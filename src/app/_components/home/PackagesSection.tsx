@@ -4,12 +4,12 @@ import { OUR_PACKAGES } from "./home.constants"
 export function PackagesSection() {
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
         <h2 className="text-center text-[44px] pb-8 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
           החבילות שלנו
         </h2>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-14 lg:grid-cols-3">
           {OUR_PACKAGES.map((p) => (
             <article
               key={p.title}

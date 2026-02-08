@@ -6,16 +6,16 @@ export function GreenSignatureCard() {
     <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] hidden sm:block">
       <div
         data-gs-root
-        className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3 relative"
+        className="mx-auto w-full px-4 sm:px-6 lg:px-3 relative"
       >
         <div
   data-gs-grid
-  className="relative grid  main-row gap-0 lg:grid-cols-[1fr_2fr]"
+  className="relative grid  main-row gap-0 lg:grid-cols-[1fr_3fr]"
 >
           {/* Card - ימין */}
           <div
   data-gs-card-col
-  className="relative z-10 flex justify-start items-center"
+  className="relative z-10 flex justify-start items-center mr-4"
 >
             <div className="w-full  py-[35px] rounded-[10px] rounded-l-none bg-white px-[30px] border border-[#D2E3E7] border-l-0" style={{ boxShadow: '0 0 24px -5px rgba(0, 0, 0, 0.07)' }}>
               <p className="t-title">
@@ -63,7 +63,7 @@ export function GreenSignatureCard() {
                   width={975}
                   height={736}
                   sizes="(min-width: 1024px) 1020px, 90vw"
-                  className="h-full w-auto max-w-none object-contain object-right"
+                  className="h-full w-full  object-right"
                   priority
                 />
           </div>

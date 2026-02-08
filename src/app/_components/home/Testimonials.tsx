@@ -5,7 +5,7 @@ import { TESTIMONIALS } from "./home.constants"
 export function Testimonials() {
   return (
     <section aria-label="המלצות" className="py-[var(--space-section)]">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-1">
         <div className="grid gap-22 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => {
             const src = encodeURI(t.imageSrc)
