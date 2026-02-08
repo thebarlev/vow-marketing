@@ -6,8 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-assistant);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,24 +48,68 @@
 }
 
 :root {
+  /* Brand tokens */
+  --vow-bg: #f5f9fa;
+  --vow-accent: #5389bb;
+  --vow-muted: #747474;
+  --vow-border: #ccc;
+  --vow-black: #000;
+  --vow-white: #fff;
+
+  /* Section spacing token (responsive) */
+  --space-section: 1.5rem;
+
+  /* Button tokens */
+  --vow-button-bg: var(--vow-black);
+  --vow-button-fg: var(--vow-white);
+  --vow-button-hover-bg: var(--vow-accent);
+  --vow-button-hover-border: var(--vow-accent);
+  --vow-button-font-size: 18px;
+  --vow-button-padding-x: 30px;
+  --vow-button-padding-y: 10px;
+  --vow-button-radius: 10px;
+
+  /* Secondary button tokens */
+  --vow-button-secondary-bg: var(--vow-white);
+  --vow-button-secondary-fg: var(--vow-black);
+  --vow-button-secondary-border: var(--vow-black);
+  --vow-button-secondary-hover-bg: var(--vow-black);
+  --vow-button-secondary-hover-fg: var(--vow-white);
+
+  /* T-title token */
+  --t-title-color: #5389bb;
+  --t-title-size: 20px;
+  --t-title-weight: 600;
+  --t-title-line-height: 32px;
+
+  /* H3 token */
+  --h3-color: #000;
+  --h3-size: 40px;
+  --h3-weight: 600;
+  --h3-line-height: 39px;
+  --h3-width: 327px;
+
+  /* Special copy token */
+  --vow-free-year: var(--vow-accent);
+
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --background: var(--vow-bg);
+  --foreground: var(--vow-black);
+  --card: var(--vow-white);
+  --card-foreground: var(--vow-black);
+  --popover: var(--vow-white);
+  --popover-foreground: var(--vow-black);
+  --primary: var(--vow-black);
+  --primary-foreground: var(--vow-white);
   --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --secondary-foreground: var(--vow-black);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: var(--vow-muted);
   --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent-foreground: var(--vow-black);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
+  --border: var(--vow-border);
+  --input: var(--vow-border);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -79,8 +124,9 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-}
 
+
+}
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -113,6 +159,112 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-section: 3rem;
+  }
+}
+
+/* Accessible skip link (visible on focus only) */
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 50;
+  transform: translateY(-200%);
+  transition: transform 150ms ease;
+  background: var(--vow-white);
+  color: var(--vow-black);
+  border: 1px solid var(--vow-border);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
+  outline-offset: 2px;
+}
+
+/* Primary button token class (use when design requires VOW spec) */
+.vow-btn-primary {
+  display: inline-flex;
+  height: 50px;
+  padding: var(--vow-button-padding-y) var(--vow-button-padding-x);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--vow-button-radius);
+  background: var(--vow-button-bg);
+  color: var(--vow-button-fg);
+  border: 1px solid transparent;
+  font-size: var(--vow-button-font-size);
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+  font-weight: 600;
+}
+.vow-btn-primary:hover {
+  background: var(--vow-button-hover-bg);
+  border-color: var(--vow-button-hover-border);
+}
+.vow-btn-primary:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
+  outline-offset: 2px;
+}
+
+/* T-title class */
+.t-title {
+  color: var(--t-title-color);
+  text-align: right;
+  font-family: var(--font-assistant);
+  font-size: var(--t-title-size);
+  font-style: normal;
+  font-weight: var(--t-title-weight);
+  line-height: var(--t-title-line-height);
+}
+
+/* Secondary button token class */
+.vow-btn-secondary {
+  display: inline-flex;
+  height: 50px;
+  padding: var(--vow-button-padding-y) var(--vow-button-padding-x);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--vow-button-radius);
+  background: transparent;
+  color: var(--vow-black);
+  border: 1px solid var(--vow-black);
+  font-size: var(--vow-button-font-size);
+  font-weight: 600;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+.vow-btn-secondary:hover {
+  background: var(--vow-accent);
+  border-color: var(--vow-accent);
+  color: var(--vow-white);
+}
+.vow-btn-secondary:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
+  outline-offset: 2px;
+}
+/* H3 class */
+.h3-title {
+  color: var(--h3-color);
+  text-align: right;
+  font-family: var(--font-assistant);
+  font-size: var(--h3-size);
+  font-style: normal;
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line-height);
+  max-width: 100%;
+}
+
+.h3-title--narrow {
+  width: var(--h3-width);
 }
 
 @layer base {
