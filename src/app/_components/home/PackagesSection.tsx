@@ -5,7 +5,7 @@ export function PackagesSection() {
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-right text-[44px] font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+        <h2 className="text-center text-[44px] pb-8 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
           החבילות שלנו
         </h2>
 
@@ -15,7 +15,10 @@ export function PackagesSection() {
               key={p.title}
               className="rounded-[18px] border border-[color:var(--vow-border)] bg-white p-6 shadow-sm"
             >
-              <h3 className="h3-title">
+              <p className="text-right text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)]">
+                 {p.kicker}
+              </p>
+              <h3 className="h3-title text-[40px] py-2">
                 {p.title}
               </h3>
 
@@ -28,14 +31,14 @@ export function PackagesSection() {
 
               <div className="mt-5 h-px w-full bg-[color:var(--vow-border)]" />
 
-              <ul className="mt-4 space-y-2 text-right text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]">
-                {p.bullets.map((b) => (
-                  <li key={b} className="flex items-start justify-end gap-3">
-                    <span>{b}</span>
-                    <CheckIcon />
-                  </li>
-                ))}
-              </ul>
+              <ul className="mt-4 space-y-2 text-left text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]">
+  {p.bullets.map((b) => (
+    <li key={b} className="flex items-center gap-3">
+      <CheckIcon className="shrink-0" />
+      <span>{b}</span>
+    </li>
+  ))}
+</ul>
             </article>
           ))}
         </div>

@@ -3,21 +3,21 @@ import Image from "next/image"
 
 export function GreenSignatureCard() {
   return (
-    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)]">
+    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] hidden sm:block">
       <div
         data-gs-root
-        className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-0 relative"
+        className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3 relative"
       >
         <div
-          data-gs-grid
-          className="relative grid items-center gap-10 lg:grid-cols-2"
-        >
+  data-gs-grid
+  className="relative grid  main-row gap-0 lg:grid-cols-[1fr_2fr]"
+>
           {/* Card - ימין */}
           <div
-            data-gs-card-col
-            className="order-1 flex justify-center lg:order-1 lg:justify-end relative z-10 lg:translate-x-[calc(clamp(0px,calc((100vw-1440px)/2),320px)+200px)]"
-          >
-            <div className="w-full max-w-[386px] py-[35px] rounded-[10px] bg-white px-[30px] border border-[#D2E3E7]" style={{ boxShadow: '0 0 24px 10px rgba(0, 0, 0, 0.07)' }}>
+  data-gs-card-col
+  className="relative z-10 flex justify-start items-center"
+>
+            <div className="w-full  py-[35px] rounded-[10px] rounded-l-none bg-white px-[30px] border border-[#D2E3E7] border-l-0" style={{ boxShadow: '0 0 24px -5px rgba(0, 0, 0, 0.07)' }}>
               <p className="t-title">
                 חינם לשנה
               </p>
@@ -56,35 +56,16 @@ export function GreenSignatureCard() {
 </ul>
             </div>
           </div>
-
-          {/* Image - שמאל */}
-          <div data-gs-image-col className="order-2 lg:order-2 relative z-20">
-            {/* Placeholder keeps the left grid column height */}
-            <div className="h-[clamp(520px,45vw,768px)]" aria-hidden />
-          </div>
-
-          {/* Full-bleed image window (anchored to viewport left, clipped) */}
-          <div
-            data-gs-bleed
-            className="pointer-events-none absolute left-0 top-0 h-[clamp(520px,55vw,768px)] w-screen overflow-hidden translate-x-[clamp(-9999px,calc(720px-50vw),0px)]"
-          >
-            <div
-              data-gs-image-frame
-              className="absolute -left-[120px] top-0 h-full w-[calc(clamp(520px,55vw,768px)*1.32473+120px)] overflow-hidden rounded-[20px]"
-            >
-              {/* The image keeps full height (no vertical crop). Frame width controls reveal/clipping. */}
-              <div className="absolute left-[120px] top-0 h-full">
-                <Image
+          <div className="relative h-full">
+           <Image
                   src="/vowapp.webp"
                   alt="ממשק VOW"
                   width={975}
                   height={736}
                   sizes="(min-width: 1024px) 1020px, 90vw"
-                  className="h-full w-auto max-w-none object-contain object-left"
+                  className="h-full w-auto max-w-none object-contain object-right"
                   priority
                 />
-              </div>
-            </div>
           </div>
         </div>
       </div>

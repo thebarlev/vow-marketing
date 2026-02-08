@@ -21,6 +21,7 @@ export const TESTIMONIALS = [
   {
     name: "חולדה",
     title: "שנאי חולדה",
+    kicker: "",
     text: DEFAULT_TESTIMONIAL_TEXT,
     imageSrc: "/testimonials/שנאי חולדה.webp",
     imageAlt: "תמונה מייצגת — שנאי חולדה",
@@ -115,16 +116,19 @@ export const PACKAGE_CARDS = [
 export const OUR_PACKAGES = [
   {
     title: "עיצוב ופיתוח",
+    kicker: "מעצבים חוויה. מפתחים עתיד.",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[3].bullets,
   },
   {
     title: "שיווק דיגיטלי",
+    kicker: "יוצרים נוכחות דיגיטלית מנצחת",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[2].bullets,
   },
   {
     title: "חשבונאות חכמה (AI)",
+    kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[1].bullets,
   },

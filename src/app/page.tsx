@@ -18,8 +18,7 @@ export default function HomePage() {
         <LogoRow />
         <SuccessSection />
         <Testimonials />
-        <GreenSignatureCard />
-        <VowAppAndPackages />
+        <GreenSignatureCard /> 
         <PackagesSection />
       </main>
 
