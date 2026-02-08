@@ -41,7 +41,6 @@ async function upsertSubscription(params: {
     updated_at: now,
   }
 
-  // Best-effort to support different column names.
   const variants: Array<Record<string, unknown>> = [
     { ...base, package_id: params.packageId, expires_at: params.expiresAt },
     { ...base, packageId: params.packageId, expires_at: params.expiresAt },
@@ -51,7 +50,7 @@ async function upsertSubscription(params: {
     { ...base, packageId: params.packageId, expiresAt: params.expiresAt },
   ]
 
-  const payloads = isActive
+  const payloads: Array<Record<string, unknown>> = isActive
     ? variants.flatMap((v) => [
         { ...v, started_at: now },
         { ...v, activated_at: now },
@@ -62,22 +61,22 @@ async function upsertSubscription(params: {
   let lastError: unknown = null
 
   for (const payload of payloads) {
-    // Prefer upsert when `email` is unique.
+    // Without generated Supabase Database types, `supabase-js` may infer `never`
+    // for insert/update/upsert payloads on dynamic table names during `next build`.
     const upsertRes = await supabase
       .from(table)
-      .upsert(payload, { onConflict: "email" })
+      .upsert(payload as never, { onConflict: "email" })
     if (!upsertRes.error) return
     lastError = upsertRes.error
 
-    // Fallback: update then insert.
     const updateRes = await supabase
       .from(table)
-      .update(payload)
+      .update(payload as never)
       .eq("email", params.email)
     if (!updateRes.error) return
     lastError = updateRes.error
 
-    const insertRes = await supabase.from(table).insert(payload)
+    const insertRes = await supabase.from(table).insert(payload as never)
     if (!insertRes.error) return
     lastError = insertRes.error
   }
@@ -96,7 +95,10 @@ export async function POST(req: Request) {
 
   const token = getBearerToken(req.headers.get("authorization"))
   if (token !== secret) {
-    return NextResponse.json({ ok: false, error: "unauthorized" }, { status: 401 })
+    return NextResponse.json(
+      { ok: false, error: "unauthorized" },
+      { status: 401 },
+    )
   }
 
   const body = await req.json().catch(() => null)
@@ -111,7 +113,8 @@ export async function POST(req: Request) {
   const email = normalizeEmail(parsed.data.email)
   const packageId = parsed.data.packageId
   const expiresAt = parsed.data.expires_at
-  const normalizedStatus = parsed.data.status === "active" ? "active" : "expired"
+  const normalizedStatus =
+    parsed.data.status === "active" ? "active" : "expired"
 
   await upsertSubscription({
     email,
@@ -122,4 +125,3 @@ export async function POST(req: Request) {
 
   return NextResponse.json({ ok: true })
 }
-

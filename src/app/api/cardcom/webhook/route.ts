@@ -107,7 +107,9 @@ async function updateSubscriptionIdempotent(params: {
 
       const { data, error } = await supabase
         .from(table)
-        .update(updateFields)
+        // Without generated Supabase Database types, `supabase-js` may infer `never`
+        // for update payloads on dynamic table names during `next build`.
+        .update(updateFields as never)
         .eq("email", params.email)
         .eq(v.packageField, params.packageId)
         .eq(v.statusField, v.pendingValue)

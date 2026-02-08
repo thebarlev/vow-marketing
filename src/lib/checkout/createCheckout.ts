@@ -108,7 +108,9 @@ async function insertPendingSubscription(params: {
 
   let lastError: unknown = null
   for (const v of variants) {
-    const { error } = await supabase.from(table).insert(v)
+    // Without generated Supabase Database types, `supabase-js` may infer `never`
+    // for insert payloads on dynamic table names during `next build`.
+    const { error } = await supabase.from(table).insert(v as never)
     if (!error) return
     lastError = error
   }
