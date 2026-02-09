@@ -1,7 +1,24 @@
+"use client";
 import { CheckIcon } from "./CheckIcon"
 import Image from "next/image"
 
+import { useState } from "react"
+import { Popup } from "./Popup"
+
 export function GreenSignatureCard() {
+
+  const [open, setOpen] = useState(false);
+  const [popupData, setPopupData] = useState<{ title: string; description: string, toptext: string }>({
+    title: '',
+    description: '',
+    toptext: '',
+  });
+  
+    const handleOpen = (title: string, description: string, toptext: string) => {
+    setPopupData({ title, description, toptext });
+    setOpen(true);
+  };
+
   return (
     <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
       <div
@@ -23,9 +40,16 @@ export function GreenSignatureCard() {
               </p>
               <h3 className="mt-3 h3-title">
 חתימה דיגיטלית מאובטחת              </h3>
-              <button
+            <button
   type="button"
-  className="vow-btn-primary mt-4 w-full max-w-[323px]"
+  className="vow-btn-primary mt-4 w-full max-w-[323px] cursor-pointer"
+  onClick={() =>
+    handleOpen(
+      "חתימה דיגיטלית מאובטחת", // title (from h3)
+      "פתרון חתימה מאובטח, מהיר וחוקי", // description
+      "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות" // top text (from p)
+    )
+  }
 >
   להצטרפות
 </button>
@@ -78,6 +102,16 @@ export function GreenSignatureCard() {
           </div>
         </div>
       </div>
+
+      {open && (
+        <Popup
+          title={popupData.title}
+          description={popupData.description}
+          toptext = {popupData.toptext}
+          onClose={() => setOpen(false)}
+        />
+      )}
+
     </section>
   )
 }

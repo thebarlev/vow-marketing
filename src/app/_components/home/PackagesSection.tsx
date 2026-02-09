@@ -7,17 +7,17 @@ import { Popup } from "./Popup"
 export function PackagesSection() {
 
   const [open, setOpen] = useState(false);
-const [popupData, setPopupData] = useState<{ title: string; description: string }>({
+const [popupData, setPopupData] = useState<{ title: string; description: string, toptext: string }>({
   title: '',
   description: '',
+  toptext: '',
 });
 
-  const handleOpen = (title: string, description: string) => {
-  setPopupData({ title, description });
+  const handleOpen = (title: string, description: string, toptext: string) => {
+  setPopupData({ title, description, toptext });
   setOpen(true);
 };
 
-const handleClose = () => setOpen(false);
 
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
@@ -42,7 +42,7 @@ const handleClose = () => setOpen(false);
               <button
                 type="button"
                 className="vow-btn-primary mt-4 w-full cursor-pointer max-w-[323px]"
-                onClick={() => handleOpen(p.title, p.kicker)}
+                onClick={() => handleOpen(p.title, p.kicker, p.toppopup)}
               >
                 {p.buttonLabel}
               </button>
@@ -66,6 +66,7 @@ const handleClose = () => setOpen(false);
         <Popup
           title={popupData.title}
           description={popupData.description}
+          toptext = {popupData.toptext}
           onClose={() => setOpen(false)}
         />
       )}

@@ -117,17 +117,20 @@ export const OUR_PACKAGES = [
   {
     title: "עיצוב ופיתוח",
     kicker: "מעצבים חוויה. מפתחים עתיד.",
+    toppopup: "",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[3].bullets,
   },
   {
     title: "שיווק דיגיטלי",
+    toppopup: "השאירו פרטים ונחזור אליכם בשעות הקרובות",
     kicker: "יוצרים נוכחות דיגיטלית מנצחת",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[2].bullets,
   },
   {
     title: "חשבונאות חכמה (AI)",
+    toppopup: "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות",
     kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[1].bullets,
