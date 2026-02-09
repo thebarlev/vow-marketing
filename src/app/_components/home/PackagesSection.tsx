@@ -1,6 +1,7 @@
+"use client";
 import { CheckIcon } from "./CheckIcon"
 import { OUR_PACKAGES } from "./home.constants"
-import { useState } from "react";
+import { useState } from "react"
 import { Popup } from "./Popup"
 
 export function PackagesSection() {
@@ -40,7 +41,7 @@ const handleClose = () => setOpen(false);
 
               <button
                 type="button"
-                className="vow-btn-primary mt-4 w-full max-w-[323px]"
+                className="vow-btn-primary mt-4 w-full cursor-pointer max-w-[323px]"
                 onClick={() => handleOpen(p.title, p.kicker)}
               >
                 {p.buttonLabel}
