@@ -10,7 +10,7 @@ import { VowAppAndPackages } from "@/app/_components/home/VowAppAndPackages"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#FAF9F5]">
       <SiteHeader />
 
       <main id="main" role="main">
