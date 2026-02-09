@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { HERO_TAGS } from "./home.constants"
-import { HeroRotatingTags } from "./HeroRotatingTags"
+import { HeroRotatingTags } from "./HeroRotatingTags" 
 
 export function Hero() {
   return (
@@ -12,7 +12,7 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           {/* Text */}
           <div className="order-2 text-right lg:order-1">
-            <h1 className="text-black flex flex-row lg:flex-col lg:gap-6">
+            <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-6">
               <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 חותמים
               </span>

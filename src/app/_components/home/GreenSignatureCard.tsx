@@ -80,7 +80,7 @@ export function GreenSignatureCard() {
 </ul>
             </div>
           </div>
-          <div className="order-1 sm:order-2 lg:order-2 relatives h-[100vh]">
+          <div className="order-1 sm:order-2 lg:order-2 relatives lg:h-[100vh]">
            <Image
                   src="/vowapp.webp"
                   alt="ממשק VOW"
