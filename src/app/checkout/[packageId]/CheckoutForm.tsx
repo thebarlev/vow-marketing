@@ -47,7 +47,9 @@ export function CheckoutForm(props: { packageId: string }) {
       return
     }
 
-    window.location.assign(json.redirectUrl)
+    const url = new URL(json.redirectUrl, window.location.origin)
+if (url.origin !== window.location.origin) throw new Error()
+window.location.assign(url.toString())
   }
 
   return (
