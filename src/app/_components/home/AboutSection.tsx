@@ -22,11 +22,11 @@ export function AboutSection() {
     <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
       <div
         data-gs-root
-        className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-6 lg:px-3 relative"
+        className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-4 lg:px-3 relative"
       >
         <div
   data-gs-grid
-  className="relative rounded-[10px] grid bg-white p-6 main-row gap-5 lg:grid-cols-2"
+  className="relative rounded-[10px] grid bg-white p-4 px-8 main-row gap-5 lg:grid-cols-2"
 >
           {/* Card - ימין */}
           <div
