@@ -11,7 +11,7 @@ export function SiteHeader() {
         <nav
           role="navigation"
           aria-label="ניווט ראשי"
-          className="flex flex-row-reverse items-center justify-between py-6"
+          className="flex flex-row-reverse flex-wrap items-center justify-between gap-3 py-6"
         >
           <Link
             href="/"
@@ -23,14 +23,14 @@ export function SiteHeader() {
   alt="VOW Logo"
   width={80}
   height={46}
-  className="w-auto h-auto flex items-center gap-2 py-1"
+  className="max-w-full h-auto flex items-center gap-2 py-1"
 />
             <span className="text-2xl font-bold tracking-tight text-black">
               
             </span>
           </Link>
 
-          <ul className="flex items-center gap-3">
+          <ul className="flex flex-wrap items-center gap-2 max-w-full">
           <li>
   <a
     className="vow-btn-secondary"

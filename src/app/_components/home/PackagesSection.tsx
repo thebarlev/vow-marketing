@@ -1,7 +1,23 @@
 import { CheckIcon } from "./CheckIcon"
 import { OUR_PACKAGES } from "./home.constants"
+import { useState } from "react";
+import { Popup } from "./Popup"
 
 export function PackagesSection() {
+
+  const [open, setOpen] = useState(false);
+const [popupData, setPopupData] = useState<{ title: string; description: string }>({
+  title: '',
+  description: '',
+});
+
+  const handleOpen = (title: string, description: string) => {
+  setPopupData({ title, description });
+  setOpen(true);
+};
+
+const handleClose = () => setOpen(false);
+
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
@@ -9,7 +25,7 @@ export function PackagesSection() {
           החבילות שלנו
         </h2>
 
-        <div className="mt-8 grid gap-14 lg:grid-cols-3">
+        <div className="mt-8 grid gap-14 all-package lg:grid-cols-3">
           {OUR_PACKAGES.map((p) => (
             <article
               key={p.title}
@@ -25,6 +41,7 @@ export function PackagesSection() {
               <button
                 type="button"
                 className="vow-btn-primary mt-4 w-full max-w-[323px]"
+                onClick={() => handleOpen(p.title, p.kicker)}
               >
                 {p.buttonLabel}
               </button>
@@ -43,6 +60,14 @@ export function PackagesSection() {
           ))}
         </div>
       </div>
+       {/* Popup */}
+      {open && (
+        <Popup
+          title={popupData.title}
+          description={popupData.description}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </section>
   )
 }

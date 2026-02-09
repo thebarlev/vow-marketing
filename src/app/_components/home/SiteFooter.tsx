@@ -26,12 +26,12 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-6">
           
-
+           
           {FOOTER_COLUMNS.map((col, index) => (
             <div
       key={col.title}
       className={`
-        ${index === 0 ? "md:col-span-2 max-w-[400px] text-right" : "text-right"}
+        ${index === 0 ? "md:col-span-2 max-w-[400px] text-right order-2 sm:order-1 lg:order-1" : "text-right order-2 sm:order-1 lg:order-1"}
       `}
     >
               <p className="text-[18px] font-semibold leading-[20px] text-[#A1A1A1]">
@@ -49,7 +49,9 @@ export function SiteFooter() {
             </div>
           ))}
 
-         <div className="flex flex-col items-end py-1 text-right">
+         <div className="flex flex-col items-center text-center py-1
+order-1 sm:order-2 lg:order-2
+sm:items-end sm:text-right">
   <Image
     src="/logo.svg"
     alt="VOW Logo"
@@ -66,7 +68,8 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-8">
-  <div className="flex justify-between items-center">
+  <div className="flex flex-col items-center gap-4
+                  sm:flex-row sm:justify-between sm:items-center">
     {/* Right: social icons */}
     <div className="flex space-x-4">
       <a href="#" className="text-white/70 hover:text-white">

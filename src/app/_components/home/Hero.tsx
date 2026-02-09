@@ -11,7 +11,7 @@ export function Hero() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           {/* Text */}
-          <div className="order-1 text-right lg:order-1">
+          <div className="order-2 text-right lg:order-1">
             <h1 className="text-black">
               <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 חותמים
@@ -26,7 +26,7 @@ export function Hero() {
           </div>
 
           {/* Image */}
-          <div className="order-2 flex justify-center lg:order-2 lg:justify-end">
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
             <div className="relative w-full max-w-[560px] overflow-hidden rounded-[22px] bg-white shadow-sm">
               <Image
                 src="/hero.webp"
