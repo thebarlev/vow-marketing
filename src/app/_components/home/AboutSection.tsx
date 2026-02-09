@@ -22,7 +22,7 @@ export function AboutSection() {
     <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
       <div
         data-gs-root
-        className="max-w-[95%] rounded-[10px] mx-auto w-full px-4 sm:px-6 lg:px-3 relative"
+        className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-6 lg:px-3 relative"
       >
         <div
   data-gs-grid
@@ -35,9 +35,9 @@ export function AboutSection() {
 >
             <div className="w-full  py-[35px]">
               
-              <h3 className="mt-3 text-[30px] sm:text-[70px] font-semibold sm:max-w-[90%]"> למה זה נכון בשבילך להצטרף למהפכה של רו״ח AI
+              <h3 className="mt-3 text-[30px] sm:text-[70px] sm:leading-[1.1] font-semibold sm:max-w-[90%]"> למה זה נכון בשבילך להצטרף למהפכה של רו״ח AI
               </h3>
-              <p className="text-[20px]  leading-[32px] text-[#000000] sm:max-w-[70%] lg:max-w-[70%]">
+              <p className="text-[20px] pt-2 leading-[32px] text-[#747474] sm:max-w-[70%] lg:max-w-[70%]">
                למי זה מתאים: עוסקים פטורים בעלי עסקים עם מחזור עד 500,000 ₪ בשנה
               </p>
             <button
@@ -53,7 +53,7 @@ export function AboutSection() {
 >
   להשארת פרטים
 </button>
-<p className="text-[20px] pt-2 leading-[32px] text-[#000000] sm:max-w-[70%]">
+<p className="text-[20px] pt-2  leading-[32px] text-[#747474] sm:max-w-[70%]">
             המכסה מלאה – 100 העסקים הראשונים כבר הצטרפו.<br />
   כרגע ניתן להירשם רק לרשימת המתנה.
               </p>

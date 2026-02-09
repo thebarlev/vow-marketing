@@ -164,7 +164,8 @@ export const OUR_PRICE = [
     kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "ניסיון חינם",
     price: "0 ₪",
-    badge: "נסו את Vow לשנה",
+    priceextra: "",
+    badge: "",
     bullets: [
       "פיתוח וליווי אתרים ומערכות",
       "פיתוח בהתאמה אישית",
@@ -177,8 +178,9 @@ export const OUR_PRICE = [
     toppopup: "השאירו פרטים ונחזור אליכם בשעות הקרובות",
     kicker: "יוצרים נוכחות דיגיטלית מנצחת",
     buttonLabel: "ניסיון חינם",
-    price: "29 ₪ לחודש לפני מע״מ",
+    price: "29 ₪ לחודש",
     badge: "המומלץ ביותר",
+    priceextra: "לפני מע״מ",
     bullets: [
       "פיתוח וליווי אתרים ומערכות",
       "פיתוח בהתאמה אישית",
@@ -191,7 +193,8 @@ export const OUR_PRICE = [
     toppopup: "",
     kicker: "מעצבים חוויה. מפתחים עתיד.",
     buttonLabel: "ניסיון חינם",
-    price: "69 ₪ לחודש לפני מע״מ",
+    price: "69 ₪  מע״מ",
+    priceextra: "לפני מע״מ",
     badge: "",
     bullets: [
       "פיתוח וליווי אתרים ומערכות",

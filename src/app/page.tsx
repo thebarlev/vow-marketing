@@ -23,8 +23,6 @@ export default function HomePage() {
         <SuccessSection />
         <Testimonials />
         <GreenSignatureCard /> 
-        <AboutSection />
-        <PriceSection />
         <PackagesSection />
       </main>
 
