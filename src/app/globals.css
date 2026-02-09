@@ -274,6 +274,16 @@ body {
   width: var(--h3-width);
 }
 
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
 /* ✅ Small screens */
 @media (max-width: 640px) {
   .vow-btn-primary, .vow-btn-secondary {
