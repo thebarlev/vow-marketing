@@ -9,7 +9,7 @@ export function Hero() {
       className="py-[var(--space-section)]"
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div className="grid items-center gap-5 sm:gap-10 lg:gap-10 lg:grid-cols-2">
           {/* Text */}
           <div className="order-2 text-right lg:order-1">
             <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-6">
@@ -33,7 +33,15 @@ export function Hero() {
                 alt="תמונת הירו: צוות VOW"
                 width={1120}
                 height={900}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full hidden sm:block lg:block object-cover"
+                priority
+              />
+              <Image
+                src="/banner-small.svg"
+                alt="תמונת הירו: צוות VOW"
+                width={1120}
+                height={900}
+                className="h-auto sm:hidden lg:hidden w-full object-cover"
                 priority
               />
             </div>

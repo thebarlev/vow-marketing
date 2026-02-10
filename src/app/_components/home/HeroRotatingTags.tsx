@@ -23,7 +23,7 @@ export function HeroRotatingTags(props: { items: readonly string[] }) {
 
   return (
     <div
-      className="inline-flex flex-wrap items-center justify-start lg:justify-end gap-[30px] text-right text-[22px] font-normal leading-[32px] text-black"
+      className="inline-flex flex-col lg:flex-row flex-wrap sm:items-center lg:items-center justify-start lg:justify-end gap-[20px] sm:gap-[30px] lg:gap-[30px] text-right text-[22px] font-normal leading-[32px] text-black"
       aria-label="תחומי פעילות"
     >
       {props.items.map((t, idx) => (

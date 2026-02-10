@@ -270,6 +270,12 @@ body {
   max-width: 100%;
 }
 
+.h3-title-km {
+  font-family: var(--font-assistant);
+  font-size: var(--h3-size);
+  
+}
+
 .h3-title--narrow {
   width: var(--h3-width);
 }
@@ -285,7 +291,7 @@ body {
 }
 
 /* ✅ Small screens */
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .vow-btn-primary, .vow-btn-secondary {
     padding: 10px; /* smaller padding on mobile */
   }
@@ -297,6 +303,11 @@ body {
   }
   .all-package .h3-title{
     max-width: 64%;
+  }
+
+  .sub-package .h3-title{
+    max-width: 100%;
+    font-size: 29px;
   }
 }
 

@@ -82,7 +82,7 @@ export function GreenSignatureCard() {
           </div>
           <div className="order-1 sm:order-2 lg:order-2 relatives lg:h-[100vh]">
            <Image
-                  src="/vowapp.webp"
+                  src="/newn.svg"
                   alt="ממשק VOW"
                   width={975}
                   height={736}
@@ -95,8 +95,8 @@ export function GreenSignatureCard() {
                   alt="ממשק VOW"
   width={220}
   height={440}
-                  className="absolute z-[999] -top-20 -left-6 w-[220px] sm:w-[220px] h-auto
-    pointer-events-none mobile-image  object-right sm:hidden"
+                  className="absolute z-[999] -top-20 -left-6 w-[220px] lg:w-[220px] h-auto
+    pointer-events-none mobile-image  object-right lg:hidden"
                   priority
                 />
           </div>

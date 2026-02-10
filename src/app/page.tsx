@@ -24,6 +24,7 @@ export default function HomePage() {
         <Testimonials />
         <GreenSignatureCard /> 
         <PackagesSection />
+        <AboutSection />
       </main>
 
       <CookieBanner/>

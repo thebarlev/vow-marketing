@@ -53,7 +53,7 @@ export function SiteFooter() {
 order-1 sm:order-2 lg:order-2
 sm:items-end sm:text-right">
   <Image
-    src="/logo.svg"
+    src="/footer-logo.svg"
     alt="VOW Logo"
     width={80}
     height={46}
@@ -71,7 +71,7 @@ sm:items-end sm:text-right">
   <div className="flex flex-col items-center gap-4
                   sm:flex-row sm:justify-between sm:items-center">
     {/* Right: social icons */}
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 gap-4 lg:gap-2">
       <a href="#" className="text-white/70 hover:text-white">
         <FaFacebookF />
       </a>
