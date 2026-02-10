@@ -44,21 +44,21 @@ const [popupData, setPopupData] = useState<{ title: string; description: string,
                 {p.title}
               </h3>
               <h4 className="text-[30px] pt-2 font-semibold">
-                {p.price}
+                {p.price} <span className="text-[20px] font-normal">{p.priceextra}</span>
               </h4>
-              <p className="text-right text-[20px] font-semibold leading-[32px] text-[#000000]">
+              <p className="text-right -mt-1 text-[20px] font-semibold leading-[32px] text-[#000000]">
                  {p.kicker}
               </p>
 
               <button
                 type="button"
-                className="vow-btn-primary mt-4 w-full cursor-pointer max-w-[323px]"
+                className="vow-btn-primary mt-4 mb-8 w-full cursor-pointer"
                 onClick={() => handleOpen(p.title, p.kicker, p.toppopup)}
               >
                 {p.buttonLabel}
               </button>
 
-              <div className="mt-5 h-px w-full bg-[color:var(--vow-border)]" />
+              <div className="mb-5 h-px w-full bg-[color:var(--vow-border)]" />
 
               <ul className="mt-4 space-y-2 text-left text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]">
   {p.bullets.map((b) => (

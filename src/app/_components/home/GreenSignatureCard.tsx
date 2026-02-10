@@ -20,10 +20,10 @@ export function GreenSignatureCard() {
   };
 
   return (
-    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
+    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top pb-20">
       <div
         data-gs-root
-        className="mx-auto w-full px-4 sm:px-6 lg:px-3 relative"
+        className="mx-auto  max-w-[1440px] px-4 sm:px-6 lg:px-3 relative"
       >
         <div
   data-gs-grid
@@ -32,7 +32,7 @@ export function GreenSignatureCard() {
           {/* Card - ימין */}
           <div
   data-gs-card-col
-  className="order-2 sm:order-1 lg:order-1 relative z-10 flex justify-start items-center mr-4"
+  className="order-2 sm:order-1 lg:order-1 relative z-10 flex justify-start items-center"
 >
             <div className="w-full  py-[35px] rounded-[10px] rounded-l-none bg-white px-[30px] border border-[#D2E3E7] border-l-0" style={{ boxShadow: '0 0 24px -5px rgba(0, 0, 0, 0.07)' }}>
               <p className="t-title">
@@ -80,14 +80,14 @@ export function GreenSignatureCard() {
 </ul>
             </div>
           </div>
-          <div className="order-1 sm:order-2 lg:order-2 relative h-full">
+          <div className="order-1 sm:order-2 lg:order-2 relatives lg:h-[100vh]">
            <Image
                   src="/vowapp.webp"
                   alt="ממשק VOW"
                   width={975}
                   height={736}
                   sizes="(min-width: 1024px) 1020px, 90vw"
-                  className="h-full w-full  object-right hidden lg:block"
+                  className="h-full w-full absolute  object-right hidden lg:block"
                   priority
                 />
                 <Image
