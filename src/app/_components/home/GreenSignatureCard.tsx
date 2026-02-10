@@ -3,19 +3,25 @@ import { CheckIcon } from "./CheckIcon"
 import Image from "next/image"
 
 import { useState } from "react"
-import { Popup } from "./Popup"
+import { Popup, LeadSource } from "./Popup"
 
 export function GreenSignatureCard() {
 
   const [open, setOpen] = useState(false);
-  const [popupData, setPopupData] = useState<{ title: string; description: string, toptext: string }>({
+  const [popupData, setPopupData] = useState<{ 
+    title: string; 
+    description: string; 
+    toptext: string; 
+    source: LeadSource 
+  }>({
     title: '',
     description: '',
     toptext: '',
+    source: 'smart_accounting_ai',
   });
   
-    const handleOpen = (title: string, description: string, toptext: string) => {
-    setPopupData({ title, description, toptext });
+  const handleOpen = (title: string, description: string, toptext: string, source: LeadSource) => {
+    setPopupData({ title, description, toptext, source });
     setOpen(true);
   };
 
@@ -34,11 +40,11 @@ export function GreenSignatureCard() {
   data-gs-card-col
   className="order-2 sm:order-1 lg:order-1 relative z-10 flex justify-start items-center"
 >
-            <div className="w-full  py-[35px] rounded-[10px] rounded-l-none bg-white px-[30px] border border-[#D2E3E7] border-l-0" style={{ boxShadow: '0 0 24px -5px rgba(0, 0, 0, 0.07)' }}>
-              <p className="t-title">
+            <div className="w-full  py-[25px] rounded-[10px] rounded-l-none bg-white px-[30px] border border-[#D2E3E7] border-l-0" style={{ boxShadow: '0 0 24px -5px rgba(0, 0, 0, 0.07)' }}>
+              <p className="t-title ">
                 חינם לשנה
               </p>
-              <h3 className="mt-3 h3-title">
+              <h3 className="mt-3  h3-title">
 חתימה דיגיטלית מאובטחת              </h3>
             <button
   type="button"
@@ -47,7 +53,8 @@ export function GreenSignatureCard() {
     handleOpen(
       "חתימה דיגיטלית מאובטחת", // title (from h3)
       "פתרון חתימה מאובטח, מהיר וחוקי", // description
-      "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות" // top text (from p)
+      "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות", // top text (from p)
+      "smart_accounting_ai" // source
     )
   }
 >
@@ -56,7 +63,7 @@ export function GreenSignatureCard() {
               <div className="py-[30px]">
                 <div className="w-full max-w-[323px] h-px bg-[#CCCCCC]" />
               </div>
-              <ul className="space-y-4 text-[18px] leading-7 text-black" dir="rtl">
+              <ul className="space-y-4 text-[20px] leading-9 py-2 text-black" dir="rtl">
   <li className="flex items-start gap-3">
     <CheckIcon className="shrink-0" />
     <span>הפקת מסמכים רציפה </span>
@@ -71,7 +78,7 @@ export function GreenSignatureCard() {
   </li>
   <li className="flex items-start gap-3">
     <CheckIcon className="shrink-0" />
-    <span>שמירה וגיבוי מלאים</span>
+    <span>שמירה וגיבוי מלאים </span>
   </li>
   <li className="flex items-start gap-3">
     <CheckIcon className="shrink-0" />
@@ -80,16 +87,39 @@ export function GreenSignatureCard() {
 </ul>
             </div>
           </div>
-          <div className="order-1 sm:order-2 lg:order-2 relatives lg:h-[100vh]">
-           <Image
-                  src="/vowapp.webp"
-                  alt="ממשק VOW"
-                  width={975}
-                  height={736}
-                  sizes="(min-width: 1024px) 1020px, 90vw"
-                  className="h-full w-full absolute  object-right hidden lg:block"
-                  priority
-                />
+
+          {/* Image column - שמאל */}
+          <div data-gs-image-col className="order-1 sm:order-2 lg:order-2 relative h-[clamp(520px,55vw,768px)] overflow-visible">
+            {/* Bleed container */}
+            <div
+              data-gs-bleed
+              className="absolute left-0 top-0 h-[clamp(520px,55vw,768px)] w-screen overflow-hidden"
+              style={{
+                transform: 'translateX(clamp(-9999px, calc(720px - 50vw), 0px))'
+              }}
+            >
+              {/* Image frame with border radius */}
+              <div
+                data-gs-image-frame
+                className="absolute -left-[120px] top-0 h-full overflow-hidden rounded-[20px]"
+                style={{
+                  width: 'calc(clamp(520px, 55vw, 768px) * 1.32473 + 120px)'
+                }}
+              >
+                {/* Image wrapper shifted right */}
+                <div className="absolute left-[120px] top-0 h-full">
+                  <Image
+                    src="/vowapp.webp"
+                    alt="Green signature"
+                    width={975}
+                    height={736}
+                    sizes="(min-width: 1024px) 1020px, 90vw"
+                    className="h-full w-auto max-w-none object-contain object-left"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
                 <Image
                   src="/iphone_vow.svg"
                   alt="ממשק VOW"
@@ -108,6 +138,7 @@ export function GreenSignatureCard() {
           title={popupData.title}
           description={popupData.description}
           toptext = {popupData.toptext}
+          source={popupData.source}
           onClose={() => setOpen(false)}
         />
       )}
