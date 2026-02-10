@@ -10,8 +10,8 @@ function PackageCard(props: {
   bullets: readonly string[]
 }) {
   return (
-    <article className="rounded-[18px] border border-[color:var(--vow-border)] bg-white p-6">
-      <p className="text-right text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)]">
+    <article className="rounded-[118px] border border-[color:var(--vow-border)] bg-red-500 p-6">
+      <p className="text-right text-[1px] font-semibold leading-[32px] text-[color:var(--vow-accent)]">
         {props.kicker}
       </p>
 
@@ -44,7 +44,7 @@ export function VowAppAndPackages() {
   return (
     <section aria-label="חתימה דיגיטלית וחבילות" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[22px] border border-[color:var(--vow-border)] bg-white">
+        <div className="relative overflow-hidden rounded-[22px] border border-[color:var(--vow-border)] bg-red-500">
           {/* Background layer that continues hero feel */}
           <div
             aria-hidden="true"

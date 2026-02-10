@@ -4,7 +4,7 @@ import { TESTIMONIALS } from "./home.constants"
 
 export function Testimonials() {
   return (
-    <section aria-label="המלצות" className="py-[var(--space-section)]">
+    <section aria-label="המלצות" className="py-3">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-1">
         <div className="grid gap-22 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => {
@@ -12,7 +12,7 @@ export function Testimonials() {
             return (
               <article
                 key={t.imageSrc}
-                className="rounded-[18px] border border-[color:var(--vow-border)] bg-transparent p-6 shadow-sm"
+                className="rounded-[18px] border border-[color:var(--vow-border)] bg-transparent px-6 py-12 shadow-sm"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="relative size-[86px] overflow-hidden rounded-full border border-[color:var(--vow-border)] bg-[color:var(--vow-bg)]">
@@ -25,11 +25,11 @@ export function Testimonials() {
                     />
                   </div>
 
-                  <p className="mt-4 w-[301px] max-w-full text-center text-[20px] font-bold leading-[32px] text-[color:var(--vow-muted)]">
+                  <p className="mt-4 w-[95%] max-w-full text-center text-[20px] font-bold leading-[32px] text-[color:var(--vow-muted)] py-2">
                     {t.title}
                   </p>
 
-                  <p className="mt-2 w-[301px] max-w-full text-center text-[20px] font-semibold leading-[32px] text-[color:var(--vow-muted)]">
+                  <p className="mt-2 w-[95%] max-w-full text-center text-[20px] font-semibold leading-[32px] text-[color:var(--vow-muted)]">
                     {t.text}
                   </p>
                 </div>

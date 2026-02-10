@@ -8,20 +8,19 @@ export function Hero() {
       aria-label="הירו"
       className="py-[var(--space-section)]"
     >
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-3">
-        <div className="grid items-center gap-5 sm:gap-10 lg:gap-10 lg:grid-cols-2">
+      <div className="mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-5">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
           {/* Text */}
           <div className="order-2 text-right lg:order-1">
-            <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-6">
+            <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-4">
               <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
-                חותמים
+              חותמים
               </span>
               <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
-                על הצלחה
+               על הצלחה
               </span>
             </h1>
-            <div className="mt-6 flex justify-start lg:justify-end">
-              <HeroRotatingTags items={HERO_TAGS} />
+            <div className="mt-6 flex justify-start w-[calc(100%+100px)]" dir="rtl">              <HeroRotatingTags items={HERO_TAGS} />
             </div>
           </div>
 
@@ -33,15 +32,7 @@ export function Hero() {
                 alt="תמונת הירו: צוות VOW"
                 width={1120}
                 height={900}
-                className="h-auto w-full hidden sm:block lg:block object-cover"
-                priority
-              />
-              <Image
-                src="/banner-small.svg"
-                alt="תמונת הירו: צוות VOW"
-                width={1120}
-                height={900}
-                className="h-auto sm:hidden lg:hidden w-full object-cover"
+                className="h-auto w-full object-cover"
                 priority
               />
             </div>
