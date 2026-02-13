@@ -12,7 +12,7 @@ export function PriceSection() {
 
   // נשאר בקובץ אבל לא בשימוש כרגע (אפשר למחוק לגמרי אם לא צריך)
   const [open, setOpen] = useState(false);
-  const [popupData, setPopupData] = useState<{
+  const [popupData] = useState<{
     title: string;
     description: string;
     toptext: string;

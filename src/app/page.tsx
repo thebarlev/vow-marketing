@@ -8,8 +8,6 @@ import { SuccessSection } from "@/app/_components/home/SuccessSection"
 import { Testimonials } from "@/app/_components/home/Testimonials"
 import { CookieBanner } from "@/app/_components/home/CookieBanner"
 import { AboutSection } from "@/app/_components/home/AboutSection"
-import { PriceSection } from "@/app/_components/home/PriceSection"
-import { VowAppAndPackages } from "@/app/_components/home/VowAppAndPackages"
 
 
 export default function HomePage() {
