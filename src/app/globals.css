@@ -307,7 +307,8 @@ body {
 
   .sub-package .h3-title{
     max-width: 100%;
-    font-size: 29px;
+    font-size: 25px;
+    font-weight: 600;
   }
 }
 
