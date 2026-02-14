@@ -68,7 +68,7 @@ export function AboutSection() {
                
             </div>
           </div>
-          <div className=" relative h-full">
+          <div className=" relative h-full sub-package">
   {ABOUT_US.map((p) => (
     <article key={p.title} className="py-4 sm:p-13">
       

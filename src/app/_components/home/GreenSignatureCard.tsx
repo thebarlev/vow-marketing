@@ -89,11 +89,11 @@ export function GreenSignatureCard() {
           </div>
 
           {/* Image column - שמאל */}
-          <div data-gs-image-col className="order-1 sm:order-2 lg:order-2 relative h-[clamp(520px,55vw,768px)] overflow-visible">
+          <div data-gs-image-col className="order-1 sm:order-2 lg:order-2 relative sm:h-[clamp(520px,55vw,768px)] lg:h-[clamp(520px,55vw,768px)] overflow-visible">
             {/* Bleed container */}
             <div
               data-gs-bleed
-              className="absolute left-0 top-0 h-[clamp(520px,55vw,768px)] w-screen overflow-hidden"
+              className="absolute hidden lg:block left-0 top-0 h-[clamp(520px,55vw,768px)] w-screen overflow-hidden"
               style={{
                 transform: 'translateX(clamp(-9999px, calc(720px - 50vw), 0px))'
               }}
@@ -114,7 +114,7 @@ export function GreenSignatureCard() {
                     width={975}
                     height={736}
                     sizes="(min-width: 1024px) 1020px, 90vw"
-                    className="h-full w-auto max-w-none object-contain object-left"
+                    className="h-full w-auto max-w-none  object-contain object-left"
                     priority
                   />
                 </div>
@@ -125,7 +125,7 @@ export function GreenSignatureCard() {
                   alt="ממשק VOW"
   width={220}
   height={440}
-                  className="absolute z-[999] -top-20 -left-6 w-[220px] sm:w-[220px] h-auto
+                  className="absolute z-[999] -top-25 -left-6 w-[210px] sm:w-[210px] h-auto
     pointer-events-none mobile-image  object-right sm:hidden"
                   priority
                 />

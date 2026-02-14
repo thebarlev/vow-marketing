@@ -36,7 +36,7 @@ export function PackagesSection() {
           {OUR_PACKAGES.map((p) => (
             <article
               key={p.title}
-              className="rounded-[10px] bg-white w-[386px] p-6 shadow-[0_0_24px_10px_rgba(0,0,0,0.07)] flex flex-col items-stretch"
+              className="rounded-[10px] bg-white mx-auto w-[386px] p-6 shadow-[0_0_24px_10px_rgba(0,0,0,0.07)] flex flex-col items-stretch"
               >
               <p className="text-right text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)]">
                  {p.kicker}
