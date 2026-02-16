@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Assistant } from "next/font/google";
 import "./globals.css";
 
@@ -22,19 +23,15 @@ export default function RootLayout({
 
   return (
     <html lang="he" dir="rtl" className={assistant.variable}>
-      <head>
+      <body className="antialiased font-sans">
+        {children}
+
         {siteKey && (
-          <script
+          <Script
             src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
-            async
-            defer
+            strategy="afterInteractive"
           />
         )}
-      </head>
-      <body
-        className={`antialiased`}
-      >
-        {children}
       </body>
     </html>
   );
