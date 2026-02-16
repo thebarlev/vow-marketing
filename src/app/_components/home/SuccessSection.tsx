@@ -2,7 +2,7 @@ export function SuccessSection() {
   return (
     <section aria-label="הצלחה" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-0">
-        <div className="space-y-6">
+        <div className="space-y-3">
           <h2 className="text-center font-semibold text-black text-[44px] leading-[52px] sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
             הצלחה לא נבנית במקרה
           </h2>

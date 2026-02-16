@@ -21,6 +21,7 @@ export const TESTIMONIALS = [
   {
     name: "חולדה",
     title: "שנאי חולדה",
+    kicker: "",
     text: DEFAULT_TESTIMONIAL_TEXT,
     imageSrc: "/testimonials/שנאי חולדה.webp",
     imageAlt: "תמונה מייצגת — שנאי חולדה",
@@ -115,18 +116,96 @@ export const PACKAGE_CARDS = [
 export const OUR_PACKAGES = [
   {
     title: "עיצוב ופיתוח",
+    kicker: "מעצבים חוויה. מפתחים עתיד.",
+    toppopup: "",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[3].bullets,
+    source: "design_development" as const,
   },
   {
     title: "שיווק דיגיטלי",
+    toppopup: "השאירו פרטים ונחזור אליכם בשעות הקרובות",
+    kicker: "יוצרים נוכחות דיגיטלית מנצחת",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[2].bullets,
+    source: "digital_marketing" as const,
   },
   {
     title: "חשבונאות חכמה (AI)",
+    toppopup: "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות",
+    kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[1].bullets,
+    source: "smart_accounting_ai" as const,
   },
 ] as const
 
+ export const ABOUT_US = [
+  {
+    title: "חוסכים אלפי שקלים בשנה",
+    kicker: "במקום לשלם הון עתק בחודש לרו״ח מסורתי - עם VOW רואה חשבון AI ישאר לך ההרבה יותר כסף בכיס.", 
+    icon: "/about/1.svg",
+  },
+  {
+    title: "אפס טעויות, אפס פחדים", 
+    kicker: "הAI למד את כל הרגולציה של מס הכנסה, ביטוח לאומי ומע״מ + את הידע של למעלה מ-1,000 רואי חשבון. אתה מקבל מקצועיות של רמה אחרת.", 
+    icon: "/about/2.svg",
+  },
+  {
+    title: "דוחות בזמן, בלי עיכובים", 
+    kicker: "דוחות חודשיים ודוחות שנתיים מוכנים בזמן, בלי המתנה, בלי \"אני עסוק\", בלי משחקים.", 
+    icon: "/about/3.svg",
+  },
+] as const;
+
+ 
+
+export const OUR_PRICE = [
+  {
+    title: "חינם",
+    toppopup: "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות",
+    kicker: "להפקת כל סוגי המסמכים",
+    buttonLabel: "ניסיון חינם",
+    price: "0 ₪",
+    priceextra: "",
+    badge: "",
+    bullets: [
+      "להפיק ולשלוח חשבוניות, הצעות מחיר ודוחות",
+      "ניהול הכנסות ולקוחות",
+      "להפיק עד 10 מסמכים בחודש",
+      "ניהול עסק אחד",
+    ],
+  },
+  {
+    title: "מקצועי",
+    toppopup: "השאירו פרטים ונחזור אליכם בשעות הקרובות",
+    kicker: "להפקת כל סוגי המסמכים",
+    buttonLabel: "ניסיון חינם",
+    price: "29 ₪ לחודש",
+    badge: "המומלץ ביותר",
+    priceextra: "לפני מע״מ",
+    bullets: [
+      "להפיק ולשלוח חשבוניות, הצעות מחיר ודוחות",
+      "ניהול הכנסות ולקוחות",
+      "להפיק עד 50 מסמכים בחודש",
+      "ניהול עסק אחד",
+      "עלות מסמך נוסף 1 ₪",
+    ],
+  },
+  {
+    title: "אקסטרה",
+    toppopup: "",
+    kicker: "להפקת כל סוגי המסמכים",
+    buttonLabel: "ניסיון חינם",
+    price: "69 ₪  לחודש",
+    priceextra: "לפני מע״מ",
+    badge: "",
+    bullets: [
+      "להפיק ולשלוח חשבוניות, הצעות מחיר ודוחות",
+      "ניהול הכנסות ולקוחות",
+      "להפיק עד 250 מסמכים בחודש",
+      "ניהול עסק אחד",
+      "עלות מסמך נוסף 0.5 ₪",
+    ],
+  },
+] as const;

@@ -47,6 +47,13 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+  
 :root {
   /* Brand tokens */
   --vow-bg: #f5f9fa;
@@ -263,8 +270,45 @@
   max-width: 100%;
 }
 
+.h3-title-km {
+  font-family: var(--font-assistant);
+  font-size: var(--h3-size);
+  
+}
+
 .h3-title--narrow {
   width: var(--h3-width);
+}
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+/* ✅ Small screens */
+@media (max-width: 1024px) {
+  .vow-btn-primary, .vow-btn-secondary {
+    padding: 10px; /* smaller padding on mobile */
+  }
+  .mobile-margin-top{
+    margin-top: 50px;
+  }
+  .h3-title{
+    max-width: 84%;
+  }
+  .all-package .h3-title{
+    max-width: 64%;
+  }
+
+  .sub-package .h3-title{
+    max-width: 100%;
+    font-size: 23px;
+  }
 }
 
 @layer base {
@@ -275,3 +319,4 @@
     @apply bg-background text-foreground;
   }
 }
+

@@ -6,11 +6,13 @@ import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { SuccessSection } from "@/app/_components/home/SuccessSection"
 import { Testimonials } from "@/app/_components/home/Testimonials"
-import { VowAppAndPackages } from "@/app/_components/home/VowAppAndPackages"
+import { CookieBanner } from "@/app/_components/home/CookieBanner"
+import { AboutSection } from "@/app/_components/home/AboutSection"
+
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#FAF9F5]">
       <SiteHeader />
 
       <main id="main" role="main">
@@ -18,11 +20,13 @@ export default function HomePage() {
         <LogoRow />
         <SuccessSection />
         <Testimonials />
-        <GreenSignatureCard />
-        <VowAppAndPackages />
+        <GreenSignatureCard /> 
+        <AboutSection />
         <PackagesSection />
+        <AboutSection />
       </main>
 
+      <CookieBanner/>
       <SiteFooter />
     </div>
   )
