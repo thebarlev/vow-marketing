@@ -8,6 +8,9 @@ import { SuccessSection } from "@/app/_components/home/SuccessSection"
 import { Testimonials } from "@/app/_components/home/Testimonials"
 import { CookieBanner } from "@/app/_components/home/CookieBanner"
 import { AboutSection } from "@/app/_components/home/AboutSection"
+import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
+import { FaqSection } from "@/app/_components/home/FaqSection"
+import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
 
 
 export default function HomePage() {
@@ -17,16 +20,18 @@ export default function HomePage() {
 
       <main id="main" role="main">
         <Hero />
+        <GreenInvoiceSection />
         <LogoRow />
         <SuccessSection />
         <Testimonials />
-        <GreenSignatureCard /> 
+        <VisionToExecutionSection />
+        <GreenSignatureCard />
         <AboutSection />
         <PackagesSection />
-        <AboutSection />
+        <FaqSection />
       </main>
 
-      <CookieBanner/>
+      <CookieBanner />
       <SiteFooter />
     </div>
   )

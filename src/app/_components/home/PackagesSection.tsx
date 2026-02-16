@@ -1,8 +1,9 @@
 "use client";
 import { CheckIcon } from "./CheckIcon"
 import { OUR_PACKAGES } from "./home.constants"
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { Popup, LeadSource } from "./Popup"
+import { LEAD_POPUP_EVENT, type LeadPopupEventDetail } from "./leadPopupEvent"
 
 export function PackagesSection() {
 
@@ -19,17 +20,34 @@ export function PackagesSection() {
     source: 'design_development',
   });
 
-  const handleOpen = (title: string, description: string, toptext: string, source: LeadSource) => {
+  const handleOpen = useCallback((title: string, description: string, toptext: string, source: LeadSource) => {
     setPopupData({ title, description, toptext, source });
     setOpen(true);
-  };
+  }, []);
+
+  useEffect(() => {
+    const onOpenLeadPopup = (event: Event) => {
+      const detail = (event as CustomEvent<LeadPopupEventDetail>).detail
+      const source = detail?.source
+      if (!source) return
+
+      const pkg = OUR_PACKAGES.find((p) => p.source === source)
+      if (!pkg) return
+
+      handleOpen(pkg.title, pkg.kicker, pkg.toppopup ?? "", pkg.source)
+    }
+
+    window.addEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
+    return () => window.removeEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
+  }, [handleOpen]);
 
 
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
+      <div id="lead-design-development" className="scroll-mt-24" />
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
         <h2 className="text-center text-[44px] pb-8 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
-          החבילות שלנו
+          השירותים שלנו
         </h2>
 
         <div className="mt-8 grid gap-14 all-package lg:grid-cols-3">

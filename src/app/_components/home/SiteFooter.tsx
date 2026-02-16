@@ -1,23 +1,47 @@
+import Link from "next/link"
 import Image from "next/image"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-const FOOTER_COLUMNS = [
-   {
+
+const LEGAL_LINKS = [
+  { href: "/terms", label: "תנאים משפטיים" },
+  { href: "/privacy", label: "פרטיות" },
+  { href: "/account-deletion", label: "מחיקת חשבון" },
+  { href: "/accessibility", label: "נגישות" },
+] as const
+
+type FooterColumn =
+  | {
+      title: string
+      type: "links"
+      items: readonly { href: string; label: string }[]
+    }
+  | {
+      title: string
+      type: "text"
+      items: readonly string[]
+    }
+
+const FOOTER_COLUMNS: readonly FooterColumn[] = [
+  {
     title: "VOW חשבונית ירוקה מאובטחת",
-    items: ["תנאי שימוש", "מדיניות הפרטיות", "נספח שימוש בשירות הפקת מסמכים", "הסכם מידע שיווקי"],
+    type: "links",
+    items: LEGAL_LINKS,
   },
   {
     title: "החברה",
+    type: "text",
     items: ["VOW", "דרושים", "חדשות", "שקיפות"],
   },
   {
     title: "חברה",
+    type: "text",
     items: ["אודות", "קריירה", "שותפים", "מדיניות פרטיות"],
   },
   {
     title: "תמיכה",
+    type: "text",
     items: ["מרכז עזרה", "צור קשר", "שאלות נפוצות", "סטטוס מערכת"],
   },
- 
 ] as const
 
 export function SiteFooter() {
@@ -27,24 +51,35 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-6">
           
            
-          {FOOTER_COLUMNS.map((col, index) => (
+          {FOOTER_COLUMNS.map((col) => (
             <div
       key={col.title}
       className={`
-        ${index === 0 ? "md:col-span-2 max-w-[400px] text-right order-2 sm:order-1 lg:order-1" : "text-right order-2 sm:order-1 lg:order-1"}
+        ${col.type === "links" ? "md:col-span-2 max-w-[400px] text-right order-2 sm:order-1 lg:order-1" : "text-right order-2 sm:order-1 lg:order-1"}
       `}
     >
               <p className="text-[18px] font-semibold leading-[20px] text-[#A1A1A1]">
                 {col.title}
               </p>
               <ul className="mt-4 space-y-3">
-                {col.items.map((item) => (
-                  <li key={item}>
-                    <span className="cursor-default text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1]">
-                      {item}
-                    </span>
-                  </li>
-                ))}
+                {col.type === "links"
+                  ? col.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded-sm"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))
+                  : col.items.map((item) => (
+                      <li key={item}>
+                        <span className="cursor-default text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1]">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
               </ul>
             </div>
           ))}
