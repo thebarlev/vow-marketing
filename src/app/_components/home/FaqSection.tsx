@@ -121,8 +121,8 @@ export function FaqSection() {
   }
 
   return (
-    <section aria-label="שאלות נפוצות" className="py-[var(--space-section)]">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+    <section aria-label="שאלות נפוצות" className="py-[var(--space-section)]  bg-[#F4F1EC]">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
         <div dir="rtl" className="mx-auto max-w-[777px] w-full px-4 sm:px-0 text-right">
           <h2 className="text-balance text-[44px] font-semibold leading-[1.1] tracking-[-0.2px] text-black sm:text-[56px] lg:text-[64px]">
             שאלות נפוצות

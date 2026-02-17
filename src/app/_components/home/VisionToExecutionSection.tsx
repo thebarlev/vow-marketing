@@ -34,20 +34,23 @@ export function VisionToExecutionSection() {
   }
 
   return (
-    <section aria-label="טכנולוגיה, מוצר ו-AI מהחזון לביצוע" className="py-[var(--space-section)]">
+    <section aria-label="טכנולוגיה, מוצר ו-AI מהחזון לביצוע" className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 text-right">
-        <div >
-          <h2 className="text-right">טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
-          <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%] text-right">
-          ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים — משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.          </h3>
-          <button
-            type="button"
-            onClick={onCtaClick}
-            className="mx-auto mt-7 inline-flex w-full max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15 sm:w-auto"
-          >
-            להשארת פרטים
-          </button>
-        </div>
+      <div className="text-right md:text-center">
+  <h2 className="text-right md:text-center">
+    טכנולוגיה, מוצר ו-AI מהחזון לביצוע
+  </h2>
+  <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%] text-right md:text-center">
+    ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים — משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.
+  </h3>
+  <button
+    type="button"
+    onClick={onCtaClick}
+    className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+  >
+    להשארת פרטים
+  </button>
+</div>
 
         {/* Grid: 2 cols on mobile, 4 on desktop — 97% wide, centered, RTL */}
         <div

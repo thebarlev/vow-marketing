@@ -12,7 +12,7 @@ const BENEFITS: readonly string[] = [
 
 export function GreenInvoiceSection() {
   return (
-    <section aria-label="חשבונית ירוקה מאובטחת" className="py-[var(--space-section)]">
+    <section aria-label="חשבונית ירוקה מאובטחת" className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div className="grid lg:grid-cols-2 lg:items-center lg:gap-16 bg-white">
 
         {/* Left: content — shown first on mobile via order, second on desktop */}

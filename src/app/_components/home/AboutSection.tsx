@@ -25,7 +25,7 @@ export function AboutSection() {
   };
 
   return (
-    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
+    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]">
       <div
         data-gs-root
         className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-4 lg:px-3 relative"
