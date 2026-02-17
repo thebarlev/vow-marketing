@@ -5,7 +5,7 @@ export function Testimonials() {
   return (
     <section aria-label="המלצות" className="py-3">
       <div className="mx-auto max-w-[1440px] px-1 sm:px-6 lg:px-4 ">
-        <div className="grid gap-6 md:gap-22 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:gap-[5.5rem] md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => {
             const src = encodeURI(t.imageSrc)
             return (

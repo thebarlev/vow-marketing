@@ -1,4 +1,3 @@
-import { GreenSignatureCard } from "@/app/_components/home/GreenSignatureCard"
 import { Hero } from "@/app/_components/home/Hero"
 import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"

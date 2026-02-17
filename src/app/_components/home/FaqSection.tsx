@@ -26,7 +26,7 @@ const FAQ_ITEMS: readonly FaqItem[] = [
         כן. יש תמיכה אנושית מלאה:
         <br />
         <br />
-        • צ'אט באתר
+        • צ&apos;אט באתר
         <br />
         • מייל: <a href="mailto:support@vow.co.il" className="text-blue-600 underline hover:text-blue-700">support@vow.co.il</a>
         <br />

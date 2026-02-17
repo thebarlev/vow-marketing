@@ -46,7 +46,7 @@ export function PackagesSection() {
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
       <div id="lead-design-development" className="scroll-mt-24" />
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
-        <h2 className="text-center text-[44px] pb-8 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+        <h2 className="text-center text-[44px] pb-0 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
           השירותים שלנו
         </h2>
 

@@ -35,13 +35,11 @@ export function VisionToExecutionSection() {
 
   return (
     <section aria-label="טכנולוגיה, מוצר ו-AI מהחזון לביצוע" className="py-[var(--space-section)]">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2>טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
-          <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%] text-center">
-            אנחנו ב-VOW מלווים בעלי עסקים ויזמים בבניית מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים -
-            משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.
-          </h3>
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 text-right">
+        <div >
+          <h2 className="text-right">טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
+          <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%] text-right">
+          ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים — משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.          </h3>
           <button
             type="button"
             onClick={onCtaClick}
@@ -69,7 +67,7 @@ export function VisionToExecutionSection() {
               </div>
               <figcaption
                 dir="rtl"
-                className="mt-4 text-right text-[24px] lg:text-[24px] font-semibold leading-tight text-black"
+                className="mt-1  mb-2 text-right text-[20px] lg:text-[24px] font-semibold leading-tight text-black"
               >
                 {card.caption}
               </figcaption>

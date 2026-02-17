@@ -7,7 +7,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header role="banner" className="relative z-50">
+    <header role="banner" className="relative z-50 bg-[#F4F1EC]">
       <a href="#main" className="skip-link">
         דלג לתוכן
       </a>

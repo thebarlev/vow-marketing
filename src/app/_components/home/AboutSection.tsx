@@ -41,7 +41,7 @@ export function AboutSection() {
 >
             <div className="w-full  py-[35px]">
               
-              <h2 className="mt-3 text-right text-[46px]">
+              <h2 className="mt-3 text-right">
               הצטרף למהפכת ה-AI שחוסכת לך כסף ומקצועית כמו רואה חשבון אמיתי
 
 </h2>
@@ -71,7 +71,7 @@ export function AboutSection() {
           </div>
           <div className=" relative h-full sub-package">
   {ABOUT_US.map((p) => (
-    <article key={p.title} className="py-4 sm:p-13">
+    <article key={p.title} className="py-4 sm:p-[3.25rem]">
       
       {/* Title with icon */}
       <div className="flex items-center gap-3 py-2">
