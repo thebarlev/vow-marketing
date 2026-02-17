@@ -15,7 +15,7 @@ export function SiteHeader() {
         <nav
           role="navigation"
           aria-label="ניווט ראשי"
-          className="flex flex-row-reverse items-center justify-between gap-3 py-2 lg:py-6"
+          className="flex flex-row-reverse items-center justify-between gap-3 py-4 lg:py-6"
         >
           {/* Logo */}
           <Link
@@ -36,7 +36,7 @@ export function SiteHeader() {
           {/* Navigation */}
           <ul className="flex flex-nowrap items-center gap-2">
             {/* המבורגר — רק במובייל, בצד ימין */}
-            <li className="sm:hidden">
+            <li className="sm:hidden flex items-center">
               <button
                 type="button"
                 aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
@@ -60,19 +60,19 @@ export function SiteHeader() {
             </li>
 
             {/* כפתורים — תמיד מוצגים */}
-            <li>
+            <li className="flex items-center">
               <a href="https://app.vow.co.il" className="vow-btn-primary">
                 הצטרפות
               </a>
             </li>
-            <li>
+            <li className="flex items-center">
               <a href="https://app.vow.co.il/login" className="vow-btn-secondary">
                 התחברות
               </a>
             </li>
 
             {/* מחירון — נסתר במובייל */}
-            <li className="hidden sm:block">
+            <li className="hidden sm:flex sm:items-center">
               <Link
                 href="/pricing"
                 className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors"
