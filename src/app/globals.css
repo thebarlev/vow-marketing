@@ -188,13 +188,13 @@ body {
     font-size: 50px;
     line-height: 50px;
     letter-spacing: -0.6px;
-    margin-bottom:10px;
+    margin-bottom:5px;
   }
 
   @media (min-width: 1024px) {
     h2 {
       font-size: 70px;
-      line-height: 76px;
+      line-height: 66px;
       letter-spacing: -0.8px;
     }
   }
@@ -211,6 +211,24 @@ body {
     h3 {
       font-size: 24px;
       line-height: 36px;
+    }
+  }
+  /* List Typography */
+  ul, ol {
+    @apply text-right;
+    direction: rtl;
+  }
+
+  li {
+    @apply text-right;
+    font-size: 20px;
+    line-height: 2;
+    direction: rtl;
+  }
+
+  @media (min-width: 1024px) {
+    li {
+      font-size: 20px;
     }
   }
 }
@@ -442,6 +460,24 @@ body {
     outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
     outline-offset: 2px;
   }
+  /* Free Year Heading — matches h2 tokens exactly */
+
+}
+.free-year-heading {
+  color: var(--vow-accent);
+  font-weight: 600;
+  text-align: right;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -0.6px;
+}
+
+@media (min-width: 1024px) {
+  .free-year-heading {
+    font-size: 70px;
+    line-height: 76px;
+    letter-spacing: -0.8px;
+  }
 }
 
 /* Hide scrollbar but keep scrolling */
@@ -477,4 +513,7 @@ body {
     max-width: 100%;
     font-size: 23px;
   }
+}
+.grecaptcha-badge {
+  visibility: hidden;
 }

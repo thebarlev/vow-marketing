@@ -4,14 +4,14 @@ import { TESTIMONIALS } from "./home.constants"
 export function Testimonials() {
   return (
     <section aria-label="המלצות" className="py-3">
-      <div className="mx-auto max-w-[1440px] px-1 sm:px-6 lg:px-3">
+      <div className="mx-auto max-w-[1440px] px-1 sm:px-6 lg:px-4 ">
         <div className="grid gap-6 md:gap-22 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => {
             const src = encodeURI(t.imageSrc)
             return (
               <article
                 key={t.imageSrc}
-                className="rounded-[18px] border border-[color:var(--vow-border)] bg-transparent px-4 md:px-6 py-8 md:py-12 shadow-sm"
+                className="rounded-[18px]  px-4 md:px-6 py-8 md:py-6  bg-white"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="relative size-[86px] overflow-hidden rounded-full border border-[color:var(--vow-border)] bg-[color:var(--vow-bg)]">

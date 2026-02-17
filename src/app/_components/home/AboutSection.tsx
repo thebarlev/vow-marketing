@@ -42,7 +42,8 @@ export function AboutSection() {
             <div className="w-full  py-[35px]">
               
               <h2 className="mt-3 text-right">
-  למה זה נכון בשבילך להצטרף למהפכה של רו״ח AI
+              הצטרף למהפכת ה-AI שחוסכת לך כסף ומקצועית כמו רואה חשבון אמיתי
+
 </h2>
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
                למי זה מתאים: עוסקים פטורים בעלי עסקים עם מחזור עד 500,000 ₪ בשנה

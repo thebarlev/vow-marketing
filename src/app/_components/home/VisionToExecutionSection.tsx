@@ -38,12 +38,10 @@ export function VisionToExecutionSection() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2>טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
-          
           <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%] text-center">
             אנחנו ב-VOW מלווים בעלי עסקים ויזמים בבניית מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים -
             משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.
           </h3>
-
           <button
             type="button"
             onClick={onCtaClick}
@@ -53,25 +51,29 @@ export function VisionToExecutionSection() {
           </button>
         </div>
 
-        <div dir="ltr" className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto px-4">
+        {/* Grid: 2 cols on mobile, 4 on desktop — 97% wide, centered, RTL */}
+        <div
+          dir="rtl"
+          className="mt-10 mx-auto w-[97%] grid grid-cols-2 gap-6 lg:grid-cols-4 lg:max-w-6xl"
+        >
           {CARDS.map((card) => (
-            <figure key={card.src} className="flex flex-col w-full max-w-xs items-end">
-            <div className="relative aspect-[1/1] w-full overflow-hidden rounded-[0px] bg-white shadow-sm">
-              <Image
-                src={card.src}
-                alt={card.alt}
-                fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 300px"
-                className="object-cover"
-              />
-            </div>
-            <figcaption
-              dir="rtl"
-              className="mt-4 text-right text-[16px] lg:text-[18px] font-bold leading-snug text-black lg:w-[75%]"
-            >
-              {card.caption}
-            </figcaption>
-          </figure>
+            <figure key={card.src} className="flex flex-col w-full items-start">
+              <div className="relative aspect-[1/1] w-full overflow-hidden rounded-[0px] bg-white shadow-sm">
+                <Image
+                  src={card.src}
+                  alt={card.alt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption
+                dir="rtl"
+                className="mt-4 text-right text-[24px] lg:text-[18px] font-semibold leading-tight text-black"
+              >
+                {card.caption}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>

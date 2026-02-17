@@ -20,12 +20,11 @@ export default function HomePage() {
 
       <main id="main" role="main">
         <Hero />
-        <GreenInvoiceSection />
         <LogoRow />
         <SuccessSection />
         <Testimonials />
+        <GreenInvoiceSection />
         <VisionToExecutionSection />
-        <GreenSignatureCard />
         <AboutSection />
         <PackagesSection />
         <FaqSection />
