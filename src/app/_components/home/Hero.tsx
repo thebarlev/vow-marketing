@@ -13,10 +13,10 @@ export function Hero() {
           {/* Text */}
           <div className="order-2 text-right lg:order-1">
             <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-4">
-              <span className="block text-[94px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
+              <span className="block text-[80px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 חותמים
               </span>
-              <span className="block text-[94px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
+              <span className="block text-[80px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 על הצלחה
               </span>
             </h1>

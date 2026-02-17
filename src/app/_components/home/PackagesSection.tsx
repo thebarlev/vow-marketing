@@ -50,12 +50,12 @@ export function PackagesSection() {
           השירותים שלנו
         </h2>
 
-        <div className="mt-8 grid gap-14 all-package lg:grid-cols-3">
-          {OUR_PACKAGES.map((p) => (
-            <article
-              key={p.title}
-              className="rounded-[10px] bg-white mx-auto w-[386px] p-6 shadow-[0_0_24px_10px_rgba(0,0,0,0.07)] flex flex-col items-stretch"
-              >
+        <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-1 lg:place-items-stretch lg:justify-center">
+           {OUR_PACKAGES.map((p) => (
+    <article
+  key={p.title}
+  className="rounded-[10px] bg-white w-[98%] max-w-[386px] mx-auto lg:w-full lg:max-w-[350px] lg:mx-auto p-6 shadow-[0_0_24px_10px_rgba(0,0,0,0.07)] flex flex-col items-stretch"
+>
               <p className="text-right text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)]">
                  {p.kicker}
               </p>
@@ -64,14 +64,13 @@ export function PackagesSection() {
               </h3>
 
               <button
-                type="button"
-                className="vow-btn-primary mt-4 w-full cursor-pointer max-w-[323px]"
-                onClick={() => handleOpen(p.title, p.kicker, p.toppopup, p.source)}
-              >
-                {p.buttonLabel}
-              </button>
-
-              <div className="mt-7 h-px w-full max-w-[323px]  bg-[color:var(--vow-border)]" />
+  type="button"
+  className="vow-btn-primary mt-4 w-full cursor-pointer"
+  onClick={() => handleOpen(p.title, p.kicker, p.toppopup, p.source)}
+>
+  {p.buttonLabel}
+</button>
+<div className="mt-7 h-px w-full bg-[color:var(--vow-border)]" />
 
               <ul className="mt-4 space-y-1 text-left text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]">
   {p.bullets.map((b) => (

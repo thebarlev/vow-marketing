@@ -69,7 +69,7 @@ export function VisionToExecutionSection() {
               </div>
               <figcaption
                 dir="rtl"
-                className="mt-4 text-right text-[24px] lg:text-[18px] font-semibold leading-tight text-black"
+                className="mt-4 text-right text-[24px] lg:text-[24px] font-semibold leading-tight text-black"
               >
                 {card.caption}
               </figcaption>

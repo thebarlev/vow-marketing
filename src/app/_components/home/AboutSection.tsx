@@ -32,7 +32,7 @@ export function AboutSection() {
       >
         <div
   data-gs-grid
-  className="relative rounded-[10px] grid bg-white p-4 px-8 main-row gap-4 lg:grid-cols-2"
+  className="relative rounded-[10px] grid bg-white p-4 px-4 main-row gap-4 lg:grid-cols-2"
 >
           {/* Card - ימין */}
           <div
@@ -41,7 +41,7 @@ export function AboutSection() {
 >
             <div className="w-full  py-[35px]">
               
-              <h2 className="mt-3 text-right">
+              <h2 className="mt-3 text-right text-[46px]">
               הצטרף למהפכת ה-AI שחוסכת לך כסף ומקצועית כמו רואה חשבון אמיתי
 
 </h2>

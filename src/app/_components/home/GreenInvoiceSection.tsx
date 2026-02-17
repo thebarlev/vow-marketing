@@ -19,9 +19,15 @@ export function GreenInvoiceSection() {
         <div className="flex items-center justify-center order-2 lg:order-1 bg-white">
           <div dir="rtl" className="py-10 text-right lg:py-0 w-full max-w-[520px] mx-auto px-4 sm:px-6 lg:px-8">
             <p className="free-year-heading">חינם לשנה</p>
-            <h2 className="mt-0 !text-right !font-semibold text-black">
+            <h2 className="mt-0 !text-right !font-semibold text-black ">
               חשבונית ירוקה מאובטחת
             </h2>
+            <Link
+              href="https://app.vow.co.il"
+              className="vow-btn-primary mt-8 w-full max-w-[323px] !rounded-xl px-10 py-4 mb-4"
+            >
+              להצטרפות
+            </Link>
             <ul className="mt-1 space-y-1 text-base leading-8 text-black lg:text-lg">
               {BENEFITS.map((benefit) => (
                 <li key={benefit} className="flex  items-center gap-3">
@@ -30,12 +36,7 @@ export function GreenInvoiceSection() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="https://app.vow.co.il"
-              className="vow-btn-primary mt-8 w-full max-w-[323px] !rounded-xl px-10 py-4"
-            >
-              להצטרפות
-            </Link>
+
           </div>
         </div>
 

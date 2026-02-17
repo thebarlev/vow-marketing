@@ -12,6 +12,11 @@ const assistant = Assistant({
 export const metadata: Metadata = {
   title: "VOW",
   description: "חותמים על הצלחה",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon-16x16.png',
+  },
 };
 
 export default function RootLayout({
@@ -20,12 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
   return (
     <html lang="he" dir="rtl" className={assistant.variable}>
       <body className="antialiased font-sans">
         {children}
-
         {siteKey && (
           <Script
             src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
