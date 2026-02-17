@@ -24,7 +24,7 @@ export function GreenInvoiceSection() {
             </h2>
             <ul className="mt-1 space-y-1 text-base leading-8 text-black lg:text-lg">
               {BENEFITS.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
+                <li key={benefit} className="flex  items-center gap-3">
                   <CheckIcon className="mt-1 shrink-0" />
                   <span>{benefit}</span>
                 </li>

@@ -11,10 +11,10 @@ export function Testimonials() {
             return (
               <article
                 key={t.imageSrc}
-                className="rounded-[18px]  px-4 md:px-6 py-8 md:py-6  bg-white"
+                className="rounded-[18px]  px-4 md:px-6 py-8 md:py-6  bg-white mx-auto w-[95%] md:w-full"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="relative size-[86px] overflow-hidden rounded-full border border-[color:var(--vow-border)] bg-[color:var(--vow-bg)]">
+                  <div className="relative size-[86px] overflow-hidden rounded-full bg-[color:var(--vow-bg)]">
                     <Image
                       src={src}
                       alt={t.imageAlt}
@@ -26,7 +26,7 @@ export function Testimonials() {
                   <p className="mt-3 md:mt-4 w-[95%] max-w-full text-center text-[20px] font-bold leading-[32px] text-[color:var(--vow-muted)] py-1 md:py-2">
                     {t.title}
                   </p>
-                  <p className="mt-1 md:mt-2 w-[95%] max-w-full text-center text-[20px] font-semibold leading-[32px] text-[color:var(--vow-muted)]">
+                  <p className="mt-1 md:mt-2 w-[99%] max-w-full text-center text-[20px] font-semibold leading-[30px] text-black">
                     {t.text}
                   </p>
                 </div>

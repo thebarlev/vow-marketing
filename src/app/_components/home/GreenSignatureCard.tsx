@@ -63,7 +63,7 @@ export function GreenSignatureCard() {
               <div className="py-[30px]">
                 <div className="w-full max-w-[323px] h-px bg-[#CCCCCC]" />
               </div>
-              <ul className="space-y-4 text-[20px] leading-9 py-2 text-black" dir="rtl">
+              <ul className="space-y-4 leading-9 py-2 text-black" dir="rtl">
   <li className="flex items-start gap-3">
     <CheckIcon className="shrink-0" />
     <span>הפקת מסמכים רציפה </span>

@@ -56,7 +56,7 @@ body {
 :root {
   /* Brand tokens */
   --vow-bg: #f5f9fa;
-  --vow-accent: #5389bb; /* כחול - הצבע העיקרי שלך */
+  --vow-accent: #5389bb;
   --vow-muted: #747474;
   --vow-border: #ccc;
   --vow-black: #000;
@@ -177,7 +177,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
@@ -188,15 +188,7 @@ body {
     font-size: 50px;
     line-height: 50px;
     letter-spacing: -0.6px;
-    margin-bottom:5px;
-  }
-
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 70px;
-      line-height: 66px;
-      letter-spacing: -0.8px;
-    }
+    margin-bottom: 5px;
   }
 
   /* H3 Typography */
@@ -207,12 +199,6 @@ body {
     line-height: 32px;
   }
 
-  @media (min-width: 1024px) {
-    h3 {
-      font-size: 24px;
-      line-height: 36px;
-    }
-  }
   /* List Typography */
   ul, ol {
     @apply text-right;
@@ -221,21 +207,32 @@ body {
 
   li {
     @apply text-right;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 2;
     direction: rtl;
   }
 
   @media (min-width: 1024px) {
+    h2 {
+      font-size: 70px;
+      line-height: 66px;
+      letter-spacing: -0.8px;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
     li {
-      font-size: 20px;
+      font-size: 22x;
     }
   }
 }
 
 /* ===== COMPONENTS LAYER ===== */
 @layer components {
-  
+
   /* Primary Button */
   .btn-primary {
     display: flex;
@@ -253,13 +250,13 @@ body {
     cursor: pointer;
     border: none;
   }
-  
+
   .btn-primary:hover {
     background: #5389BB;
     color: #FFFFFF;
     transform: translateY(-1px);
   }
-  
+
   .btn-primary:active {
     background: #000;
     transform: translateY(0);
@@ -283,14 +280,14 @@ body {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  
+
   .btn-secondary:hover {
     background: #5389BB;
     transform: translateY(-1px);
     color: #FFFFFF;
     border: 1px solid #5389BB;
   }
-  
+
   .btn-secondary:active {
     background: #e5e5e5;
     transform: translateY(0);
@@ -312,12 +309,12 @@ body {
     transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
     font-weight: 600;
   }
-  
+
   .vow-btn-primary:hover {
     background: var(--vow-button-hover-bg);
     border-color: var(--vow-button-hover-border);
   }
-  
+
   .vow-btn-primary:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
     outline-offset: 2px;
@@ -339,13 +336,13 @@ body {
     font-weight: 600;
     transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
   }
-  
+
   .vow-btn-secondary:hover {
     background: var(--vow-accent);
     border-color: var(--vow-accent);
     color: var(--vow-white);
   }
-  
+
   .vow-btn-secondary:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
     outline-offset: 2px;
@@ -366,18 +363,18 @@ body {
     transition: color 0.2s ease-in-out;
     cursor: pointer;
   }
-  
+
   .link-standard:hover {
     color: #5389BB;
   }
-  
+
   .link-standard:visited {
     color: #5389BB;
     font-size: 18px;
     font-weight: 700;
   }
 
-  /* Blue Link (for cookies and general use) */
+  /* Blue Link */
   .link-orange {
     color: #5389BB;
     text-decoration-line: underline;
@@ -386,12 +383,12 @@ body {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  
+
   .link-orange:hover {
     color: #3d6a94;
     text-decoration-thickness: 2px;
   }
-  
+
   .link-orange:active {
     color: #2a4a66;
   }
@@ -401,7 +398,7 @@ body {
     transition: all 0.3s ease;
     font-weight: 600;
   }
-  
+
   .hero-tag-active {
     font-weight: 700;
     color: var(--vow-accent);
@@ -453,23 +450,23 @@ body {
     border-radius: 0.75rem;
     padding: 0.5rem 0.75rem;
   }
-  
+
   .skip-link:focus,
   .skip-link:focus-visible {
     transform: translateY(0);
     outline: 3px solid color-mix(in srgb, var(--vow-accent) 35%, transparent);
     outline-offset: 2px;
   }
-  /* Free Year Heading — matches h2 tokens exactly */
 
-}
-.free-year-heading {
-  color: var(--vow-accent);
-  font-weight: 600;
-  text-align: right;
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: -0.6px;
+  /* Free Year Heading — matches h2 tokens exactly */
+  .free-year-heading {
+    color: var(--vow-accent);
+    font-weight: 600;
+    text-align: right;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.6px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -490,21 +487,21 @@ body {
   display: none;
 }
 
-/* ✅ Mobile Responsive */
+/* Mobile Responsive */
 @media (max-width: 1024px) {
-  .vow-btn-primary, 
+  .vow-btn-primary,
   .vow-btn-secondary {
     padding: 10px;
   }
-  
+
   .mobile-margin-top {
     margin-top: 50px;
   }
-  
+
   .h3-title {
     max-width: 84%;
   }
-  
+
   .all-package .h3-title {
     max-width: 64%;
   }
@@ -514,6 +511,7 @@ body {
     font-size: 23px;
   }
 }
+
 .grecaptcha-badge {
   visibility: hidden;
 }

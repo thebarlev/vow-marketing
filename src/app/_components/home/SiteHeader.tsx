@@ -31,7 +31,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Navigation */}
-          <ul className="flex flex-wrap items-center gap-2 max-w-full">
+          <ul className="flex flex-nowrap items-center gap-2 max-w-full">
           <li>
               <a
                 href="https://app.vow.co.il"

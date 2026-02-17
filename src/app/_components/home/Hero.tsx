@@ -13,10 +13,10 @@ export function Hero() {
           {/* Text */}
           <div className="order-2 text-right lg:order-1">
             <h1 className="text-black flex flex-wrap lg:flex-col lg:gap-4">
-              <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
+              <span className="block text-[94px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 חותמים
               </span>
-              <span className="block text-[64px] font-semibold leading-[58px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
+              <span className="block text-[94px] font-semibold leading-[88px] tracking-[-0.8px] sm:text-[96px] sm:leading-[88px] lg:text-[156px] lg:leading-[144px] lg:tracking-[-1.56px]">
                 על הצלחה
               </span>
             </h1>
@@ -27,7 +27,21 @@ export function Hero() {
 
           {/* Image */}
           <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <div className="relative w-full lg:max-w-[560px] overflow-hidden rounded-[22px] bg-white shadow-sm">
+
+            {/* Mobile image — full width, no rounded corners, cropped from top */}
+            <div className="relative w-screen -mx-4 overflow-hidden max-[990px]:block hidden"
+                 style={{ aspectRatio: "16/9" }}>
+              <Image
+                src="/m-woman-vow.webp"
+                alt="תמונת הירו: צוות VOW"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+
+            {/* Desktop image — original style */}
+            <div className="relative hidden min-[990px]:block w-full lg:max-w-[560px] overflow-hidden rounded-[22px] bg-white shadow-sm">
               <Image
                 src="/hero.webp"
                 alt="תמונת הירו: צוות VOW"
@@ -37,6 +51,7 @@ export function Hero() {
                 priority
               />
             </div>
+
           </div>
         </div>
       </div>
