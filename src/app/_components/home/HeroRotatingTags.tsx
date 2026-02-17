@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 
 function prefersReducedMotion() {
@@ -13,11 +12,9 @@ export function HeroRotatingTags(props: { items: readonly string[] }) {
   React.useEffect(() => {
     if (prefersReducedMotion()) return
     if (props.items.length <= 1) return
-
     const id = window.setInterval(() => {
       setActiveIndex((i) => (i + 1) % props.items.length)
     }, 3000)
-
     return () => window.clearInterval(id)
   }, [props.items.length])
 
@@ -31,8 +28,8 @@ export function HeroRotatingTags(props: { items: readonly string[] }) {
           key={t}
           className={
             idx === activeIndex
-              ? "text-[color:var(--vow-accent)] transition-colors"
-              : "text-black transition-colors"
+              ? "text-[color:var(--vow-accent)] font-semibold transition-all duration-300"
+              : "text-black font-normal transition-all duration-300"
           }
         >
           {t}
@@ -41,4 +38,3 @@ export function HeroRotatingTags(props: { items: readonly string[] }) {
     </div>
   )
 }
-
