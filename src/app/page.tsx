@@ -1,24 +1,26 @@
-import type { Metadata } from "next";
+// src/app/page.tsx
+import type { Metadata } from "next"
 
-import { Hero } from "@/app/_components/home/Hero";
-import { LogoRow } from "@/app/_components/home/LogoRow";
-import { PackagesSection } from "@/app/_components/home/PackagesSection";
-import { SiteFooter } from "@/app/_components/home/SiteFooter";
-import { SiteHeader } from "@/app/_components/home/SiteHeader";
-import { SuccessSection } from "@/app/_components/home/SuccessSection";
-import { Testimonials } from "@/app/_components/home/Testimonials";
-import { CookieBanner } from "@/app/_components/home/CookieBanner";
-import { AboutSection } from "@/app/_components/home/AboutSection";
-import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection";
-import { FaqSection } from "@/app/_components/home/FaqSection";
-import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection";
+import { Hero } from "@/app/_components/home/Hero"
+import { LogoRow } from "@/app/_components/home/LogoRow"
+import { PackagesSection } from "@/app/_components/home/PackagesSection"
+import { SiteFooter } from "@/app/_components/home/SiteFooter"
+import { SiteHeader } from "@/app/_components/home/SiteHeader"
+import { SuccessSection } from "@/app/_components/home/SuccessSection"
+import { Testimonials } from "@/app/_components/home/Testimonials"
+import { CookieBanner } from "@/app/_components/home/CookieBanner"
+import { AboutSection } from "@/app/_components/home/AboutSection"
+import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
+import { FaqSection } from "@/app/_components/home/FaqSection"
+import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://app.vow.co.il"),
+  // ✅ זה האתר השיווקי (לא app)
+  metadataBase: new URL("https://vow.co.il"),
 
   title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
   description:
-    ,
+    "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
 
   keywords: [
     "רו״ח AI",
@@ -37,11 +39,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
     description:
-"VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",    url: "https://app.vow.co.il",
+      "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
+    url: "https://vow.co.il",
     siteName: "VOW",
     images: [
       {
-        url: "https://app.vow.co.il/og-home.jpg",
+        url: "https://vow.co.il/og-home.jpg",
         width: 1200,
         height: 630,
         alt: "VOW – AI Accountant & Digital Business Platform",
@@ -56,14 +59,14 @@ export const metadata: Metadata = {
     title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
     description:
       "שנה חינם לחשבונית דיגיטלית מאובטחת + רו״ח AI, שיווק, מיתוג ופיתוח מערכות לעסקים.",
-    images: ["https://app.vow.co.il/og-home.jpg"],
+    images: ["https://vow.co.il/og-home.jpg"],
   },
 
   robots: {
     index: true,
     follow: true,
   },
-};
+}
 
 export default function HomePage() {
   return (
@@ -85,5 +88,5 @@ export default function HomePage() {
       <CookieBanner />
       <SiteFooter />
     </div>
-  );
+  )
 }
