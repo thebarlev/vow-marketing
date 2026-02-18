@@ -39,7 +39,7 @@ export function VisionToExecutionSection() {
       <div className="text-right md:text-center">
       <h2 className="text-right md:text-center w-full">טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
           <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
-            ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים — משלב הרעיון וה-MVP ועד למוצר יציב, סקיילבילי ומוכן לצמיחה.
+          ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים - משלב הרעיון וה-MVP ועד למוצר פעיל ומוכן לצמיחה.
           </h3>
           <button
             type="button"

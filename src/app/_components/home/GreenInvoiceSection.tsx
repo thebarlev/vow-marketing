@@ -16,7 +16,7 @@ export function GreenInvoiceSection() {
       <div className="grid lg:grid-cols-2 lg:items-center lg:gap-16 bg-white">
 
         {/* Left: content — shown first on mobile via order, second on desktop */}
-        <div className="flex items-center justify-center order-2 lg:order-1 bg-white">
+        <div className="flex items-center justify-center order-2 lg:order-1 max-w-[400px] mx-auto">
           <div dir="rtl" className="py-10 text-right lg:py-0 w-full max-w-[520px] mx-auto px-4 sm:px-6 lg:px-8">
             <p className="free-year-heading">חינם לשנה</p>
             <h2 className="mt-0 !text-right !font-semibold text-black ">
