@@ -11,7 +11,7 @@ export function SiteHeader() {
       <a href="#main" className="skip-link">
         דלג לתוכן
       </a>
-      <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-5">
+      <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-4ד">
         <nav
           role="navigation"
           aria-label="ניווט ראשי"
@@ -61,12 +61,12 @@ export function SiteHeader() {
 
             {/* כפתורים — תמיד מוצגים */}
             <li className="flex items-center">
-              <a href="https://app.vow.co.il" className="vow-btn-primary">
+              <a href="https://app.vow.co.il" className="vow-btn-primary ">
                 הצטרפות
               </a>
             </li>
             <li className="flex items-center">
-              <a href="https://app.vow.co.il/login" className="vow-btn-secondary">
+              <a href="https://app.vow.co.il/login" className="mr-3 vow-btn-secondary">
                 התחברות
               </a>
             </li>
@@ -75,7 +75,7 @@ export function SiteHeader() {
             <li className="hidden sm:flex sm:items-center">
               <Link
                 href="/pricing"
-                className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors"
+                className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
               >
                 מחירון
               </Link>
