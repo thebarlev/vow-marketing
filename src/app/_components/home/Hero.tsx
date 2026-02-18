@@ -11,8 +11,7 @@ const HERO_TAGS = [
 export function Hero() {
   return (
     <section className="w-full bg-[#F4F1EC]" dir="rtl">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-[var(--space-section)]">
-        <div className="grid gap-5 md:grid-cols-2 md:items-center">
+<div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4 pt-0 pb-[var(--space-section)] md:py-[var(--space-section)]">        <div className="grid gap-5 md:grid-cols-2 md:items-center">
           
           {/* ===== TEXT (ימין) ===== */}
           <div className="min-w-0 w-full flex flex-col items-end text-right order-2 md:order-1 px-4 sm:px-6 md:px-0">

@@ -23,7 +23,7 @@ type FooterColumn =
 
 const FOOTER_COLUMNS: readonly FooterColumn[] = [
   {
-    title: "VOW חשבונית ירוקה מאובטחת",
+    title: "חשוב לדעת",
     type: "links",
     items: LEGAL_LINKS,
   },
@@ -32,7 +32,7 @@ const FOOTER_COLUMNS: readonly FooterColumn[] = [
 export function SiteFooter() {
   return (
     <footer role="contentinfo" className="bg-black">
-      <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-4">
         <div className="grid gap-10 md:grid-cols-6">
           {FOOTER_COLUMNS.map((col) => (
             <div
