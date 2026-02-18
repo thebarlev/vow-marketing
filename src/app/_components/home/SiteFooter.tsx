@@ -27,6 +27,11 @@ const FOOTER_COLUMNS: readonly FooterColumn[] = [
     type: "links",
     items: LEGAL_LINKS,
   },
+  {
+    title: "עמודים",
+    type: "text",
+    items: ["יצירת קשר"],
+  },
 ] as const
 
 export function SiteFooter() {
@@ -58,9 +63,18 @@ export function SiteFooter() {
                     ))
                   : col.items.map((item) => (
                       <li key={item}>
-                        <span className="cursor-default text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1]">
-                          {item}
-                        </span>
+                        {item === "יצירת קשר" ? (
+                          <Link
+                            href="/contact"
+                            className="text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded-sm"
+                          >
+                            {item}
+                          </Link>
+                        ) : (
+                          <span className="cursor-default text-[18px] font-normal leading-[20px] text-white underline-offset-4 hover:underline hover:text-[#A1A1A1]">
+                            {item}
+                          </span>
+                        )}
                       </li>
                     ))}
               </ul>
