@@ -25,25 +25,26 @@ export function AboutSection() {
   };
 
   return (
-    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top">
+    <section aria-label="חתימה ירוקה" className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]">
       <div
         data-gs-root
-        className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-4 lg:px-3 relative"
+        className="mx-auto max-w-[1440px] rounded-[10px] mx-auto w-full px-4 sm:px-4 lg:px-4 relative"
       >
         <div
   data-gs-grid
-  className="relative rounded-[10px] grid bg-white p-4 px-8 main-row gap-22 lg:grid-cols-2"
+  className="relative rounded-[10px] grid bg-white p-4 px-4 main-row gap-4 lg:grid-cols-2"
 >
           {/* Card - ימין */}
           <div
   data-gs-card-col
-  className="  relative z-10 flex justify-start items-center mr-4"
+  className="  relative z-10 flex justify-start items-center "
 >
             <div className="w-full  py-[35px]">
               
-              <h3 className="mt-3 text-[30px] sm:text-[70px] sm:leading-[70px] font-semibold sm:max-w-[90%]">
-                 למה זה נכון בשבילך להצטרף למהפכה של רו״ח AI
-              </h3>
+              <h2 className="mt-3 text-right">
+              הצטרף למהפכת ה-AI שחוסכת לך כסף ומקצועית כמו רואה חשבון אמיתי
+
+</h2>
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
                למי זה מתאים: עוסקים פטורים בעלי עסקים עם מחזור עד 500,000 ₪ בשנה
               </p>
@@ -70,7 +71,7 @@ export function AboutSection() {
           </div>
           <div className=" relative h-full sub-package">
   {ABOUT_US.map((p) => (
-    <article key={p.title} className="py-4 sm:p-13">
+    <article key={p.title} className="py-4 sm:p-[3.25rem]">
       
       {/* Title with icon */}
       <div className="flex items-center gap-3 py-2">
