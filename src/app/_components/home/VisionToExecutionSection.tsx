@@ -4,14 +4,9 @@ import { openLeadPopup } from "./leadPopupEvent"
 
 const CARDS = [
   {
-    src: "/1.webp",
-    alt: "אוטומציות, אינטגרציות ו-AI עסקי",
-    caption: "אוטומציות, אינטגרציות ו-AI עסקי",
-  },
-  {
-    src: "/2.webp",
-    alt: "שיפור ביצועים, חוויית משתמש וסקייל",
-    caption: "שיפור ביצועים, חוויית משתמש וסקייל",
+    src: "/4.webp",
+    alt: "פיתוח MVP ליזמים וסטארטאפים",
+    caption: "פיתוח MVP ליזמים וסטארטאפים",
   },
   {
     src: "/3.webp",
@@ -19,10 +14,18 @@ const CARDS = [
     caption: "תכנון ופיתוח אתרים ואפליקציות",
   },
   {
-    src: "/4.webp",
-    alt: "פיתוח MVP ליזמים וסטארטאפים",
-    caption: "פיתוח MVP ליזמים וסטארטאפים",
+    src: "/2.webp",
+    alt: "שיפור ביצועים, חוויית משתמש וסקייל",
+    caption: "שיפור ביצועים, חוויית משתמש וסקייל",
   },
+  {
+    src: "/1.webp",
+    alt: "אוטומציות, אינטגרציות ו-AI עסקי",
+    caption: "אוטומציות, אינטגרציות ו-AI עסקי",
+  },
+  
+
+
 ] as const
 
 export function VisionToExecutionSection() {
@@ -34,12 +37,12 @@ export function VisionToExecutionSection() {
   }
 
   return (
-    <section aria-label="טכנולוגיה, מוצר ו-AI מהחזון לביצוע" className="py-[var(--space-section)] bg-[#F4F1EC]">
+    <section aria-label="פיתוח, עיצוב ושיווק דיגיטלי מבוסס AI שמייצר צמיחה" className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <div className="text-right md:text-center">
-      <h2 className="text-right md:text-center w-full">טכנולוגיה, מוצר ו-AI מהחזון לביצוע</h2>
+      <h2 className="text-right md:text-center w-full  pb-2">פיתוח, עיצוב ושיווק דיגיטלי מבוסס AI שמייצר צמיחה</h2>
           <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
-          ב-VOW אנחנו מלווים בעלי עסקים ויזמים בפיתוח מוצרים דיגיטליים, מערכות חכמות ואתרי אינטרנט מתקדמים - משלב הרעיון וה-MVP ועד למוצר פעיל ומוכן לצמיחה.
+          ב-VOW בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים.
           </h3>
           <button
             type="button"
