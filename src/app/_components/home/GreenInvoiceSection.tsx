@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-
 import { CheckIcon } from "./CheckIcon"
 
 const BENEFITS: readonly string[] = [
@@ -13,10 +12,36 @@ const BENEFITS: readonly string[] = [
 
 export function GreenInvoiceSection() {
   return (
-    <section aria-label="חשבונית ירוקה מאובטחת" className="py-[var(--space-section)]">
-      <div className="grid lg:grid-cols-2 lg:items-center lg:gap-16">
-        {/* Left: edge-to-edge image (no padding/margins) */}
-        <div className="relative w-full min-h-[320px] lg:min-h-[640px] overflow-hidden">
+    <section aria-label="חשבונית ירוקה מאובטחת" className="py-[var(--space-section)] bg-[#F4F1EC]">
+      <div className="grid lg:grid-cols-2 lg:items-center lg:gap-16 bg-white">
+
+        {/* Left: content — shown first on mobile via order, second on desktop */}
+        <div className="flex items-center justify-center order-2 lg:order-1 max-w-[400px] mx-auto">
+          <div dir="rtl" className="py-10 text-right lg:py-0 w-full max-w-[520px] mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="free-year-heading">חינם לשנה</p>
+            <h2 className="mt-0 !text-right !font-semibold text-black ">
+              חשבונית ירוקה מאובטחת
+            </h2>
+            <Link
+              href="https://app.vow.co.il"
+              className="vow-btn-primary mt-8 w-full max-w-[323px] !rounded-xl px-10 py-4 mb-4"
+            >
+              להצטרפות
+            </Link>
+            <ul className="mt-1 space-y-1 text-base leading-8 text-black lg:text-lg">
+              {BENEFITS.map((benefit) => (
+                <li key={benefit} className="flex  items-center gap-3">
+                  <CheckIcon className="mt-1 shrink-0" />
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+        </div>
+
+        {/* Right: edge-to-edge image — shown second on mobile, first on desktop */}
+        <div className="relative w-full min-h-[320px] lg:min-h-[640px] overflow-hidden order-1 lg:order-2">
           <Image
             src="/manmobile.webp"
             alt="חשבונית ירוקה מאובטחת — תצוגה במובייל"
@@ -34,36 +59,7 @@ export function GreenInvoiceSection() {
           />
         </div>
 
-        {/* Right: content inside regular site container */}
-        <div className="flex items-center">
-          <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-            <div dir="rtl" className="py-10 text-right lg:py-0 lg:max-w-[520px]">
-              <p className="font-semibold text-[color:var(--vow-accent)]">חינם לשנה</p>
-
-              <h2 className="mt-3 text-3xl font-bold text-black lg:text-5xl">
-                חשבונית ירוקה מאובטחת
-              </h2>
-
-              <ul className="mt-7 space-y-3 text-base leading-8 text-black lg:text-lg">
-                {BENEFITS.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-3">
-                    <CheckIcon className="mt-1 shrink-0" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="https://app.vow.co.il"
-                className="vow-btn-primary mt-8 w-full max-w-[323px] !rounded-xl px-10 py-4"
-              >
-                להצטרפות
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )
 }
-

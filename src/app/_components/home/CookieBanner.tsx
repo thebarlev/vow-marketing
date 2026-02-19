@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const CONSENT_KEY = "vow_cookie_consent";
 const CONSENT_TIMESTAMP_KEY = "vow_cookie_consent_ts";
-
 type ConsentValue = "accepted" | "rejected";
 
 export function CookieBanner() {
@@ -33,10 +32,6 @@ export function CookieBanner() {
     setVisible(false);
   };
 
-  const handleClose = () => {
-    setVisible(false);
-  };
-
   if (!mounted) return null;
   if (!visible) return null;
 
@@ -48,62 +43,69 @@ export function CookieBanner() {
       aria-label="Cookie consent"
     >
       <div className="mx-auto flex max-w-[1200px] items-start gap-4 sm:items-center">
-        {/* Close Button */}
-        <button
-          type="button"
-          onClick={handleClose}
-          className="flex-shrink-0 text-black hover:text-gray-700 transition-colors cursor-pointer"
-          aria-label="סגור הודעת עוגיות"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-
-        {/* Content */}
-        <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        {/* מובייל: פריסה אנכית */}
+        <div className="flex-1 flex flex-col gap-4 sm:hidden">
           <div className="flex items-start gap-3 text-right">
-            {/* Cookie Icon */}
-            <Image
-              src="/cookies.svg"
-              alt="cookies"
-              width={40}
-              height={40}
-              className="flex-shrink-0"
-            />
-            
-            {/* Text Content */}
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 flex-1">
               <h3 className="text-[20px] font-semibold text-[#FF6B35] leading-tight">
                 כל הקליקים על המשולחן
               </h3>
-              <p className="text-[20px] text-gray-700 leading-snug">
+              <p className="text-[16px] text-gray-700 leading-snug">
                 אנחנו משתמשים בעוגיות (cookies) כדי לשפר את חווית הגלישה באתר. המשך גלישה באתר = הסכמה מצדך. רוצה לדעת יותר?{" "}
-                <a href="/privacy" className="link-orange">
-                  לחץ כאן
-                </a>
+                <a href="/privacy" className="link-orange">לחץ כאן</a>
               </p>
             </div>
           </div>
-
-          {/* Buttons */}
-          <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
-            <button
-              type="button"
-              className="btn-secondary w-[100px]"
-              onClick={() => setConsent("rejected")}
-            >
-              דחה
-            </button>
-            <button
-              type="button"
-              className="btn-primary w-[100px]"
-              onClick={() => setConsent("accepted")}
-            >
-              מאשר
-            </button>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button type="button" className="btn-secondary w-[80px]" onClick={() => setConsent("rejected")}>
+                דחה
+              </button>
+              <button type="button" className="btn-primary w-[80px]" onClick={() => setConsent("accepted")}>
+                מאשר
+              </button>
+            </div>
+            <Image
+              src="/cookies.svg"
+              alt="cookies"
+              width={68}
+              height={68}
+              className="flex-shrink-0"
+            />
           </div>
         </div>
+
+        {/* דסקטופ: טקסט וכפתורים בשורה אחת */}
+        <div className="hidden sm:flex items-start gap-4 flex-1">
+          <Image
+            src="/cookies.svg"
+            alt="cookies"
+            width={40}
+            height={40}
+            className="flex-shrink-0"
+          />
+          <div className="flex-1 flex items-start gap-4">
+            <div className="flex flex-col gap-1 flex-1 min-w-0">
+              <h3 className="text-[20px] font-semibold text-[#FF6B35] leading-[1.2]">
+                כל הקליקים על המשולחן
+              </h3>
+              <p className="text-[16px] text-gray-700 leading-[1.4]">
+                אנחנו משתמשים בעוגיות (cookies) כדי לשפר את חווית הגלישה באתר. המשך גלישה באתר = הסכמה מצדך. רוצה לדעת יותר?{" "}
+                <a href="/privacy" className="link-orange">לחץ כאן</a>
+              </p>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <button type="button" className="btn-secondary w-[100px]" onClick={() => setConsent("rejected")}>
+                דחה
+              </button>
+              <button type="button" className="btn-primary w-[100px]" onClick={() => setConsent("accepted")}>
+                מאשר
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

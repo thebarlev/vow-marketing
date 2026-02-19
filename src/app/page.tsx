@@ -1,4 +1,6 @@
-import { GreenSignatureCard } from "@/app/_components/home/GreenSignatureCard"
+// src/app/page.tsx
+import type { Metadata } from "next"
+
 import { Hero } from "@/app/_components/home/Hero"
 import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
@@ -12,6 +14,59 @@ import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecuti
 import { FaqSection } from "@/app/_components/home/FaqSection"
 import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
 
+export const metadata: Metadata = {
+  // ✅ זה האתר השיווקי (לא app)
+  metadataBase: new URL("https://vow.co.il"),
+
+  title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+  description:
+    "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
+
+  keywords: [
+    "רו״ח AI",
+    "חשבונית דיגיטלית",
+    "חשבוניות אונליין",
+    "מערכת חשבוניות",
+    "חתימה דיגיטלית",
+    "חיבור לשע״מ",
+    "פיתוח אתרים",
+    "ניהול מוצר",
+    "שיווק מבוסס AI",
+    "מערכת ניהול עסקי",
+    "עיצוב ומיתוג לעסקים",
+  ],
+
+  openGraph: {
+    title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+    description:
+      "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
+    url: "https://vow.co.il",
+    siteName: "VOW",
+    images: [
+      {
+        url: "https://vow.co.il/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "VOW – AI Accountant & Digital Business Platform",
+      },
+    ],
+    locale: "he_IL",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+    description:
+      "שנה חינם לחשבונית דיגיטלית מאובטחת + רו״ח AI, שיווק, מיתוג ופיתוח מערכות לעסקים.",
+    images: ["https://vow.co.il/og-home.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function HomePage() {
   return (
@@ -20,12 +75,11 @@ export default function HomePage() {
 
       <main id="main" role="main">
         <Hero />
-        <GreenInvoiceSection />
         <LogoRow />
         <SuccessSection />
         <Testimonials />
+        <GreenInvoiceSection />
         <VisionToExecutionSection />
-        <GreenSignatureCard />
         <AboutSection />
         <PackagesSection />
         <FaqSection />
