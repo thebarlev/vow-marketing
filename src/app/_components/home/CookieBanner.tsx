@@ -1,109 +1,111 @@
 "use client";
-
-import { useState } from "react";
+import * as React from "react";
 import Image from "next/image";
 
-const CONSENT_KEY = "cookies_consent";
-const CONSENT_TIMESTAMP_KEY = "cookies_consent_timestamp";
-const CONSENT_DURATION_MS = 365 * 24 * 60 * 60 * 1000; // 12 חודשים
+const CONSENT_KEY = "vow_cookie_consent";
+const CONSENT_TIMESTAMP_KEY = "vow_cookie_consent_ts";
+type ConsentValue = "accepted" | "rejected";
 
 export function CookieBanner() {
-  const [visible, setVisible] = useState<boolean>(() => {
+  const [mounted, setMounted] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
     try {
-      const consent = localStorage.getItem(CONSENT_KEY);
-      const timestamp = localStorage.getItem(CONSENT_TIMESTAMP_KEY);
-
-      if (consent && timestamp) {
-        const consentDate = Number(timestamp);
-        const now = Date.now();
-
-        if (
-          Number.isFinite(consentDate) &&
-          now - consentDate < CONSENT_DURATION_MS
-        ) {
-          return false; // hide banner
-        }
-      }
-
-      return true; // show banner
+      const consent = localStorage.getItem(CONSENT_KEY) as ConsentValue | null;
+      const ts = localStorage.getItem(CONSENT_TIMESTAMP_KEY);
+      if (!consent || !ts) setVisible(true);
+      else setVisible(false);
     } catch {
-      // If localStorage fails for any reason, show banner
-      return true;
+      setVisible(true);
     }
-  });
+  }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem(CONSENT_KEY, "accepted");
-    localStorage.setItem(
-      CONSENT_TIMESTAMP_KEY,
-      Date.now().toString()
-    );
+  const setConsent = (value: ConsentValue) => {
+    try {
+      localStorage.setItem(CONSENT_KEY, value);
+      localStorage.setItem(CONSENT_TIMESTAMP_KEY, String(Date.now()));
+    } catch {
+      // ignore
+    }
     setVisible(false);
-    console.log("Cookies accepted");
   };
 
-  const handleReject = () => {
-    localStorage.setItem(CONSENT_KEY, "rejected");
-    localStorage.setItem(
-      CONSENT_TIMESTAMP_KEY,
-      Date.now().toString()
-    );
-    setVisible(false);
-    console.log("Cookies rejected");
-  };
-
+  if (!mounted) return null;
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[9999] bg-white shadow-md px-6 py-4 rtl border-t border-gray-200">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div
+      className="fixed bottom-0 left-0 right-0 z-[9999] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] px-4 py-4 sm:px-6"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div className="mx-auto flex max-w-[1200px] items-start gap-4 sm:items-center">
         
-        {/* Icon + Text */}
-        <div className="flex items-start gap-3 flex-1">
-          <Image
-            src="/cookies.svg"
-            alt="cookies"
-            width={50}
-            height={50}
-            className="max-w-[30px] h-auto shrink-0"
-            priority
-          />
-          <div className="text-right">
-            <h4 className="font-bold text-[#F27021] text-lg">
-              כל הקלפים על השולחן
-            </h4>
-            <p className="text-gray-700 text-sm leading-relaxed mt-1">
-              אנחנו משתמשים בעוגיות (cookies) כדי להציג לך תכנים רלוונטיים. 
-              נשתמש בקוקיז לא חיוניים רק לאחר אישור. רוצה לדעת יותר?{" "}
-              <a href="/privacy" className="underline text-blue-600">
-                לחץ כאן
-              </a>
-            </p>
+        {/* מובייל: פריסה אנכית */}
+        <div className="flex-1 flex flex-col gap-4 sm:hidden">
+          <div className="flex items-start gap-3 text-right">
+            <div className="flex flex-col gap-1 flex-1">
+              <h3 className="text-[20px] font-semibold text-[#FF6B35] leading-tight">
+                כל הקליקים על המשולחן
+              </h3>
+              <p className="text-[16px] text-gray-700 leading-snug">
+                אנחנו משתמשים בעוגיות (cookies) כדי לשפר את חווית הגלישה באתר. המשך גלישה באתר = הסכמה מצדך. רוצה לדעת יותר?{" "}
+                <a href="/privacy" className="link-orange">לחץ כאן</a>
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button type="button" className="btn-secondary w-[80px]" onClick={() => setConsent("rejected")}>
+                דחה
+              </button>
+              <button type="button" className="btn-primary w-[80px]" onClick={() => setConsent("accepted")}>
+                מאשר
+              </button>
+            </div>
+            <Image
+              src="/cookies.svg"
+              alt="cookies"
+              width={68}
+              height={68}
+              className="flex-shrink-0"
+            />
           </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex gap-3 items-center shrink-0">
-          <button
-            onClick={handleAccept}
-            className="bg-[#5389BB] hover:bg-[#4678A5] text-white px-6 py-2 rounded-lg font-medium transition-colors"
-          >
-            אני מסכים
-          </button>
-          <button
-            onClick={handleReject}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium transition-colors"
-          >
-            סירוב
-          </button>
-          <button
-            onClick={handleReject}
-            className="text-gray-500 hover:text-black font-bold text-xl p-2"
-            aria-label="סגור"
-          >
-            ✕
-          </button>
+        {/* דסקטופ: טקסט וכפתורים בשורה אחת */}
+        <div className="hidden sm:flex items-start gap-4 flex-1">
+          <Image
+            src="/cookies.svg"
+            alt="cookies"
+            width={40}
+            height={40}
+            className="flex-shrink-0"
+          />
+          <div className="flex-1 flex items-start gap-4">
+            <div className="flex flex-col gap-1 flex-1 min-w-0">
+              <h3 className="text-[20px] font-semibold text-[#FF6B35] leading-[1.2]">
+                כל הקליקים על המשולחן
+              </h3>
+              <p className="text-[16px] text-gray-700 leading-[1.4]">
+                אנחנו משתמשים בעוגיות (cookies) כדי לשפר את חווית הגלישה באתר. המשך גלישה באתר = הסכמה מצדך. רוצה לדעת יותר?{" "}
+                <a href="/privacy" className="link-orange">לחץ כאן</a>
+              </p>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <button type="button" className="btn-secondary w-[100px]" onClick={() => setConsent("rejected")}>
+                דחה
+              </button>
+              <button type="button" className="btn-primary w-[100px]" onClick={() => setConsent("accepted")}>
+                מאשר
+              </button>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   );

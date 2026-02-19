@@ -77,7 +77,7 @@ export function PriceSection() {
 
               <ul className="mt-4 space-y-0 text-left text-[18px] font-normal leading-[30px] text-black sm:text-[20px] sm:leading-[56px]">
                 {p.bullets.map((b) => (
-                  <li key={b} className="flex items-center gap-1">
+                  <li key={b} className="flex items-center gap-1 text-[20px]">
                     <CheckIcon className="shrink-0" />
                     <span>{b}</span>
                   </li>
