@@ -10,10 +10,10 @@ const LEGAL_LINKS = [
 ] as const
 
 const PAGES_LINKS = [
-  { href: "/contact", label: "יצירת קשר" },
   { href: "/design", label: "עיצוב ומיתוג לעסקים ויזמים" },
   { href: "/develop", label: "פיתוח מבוסס AI" },
   { href: "/marketing", label: "שיווק דיגיטלי" },
+  { href: "/contact", label: "יצירת קשר" },
 ] as const
 
 type FooterColumn = {
@@ -77,13 +77,13 @@ export function SiteFooter() {
         <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:items-center">
             <div className="flex space-x-4 gap-4 lg:gap-2">
-              <a href="#" className="text-white/70 hover:text-white" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61587713103366" className="text-white/70 hover:text-white" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a href="#" className="text-white/70 hover:text-white" aria-label="Twitter">
+              <a href="https://x.com/Vowsuccess" className="text-white/70 hover:text-white" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a href="#" className="text-white/70 hover:text-white" aria-label="Instagram">
+              <a href="https://www.instagram.com/vow.for.success?igsh=MTRiMmRieTNlejlsNQ%3D%3D&utm_source=qr" className="text-white/70 hover:text-white" aria-label="Instagram">
                 <FaInstagram />
               </a>
             </div>

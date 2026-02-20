@@ -35,12 +35,12 @@ export function ServiceAboutSection({
   }
 
   return (
-    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]" dir="rtl">
-      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-4 lg:px-4 relative">
-        <div className="relative rounded-[10px] grid bg-white p-4 px-4 main-row gap-4 lg:grid-cols-2">
+    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC] " dir="rtl">
+      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-4 lg:px-4 relative  ">
+        <div className="relative rounded-[10px] grid bg-white p-8 px-14  main-row gap-4 lg:grid-cols-2">
           {/* Card - ימין */}
-          <div className="relative z-10 flex justify-start items-center">
-            <div className="w-full py-[35px]">
+          <div className="relative z-10 flex justify-start items-center ">
+            <div className="w-full py-[35px] translate-x-[20px] ">
               <h2 className="mt-3 text-right">{title}</h2>
 
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
