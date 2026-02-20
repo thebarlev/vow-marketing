@@ -71,7 +71,7 @@ const PLACEHOLDER_DOUBLE_SUBTITLE =
 export const designConfig: ServicePageConfig = {
     slug: "design",
     metadata: {
-      title: "עיצוב ומיתוג לעסקים ויזמים",
+      title: "עיצוב ומיתוג",
       description: "עמוד שירות — עיצוב",
     },
     hero: {

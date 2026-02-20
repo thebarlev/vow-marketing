@@ -3,6 +3,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 
+const HEADER_PAGES_LINKS = [
+  { href: "/design", label: "עיצוב ומיתוג " },
+  { href: "/develop", label: "פיתוח אתרים" },
+  { href: "/marketing", label: "שיווק" },
+] as const
+
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -11,7 +17,7 @@ export function SiteHeader() {
       <a href="#main" className="skip-link">
         דלג לתוכן
       </a>
-      <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-4ד">
+      <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-4">
         <nav
           role="navigation"
           aria-label="ניווט ראשי"
@@ -58,7 +64,6 @@ export function SiteHeader() {
                 )}
               </button>
             </li>
-
             {/* כפתורים — תמיד מוצגים */}
             <li className="flex items-center">
               <a href="https://app.vow.co.il" className="vow-btn-primary ">
@@ -70,16 +75,30 @@ export function SiteHeader() {
                 התחברות
               </a>
             </li>
-
-            {/* מחירון — נסתר במובייל */}
-            <li className="hidden sm:flex sm:items-center">
+            {/* קישורים — מוצגים בדסקטופ (כדי לא להעמיס על מובייל) */}
+            {HEADER_PAGES_LINKS.map((item) => (
+              <li key={item.href} className="hidden md:flex md:items-center">
+                <Link
+                  href={item.href}
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li className="hidden md:flex md:items-center">
               <Link
-                href="/pricing"
+                href="/contact"
                 className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
               >
-                מחירון
+                יצירת קשר
               </Link>
             </li>
+
+
+
+
+           
           </ul>
         </nav>
 
@@ -89,13 +108,24 @@ export function SiteHeader() {
             dir="rtl"
             className="sm:hidden absolute right-0 left-0 top-full z-50 bg-white shadow-lg border-t border-[var(--vow-border)] px-6 py-6 flex flex-col gap-4"
           >
+            {HEADER_PAGES_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="link-standard text-[20px] leading-normal py-2 hover:text-[#5389BB] transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
-              href="/pricing"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="link-standard text-[20px] leading-normal py-2 hover:text-[#5389BB] transition-colors"
             >
-              מחירון
+              יצירת קשר
             </Link>
+            
           </div>
         )}
       </div>
