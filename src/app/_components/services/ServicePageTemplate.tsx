@@ -1,12 +1,12 @@
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
-import { AboutSection } from "@/app/_components/home/AboutSection"
-import { FaqSection } from "@/app/_components/home/FaqSection"
 import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
 
 import { DoubleHeadingCtaSection } from "./DoubleHeadingCtaSection"
+import { ServiceAboutSection } from "./ServiceAboutSection"
+import { ServiceFaqSection } from "./ServiceFaqSection"
 import { ServiceHero } from "./ServiceHero"
 import type { ServicePageConfig, ServiceSectionType } from "./services.config"
 
@@ -23,16 +23,25 @@ const SECTION_RENDERERS: Record<ServiceSectionType, (config: ServicePageConfig) 
       cards={config.vision?.cards}
     />
   ),
-  AboutSection: () => <AboutSection />,
+  AboutSection: (config) =>
+    config.about ? (
+      <ServiceAboutSection
+        title={config.about.title}
+        subtitle={config.about.subtitle}
+        ctaLabel={config.about.ctaLabel}
+        ctaSource={config.about.ctaSource}
+        items={config.about.items}
+      />
+    ) : null,
   DoubleHeadingCtaSection: (config) => <DoubleHeadingCtaSection {...config.doubleHeading} />,
-  FaqSection: () => <FaqSection />,
+  FaqSection: (config) => (config.faq ? <ServiceFaqSection {...config.faq} /> : null),
   PackagesSection: () => <PackagesSection />,
   SiteFooter: () => <SiteFooter />,
 }
 
 export function ServicePageTemplate({ config }: { config: ServicePageConfig }) {
   return (
-    <div className="min-h-screen bg-[#FAF9F5]" dir="rtl">
+    <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
       {config.sections.map((section) => (
         <div key={section}>{SECTION_RENDERERS[section](config)}</div>
       ))}

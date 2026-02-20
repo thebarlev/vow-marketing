@@ -33,7 +33,7 @@ export function ServiceHero({
   }
 
   return (
-    <section aria-label={title} className="w-full bg-[#FAF9F5]" dir="rtl">
+    <section aria-label={title} className="w-full bg-[#F4F1EC]" dir="rtl">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4 py-[var(--space-section)]">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
           {/* Text */}

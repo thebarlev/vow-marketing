@@ -5,7 +5,7 @@ import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-[#FAF9F5]">
+    <div className="min-h-screen bg-[#F4F1EC]">
       <SiteHeader />
 
       <main id="main" role="main">
