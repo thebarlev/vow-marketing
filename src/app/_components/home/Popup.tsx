@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { Bot, CheckCircle, Sparkles } from "lucide-react"
+import { Bot, CheckCircle, Sparkles, X } from "lucide-react"
 
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
@@ -55,15 +55,11 @@ export function Popup({
     setError(null)
 
     try {
-      // Get reCAPTCHA token
       const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-      if (!siteKey) {
-        throw new Error("reCAPTCHA not configured")
-      }
+      if (!siteKey) throw new Error("reCAPTCHA not configured")
 
-      // Execute reCAPTCHA invisibly
-      const token = await window.grecaptcha.execute(siteKey, { 
-        action: 'submit_lead' 
+      const token = await window.grecaptcha.execute(siteKey, {
+        action: "submit_lead",
       })
 
       const response = await fetch("/api/leads", {
@@ -77,15 +73,12 @@ export function Popup({
           source,
           pagePath: pagePathOverride ?? window.location.pathname,
           userAgent: navigator.userAgent,
-          captchaToken: token, // Add captcha token
+          captchaToken: token,
         }),
       })
 
       const result = await response.json()
-
-      if (!response.ok || !result.ok) {
-        throw new Error(result.error || "שגיאה בשמירת הנתונים")
-      }
+      if (!response.ok || !result.ok) throw new Error(result.error || "שגיאה בשמירת הנתונים")
 
       setIsSuccess(true)
     } catch (err) {
@@ -95,7 +88,6 @@ export function Popup({
     }
   }
 
-  // Conditional success message based on source
   const successMessage =
     source === "smart_accounting_ai" ? (
       <>
@@ -116,143 +108,152 @@ export function Popup({
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000000D6] px-4"
+      className="fixed inset-0 z-[9999] overflow-y-auto bg-[#000000D6] px-4"
       onClick={onClose}
     >
-      <div
-        className="relative w-full max-w-[637px] rounded-xl bg-white  p-5 text-right max-h-[calc(100vh-80px)] overflow-y-auto hide-scrollbar"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {!isSuccess ? (
-          <>
-            <div className="mb-2 flex justify-center">
-              {iconVariant === "develop-ai" ? (
-                <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
-              ) : (
-                <Sparkles className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
-              )}
-            </div>
+      {/* עטיפה פנימית עם מרווח — מאפשרת גלילה לכל הפופאפ */}
+      <div className="flex min-h-full items-start justify-center py-10">
+        <div
+          className="relative w-full max-w-[637px] rounded-xl bg-white p-5 text-right"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* כפתור X — פינה שמאלית עליונה */}
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="סגור"
+            className="absolute top-4 left-4 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
+          >
+            <X className="h-5 w-5" aria-hidden="true" />
+          </button>
 
-            {toptext && (
-              <div className="mb-3 text-center">
-                <span className="inline-block rounded bg-[#F5F5F5] px-4 py-2 text-[20px] font-bold text-[#5389BB]">
-                  {toptext}
-                </span>
-              </div>
-            )}
-
-            <h2 className="mb-1 text-center text-[50px] font-bold">
-              {title}
-            </h2>
-
-            <h6 className="mb-2 px-1 py-1 text-center text-[26px] font-semibold text-[#747474]">
-              {description}
-            </h6>
-
-            <form
-              className="mx-auto max-w-[336px] space-y-4"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <div>
-                <label htmlFor="firstName" className="mb-1 block text-[20px] font-semibold">
-                  שם פרטי
-                </label>
-                <input
-                  id="firstName"
-                  type="text"
-                  {...register("firstName")}
-                  className="w-full rounded border px-3 py-3"
-                  dir="rtl"
-                />
-                {errors.firstName && (
-                  <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
+          {!isSuccess ? (
+            <>
+              <div className="mb-s flex justify-center">
+                {iconVariant === "develop-ai" ? (
+                  <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
+                ) : (
+                  <Sparkles className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
                 )}
               </div>
 
-              <div>
-                <label htmlFor="lastName" className="mb-1 block text-[20px] font-semibold">
-                  שם משפחה
-                </label>
-                <input
-                  id="lastName"
-                  type="text"
-                  {...register("lastName")}
-                  className="w-full rounded border px-3 py-3"
-                  dir="rtl"
-                />
-                {errors.lastName && (
-                  <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="email" className="mb-1 block text-[20px] font-semibold">
-                  דוא&quot;ל
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  {...register("email")}
-                  className="w-full rounded border px-3 py-3"
-                  dir="ltr"
-                />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="mb-1 block text-[20px] font-semibold">
-                  נייד
-                </label>
-                <input
-                  id="phone"
-                  type="tel"
-                  {...register("phone")}
-                  className="w-full rounded border px-3 py-3"
-                  dir="ltr"
-                />
-                {errors.phone && (
-                  <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
-                )}
-              </div>
-
-              {error && (
-                <div className="rounded bg-red-50 p-3 text-center text-sm text-red-600">
-                  {error}
+              {toptext && (
+                <div className="mb-3 text-center">
+                  <span className="inline-block rounded bg-[#F5F5F5] px-4 py-2 text-[20px] font-bold text-[#5389BB]">
+                    {toptext}
+                  </span>
                 </div>
               )}
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-2 w-full rounded bg-black py-3 text-[20px] text-white cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              <h2 className="mb-1 text-center text-[50px] font-bold">{title}</h2>
+
+              <h6 className="mb-2 px-1 py-1 text-center text-[26px] font-semibold text-[#747474]">
+                {description}
+              </h6>
+
+              <form
+                className="mx-auto max-w-[336px] space-y-4"
+                onSubmit={handleSubmit(onSubmit)}
               >
-                {isSubmitting ? "שולח..." : "הרשמה"}
+                <div>
+                  <label htmlFor="firstName" className="mb-1 block text-[20px] font-semibold">
+                    שם פרטי
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    {...register("firstName")}
+                    className="w-full rounded border px-3 py-3"
+                    dir="rtl"
+                  />
+                  {errors.firstName && (
+                    <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="lastName" className="mb-1 block text-[20px] font-semibold">
+                    שם משפחה
+                  </label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    {...register("lastName")}
+                    className="w-full rounded border px-3 py-3"
+                    dir="rtl"
+                  />
+                  {errors.lastName && (
+                    <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="mb-1 block text-[20px] font-semibold">
+                    דוא&quot;ל
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    {...register("email")}
+                    className="w-full rounded border px-3 py-3"
+                    dir="ltr"
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="mb-1 block text-[20px] font-semibold">
+                    נייד
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    {...register("phone")}
+                    className="w-full rounded border px-3 py-3"
+                    dir="ltr"
+                  />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+                  )}
+                </div>
+
+                {error && (
+                  <div className="rounded bg-red-50 p-3 text-center text-sm text-red-600">
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="mt-2 w-full rounded bg-black py-3 text-[20px] text-white cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "שולח..." : "הרשמה"}
+                </button>
+              </form>
+            </>
+          ) : (
+            <div className="mx-auto max-w-[520px] space-y-6 text-center">
+              <div className="flex justify-center">
+                <CheckCircle className="h-16 w-16 text-green-600" aria-hidden="true" />
+              </div>
+
+              <h2 className="text-[40px] font-bold">ההרשמה התקבלה בהצלחה</h2>
+
+              {successMessage}
+
+              <button
+                type="button"
+                onClick={onClose}
+                className="mx-auto w-full mt-6 block rounded bg-black px-10 py-3 text-[20px] text-white cursor-pointer"
+              >
+                סגירה
               </button>
-            </form>
-          </>
-        ) : (
-          <div className="mx-auto max-w-[520px] space-y-6 text-center">
-            <div className="flex justify-center">
-              <CheckCircle className="h-16 w-16 text-green-600" aria-hidden="true" />
             </div>
-
-            <h2 className="text-[40px] font-bold">
-              ההרשמה התקבלה בהצלחה
-            </h2>
-
-            {successMessage}
-
-            <button
-              type="button"
-              onClick={onClose}
-              className="mx-auto w-full mt-6 block rounded bg-black px-10 py-3 text-[20px] text-white cursor-pointer"
-            >
-              סגירה
-            </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   )
