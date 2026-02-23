@@ -13,42 +13,37 @@ export function Hero() {
     <section className="w-full bg-[#F4F1EC]" dir="rtl">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4 pt-0 pb-[var(--space-section)] md:py-[var(--space-section)]">
 
-      {/* ===== Mobile: טקסט + תמונה זה לצד זה ===== */}
-<div className="grid grid-cols-2 gap-2 md:hidden items-stretch">
-
-{/* טקסט ימין — ממורכז לגובה התמונה */}
-<div className="flex flex-col items-end text-right justify-center h-full">
-  <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
-    <span className="block w-full tracking-[-0.8px] text-[40px] leading-[0.95]">
-      חותמים
-    </span>
-    <span className="block w-full tracking-[-0.8px] text-[40px] leading-[0.95] mb-1">
-      על הצלחה
-    </span>
-  </h1>
-
-  <div className="mt-4 w-full flex flex-col items-end">
-    <HeroRotatingTags items={HERO_TAGS} />
-  </div>
-</div>
-
-{/* תמונה שמאל */}
-<div className="relative w-full overflow-hidden rounded-2xl aspect-[4/5]">
-  <Image
-    src="/m-woman-vow.webp"
-    alt=""
-    fill
-    priority
-    className="object-cover"
-    sizes="50vw"
-  />
-</div>
-
-</div>
+        {/* ===== Mobile: תמונה רוחב מלא + טקסט מתחת ===== */}
+        <div className="flex flex-col md:hidden">
+          {/* תמונה רוחב מלא ללא פינות עגולות */}
+          <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6">
+            <Image
+              src="/m-woman-vow.webp"
+              alt=""
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+          {/* טקסט מתחת לתמונה */}
+          <div className="flex flex-col items-end text-right mt-5">
+            <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
+              <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9]">
+                חותמים
+              </span>
+              <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9] mb-1">
+                על הצלחה
+              </span>
+            </h1>
+            <div className="mt-4 w-full flex flex-col items-start">
+              <HeroRotatingTags items={HERO_TAGS} />
+            </div>
+          </div>
+        </div>
 
         {/* ===== Desktop: layout מקורי ===== */}
         <div className="hidden md:grid gap-5 md:grid-cols-2 md:items-center">
-
           {/* TEXT (ימין) */}
           <div className="min-w-0 w-full flex flex-col items-end text-right order-1 px-0">
             <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
@@ -83,7 +78,6 @@ export function Hero() {
               <HeroRotatingTags items={HERO_TAGS} />
             </div>
           </div>
-
           {/* IMAGE (שמאל) */}
           <div className="w-full order-2">
             <div className="relative w-full overflow-hidden rounded-3xl shadow-lg aspect-[4/5]">
@@ -97,7 +91,6 @@ export function Hero() {
               />
             </div>
           </div>
-
         </div>
 
       </div>

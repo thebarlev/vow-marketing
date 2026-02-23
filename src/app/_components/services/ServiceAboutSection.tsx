@@ -1,7 +1,5 @@
 "use client"
-
 import Image from "next/image"
-
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
 
@@ -35,18 +33,20 @@ export function ServiceAboutSection({
   }
 
   return (
-    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC] " dir="rtl">
-      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-4 lg:px-4 relative  ">
-        <div className="relative rounded-[10px] grid bg-white p-8 px-14  main-row gap-4 lg:grid-cols-2">
-          {/* Card - ימין */}
-          <div className="relative z-10 flex justify-start items-center ">
-            <div className="w-full py-[35px] translate-x-[20px] ">
-              <h2 className="mt-3 text-right">{title}</h2>
+    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]" dir="rtl">
+      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-4 lg:px-4 relative">
+        <div className="relative rounded-[10px] grid bg-white p-1 px-3 main-row gap-4 lg:grid-cols-2">
 
-              <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
+          {/* Card - ימין */}
+          <div className="relative z-10 min-w-0 max-w-full overflow-hidden flex justify-start items-center w-full">
+            <div className="w-full min-w-0 max-w-full
+              py-[20px] px-[10px]
+              sm:py-[35px] sm:px-4 sm:translate-x-0
+            ">
+              <h2 className="text-right break-words">{title}</h2>
+              <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%] break-words">
                 {subtitle}
               </p>
-
               <button
                 type="button"
                 className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer"
@@ -60,7 +60,13 @@ export function ServiceAboutSection({
           {/* Items - שמאל */}
           <div className="relative h-full sub-package">
             {items.map((item) => (
-              <article key={item.id} className="py-4 sm:p-[3.25rem]">
+              <article
+                key={item.id}
+                className="
+                  py-[16px] px-[10px]
+                  sm:py-[3.25rem] sm:px-[3.25rem]
+                "
+              >
                 <div className="flex items-center gap-3 py-2">
                   {item.icon ? (
                     <Image
@@ -73,7 +79,6 @@ export function ServiceAboutSection({
                   ) : null}
                   <h3 className="h3-title sm:text-[30px] font-semibold">{item.title}</h3>
                 </div>
-
                 {item.description ? (
                   <p className="text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]">
                     {item.description}
@@ -82,9 +87,9 @@ export function ServiceAboutSection({
               </article>
             ))}
           </div>
+
         </div>
       </div>
     </section>
   )
 }
-

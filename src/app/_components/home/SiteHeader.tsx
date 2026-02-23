@@ -7,6 +7,7 @@ const HEADER_PAGES_LINKS = [
   { href: "/design", label: "עיצוב ומיתוג " },
   { href: "/develop", label: "פיתוח אתרים בסביבת AI" },
   { href: "/develop-ai", label: "פיתוח תוכנה בסבית AI" },
+  { href: "/marketing", label: "שיווק דיגיטלי" },
 ] as const
 
 const HEADER_DEV_DROPDOWN = [

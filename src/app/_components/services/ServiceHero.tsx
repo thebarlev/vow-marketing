@@ -61,7 +61,7 @@ export function ServiceHero({
                 alt={imageAlt}
                 fill
                 priority={false}
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(min-width: 768px) 45vw, 100vw"
               />
             </div>

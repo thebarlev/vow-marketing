@@ -76,7 +76,7 @@ export const designConfig: ServicePageConfig = {
       tags: ["אתר", "אפליקציה", "SaaS ומערכות", "קריאייטיב", "לוגו"],
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
-      imageSrc: "/services/design/Dhero.webp",
+      imageSrc: "/services/d-design.webp",
       imageAlt: "עיצוב ומיתוג לעסקים",
     },
     doubleHeading: {
@@ -101,7 +101,7 @@ export const designConfig: ServicePageConfig = {
       ],
     },
     about: {
-      title: "עסק חדש? מתחילים נכון מהיום הראשון",
+      title: "עסק חדש?\nמתחילים נכון מהיום הראשון",
       subtitle: "כל פרויקט נבנה כדי להניע לפעולה, בין אם להשארת פרטים, רכישה או יצירת קשר, שהופכת את הגולשים ללקוחות.",
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
@@ -148,7 +148,7 @@ export const developConfig: ServicePageConfig = {
     tags: ["אתרי תדמית / חנויות", "אפליקציות", "מערכות / SaaS", "אוטומציות"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
-    imageSrc: "/services/develop/Dhero.webp",
+    imageSrc: "/services/d-develop.webp",
     imageAlt: "פיתוח מבוסס AI",
 
   },
@@ -203,7 +203,7 @@ export const marketingConfig: ServicePageConfig = {
     tags: ["ניהול קמפיינים", "SEO", "קריאטיב"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
-    imageSrc: "/services/marketing/itzik-vow.webp",
+    imageSrc: "/services/d-marketing.webp",
     imageAlt: "שיווק דיגיטלי",
   },
   doubleHeading: {
