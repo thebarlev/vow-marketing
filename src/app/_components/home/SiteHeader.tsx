@@ -98,7 +98,7 @@ export function SiteHeader() {
                 height={46}
                 priority
                 className={[
-                  "h-auto transition-all duration-300 ease-in-out",
+                  "h-auto transition-all duration-300 ease-in-out origin-right",
                   // במובייל: 149px רגיל → 119px בגלילה (80% = כיווץ 20%)
                   // בדסקטופ (sm ומעלה): תמיד 149px
                   scrolled
