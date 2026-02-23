@@ -9,14 +9,18 @@ const LEGAL_LINKS = [
   { href: "/accessibility", label: "נגישות" },
 ] as const
 
+const PRODUCTS_LINKS = [
+  { href: "/account-ai", label: "רואה חשבון AI" },
+  { href: "/invoice", label: "חשבונית דיגיטלית מאובטחת" },
+] as const
+
 const PAGES_LINKS = [
   { href: "/design", label: "עיצוב ומיתוג" },
   { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
   { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
-
- { href: "/pricing", label: "מחירים"},
- { href: "/marketing", label: "שיווק דיגיטלי" },
- { href: "/contact", label: "יצירת קשר" }
+  { href: "/pricing", label: "מחירים" },
+  { href: "/marketing", label: "שיווק דיגיטלי" },
+  { href: "/contact", label: "יצירת קשר" },
 ] as const
 
 type FooterColumn = {
@@ -26,14 +30,15 @@ type FooterColumn = {
 
 const FOOTER_COLUMNS: readonly FooterColumn[] = [
   { title: "חשוב לדעת", items: LEGAL_LINKS },
-  { title: "עמודים", items: PAGES_LINKS },
+  { title: "שירותים של VOW", items: PAGES_LINKS },
+  { title: "מוצרים של VOW", items: PRODUCTS_LINKS },
 ] as const
 
 export function SiteFooter() {
   return (
     <footer role="contentinfo" className="bg-black">
       <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-4">
-        <div className="grid gap-10 md:grid-cols-6">
+        <div className="grid gap-10 md:grid-cols-7">
           {FOOTER_COLUMNS.map((col) => (
             <div
               key={col.title}
@@ -42,7 +47,6 @@ export function SiteFooter() {
               <p className="text-[18px] font-semibold leading-[20px] text-[#A1A1A1]">
                 {col.title}
               </p>
-
               <ul className="mt-4 space-y-3">
                 {col.items.map((item) => (
                   <li key={item.href}>
@@ -62,7 +66,7 @@ export function SiteFooter() {
           <div
             className="flex flex-col items-center text-center py-1
                        order-1 sm:order-2 lg:order-2
-                       md:col-start-6 md:items-end md:justify-start"
+                       md:col-start-7 md:items-end md:justify-start"
           >
             <Image
               src="/footer-logo.svg"
@@ -90,7 +94,6 @@ export function SiteFooter() {
                 <FaInstagram />
               </a>
             </div>
-
             <p className="text-sm text-white/70">© {new Date().getFullYear()} VOW</p>
           </div>
         </div>

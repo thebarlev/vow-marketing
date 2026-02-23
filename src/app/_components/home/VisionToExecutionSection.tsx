@@ -16,6 +16,7 @@ type Props = {
   subtitle?: string
   ctaLabel?: string
   source?: "design_development" | "digital_marketing" | "smart_accounting_ai"
+  ctaHref?: string
   cards?: VisionCard[]
 }
 
@@ -31,6 +32,7 @@ export function VisionToExecutionSection({
   subtitle = "השילוב בין אפיון מדויק, חוויית משתמש מתקדמת וטכנולוגיות AI מאפשר לנו לבנות פתרונות מהירים, סקיילביליים ונכונים כלכלית.",
   ctaLabel = "להשארת פרטים",
   source = "design_development",
+  ctaHref,
   cards = DEFAULT_CARDS,
 }: Props) {
   const onCtaClick = () => {
@@ -54,13 +56,22 @@ export function VisionToExecutionSection({
             {subtitle}
           </h3>
 
-          <button
-            type="button"
-            onClick={onCtaClick}
-            className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
-          >
-            {ctaLabel}
-          </button>
+          {ctaHref ? (
+            <a
+              href={ctaHref}
+              className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+            >
+              {ctaLabel}
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={onCtaClick}
+              className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+            >
+              {ctaLabel}
+            </button>
+          )}
         </div>
 
         <div className="mt-10 mx-auto w-[97%] grid grid-cols-2 gap-6 lg:grid-cols-4 lg:max-w-6xl">

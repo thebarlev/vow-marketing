@@ -20,6 +20,7 @@ const SECTION_RENDERERS: Record<ProductSectionType, (config: ProductPageConfig) 
       subtitle={config.vision?.subtitle}
       ctaLabel={config.vision?.ctaLabel}
       source={config.vision?.source}
+      ctaHref={config.vision?.ctaHref}
       cards={config.vision?.cards}
     />
   ),
@@ -30,6 +31,7 @@ const SECTION_RENDERERS: Record<ProductSectionType, (config: ProductPageConfig) 
         subtitle={config.about.subtitle}
         ctaLabel={config.about.ctaLabel}
         ctaSource={config.about.ctaSource}
+        ctaHref={config.about.ctaHref}
         items={config.about.items}
       />
     ) : null,

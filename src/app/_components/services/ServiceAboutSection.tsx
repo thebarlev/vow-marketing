@@ -15,6 +15,7 @@ export type ServiceAboutSectionProps = {
   subtitle: string
   ctaLabel: string
   ctaSource: LeadSource
+  ctaHref?: string
   items: ServiceAboutItem[]
 }
 
@@ -23,6 +24,7 @@ export function ServiceAboutSection({
   subtitle,
   ctaLabel,
   ctaSource,
+  ctaHref,
   items,
 }: ServiceAboutSectionProps) {
   const onCtaClick = () => {
@@ -39,7 +41,7 @@ export function ServiceAboutSection({
 
           {/* Card - ימין */}
           <div className="relative z-10 min-w-0 max-w-full overflow-hidden flex justify-start items-center w-full">
-            <div className="w-full min-w-0 max-w-full
+            <div className="w-full min-w-0 max-w-full  lg:px-10
               py-[20px] px-[10px]
               sm:py-[35px] sm:px-4 sm:translate-x-0
             ">
@@ -47,18 +49,27 @@ export function ServiceAboutSection({
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%] break-words">
                 {subtitle}
               </p>
-              <button
-                type="button"
-                className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer"
-                onClick={onCtaClick}
-              >
-                {ctaLabel}
-              </button>
+              {ctaHref ? (
+                <a
+                  href={ctaHref}
+                  className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer text-center"
+                >
+                  {ctaLabel}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer"
+                  onClick={onCtaClick}
+                >
+                  {ctaLabel}
+                </button>
+              )}
             </div>
           </div>
 
           {/* Items - שמאל */}
-          <div className="relative h-full sub-package">
+          <div className="relative h-full sub-package lg:px-6">
             {items.map((item) => (
               <article
                 key={item.id}

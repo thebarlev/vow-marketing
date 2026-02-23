@@ -10,6 +10,7 @@ export type ServiceHeroProps = {
   tags: readonly string[]
   ctaLabel: string
   ctaSource: LeadSource
+  ctaHref?: string
   imageSrc?: string
   imageAlt?: string
 }
@@ -20,6 +21,7 @@ export function ServiceHero({
   tags,
   ctaLabel,
   ctaSource,
+  ctaHref,
   imageSrc = "/D-hero.webp",
   imageAlt = "",
 }: ServiceHeroProps) {
@@ -48,9 +50,15 @@ export function ServiceHero({
             <div className="mt-6 w-full text-right">
               <HeroRotatingTags items={tags} />
             </div>
-            <button type="button" className="btn-primary mt-7 w-full sm:w-auto" onClick={onCtaClick}>
-              {ctaLabel}
-            </button>
+            {ctaHref ? (
+              <a href={ctaHref} className="btn-primary mt-7 !w-[170px] sm:w-auto text-center">
+                {ctaLabel}
+              </a>
+            ) : (
+              <button type="button" className="btn-primary mt-7 !w-[170px] sm:w-auto" onClick={onCtaClick}>
+                {ctaLabel}
+              </button>
+            )}
           </div>
 
           {/* Image */}

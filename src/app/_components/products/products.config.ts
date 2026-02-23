@@ -24,6 +24,7 @@ export type ProductPageConfig = {
     tags: readonly string[]
     ctaLabel: string
     ctaSource: LeadSource
+    ctaHref?: string
     imageSrc?: string
     imageAlt?: string
   }
@@ -32,6 +33,7 @@ export type ProductPageConfig = {
     subtitle?: string
     ctaLabel?: string
     source?: LeadSource
+    ctaHref?: string
     cards?: Array<{ id: string; src: string; alt: string; caption: string }>
   }
   doubleHeading: {
@@ -45,6 +47,7 @@ export type ProductPageConfig = {
     subtitle: string
     ctaLabel: string
     ctaSource: LeadSource
+    ctaHref?: string
     items: ServiceAboutItem[]
   }
   faq?: {
@@ -70,7 +73,7 @@ export const developAiConfig: ProductPageConfig = {
   slug: "develop-ai",
   metadata: {
     title: "פיתוח בהתאמה אישית בסביבת AI",
-    description: "עמוד מוצר — פיתוח מבוסס AI",
+    description: "פיתוח תוכנה מבוסס AI-פתרונות תוכנה מותאמים אישית לעסק שלכם. אנחנו משתמשים ב-AI כדי לפתח מהר יותר, חכם יותר - ולהעניק לכם יתרון תחרותי אמיתי.",
   },
   hero: {
     title: "פיתוח בהתאמה אישית בסביבת AI",
@@ -157,45 +160,48 @@ export const developAiConfig: ProductPageConfig = {
 export const invoiceConfig: ProductPageConfig = {
   slug: "invoice",
   metadata: {
-    title: "Invoice | VOW",
-    description: "עמוד מוצר — חשבוניות",
+    title: "חשבונית דיגיטלית מאובטחת שנה חינם",
+    description: "חשבונית דיגיטלית מאובטחת הפיקו חשבוניות דיגיטליות מאובטחות בקלות ובמהירות. עמידה מלאה בדרישות רשות המסים, עם חתימה דיגיטלית וסנכרון אוטומטי.",
   },
   hero: {
-    title: "Invoice",
-    subtitle: "חשבוניות, תשלומים ותהליכים — פשוט, ברור ומהיר.",
-    tags: ["חשבוניות", "סליקה", "אוטומציה", "דוחות", "התאמה לעסק"],
-    ctaLabel: "להשארת פרטים",
+    title: "חשבונית דיגיטלית מאובטחת שנה חינם",
+    subtitle: "",
+    tags: ["הפקת מסמכים", "ניהול לקוחות", "הפקת דוחות"],
+    ctaLabel: "להצטרפות",
     ctaSource: "smart_accounting_ai",
-    imageSrc: "/D-hero.webp",
+    ctaHref: "https://app.vow.co.il",
+    imageSrc: "/services/d-green-invocie.webp",
     imageAlt: "Invoice",
   },
   vision: {
-    title: "יותר סדר. פחות התעסקות.",
-    subtitle: "מייצרים תהליך שמצמצם טעויות וחוסך זמן — מהפקה ועד מעקב.",
-    ctaLabel: "להשארת פרטים",
+    title: "חשבונית דיגיטלית מאובטחת",
+    subtitle: "VOW מאפשרת הפקת חשבוניות ו-12 סוגי מסמכים עסקיים, עם חתימה דיגיטלית מאובטחת.",
+    ctaLabel: "להצטרפות",
+    ctaHref: "https://app.vow.co.il",
     source: "smart_accounting_ai",
     cards: [
-      { id: "invoice-1", src: "/1.webp", alt: "הפקה מהירה", caption: "הפקה מהירה" },
-      { id: "invoice-2", src: "/2.webp", alt: "תשלומים ומעקב", caption: "תשלומים ומעקב" },
-      { id: "invoice-3", src: "/3.webp", alt: "דוחות ותובנות", caption: "דוחות ותובנות" },
-      { id: "invoice-4", src: "/4.webp", alt: "אוטומציה לתהליכים", caption: "אוטומציה לתהליכים" },
+      { id: "invoice-1", src: "/services/invoice/vow1.webp", alt: "הפקת 12 סוגי מסמכים לניהול העסק והפקת דוחות", caption: "הפקת 12 סוגי מסמכים לניהול העסק והפקת דוחות" },
+      { id: "invoice-2", src: "/services/invoice/vow2.webp", alt: "מערכת שנבנתה סביב חוקי ישראל", caption: "מערכת שנבנתה סביב חוקי ישראל" },
+      { id: "invoice-3", src: "/services/invoice/vow3.webp", alt: "דשבורד וכלים מתקדמים לניהול העסק", caption: "דשבורד וכלים מתקדמים לניהול העסק" },
+      { id: "invoice-4", src: "/services/invoice/vow4.webp", alt: "חיבור ישיר לרשות המיסים כולל הפקת מספר הקצאה", caption: "חיבור ישיר לרשות המיסים כולל הפקת מספר הקצאה" },
     ],
   },
   doubleHeading: {
-    title: "רוצים לייעל את תהליך החשבוניות?",
-    subtitle: "נבנה תהליך מדויק שמותאם לעסק שלכם — בלי עומס ובלי בלגן.",
+    title: "עמידה מלאה בדרישות רשות המסים",
+    subtitle: 'כל מסמך מותאם לתקנות המעודכנות של רשות המסים, כולל מספר הקצאה.',
     buttonLabel: "להשארת פרטים",
     buttonSource: "smart_accounting_ai",
   },
   about: {
-    title: "חשבוניות שמתחברות לעסק",
-    subtitle: "הפקה, סליקה ודוחות — עם אוטומציות שמורידות עבודה ידנית.",
-    ctaLabel: "להשארת פרטים",
+    title: "כל המסמכים העסקיים שלכם, במקום אחד, בלחיצה אחת.",
+    subtitle: "חשבוניות, קבלות ומסמכים רגולטוריים עם חתימה דיגיטלית מאובטחת. בחינם לשנה הראשונה",
+    ctaLabel: "להצטרפות",
     ctaSource: "smart_accounting_ai",
+    ctaHref: "https://app.vow.co.il",
     items: [
-      { id: "invoice-about-1", title: "תהליכים אוטומטיים", description: "מקטינים פעולות ידניות ושגיאות.", icon: "/about/3.svg" },
-      { id: "invoice-about-2", title: "תמונה פיננסית ברורה", description: "דוחות ותובנות במקום אחד.", icon: "/about/analytics.svg" },
-      { id: "invoice-about-3", title: "התאמה לעסק", description: "זרימה שמתאימה בדיוק למה שאתם עושים.", icon: "/about/lightbulb.svg" },
+      { id: "invoice-about-1", title: "הפקת קבלות / חשבוניות בקלות", description: "הפיקו חשבוניות מס, קבלות וחשבוניות עסקה בפורמט מקצועי - ישירות מהדשבורד, ללא ידע חשבונאי.", icon: "/services/invoice/invoice.svg" },
+      { id: "invoice-about-2", title: "חתימה דיגיטלית מאובטחת", description: "כל מסמך נחתם דיגיטלית ומוגן מפני זיוף / שינוי, אמינות מקסימלית מול לקוחות ורשויות.", icon: "/services/invoice/safe.svg" },
+      { id: "invoice-about-3", title: "ארכיון מסמכים חכם", description: "כל המסמכים שלכם שמורים, מאורגנים ונגישים בכל זמן, גם ממכשיר נייד", icon: "/services/invoice/archive.svg" },
     ],
   },
   faq: {
@@ -213,32 +219,32 @@ export const accountAiConfig: ProductPageConfig = {
   slug: "account-ai",
   metadata: {
     title: "Account AI | VOW",
-    description: "עמוד מוצר — Account AI",
+    description: "רואה חשבון AI ראיית חשבון חכמה ב-200 ₪ בלבד. VOW מספקת ליווי עסקי 24/7 עם ידע של 1,000 רואי חשבון - ישירות לעסק הקטן שלכם.",
   },
   hero: {
-    title: "Account AI",
-    subtitle: "הופכים את הנהלת החשבונות ליותר חכמה, אוטומטית ומדויקת.",
-    tags: ["AI", "אוטומציה", "דוחות", "סדר פיננסי", "תובנות"],
+    title: "רואה חשבון AI ליגה אחרת",
+    subtitle: "ה-AI של VOW מזהה הזדמנויות רגולטוריות שאחרים מפספסים. הופך את הניהול הפיננסי שלך למדויק, אוטומטי ורווחי הרבה יותר.",
+    tags: ["הנהלת חשבונות", "דיווח מע״מ", "דוחות שנתיים", "הצהרת הון"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "smart_accounting_ai",
-    imageSrc: "/manvow.webp",
+    imageSrc: "/services/d-account-ai.webp",
     imageAlt: "Account AI",
   },
   vision: {
-    title: "פחות עבודה ידנית. יותר שליטה.",
-    subtitle: "מחברים נתונים, מייצרים תובנות, ומשפרים החלטות עסקיות.",
+    title: "חשבונית דיגיטלית מאובטחת",
+    subtitle: "הנהלת חשבונות, מע״מ, מס הכנסה וביטוח לאומי - מנוהלים חכם, אוטומטית ובפיקוח רגולטורי מלא.",
     ctaLabel: "להשארת פרטים",
     source: "smart_accounting_ai",
     cards: [
-      { id: "account-ai-1", src: "/services/develop/d1.webp", alt: "חיבור נתונים", caption: "חיבור נתונים" },
-      { id: "account-ai-2", src: "/services/develop/d2.webp", alt: "אוטומציות", caption: "אוטומציות" },
-      { id: "account-ai-3", src: "/services/develop/d3.webp", alt: "תובנות", caption: "תובנות" },
-      { id: "account-ai-4", src: "/services/develop/d4.webp", alt: "שיפור מתמיד", caption: "שיפור מתמיד" },
+      { id: "account-ai-1", src: "/services/developai/1a.webp", alt: "אלגוריתמים מתקדמים לזיהוי חסכון עסקי", caption: "אלגוריתמים מתקדמים לזיהוי חסכון עסקי" },
+      { id: "account-ai-2", src: "/services/developai/2a.webp", alt: "סנכרון מסמכים אוטומטי", caption: "סנכרון מסמכים אוטומטי" },
+      { id: "account-ai-3", src: "/services/developai/3a.webp", alt: "עמידה מלאה בדרישות הרגולציה", caption: "עמידה מלאה בדרישות הרגולציה" },
+      { id: "account-ai-4", src: "/services/developai/4a.webp", alt: "חיבור למערכות ממשלתיות", caption: "חיבור למערכות ממשלתיות" },
     ],
   },
   doubleHeading: {
-    title: "מוכנים להפוך את הפיננסים לחכמים?",
-    subtitle: "נבנה תהליך שמייצר סדר, תובנות ואוטומציה — בלי להכביד על הצוות.",
+    title: "דיווחים חכמים. החלטות חכמות.",
+    subtitle: "רו״ח AI חכם שמבצע אוטומטית את רוב העבודה החשבונאית השוטפת, בצורה מדויקת ומהירה יותר. במקרים מורכבים ניתן לשלב ליווי אנושי בהתאם לצורך.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "smart_accounting_ai",
   },
@@ -256,9 +262,14 @@ export const accountAiConfig: ProductPageConfig = {
   faq: {
     title: "שאלות נפוצות",
     items: [
-      { id: "account-ai-faq-1", question: "מה זה Account AI?", answer: "פתרון שמסייע באוטומציה ותובנות פיננסיות לפי נתונים." },
-      { id: "account-ai-faq-2", question: "איך מתחילים?", answer: "מגדירים מטרות, מחברים נתונים, ואז בונים אוטומציות ותובנות." },
-      { id: "account-ai-faq-3", question: "אפשר להתאים לעסק שלי?", answer: "כן. הקונפיג מאפשר התאמה מלאה של תהליך ותצוגה." },
+      { id: "account-ai-faq-1", question: "מה זה בעצם רואה חשבון AI?", answer: "רו״ח AI הוא מערכת חכמה שמנתחת את הפעילות העסקית שלך בזמן אמת, מכירה את חוקי מס הכנסה, מע״מ וביטוח לאומי - ועוזרת לך לקבל החלטות מדויקות בלי לפספס כלום." },
+      { id: "account-ai-faq-2", question: "איך זה חוסך לי כסף כל חודש?", answer: "המערכת מזהה הוצאות מוכרות, תכנוני מס חוקיים, חוסכת טעויות בדיווחים ומונעת קנסות מיותרים - כך שאתה משלם רק מה שצריך, ולא שקל יותר." },
+      { id: "account-ai-faq-3", question: "איך זה יכול להכניס לי יותר כסף?", answer: "רו״ח AI לא רק מחשב - הוא מנתח רווחיות, מזהה שירותים או מוצרים שמכניסים יותר, מתריע על תמחור נמוך מדי ומציע שיפורים שמגדילים רווח נקי." },
+      { id: "account-ai-faq-4", question: "זה מחליף רואה חשבון אנושי?", answer: "בטח, זה לא “עוד דוח בסוף חודש” - זה כלי חכם שעובד בשבילך 24/7. במקום תגובה מאוחרת, אתה מקבל שליטה בזמן אמת." },
+      { id: "account-ai-faq-5", question: "האם זה מתאים גם לעסק קטן?", answer: "דווקא עסקים קטנים מרוויחים הכי הרבה - כי כל טעות עולה כסף. רו״ח AI נותן לך כלים של משרד גדול, בעלות חודשית נוחה." },
+      { id: "account-ai-faq-6", question: "איך אני יודע שהוא באמת מכיר את החוק?", answer: "המערכת מבוססת על רגולציה עדכנית של מס הכנסה, מע״מ וביטוח לאומי, ומתעדכנת בהתאם לשינויים. הכל פועל לפי חוק ובהתאם לנהלים בישראל." },
+      { id: "account-ai-faq-7", question: "כמה זמן לוקח להתחיל?", answer: "חיבור מהיר וקל. תוך זמן קצר אתה כבר מקבל תובנות ברורות על מצב העסק והרווחיות שלך." },
+      { id: "account-ai-faq-8", question: "למה זה טוב יותר מהתנהלות רגילה?", answer: "כי במקום לעבוד “בדיעבד”, אתה עובד חכם. במקום לנחש - אתה יודע. ובמקום לשלם יותר - אתה שומר על הכסף שלך ומגדיל אותו." },
     ],
   },
   sections: SECTIONS_ORDER,
