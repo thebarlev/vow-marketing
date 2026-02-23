@@ -11,10 +11,12 @@ const LEGAL_LINKS = [
 
 const PAGES_LINKS = [
   { href: "/design", label: "עיצוב ומיתוג" },
-  { href: "/develop", label: "פיתוח מבוסס AI" },
-  { href: "/marketing", label: "שיווק דיגיטלי" },
-  { href: "/contact", label: "יצירת קשר" },
- { href: "/pricing", label: "מחירון חשבונית דיגיטלית"}
+  { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
+  { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
+
+ { href: "/pricing", label: "מחירים"},
+ { href: "/marketing", label: "שיווק דיגיטלי" },
+ { href: "/contact", label: "יצירת קשר" }
 ] as const
 
 type FooterColumn = {

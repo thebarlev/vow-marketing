@@ -65,9 +65,6 @@ const SECTIONS_ORDER: readonly ServiceSectionType[] = [
   "SiteFooter",
 ] as const
 
-const PLACEHOLDER_DOUBLE_SUBTITLE =
-  "כותרת משנה קצרה שמסבירה מה מקבלים ומה הצעד הבא. אפשר להחליף אחר כך בטקסט מדויק."
-
 export const designConfig: ServicePageConfig = {
     slug: "design",
     metadata: {
@@ -147,12 +144,13 @@ export const developConfig: ServicePageConfig = {
     description: "עמוד שירות — פיתוח",
   },
   hero: {
-    title: "פיתוח מבוסס AI",
+    title: "פיתוח אתרים מבוסס AI",
     tags: ["אתרי תדמית / חנויות", "אפליקציות", "מערכות / SaaS", "אוטומציות"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     imageSrc: "/services/develop/Dhero.webp",
     imageAlt: "פיתוח מבוסס AI",
+
   },
   doubleHeading: {
     title: "יותר תוצאות. יותר מדוייק.",
@@ -161,7 +159,7 @@ export const developConfig: ServicePageConfig = {
     buttonSource: "design_development",
   },
   about: {
-    title: "מוצר טכנולוגי שמוכן לשוק מהיום הראשון",
+    title: "פיתוח דיגיטלי בלי בזבוז זמן וכסף בעזרת AI.",
     subtitle: "כל מוצר נבנה מתוך חשיבה תוצאתית: בין אם מדובר באתר, אפליקציה או מערכת פנימית - אנחנו מפתחים כדי לייצר ערך עסקי ברור.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",

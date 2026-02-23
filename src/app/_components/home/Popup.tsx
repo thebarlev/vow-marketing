@@ -4,7 +4,9 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { CheckCircle, Sparkles } from "lucide-react"
+import { Bot, CheckCircle, Sparkles } from "lucide-react"
+
+import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
 const formSchema = z.object({
   firstName: z.string().min(1, "שם פרטי חובה"),
@@ -22,10 +24,20 @@ export type PopupProps = {
   description: string
   toptext?: string
   source: LeadSource
+  iconVariant?: PopupIconVariant
+  pagePathOverride?: string
   onClose: () => void
 }
 
-export function Popup({ title, description, toptext, source, onClose }: PopupProps) {
+export function Popup({
+  title,
+  description,
+  toptext,
+  source,
+  iconVariant = "default",
+  pagePathOverride,
+  onClose,
+}: PopupProps) {
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -63,7 +75,7 @@ export function Popup({ title, description, toptext, source, onClose }: PopupPro
           email: data.email,
           phone: data.phone,
           source,
-          pagePath: window.location.pathname,
+          pagePath: pagePathOverride ?? window.location.pathname,
           userAgent: navigator.userAgent,
           captchaToken: token, // Add captcha token
         }),
@@ -114,7 +126,11 @@ export function Popup({ title, description, toptext, source, onClose }: PopupPro
         {!isSuccess ? (
           <>
             <div className="mb-4 flex justify-center">
-              <Sparkles className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
+              {iconVariant === "develop-ai" ? (
+                <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
+              ) : (
+                <Sparkles className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
+              )}
             </div>
 
             {toptext && (

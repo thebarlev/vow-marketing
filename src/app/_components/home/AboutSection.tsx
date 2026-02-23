@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ABOUT_US } from "./home.constants"
 import { useState } from "react"
 import { Popup, LeadSource } from "./Popup"
+import { POPUP_OVERRIDES_BY_PATH, type PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
 export function AboutSection() {
 
@@ -11,16 +12,26 @@ export function AboutSection() {
     title: string; 
     description: string; 
     toptext: string; 
-    source: LeadSource 
+    source: LeadSource;
+    iconVariant?: PopupIconVariant;
+    pagePathOverride?: string;
   }>({
     title: '',
     description: '',
     toptext: '',
     source: 'smart_accounting_ai',
+    iconVariant: "default",
   });
   
-  const handleOpen = (title: string, description: string, toptext: string, source: LeadSource) => {
-    setPopupData({ title, description, toptext, source });
+  const handleOpen = (
+    title: string,
+    description: string,
+    toptext: string,
+    source: LeadSource,
+    iconVariant: PopupIconVariant = "default",
+    pagePathOverride?: string
+  ) => {
+    setPopupData({ title, description, toptext, source, iconVariant, pagePathOverride });
     setOpen(true);
   };
 
@@ -37,34 +48,37 @@ export function AboutSection() {
           {/* Card - ימין */}
           <div
   data-gs-card-col
-  className="  relative z-10 flex justify-start items-center "
+  className="  relative z-10 flex justify-start items-center p-6"
 >
             <div className="w-full  py-[35px]">
               
               <h2 className="mt-3 text-right">
-              הצטרף למהפכת ה-AI שחוסכת לך כסף ומקצועית כמו רואה חשבון אמיתי
+              מיתוג, אתרים ופיתוח מערכות AI שמקדמים את העסק קדימה
 
 </h2>
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
-               למי זה מתאים: עוסקים פטורים בעלי עסקים עם מחזור עד 500,000 ₪ בשנה
-              </p>
+              אנחנו משלבים AI בכל שלב,  מהאפיון ועד השיווק, כדי לבנות עסק מדויק, מהיר ורווחי יותר.              </p>
             <button
   type="button"
   className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer"
   onClick={() =>
-    handleOpen(
-      "חתימה דיגיטלית מאובטחת", // title (from h3)
-      "פתרון חתימה מאובטח, מהיר וחוקי", // description
-      "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות", // top text (from p)
-      "smart_accounting_ai" // source
-    )
+    (() => {
+      const o = POPUP_OVERRIDES_BY_PATH["/develop-ai"]
+      handleOpen(
+        o?.title ?? "פיתוח בהתאמה אישית בסביבת AI",
+        o?.description ?? "מאפיינים מעצבים ומפתחים מערכת פנימית בהתאמה מלאה",
+        o?.toptext ?? "",
+        o?.source ?? "design_development",
+        o?.iconVariant ?? "develop-ai",
+        o?.pagePathOverride ?? "/develop-ai"
+      )
+    })()
   }
 >
   להשארת פרטים
 </button>
 <p className="text-[20px] text-[#000000] pt-3 font-semibold leading-[26px]  sm:max-w-[90%]">
-            המכסה מלאה – 100 העסקים הראשונים כבר הצטרפו.<br />
-  כרגע ניתן להירשם רק לרשימת המתנה.
+
               </p>
                
             </div>
@@ -106,6 +120,8 @@ export function AboutSection() {
           description={popupData.description}
           toptext = {popupData.toptext}
           source={popupData.source}
+          iconVariant={popupData.iconVariant}
+          pagePathOverride={popupData.pagePathOverride}
           onClose={() => setOpen(false)}
         />
       )}

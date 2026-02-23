@@ -20,15 +20,15 @@ type Props = {
 }
 
 const DEFAULT_CARDS: VisionCard[] = [
-  { id: "default-4", src: "/services/marketing/1.webp", alt: "Google Ads", caption: "Google Ads" },
-  { id: "default-3", src: "/services/marketing/2.webp", alt: "Meta Ads", caption: "Meta Ads" },
-  { id: "default-2", src: "/services/marketing/3.webp", alt: "אנליטיקה ו-SEO", caption: "אנליטיקה ו-SEO" },
-  { id: "default-1", src: "/services/marketing/4.webp", alt: "קופירייטינג ו-A/B test", caption: "קופירייטינג ו-A/B test" },
+  { id: "default-4", src: "/4.webp", alt: "אפיון ופיתוח MVP ליזמים וסטארטאפים", caption: "אפיון ופיתוח MVP ליזמים וסטארטאפים" },
+  { id: "default-3", src: "/services/develop/d2.webp", alt: "תכנון ופיתוח אתרים ואפליקציות ב-AI", caption: "תכנון ופיתוח אתרים ואפליקציות ב-AI" },
+  { id: "default-2", src: "/services/develop/d3.webp", alt: "שיפור ביצועים, חוויית משתמש, ROI וסקייל", caption: "שיפור ביצועים, חוויית משתמש, ROI וסקייל" },
+  { id: "default-1", src: "/5.webp", alt: "אוטומציות, אינטגרציות ו-AI עסקי", caption: "אוטומציות, אינטגרציות ו-AI עסקי" },
 ]
 
 export function VisionToExecutionSection({
-  title ="VOW תוצאות מהיום הראשון",
-  subtitle = "עם מעל 20 שנות ניסיון בשיווק דיגיטלי, אנחנו בונים אסטרטגיה מדויקת, קריאייטיב שממיר ומערך קמפיינים שעובד - לא ניסויים, אלא ביצועים.",
+  title ="מפתחים אתר שעובד ומייצר תוצאות מהיום הראשון",
+  subtitle = "השילוב בין אפיון מדויק, חוויית משתמש מתקדמת וטכנולוגיות AI מאפשר לנו לבנות פתרונות מהירים, סקיילביליים ונכונים כלכלית.",
   ctaLabel = "להשארת פרטים",
   source = "design_development",
   cards = DEFAULT_CARDS,

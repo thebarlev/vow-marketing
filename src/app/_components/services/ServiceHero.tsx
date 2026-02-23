@@ -33,10 +33,10 @@ export function ServiceHero({
   return (
     <section aria-label={title} className="w-full bg-[#F4F1EC]" dir="rtl">
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid gap-8 md:grid-cols-2 md:items-start">
+        <div className="grid gap-8 md:grid-cols-2 md:items-center">
 
           {/* Text */}
-          <div className="order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)]">
+          <div className="order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)] ">
             <h1 className="text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[96px] lg:leading-[0.98]">
               {title}
             </h1>
