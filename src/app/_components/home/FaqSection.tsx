@@ -6,8 +6,9 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 
 type FaqItem = {
+  id: string
   question: string
-  answer: ReactNode
+  answer: string
 }
 
 const FAQ_ITEMS: readonly FaqItem[] = [
