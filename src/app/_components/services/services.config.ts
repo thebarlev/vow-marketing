@@ -199,7 +199,7 @@ export const marketingConfig: ServicePageConfig = {
     description: "עמוד שירות — שיווק",
   },
   hero: {
-    title: "שיווק שמייצר תוצאות",
+    title: "שיווק שמביא לקוחות",
     tags: ["ניהול קמפיינים", "SEO", "קריאטיב"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
