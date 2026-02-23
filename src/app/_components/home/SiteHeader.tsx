@@ -37,27 +37,21 @@ export function SiteHeader() {
 
   useEffect(() => {
     const measure = () => {
-      if (headerRef.current) {
-        setHeaderHeight(headerRef.current.offsetHeight)
-      }
+      if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight)
     }
     measure()
     window.addEventListener("resize", measure)
     return () => window.removeEventListener("resize", measure)
   }, [])
 
-  // זיהוי גלילה — לכיווץ הלוגו במובייל
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  // עדכון גובה ה-header אחרי כיווץ/הרחבת הלוגו
   useEffect(() => {
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight)
-    }
+    if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight)
   }, [scrolled])
 
   useEffect(() => {
@@ -76,16 +70,14 @@ export function SiteHeader() {
         role="banner"
         className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EC]"
       >
-        <a href="#main" className="skip-link">
-          דלג לתוכן
-        </a>
+        <a href="#main" className="skip-link">דלג לתוכן</a>
         <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-4">
           <nav
             role="navigation"
             aria-label="ניווט ראשי"
             className="flex flex-row-reverse items-center justify-between gap-3 py-4 lg:py-6"
           >
-            {/* Logo — מתכווץ ב-20% במובייל בגלילה */}
+            {/* Logo */}
             <Link
               href="/"
               className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md"
@@ -99,13 +91,31 @@ export function SiteHeader() {
                 priority
                 className={[
                   "h-auto w-[149px] transition-transform duration-300 ease-in-out origin-left",
-                  // במובייל בגלילה: scale(0.8) — לא משנה width ולא מזיז את ה-layout
-                  // בדסקטופ: תמיד scale(1)
                   scrolled ? "sm:scale-100 scale-[0.8]" : "scale-100",
                 ].join(" ")}
               />
             </Link>
 
+            {/* ===== כפתורים באמצע — דסקטופ בלבד ===== */}
+{/* ===== כפתורים באמצע — דסקטופ בלבד ===== */}
+<div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
+  <span
+    className="text-right w-[115px] shrink-0 leading-[1.3]"
+    style={{ fontSize: "16px" }}
+  >
+    חשבונית דיגיטלית שנה חינם
+  </span>
+  <div className="flex items-center gap-2 shrink-0">
+    <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
+      הצטרפות
+    </a>
+    <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">
+      התחברות
+    </a>
+  </div>
+</div>
+
+            {/* קישורי ניווט + המבורגר */}
             <ul className="flex flex-nowrap items-center gap-1">
               {/* המבורגר — מובייל בלבד */}
               <li className="sm:hidden flex items-center">
@@ -130,28 +140,6 @@ export function SiteHeader() {
                   )}
                 </button>
               </li>
-
-              {/* כפתורים — דסקטופ בלבד */}
-              <div className="hidden sm:flex flex-row items-center gap-2 bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2">
-                <li
-                  className="flex items-center w-[125px] justify-end text-right"
-                  style={{ fontSize: "16px", lineHeight: "20px" }}
-                >
-                  חשבונית דיגיטלית שנה חינם
-                </li>
-                <div className="flex items-center gap-2">
-                  <li className="flex items-center">
-                    <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px] !sm:h-[50px]">
-                      הצטרפות
-                    </a>
-                  </li>
-                  <li className="flex items-center">
-                    <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px] !sm:h-[50px]">
-                      התחברות
-                    </a>
-                  </li>
-                </div>
-              </div>
 
               {/* קישורים — דסקטופ */}
               <li className="hidden md:flex md:items-center">
@@ -191,12 +179,13 @@ export function SiteHeader() {
                   </ul>
                 </div>
               </li>
+
               <li className="hidden md:flex md:items-center">
                 <Link
                   href="/marketing"
                   className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
                 >
-                 שיווק
+                  שיווק
                 </Link>
               </li>
               <li className="hidden md:flex md:items-center">
@@ -215,7 +204,7 @@ export function SiteHeader() {
       {/* Spacer */}
       <div style={{ height: headerHeight }} aria-hidden="true" />
 
-      {/* תפריט נפתח מובייל */}
+      {/* תפריט נפתח מובייל — ללא שינוי */}
       {menuOpen && (
         <div
           dir="rtl"

@@ -76,11 +76,43 @@ export default function HomePage() {
       <main id="main" role="main">
         <Hero />
         <LogoRow />
+        <VisionToExecutionSection
+          title="אפיון, פיתוח, עיצוב ושיווק מבוסס AI שמייצר צמיחה"
+          subtitle="ב-VOW בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים."
+          ctaLabel="להשארת פרטים"
+          source="design_development"
+          cards={[
+            {
+              id: "home-vto-1",
+              src: "/1.webp",
+              alt: "פיתוח MVP ליזמים וסטארטאפים",
+              caption: "פיתוח MVP ליזמים וסטארטאפים",
+            },
+            {
+              id: "home-vto-2",
+              src: "/3.webp",
+              alt: "תכנון ופיתוח אתרים ואפליקציות ",
+              caption: "תכנון ופיתוח אתרים ואפליקציות ",
+            },
+            {
+              id: "home-vto-3",
+              src: "/2.webp",
+              alt: "שיווק ממומן ו-SEO ",
+              caption: "שיווק ממומן ו-SEO ",
+            },
+            {
+              id: "home-vto-4",
+              src: "/4.webp",
+              alt: "שיפור ביצועים, חוויית משתמש -ROS",
+              caption: "שיפור ביצועים, חוויית משתמש -ROS",
+            },
+          ]}
+        />
         <SuccessSection />
         <Testimonials />
-        <GreenInvoiceSection />
-        <VisionToExecutionSection />
         <AboutSection />
+        <GreenInvoiceSection />
+
         <PackagesSection />
         <FaqSection />
       </main>
