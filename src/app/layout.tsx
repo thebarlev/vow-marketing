@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Assistant } from "next/font/google";
+import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import "./globals.css";
 
 const assistant = Assistant({
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={assistant.variable}>
       <body className="antialiased font-sans">
         {children}
+        <WhatsAppButton />
         {siteKey && (
           <Script
             src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
