@@ -98,12 +98,10 @@ export function SiteHeader() {
                 height={46}
                 priority
                 className={[
-                  "h-auto transition-all duration-300 ease-in-out origin-right",
-                  // במובייל: 149px רגיל → 119px בגלילה (80% = כיווץ 20%)
-                  // בדסקטופ (sm ומעלה): תמיד 149px
-                  scrolled
-                    ? "w-[119px] sm:w-[149px]"
-                    : "w-[149px]",
+                  "h-auto w-[149px] transition-transform duration-300 ease-in-out origin-left",
+                  // במובייל בגלילה: scale(0.8) — לא משנה width ולא מזיז את ה-layout
+                  // בדסקטופ: תמיד scale(1)
+                  scrolled ? "sm:scale-100 scale-[0.8]" : "scale-100",
                 ].join(" ")}
               />
             </Link>
