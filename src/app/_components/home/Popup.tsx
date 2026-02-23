@@ -120,12 +120,12 @@ export function Popup({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-[637px] rounded-xl bg-white p-10 text-right max-h-[calc(100vh-80px)] overflow-y-auto hide-scrollbar"
+        className="relative w-full max-w-[637px] rounded-xl bg-white  p-5 text-right max-h-[calc(100vh-80px)] overflow-y-auto hide-scrollbar"
         onClick={(e) => e.stopPropagation()}
       >
         {!isSuccess ? (
           <>
-            <div className="mb-4 flex justify-center">
+            <div className="mb-2 flex justify-center">
               {iconVariant === "develop-ai" ? (
                 <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
               ) : (
@@ -145,7 +145,7 @@ export function Popup({
               {title}
             </h2>
 
-            <h6 className="mb-4 px-2 py-1 text-center text-[26px] font-semibold text-[#747474]">
+            <h6 className="mb-2 px-1 py-1 text-center text-[26px] font-semibold text-[#747474]">
               {description}
             </h6>
 

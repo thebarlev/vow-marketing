@@ -8,7 +8,6 @@ const HEADER_DEV_DROPDOWN = [
   { href: "/develop-ai", label: "פיתוח תוכנה בסביבת AI" },
 ] as const
 
-// קטגוריות לתפריט נפתח במובייל — מבוסס על הפוטר, חוץ מ"חשוב לדעת"
 const MOBILE_MENU_SECTIONS = [
   {
     title: "שירותים של VOW",
@@ -34,6 +33,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
   const [headerHeight, setHeaderHeight] = useState(72)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const measure = () => {
@@ -46,6 +46,20 @@ export function SiteHeader() {
     return () => window.removeEventListener("resize", measure)
   }, [])
 
+  // זיהוי גלילה — לכיווץ הלוגו במובייל
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  // עדכון גובה ה-header אחרי כיווץ/הרחבת הלוגו
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight)
+    }
+  }, [scrolled])
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden"
@@ -57,7 +71,6 @@ export function SiteHeader() {
 
   return (
     <>
-      {/* Header קבוע */}
       <header
         ref={headerRef}
         role="banner"
@@ -72,7 +85,7 @@ export function SiteHeader() {
             aria-label="ניווט ראשי"
             className="flex flex-row-reverse items-center justify-between gap-3 py-4 lg:py-6"
           >
-            {/* Logo */}
+            {/* Logo — מתכווץ ב-20% במובייל בגלילה */}
             <Link
               href="/"
               className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md"
@@ -84,7 +97,14 @@ export function SiteHeader() {
                 width={150}
                 height={46}
                 priority
-                className="h-auto w-[149px]"
+                className={[
+                  "h-auto transition-all duration-300 ease-in-out",
+                  // במובייל: 149px רגיל → 119px בגלילה (80% = כיווץ 20%)
+                  // בדסקטופ (sm ומעלה): תמיד 149px
+                  scrolled
+                    ? "w-[119px] sm:w-[149px]"
+                    : "w-[149px]",
+                ].join(" ")}
               />
             </Link>
 
@@ -197,11 +217,9 @@ export function SiteHeader() {
           className="sm:hidden fixed left-0 right-0 bottom-0 z-40 bg-white flex flex-col"
           style={{ top: headerHeight }}
         >
-          {/* קישורים עם כותרות קטגוריה */}
           <div className="flex flex-col flex-1 overflow-y-auto px-6 py-6 gap-8">
             {MOBILE_MENU_SECTIONS.map((section) => (
               <div key={section.title}>
-                {/* כותרת קטגוריה — כמו בפוטר */}
                 <p className="text-[14px] font-semibold text-[#A1A1A1] mb-3 tracking-wide">
                   {section.title}
                 </p>
@@ -226,14 +244,14 @@ export function SiteHeader() {
           <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
             <div className="flex flex-row-reverse items-center justify-between gap-2 bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2">
               <div className="flex items-center gap-2">
-                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[50px]">
+                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
                   הצטרפות
                 </a>
-                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[50px]">
+                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">
                   התחברות
                 </a>
               </div>
-              <span className="text-right" style={{ fontSize: "18px", lineHeight: "18px" }}>
+              <span className="text-right" style={{ fontSize: "14px", lineHeight: "18px" }}>
                 חשבונית דיגיטלית שנה חינם
               </span>
             </div>
