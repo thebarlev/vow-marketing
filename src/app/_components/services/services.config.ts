@@ -213,8 +213,8 @@ export const marketingConfig: ServicePageConfig = {
     buttonSource: "digital_marketing",
   },
   about: {
-    title: "שיווק שמביא תוצאות מדידות",
-    subtitle: "אסטרטגיה, קריאייטיב ואופטימיזציה, עם החלטות שמבוססות נתונים.",
+    title: "שיווק שמבוסס על ניסיון אמיתי. תוצאות אמיתיות.",
+    subtitle: "עם מעל 20 שנות ניסיון ועבודה עם החברות המובילות במשק אנחנו יודעים איך לבנות אסטרטגיה שמביאה צמיחה.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     items: [
@@ -232,8 +232,8 @@ export const marketingConfig: ServicePageConfig = {
       },
       {
         id: "marketing-about-3",
-        title: "מדידה ואופטימיזציה",
-        description: "משפכים, אנליטיקס ודשבורדים.",
+        title: "שותפות אמיתית לצמיחה",
+        description: "אנחנו לא ספק, אנחנו שותף שמכוון לתוצאה העסקית שלכם.",
         icon: "/about/analytics.svg",
       },
     ],

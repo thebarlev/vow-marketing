@@ -73,7 +73,7 @@ export const PACKAGE_CARDS = [
   },
   {
     kicker: "הרואה חשבון שלך עובד 24/7",
-    headline: "חשבונאות חכמה (AI)",
+    headline: "רואה חשבון AI",
     buttonLabel: "להשארת פרטים",
     bullets: [
     'ידע של 1,000+ רו״ח',
@@ -126,7 +126,7 @@ export const OUR_PACKAGES = [
     source: "digital_marketing" as const,
   },
   {
-    title: "חשבונאות חכמה (AI)",
+    title: "רואה חשבון AI",
     toppopup: "מוגבל ל-100 בלבד | נותרו פחות מ־10 מקומות",
     kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "להשארת פרטים",

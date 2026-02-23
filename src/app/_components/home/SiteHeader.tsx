@@ -191,7 +191,14 @@ export function SiteHeader() {
                   </ul>
                 </div>
               </li>
-
+              <li className="hidden md:flex md:items-center">
+                <Link
+                  href="/marketing"
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
+                >
+                 שיווק
+                </Link>
+              </li>
               <li className="hidden md:flex md:items-center">
                 <Link
                   href="/contact"
