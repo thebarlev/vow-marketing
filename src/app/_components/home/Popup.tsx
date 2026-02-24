@@ -230,7 +230,7 @@ export function Popup({
                   disabled={isSubmitting}
                   className="mt-2 w-full rounded bg-black py-3 text-[20px] text-white cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "שולח..." : "הרשמה"}
+                  {isSubmitting ? "שולח..." : "שליחה"}
                 </button>
               </form>
             </>
@@ -240,7 +240,7 @@ export function Popup({
                 <CheckCircle className="h-16 w-16 text-green-600" aria-hidden="true" />
               </div>
 
-              <h2 className="text-[40px] font-bold">ההרשמה התקבלה בהצלחה</h2>
+              <h2 className="text-[40px] font-bold">הפנייה התקבלה בהצלחה</h2>
 
               {successMessage}
 
