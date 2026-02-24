@@ -1,6 +1,7 @@
 import "server-only"
-
+import { BrevoClient } from "@getbrevo/brevo"
 import { getSupabaseAdmin } from "@/lib/supabase/admin"
+
 import { verifyCaptcha } from "@/lib/captcha/verify"
 import { NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
@@ -34,24 +35,31 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const { firstName, lastName, email, phone, source, pagePath, userAgent, captchaToken } =
-      parsed.data
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      source,
+      pagePath,
+      userAgent,
+      captchaToken,
+    } = parsed.data
 
-    // Verify reCAPTCHA
-    const captchaResult = await verifyCaptcha(captchaToken)
-    if (!captchaResult.success) {
-      console.warn(`[leads] CAPTCHA failed: ${captchaResult.error}, score: ${captchaResult.score}`)
-      return NextResponse.json(
-        { error: "אימות נכשל. אנא נסה שוב." },
-        { status: 403 }
-      )
+    if (process.env.NODE_ENV !== "production" && captchaToken === "BYPASS") {
+      // dev bypass
+    } else {
+      const captchaResult = await verifyCaptcha(captchaToken)
+      if (!captchaResult.success) {
+        return NextResponse.json(
+          { error: "אימות נכשל. אנא נסה שוב." },
+          { status: 403 }
+        )
+      }
     }
-
-    console.log(`[leads] CAPTCHA verified, score: ${captchaResult.score}`)
 
     const supabase = getSupabaseAdmin()
 
-    // Map camelCase to snake_case for DB
     const { error } = await supabase.from("leads").insert({
       first_name: firstName,
       last_name: lastName,
@@ -63,11 +71,39 @@ export async function POST(req: NextRequest) {
     } as never)
 
     if (error) {
-      console.error("Supabase insert error:", error)
       return NextResponse.json(
         { error: "שגיאה בשמירת הנתונים" },
         { status: 500 }
       )
+    }
+
+    // --- Brevo email ---
+    console.log("[leads] sending email via brevo to:", process.env.LEADS_NOTIFY_EMAIL)
+    const brevo = new BrevoClient({
+      apiKey: process.env.BREVO_API_KEY!,
+    })
+
+    try {
+      const res = await brevo.transactionalEmails.sendTransacEmail({
+        sender: { name: "VOW Leads", email: "support@vow.co.il" },
+        to: [{ email: process.env.LEADS_NOTIFY_EMAIL!, name: "VOW Admin" }],
+        subject: `ליד חדש ב-VOW • ${source}`,
+        htmlContent: `
+          <div dir="rtl" style="font-family: Arial; line-height:1.6">
+            <h2>ליד חדש התקבל</h2>
+            <p><b>שם:</b> ${firstName} ${lastName}</p>
+            <p><b>אימייל:</b> ${email}</p>
+            <p><b>טלפון:</b> ${phone}</p>
+            <p><b>מקור:</b> ${source}</p>
+            <p><b>עמוד:</b> ${pagePath ?? ""}</p>
+          </div>
+        `,
+      })
+    
+      console.log("[leads] brevo sendTransacEmail response:", res)
+    } catch (e) {
+      console.error("[leads] brevo sendTransacEmail error:", e)
+      throw e
     }
 
     return NextResponse.json({ ok: true })
