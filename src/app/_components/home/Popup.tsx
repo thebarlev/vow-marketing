@@ -100,7 +100,7 @@ export function Popup({
       </>
     ) : (
       <p className="text-[22px] font-semibold leading-relaxed text-[#747474]">
-        תודה על ההרשמה! ניצור איתך קשר בהקדם.
+       ניצור איתך קשר בהקדם.
       </p>
     )
 
