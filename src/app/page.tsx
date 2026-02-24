@@ -103,8 +103,8 @@ export default function HomePage() {
             {
               id: "home-vto-4",
               src: "/4.webp",
-              alt: "שיפור ביצועים, חוויית משתמש -ROS",
-              caption: "שיפור ביצועים, חוויית משתמש -ROS",
+              alt: "שיפור ביצועים, חוויית משתמש - ROI",
+              caption: "שיפור ביצועים, חוויית משתמש - ROI",
             },
           ]}
         />

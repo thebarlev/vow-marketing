@@ -2,10 +2,12 @@ import Image from "next/image"
 import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 
 const HERO_TAGS = [
-  "רואה חשבון AI",
-  "פיתוח אתרים ומערכות",
-  "חשבונית ירוקה מאובטחת",
-  "שיווק דיגיטלי",
+
+  "פיתוח ועיצוב אתרים חכמים מבוססי AI",
+  "מערכות ואוטומציות AI לעסק",
+  "שיווק דיגיטלי שמייצר ROI אמיתי",
+  "חשבונית דיגיטלית מאובטחת (שנה חינם)",
+  "רואה חשבון AI שמכיר את החוק",
 ]
 
 export function Hero() {
