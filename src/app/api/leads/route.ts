@@ -12,9 +12,7 @@ const sourceEnum = z.enum([
   "smart_accounting_ai",
 ])
 
-const leadSchema = z.object({
-  firstName: z.string().min(1, "שם פרטי חובה"),
-  lastName: z.string().min(1, "שם משפחה חובה"),
+const baseLeadSchema = z.object({
   email: z.string().email("כתובת אימייל לא תקינה"),
   phone: z.string().min(9, "מספר טלפון לא תקין"),
   source: sourceEnum,
@@ -22,6 +20,25 @@ const leadSchema = z.object({
   userAgent: z.string().optional(),
   captchaToken: z.string().min(1, "CAPTCHA token required"),
 })
+
+const leadSchemaV1 = baseLeadSchema.extend({
+  firstName: z.string().min(1, "שם פרטי חובה"),
+  lastName: z.string().min(1, "שם משפחה חובה"),
+})
+
+const leadSchemaV2 = baseLeadSchema.extend({
+  fullName: z.string().trim().min(2, "שם מלא חובה"),
+})
+
+const leadSchema = z.union([leadSchemaV2, leadSchemaV1])
+
+function splitFullName(fullName: string): { firstName: string; lastName: string } {
+  const normalized = fullName.trim().replace(/\s+/g, " ")
+  const parts = normalized.split(" ").filter(Boolean)
+  const firstName = parts.shift() ?? normalized
+  const lastName = parts.join(" ")
+  return { firstName, lastName }
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -35,16 +52,12 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      source,
-      pagePath,
-      userAgent,
-      captchaToken,
-    } = parsed.data
+    const { email, phone, source, pagePath, userAgent, captchaToken } = parsed.data
+
+    const { firstName, lastName } =
+      "fullName" in parsed.data
+        ? splitFullName(parsed.data.fullName)
+        : { firstName: parsed.data.firstName, lastName: parsed.data.lastName }
 
     if (process.env.NODE_ENV !== "production" && captchaToken === "BYPASS") {
       // dev bypass
@@ -84,6 +97,7 @@ export async function POST(req: NextRequest) {
     })
 
     try {
+      const displayName = lastName ? `${firstName} ${lastName}` : firstName
       const res = await brevo.transactionalEmails.sendTransacEmail({
         sender: { name: "VOW Leads", email: "support@vow.co.il" },
         to: [{ email: process.env.LEADS_NOTIFY_EMAIL!, name: "VOW Admin" }],
@@ -91,7 +105,7 @@ export async function POST(req: NextRequest) {
         htmlContent: `
           <div dir="rtl" style="font-family: Arial; line-height:1.6">
             <h2>ליד חדש התקבל</h2>
-            <p><b>שם:</b> ${firstName} ${lastName}</p>
+            <p><b>שם:</b> ${displayName}</p>
             <p><b>אימייל:</b> ${email}</p>
             <p><b>טלפון:</b> ${phone}</p>
             <p><b>מקור:</b> ${source}</p>
