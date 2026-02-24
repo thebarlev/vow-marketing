@@ -110,7 +110,7 @@ export function ContactForm() {
               id="fullName"
               type="text"
               {...register("fullName")}
-              className="w-full rounded border px-3 py-3"
+              className="w-full rounded border px-3 py-3 bg-white"
               dir="rtl"
               autoComplete="name"
             />
@@ -128,7 +128,7 @@ export function ContactForm() {
                 id="phone"
                 type="tel"
                 {...register("phone")}
-                className="w-full rounded border px-3 py-3"
+                className="w-full rounded border px-3 py-3 bg-white"
                 dir="ltr"
                 autoComplete="tel"
                 inputMode="tel"
@@ -146,7 +146,7 @@ export function ContactForm() {
                 id="email"
                 type="email"
                 {...register("email")}
-                className="w-full rounded border px-3 py-3"
+                className="w-full rounded border px-3 py-3 bg-white"
                 dir="ltr"
                 autoComplete="email"
                 inputMode="email"
@@ -165,7 +165,7 @@ export function ContactForm() {
               id="subject"
               type="text"
               {...register("subject")}
-              className="w-full rounded border px-3 py-3"
+              className=" bg-white w-full rounded border px-3 py-3"
               dir="rtl"
             />
             {errors.subject && (
@@ -205,7 +205,7 @@ export function ContactForm() {
             <textarea
               id="message"
               {...register("message")}
-              className="min-h-[140px] w-full resize-y rounded border px-3 py-3"
+              className=" bg-white min-h-[140px] w-full resize-y rounded border px-3 py-3"
               dir="rtl"
             />
             {errors.message && (

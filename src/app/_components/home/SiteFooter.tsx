@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa"
 
 const LEGAL_LINKS = [
   { href: "/terms", label: "תנאים משפטיים" },
@@ -12,15 +12,15 @@ const LEGAL_LINKS = [
 const PRODUCTS_LINKS = [
   { href: "/account-ai", label: "רואה חשבון AI" },
   { href: "/invoice", label: "חשבונית דיגיטלית מאובטחת" },
+  { href: "/pricing", label: "מחירים" },
 ] as const
 
 const PAGES_LINKS = [
   { href: "/design", label: "עיצוב ומיתוג" },
   { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
   { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
-  { href: "/pricing", label: "מחירים" },
   { href: "/marketing", label: "שיווק דיגיטלי" },
-  { href: "/contact", label: "יצירת קשר" },
+  { href: "/portfolio", label: "פרויקטים נבחרים" },
 ] as const
 
 type FooterColumn = {
@@ -83,16 +83,38 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:items-center">
-            <div className="flex space-x-4 gap-4 lg:gap-2">
-              <a href="https://www.facebook.com/profile.php?id=61587713103366" className="text-white/70 hover:text-white" aria-label="Facebook">
-                <FaFacebookF />
-              </a>
-              <a href="https://x.com/Vowsuccess" className="text-white/70 hover:text-white" aria-label="Twitter">
-                <FaTwitter />
-              </a>
-              <a href="https://www.instagram.com/vow.for.success?igsh=MTRiMmRieTNlejlsNQ%3D%3D&utm_source=qr" className="text-white/70 hover:text-white" aria-label="Instagram">
-                <FaInstagram />
-              </a>
+            <div className="flex flex-col items-center gap-8 sm:items-start">
+              <p className="text-[18px] font-semibold leading-[20px] text-[#A1A1A1]">יצירת קשר</p>
+              <div className="flex sflex-row-reverse items-center gap-4 lg:gap-6">
+                <Link
+                  href="/contact"
+                  className="text-white/70 hover:text-white "
+                  aria-label="יצירת קשר"
+                >
+                  <FaEnvelope />
+                </Link>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61587713103366"
+                  className="text-white/70 hover:text-white"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://x.com/Vowsuccess"
+                  className="text-white/70 hover:text-white"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="https://www.instagram.com/vow.for.success?igsh=MTRiMmRieTNlejlsNQ%3D%3D&utm_source=qr"
+                  className="text-white/70 hover:text-white"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
             <p className="text-sm text-white/70">© {new Date().getFullYear()} VOW</p>
           </div>

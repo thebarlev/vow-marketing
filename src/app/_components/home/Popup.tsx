@@ -110,7 +110,7 @@ export function Popup({
       onClick={onClose}
     >
       {/* עטיפה פנימית עם מרווח — מאפשרת גלילה לכל הפופאפ */}
-      <div className="flex min-h-full items-start justify-center py-10">
+      <div className="flex min-h-full items-start justify-center py-10 ">
         <div
           className="relative w-full max-w-[637px] rounded-xl bg-white p-5 text-right"
           onClick={(e) => e.stopPropagation()}
@@ -127,7 +127,7 @@ export function Popup({
 
           {!isSuccess ? (
             <>
-              <div className="mb-s flex justify-center">
+              <div className="mb-0.2 flex justify-center">
                 {iconVariant === "develop-ai" ? (
                   <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
                 ) : (
@@ -150,11 +150,11 @@ export function Popup({
               </h6>
 
               <form
-                className="mx-auto max-w-[336px] space-y-4"
+                className="mx-auto max-w-[336px] space-y-4 pb-5"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <div>
-                  <label htmlFor="fullName" className="mb-1 block text-[20px] font-semibold">
+                  <label htmlFor="fullName" className="mb-0.2 block text-[20px] font-semibold">
                     שם מלא
                   </label>
                   <input
@@ -170,7 +170,7 @@ export function Popup({
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-1 block text-[20px] font-semibold">
+                  <label htmlFor="email" className="mb-0.2 block text-[20px] font-semibold">
                     דוא&quot;ל
                   </label>
                   <input
@@ -186,7 +186,7 @@ export function Popup({
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="mb-1 block text-[20px] font-semibold">
+                  <label htmlFor="phone" className="mb-0.2 block text-[20px] font-semibold">
                     נייד
                   </label>
                   <input
