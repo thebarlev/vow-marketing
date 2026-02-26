@@ -3,11 +3,9 @@ import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 
 const HERO_TAGS = [
 
-  "פיתוח ועיצוב אתרים חכמים מבוססי AI",
+  "פיתוח ועיצוב אתרים מבוססי AI",
   "מערכות ואוטומציות AI לעסק",
   "שיווק דיגיטלי שמייצר ROI אמיתי",
-  "חשבונית דיגיטלית מאובטחת (שנה חינם)",
-  "רואה חשבון AI שמכיר את החוק",
 ]
 
 export function Hero() {
@@ -32,10 +30,10 @@ export function Hero() {
           <div className="flex flex-col items-end text-right mt-5">
             <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9]">
-                חותמים
+              פיתוח אתרים חכמים, מערכות AI ושיווק שמייצר תוצאות
               </span>
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9] mb-1">
-                על הצלחה
+                
               </span>
             </h1>
             <div className="mt-4 w-full flex flex-col items-start">
@@ -51,11 +49,11 @@ export function Hero() {
             <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
               <span
                 className="block w-full text-right tracking-[-0.8px]
-                           md:text-[96px]
-                           lg:text-[120px]
-                           xl:text-[156px] xl:leading-[144px] xl:tracking-[-1.56px]"
+                           md:text-[70px]
+                           lg:text-[100px]
+                           xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]"
               >
-                חותמים
+                פיתוח אתרים חכמים, מערכות AI ושיווק שמייצר תוצאות
               </span>
               <span
                 className="block w-full text-right tracking-[-0.8px]
@@ -63,7 +61,7 @@ export function Hero() {
                            lg:text-[120px]
                            xl:text-[156px] xl:leading-[144px] xl:tracking-[-1.56px] mb-1"
               >
-                על הצלחה
+           
               </span>
             </h1>
             <div
