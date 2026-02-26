@@ -153,14 +153,47 @@ export const developConfig: ServicePageConfig = {
 
   },
   doubleHeading: {
-    title: "יותר תוצאות. יותר מדוייק.",
-    subtitle: "אם כבר יש לכם אתר או מערכת פעילה - אנחנו יכולים להפוך אותה ליעילה יותר, מדויקת יותר ורווחית יותר.",
+    title: "פיתוח אתרי וורדפרס וחנויות אונליין מבוססי AI עם 20 שנות ניסיון",
+    subtitle: "משלבים ניסיון עמוק בבניית אתרים, SEO וקידום עסקים במנועי AI, כדי לבנות לך נוכחות דיגיטלית שמייצרת תוצאות עסקיות אמיתיות.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "design_development",
   },
+  vision: {
+    title: "פיתוח אתרים מבוססי AI שמנצחים את המתחרים",
+    subtitle:
+      "אתר חכם שמתחיל לייצר מכירות / לידים ולהחזיר השקעה כבר מהחודש הראשון",
+    ctaLabel: "להשארת פרטים",
+    source: "design_development",
+    cards: [
+      {
+        id: "develop-vision-1",
+        src: "/services/develop/d1.webp",
+        alt: "אתרים שמוכרים ומייצרים לידים",
+        caption: "אתרים שמוכרים ומייצרים לידים",
+      },
+      {
+        id: "develop-vision-2",
+        src: "/services/develop/d2.webp",
+        alt: "אוטומציות שחוסכות שעות עבודה",
+        caption:  "אוטומציות שחוסכות שעות עבודה",
+      },
+      {
+        id: "develop-vision-3",
+        src: "/services/develop/d3.webp",
+        alt: "טכנולוגיה שמביאה תנועה אורגנית SEO",
+        caption: "טכנולוגיה שמביאה תנועה אורגנית SEO",
+      },
+      {
+        id: "develop-vision-4",
+        src: "/services/develop/d4.webp",
+        alt: "פיתוח בהתאמה אישית ייחודית לעסק שלך",
+        caption: "פיתוח בהתאמה אישית ייחודית לעסק שלך",
+      },
+    ],
+  },
   about: {
-    title: "פיתוח דיגיטלי בלי בזבוז זמן וכסף בעזרת AI.",
-    subtitle: "כל מוצר נבנה מתוך חשיבה תוצאתית: בין אם מדובר באתר, אפליקציה או מערכת פנימית - אנחנו מפתחים כדי לייצר ערך עסקי ברור.",
+    title: "פיתוח אתרי תדמית וחנויות אונליין מבוססי AI לעסקים, בלי לפגוע בכיס!",
+    subtitle: "כל אתר מתוכנן מהיום הראשון להביא לקוחות, מכירות ולידים - לא רק להיראות טוב.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     items: [
@@ -192,29 +225,70 @@ export const developConfig: ServicePageConfig = {
   sections: SECTIONS_ORDER,
 }
 
-export const marketingConfig: ServicePageConfig = {
+export const marketingPpcConfig: ServicePageConfig = {
   slug: "marketing",
   metadata: {
-    title: "שיווק דיגיטלי שמייצר ROI לעסקים שרוצים לגדול",
-    description: "קמפיינים בגוגל ובמטא, CRO, אנליטיקס ומשפכים. מפסיקים לנחש - מתחילים למדוד.",
+    title: "שיווק PPC | VOW",
+    description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש — מתחילים למדוד.",
+    openGraph: {
+      title: "שיווק PPC | VOW",
+      description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש — מתחילים למדוד.",
+      url: "/marketing/ppc",
+      type: "website",
+    },
   },
   hero: {
-    title: "שיווק דיגיטלי שמייצר ROI / הכנסות",
-    tags: ["ניהול קמפיינים", "SEO", "קריאטיב"],
+    title: "שיווק PPC",
+    subtitle: "Google Ads + Meta Ads עם תהליך מדיד: משפך, אנליטיקס ואופטימיזציה שמכוונת להכנסות — לא לניחושים.",
+    tags: ["Google Ads", "Meta Ads", "קריאייטיב", "אנליטיקס"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",
-    imageAlt: "שיווק דיגיטלי",
+    imageAlt: "שיווק PPC",
   },
   doubleHeading: {
-    title: "החברות הגדולות כבר כאן!",
-    subtitle: "הגיע הזמן שגם העסק שלכם יקבל שיווק ברמה אחרת.",
+    title: "גם אתם יכולים לשחק בליגה של הגדולים.",
+    subtitle: "בונים קמפיינים שמתחברים למספרים: עלות ליד, איכות, יחס סגירה ו‑LTV — ומקבלים החלטות לפי דאטה.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "digital_marketing",
   },
+  vision: {
+    title: "פחות ניחושים. יותר נתונים.",
+    subtitle:
+      "אנחנו בונים מערכת שיווק שמבוססת מדידה: קמפיינים, קריאייטיב, אנליטיקס ואופטימיזציה — עם החלטות שמחוברות ל‑ROI.",
+    ctaLabel: "להשארת פרטים",
+    source: "digital_marketing",
+    cards: [
+      {
+        id: "marketing-vision-1",
+        src: "/services/marketing/1.webp",
+        alt: "Google Ads",
+        caption: "Google Ads",
+      },
+      {
+        id: "marketing-vision-2",
+        src: "/services/marketing/2.webp",
+        alt: "Meta Ads",
+        caption: "Meta Ads",
+      },
+      {
+        id: "marketing-vision-3",
+        src: "/services/marketing/3.webp",
+        alt: "אנליטיקה ו‑CRO",
+        caption: "אנליטיקה ו‑CRO",
+      },
+      {
+        id: "marketing-vision-4",
+        src: "/services/marketing/4.webp",
+        alt: "קריאייטיב ו‑A/B Testing",
+        caption: "קריאייטיב ו‑A/B Testing",
+      },
+    ],
+  },
   about: {
-    title: "שיווק שמבוסס על ניסיון אמיתי. תוצאות אמיתיות.",
-    subtitle: "עם מעל 20 שנות ניסיון ועבודה עם החברות המובילות במשק אנחנו יודעים איך לבנות אסטרטגיה שמביאה צמיחה.",
+    title: "שיווק PPC שמבוסס ניסיון אמיתי. תוצאות אמיתיות.",
+    subtitle:
+      "עם מעל 20 שנות ניסיון — אנחנו יודעים לחבר קריאייטיב, קמפיינים ודאטה כדי לבנות תהליך שמייצר צמיחה ולא רק קליקים.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     items: [
@@ -239,22 +313,22 @@ export const marketingConfig: ServicePageConfig = {
     ],
   },
   faq: {
-    title: "שאלות נפוצות על שיווק דיגיטלי",
+    title: "שאלות נפוצות על שיווק PPC",
     items: [
       {
         id: "marketing-faq-1",
-        question: "באילו פלטפורמות אתם מפרסמים?",
-        answer: "לרוב Google/Meta, ובמידת הצורך גם ערוצים נוספים.",
+        question: "באילו פלטפורמות אתם מנהלים PPC?",
+        answer: "בעיקר Google Ads ו‑Meta Ads. בהתאם לקהל ולמוצר נשלב גם ערוצים נוספים כשזה משרת את ה‑ROI.",
       },
       {
         id: "marketing-faq-2",
         question: "איך מודדים הצלחה?",
-        answer: "מגדירים KPI, מודדים משפך, ומשפרים באופן שוטף לפי נתונים.",
+        answer: "מגדירים KPI לפי יעד עסקי (לידים/מכירות), מודדים משפך מקצה לקצה, ומשפרים באופן שוטף לפי נתונים.",
       },
       {
         id: "marketing-faq-3",
         question: "האם אתם מטפלים גם בתוכן וקריאייטיב?",
-        answer: "כן. קריאייטיב, קופי ותוכן כחלק מהתהליך.",
+        answer: "כן. קריאייטיב, קופי ונכסי נחיתה כחלק מהתהליך — כדי לשפר CTR, יחס המרה ועלות רכישה.",
       },
     ],
   },

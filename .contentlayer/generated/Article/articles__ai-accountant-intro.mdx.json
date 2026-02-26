@@ -1,0 +1,28 @@
+{
+  "title": "רו״ח AI לעסק: מה זה אומר בפועל ואיפה מתחילים",
+  "description": "סדר במסמכים, פחות טעויות, ויותר שליטה — בלי להפוך את זה לפרויקט.",
+  "date": "2026-01-28T00:00:00.000Z",
+  "coverImage": "/services/d-green-invocie.webp",
+  "category": "ai_accountant",
+  "tags": [
+    "חשבוניות",
+    "מסמכים",
+    "אוטומציה",
+    "בקרה"
+  ],
+  "body": {
+    "raw": "\n# מבוא קצר\n\nכאן יהיה טקסט פתיחה (placeholder) על איך AI עוזר לעשות סדר במסמכים ובהפקת תובנות.\n\n## רשימת בדיקות\n\n- איסוף מסמכים אוטומטי\n- סיווג בסיסי\n- בקרת חריגים\n\n",
+    "code": "var Component=(()=>{var u=Object.create;var i=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,_=Object.prototype.hasOwnProperty;var g=(e,n)=>()=>(n||e((n={exports:{}}).exports,n),n.exports),f=(e,n)=>{for(var r in n)i(e,r,{get:n[r],enumerable:!0})},l=(e,n,r,o)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let c of p(n))!_.call(e,c)&&c!==r&&i(e,c,{get:()=>n[c],enumerable:!(o=m(n,c))||o.enumerable});return e};var j=(e,n,r)=>(r=e!=null?u(x(e)):{},l(n||!e||!e.__esModule?i(r,\"default\",{value:e,enumerable:!0}):r,e)),v=e=>l(i({},\"__esModule\",{value:!0}),e);var s=g((y,a)=>{a.exports=_jsx_runtime});var M={};f(M,{default:()=>d,frontmatter:()=>I});var t=j(s()),I={title:\"\\u05E8\\u05D5\\u05F4\\u05D7 AI \\u05DC\\u05E2\\u05E1\\u05E7: \\u05DE\\u05D4 \\u05D6\\u05D4 \\u05D0\\u05D5\\u05DE\\u05E8 \\u05D1\\u05E4\\u05D5\\u05E2\\u05DC \\u05D5\\u05D0\\u05D9\\u05E4\\u05D4 \\u05DE\\u05EA\\u05D7\\u05D9\\u05DC\\u05D9\\u05DD\",description:\"\\u05E1\\u05D3\\u05E8 \\u05D1\\u05DE\\u05E1\\u05DE\\u05DB\\u05D9\\u05DD, \\u05E4\\u05D7\\u05D5\\u05EA \\u05D8\\u05E2\\u05D5\\u05D9\\u05D5\\u05EA, \\u05D5\\u05D9\\u05D5\\u05EA\\u05E8 \\u05E9\\u05DC\\u05D9\\u05D8\\u05D4 \\u2014 \\u05D1\\u05DC\\u05D9 \\u05DC\\u05D4\\u05E4\\u05D5\\u05DA \\u05D0\\u05EA \\u05D6\\u05D4 \\u05DC\\u05E4\\u05E8\\u05D5\\u05D9\\u05E7\\u05D8.\",date:\"2026-01-28\",coverImage:\"/services/d-green-invocie.webp\",category:\"ai_accountant\",tags:[\"\\u05D7\\u05E9\\u05D1\\u05D5\\u05E0\\u05D9\\u05D5\\u05EA\",\"\\u05DE\\u05E1\\u05DE\\u05DB\\u05D9\\u05DD\",\"\\u05D0\\u05D5\\u05D8\\u05D5\\u05DE\\u05E6\\u05D9\\u05D4\",\"\\u05D1\\u05E7\\u05E8\\u05D4\"]};function h(e){let n={h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",ul:\"ul\",...e.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(n.h1,{children:\"\\u05DE\\u05D1\\u05D5\\u05D0 \\u05E7\\u05E6\\u05E8\"}),`\n`,(0,t.jsx)(n.p,{children:\"\\u05DB\\u05D0\\u05DF \\u05D9\\u05D4\\u05D9\\u05D4 \\u05D8\\u05E7\\u05E1\\u05D8 \\u05E4\\u05EA\\u05D9\\u05D7\\u05D4 (placeholder) \\u05E2\\u05DC \\u05D0\\u05D9\\u05DA AI \\u05E2\\u05D5\\u05D6\\u05E8 \\u05DC\\u05E2\\u05E9\\u05D5\\u05EA \\u05E1\\u05D3\\u05E8 \\u05D1\\u05DE\\u05E1\\u05DE\\u05DB\\u05D9\\u05DD \\u05D5\\u05D1\\u05D4\\u05E4\\u05E7\\u05EA \\u05EA\\u05D5\\u05D1\\u05E0\\u05D5\\u05EA.\"}),`\n`,(0,t.jsx)(n.h2,{children:\"\\u05E8\\u05E9\\u05D9\\u05DE\\u05EA \\u05D1\\u05D3\\u05D9\\u05E7\\u05D5\\u05EA\"}),`\n`,(0,t.jsxs)(n.ul,{children:[`\n`,(0,t.jsx)(n.li,{children:\"\\u05D0\\u05D9\\u05E1\\u05D5\\u05E3 \\u05DE\\u05E1\\u05DE\\u05DB\\u05D9\\u05DD \\u05D0\\u05D5\\u05D8\\u05D5\\u05DE\\u05D8\\u05D9\"}),`\n`,(0,t.jsx)(n.li,{children:\"\\u05E1\\u05D9\\u05D5\\u05D5\\u05D2 \\u05D1\\u05E1\\u05D9\\u05E1\\u05D9\"}),`\n`,(0,t.jsx)(n.li,{children:\"\\u05D1\\u05E7\\u05E8\\u05EA \\u05D7\\u05E8\\u05D9\\u05D2\\u05D9\\u05DD\"}),`\n`]})]})}function d(e={}){let{wrapper:n}=e.components||{};return n?(0,t.jsx)(n,{...e,children:(0,t.jsx)(h,{...e})}):h(e)}return v(M);})();\n;return Component;"
+  },
+  "_id": "articles/ai-accountant-intro.mdx",
+  "_raw": {
+    "sourceFilePath": "articles/ai-accountant-intro.mdx",
+    "sourceFileName": "ai-accountant-intro.mdx",
+    "sourceFileDir": "articles",
+    "contentType": "mdx",
+    "flattenedPath": "articles/ai-accountant-intro"
+  },
+  "type": "Article",
+  "slug": "ai-accountant-intro",
+  "readingTimeMinutes": 1
+}

@@ -1,0 +1,28 @@
+{
+  "title": "איך לבנות אתר מהיר שמביא לידים (בלי להקריב עיצוב)",
+  "description": "תהליך פרקטי: מבנה, UX, ביצועים, ומדידה — כדי שהאתר יעבוד כמו נכס.",
+  "date": "2026-02-26T00:00:00.000Z",
+  "coverImage": "/services/d-develop.webp",
+  "category": "web_development",
+  "tags": [
+    "ביצועים",
+    "UX",
+    "SEO",
+    "לידים"
+  ],
+  "body": {
+    "raw": "\n# פתיחה\n\nזהו מאמר דוגמה (Mock) שמדגים חוויית קריאה “editorial” ב‑RTL. בהמשך תחליפו לתוכן אמיתי.\n\n## מה חשוב להגדיר לפני שמתחילים\n\n- מטרה אחת ברורה (לידים / מכירות / פנייה)\n- קהל יעד ומסרים\n- מדידה: אירועים, טפסים, קליקים\n\n## דוגמה לקוד\n\n```tsx\nexport function Button({ children }: { children: React.ReactNode }) {\n  return <button className=\"vow-btn-primary\">{children}</button>\n}\n```\n\n## סיכום קצר\n\nכאן יהיה סיכום (placeholder) עם קריאה לפעולה בסוף המאמר.\n\n",
+    "code": "var Component=(()=>{var p=Object.create;var l=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,_=Object.prototype.hasOwnProperty;var g=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),f=(n,e)=>{for(var r in e)l(n,r,{get:e[r],enumerable:!0})},i=(n,e,r,o)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let c of m(e))!_.call(n,c)&&c!==r&&l(n,c,{get:()=>e[c],enumerable:!(o=u(e,c))||o.enumerable});return n};var b=(n,e,r)=>(r=n!=null?p(x(n)):{},i(e||!n||!n.__esModule?l(r,\"default\",{value:n,enumerable:!0}):r,n)),j=n=>i(l({},\"__esModule\",{value:!0}),n);var h=g((X,d)=>{d.exports=_jsx_runtime});var w={};f(w,{default:()=>s,frontmatter:()=>v});var t=b(h()),v={title:\"\\u05D0\\u05D9\\u05DA \\u05DC\\u05D1\\u05E0\\u05D5\\u05EA \\u05D0\\u05EA\\u05E8 \\u05DE\\u05D4\\u05D9\\u05E8 \\u05E9\\u05DE\\u05D1\\u05D9\\u05D0 \\u05DC\\u05D9\\u05D3\\u05D9\\u05DD (\\u05D1\\u05DC\\u05D9 \\u05DC\\u05D4\\u05E7\\u05E8\\u05D9\\u05D1 \\u05E2\\u05D9\\u05E6\\u05D5\\u05D1)\",description:\"\\u05EA\\u05D4\\u05DC\\u05D9\\u05DA \\u05E4\\u05E8\\u05E7\\u05D8\\u05D9: \\u05DE\\u05D1\\u05E0\\u05D4, UX, \\u05D1\\u05D9\\u05E6\\u05D5\\u05E2\\u05D9\\u05DD, \\u05D5\\u05DE\\u05D3\\u05D9\\u05D3\\u05D4 \\u2014 \\u05DB\\u05D3\\u05D9 \\u05E9\\u05D4\\u05D0\\u05EA\\u05E8 \\u05D9\\u05E2\\u05D1\\u05D5\\u05D3 \\u05DB\\u05DE\\u05D5 \\u05E0\\u05DB\\u05E1.\",date:\"2026-02-26\",coverImage:\"/services/d-develop.webp\",category:\"web_development\",tags:[\"\\u05D1\\u05D9\\u05E6\\u05D5\\u05E2\\u05D9\\u05DD\",\"UX\",\"SEO\",\"\\u05DC\\u05D9\\u05D3\\u05D9\\u05DD\"]};function a(n){let e={code:\"code\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",pre:\"pre\",ul:\"ul\",...n.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.h1,{children:\"\\u05E4\\u05EA\\u05D9\\u05D7\\u05D4\"}),`\n`,(0,t.jsx)(e.p,{children:\"\\u05D6\\u05D4\\u05D5 \\u05DE\\u05D0\\u05DE\\u05E8 \\u05D3\\u05D5\\u05D2\\u05DE\\u05D4 (Mock) \\u05E9\\u05DE\\u05D3\\u05D2\\u05D9\\u05DD \\u05D7\\u05D5\\u05D5\\u05D9\\u05D9\\u05EA \\u05E7\\u05E8\\u05D9\\u05D0\\u05D4 \\u201Ceditorial\\u201D \\u05D1\\u2011RTL. \\u05D1\\u05D4\\u05DE\\u05E9\\u05DA \\u05EA\\u05D7\\u05DC\\u05D9\\u05E4\\u05D5 \\u05DC\\u05EA\\u05D5\\u05DB\\u05DF \\u05D0\\u05DE\\u05D9\\u05EA\\u05D9.\"}),`\n`,(0,t.jsx)(e.h2,{children:\"\\u05DE\\u05D4 \\u05D7\\u05E9\\u05D5\\u05D1 \\u05DC\\u05D4\\u05D2\\u05D3\\u05D9\\u05E8 \\u05DC\\u05E4\\u05E0\\u05D9 \\u05E9\\u05DE\\u05EA\\u05D7\\u05D9\\u05DC\\u05D9\\u05DD\"}),`\n`,(0,t.jsxs)(e.ul,{children:[`\n`,(0,t.jsx)(e.li,{children:\"\\u05DE\\u05D8\\u05E8\\u05D4 \\u05D0\\u05D7\\u05EA \\u05D1\\u05E8\\u05D5\\u05E8\\u05D4 (\\u05DC\\u05D9\\u05D3\\u05D9\\u05DD / \\u05DE\\u05DB\\u05D9\\u05E8\\u05D5\\u05EA / \\u05E4\\u05E0\\u05D9\\u05D9\\u05D4)\"}),`\n`,(0,t.jsx)(e.li,{children:\"\\u05E7\\u05D4\\u05DC \\u05D9\\u05E2\\u05D3 \\u05D5\\u05DE\\u05E1\\u05E8\\u05D9\\u05DD\"}),`\n`,(0,t.jsx)(e.li,{children:\"\\u05DE\\u05D3\\u05D9\\u05D3\\u05D4: \\u05D0\\u05D9\\u05E8\\u05D5\\u05E2\\u05D9\\u05DD, \\u05D8\\u05E4\\u05E1\\u05D9\\u05DD, \\u05E7\\u05DC\\u05D9\\u05E7\\u05D9\\u05DD\"}),`\n`]}),`\n`,(0,t.jsx)(e.h2,{children:\"\\u05D3\\u05D5\\u05D2\\u05DE\\u05D4 \\u05DC\\u05E7\\u05D5\\u05D3\"}),`\n`,(0,t.jsx)(e.pre,{children:(0,t.jsx)(e.code,{className:\"language-tsx\",children:`export function Button({ children }: { children: React.ReactNode }) {\n  return <button className=\"vow-btn-primary\">{children}</button>\n}\n`})}),`\n`,(0,t.jsx)(e.h2,{children:\"\\u05E1\\u05D9\\u05DB\\u05D5\\u05DD \\u05E7\\u05E6\\u05E8\"}),`\n`,(0,t.jsx)(e.p,{children:\"\\u05DB\\u05D0\\u05DF \\u05D9\\u05D4\\u05D9\\u05D4 \\u05E1\\u05D9\\u05DB\\u05D5\\u05DD (placeholder) \\u05E2\\u05DD \\u05E7\\u05E8\\u05D9\\u05D0\\u05D4 \\u05DC\\u05E4\\u05E2\\u05D5\\u05DC\\u05D4 \\u05D1\\u05E1\\u05D5\\u05E3 \\u05D4\\u05DE\\u05D0\\u05DE\\u05E8.\"})]})}function s(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,{...n,children:(0,t.jsx)(a,{...n})}):a(n)}return j(w);})();\n;return Component;"
+  },
+  "_id": "articles/first-steps-ai-web.mdx",
+  "_raw": {
+    "sourceFilePath": "articles/first-steps-ai-web.mdx",
+    "sourceFileName": "first-steps-ai-web.mdx",
+    "sourceFileDir": "articles",
+    "contentType": "mdx",
+    "flattenedPath": "articles/first-steps-ai-web"
+  },
+  "type": "Article",
+  "slug": "first-steps-ai-web",
+  "readingTimeMinutes": 1
+}

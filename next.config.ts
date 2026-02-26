@@ -1,4 +1,5 @@
 import type { NextConfig } from "next"
+import { withContentlayer } from "next-contentlayer2"
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -6,4 +7,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig
+export default withContentlayer(nextConfig)

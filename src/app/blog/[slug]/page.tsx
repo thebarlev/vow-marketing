@@ -1,0 +1,331 @@
+import type { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { allArticles } from "contentlayer/generated"
+import { BlogShell } from "@/app/_components/blog/BlogShell"
+import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
+import { MdxContent } from "@/app/_components/blog/MdxContent"
+import { BlogEndCta } from "@/app/_components/blog/BlogEndCta"
+import { CopyLinkButton } from "@/app/_components/blog/CopyLinkButton"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const post = allArticles.find((a) => a.slug === slug)
+  if (!post) return { title: "בלוג | VOW" }
+
+  return {
+    title: `${post.title} | VOW`,
+    description: post.description ?? "מאמר בבלוג של VOW.",
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description ?? "מאמר בבלוג של VOW.",
+      url: `/blog/${post.slug}`,
+      type: "article",
+      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
+    },
+  }
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const post = allArticles.find((a) => a.slug === slug)
+  if (!post) notFound()
+
+  const related = allArticles
+    .filter((a) => a.slug !== post.slug)
+    .filter((a) => a.category === post.category)
+    .slice()
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 4)
+
+  // NOTE: use marketing domain if this blog is on vow.co.il
+  const shareUrl = `https://vow.co.il/blog/${post.slug}`
+
+  const formattedDate = new Date(post.date).toLocaleDateString("he-IL", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
+  const renderCategoryLinks = () => {
+    if (Array.isArray(post.category)) {
+      return (
+        <div className="flex flex-col gap-0.5 ps-[22px]">
+          {post.category.map((cat: string) => (
+            <Link
+              key={cat}
+              href={`/blog/category/${cat}`}
+              className="underline text-black hover:opacity-70 transition-opacity"
+            >
+              {cat}
+            </Link>
+          ))}
+        </div>
+      )
+    }
+    return (
+      <div className="ps-[22px]">
+        <Link
+          href={`/blog/category/${post.category}`}
+          className="underline text-black hover:opacity-70 transition-opacity"
+        >
+          {post.category}
+        </Link>
+      </div>
+    )
+  }
+
+  return (
+    <BlogShell>
+      <section
+        dir="rtl"
+        aria-label="מאמר"
+        className="pt-10 pb-[var(--space-section)] sm:pt-14"
+      >
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+          {/* ─── Breadcrumbs ─── */}
+          <div className="mx-auto max-w-[980px]">
+            <nav
+              aria-label="breadcrumb"
+              className="flex items-center gap-2 text-[12px] leading-5 text-[#747474]"
+            >
+              <Link href="/blog" className="hover:text-black transition-colors">
+                בלוג
+              </Link>
+              <span>/</span>
+              <span className="text-black truncate">{post.title}</span>
+            </nav>
+          </div>
+
+          {/* ─── Two-column layout (stable): content + sticky meta ─── */}
+          <div className="mx-auto max-w-[980px] mt-6 lg:grid lg:grid-cols-[minmax(0,650px)_180px] lg:gap-10">
+            {/* ─── Main article column ─── */}
+            <div className="max-w-[650px]">
+              {/* Cover image */}
+              {post.coverImage ? (
+                <div className="relative aspect-[4/5] w-[300px] overflow-hidden rounded-3xl border border-black/10 bg-white/40">
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    fill
+                    priority={false}
+                    sizes="300px"
+                    className="object-cover"
+                  />
+                </div>
+              ) : null}
+
+              {/* Title */}
+              <h1 className="mt-8 text-balance text-[40px] font-semibold leading-[1.06] text-black sm:text-[52px] lg:text-[64px]">
+                {post.title}
+              </h1>
+
+              {/* Description */}
+              {post.description ? (
+                <p className="mt-4 text-pretty text-[18px] leading-[34px] text-[#747474] sm:text-[20px]">
+                  {post.description}
+                </p>
+              ) : null}
+
+              {/* Mobile meta (tight label/value) */}
+              <div className="mt-8 flex flex-col gap-4 text-[13px] text-[#1a1a1a] lg:hidden">
+                <div className="inline-flex items-center gap-2 text-[#747474]">
+                  <span>קטגוריה</span>
+                  <span className="text-black font-medium">
+                    {Array.isArray(post.category)
+                      ? post.category.join(", ")
+                      : post.category}
+                  </span>
+                </div>
+
+                <div className="inline-flex items-center gap-2 text-[#747474]">
+                  <span>תאריך</span>
+                  <span className="text-black font-medium">{formattedDate}</span>
+                </div>
+
+                <div className="inline-flex items-center gap-2 text-[#747474]">
+                  <span>זמן קריאה</span>
+                  <span className="text-black font-medium">
+                    {post.readingTimeMinutes} דק׳
+                  </span>
+                </div>
+
+                <div className="inline-flex items-center gap-2 text-[#747474]">
+                  <span>שיתוף</span>
+                  <CopyLinkButton href={shareUrl} />
+                </div>
+              </div>
+
+              {/* MDX body */}
+              <div className="mt-10">
+                <MdxContent code={post.body.code} />
+                <BlogEndCta />
+              </div>
+            </div>
+
+            {/* ─── Sticky meta sidebar (LEFT in RTL) ─── */}
+            <aside
+              aria-label="מידע על המאמר"
+              className="hidden lg:flex flex-col gap-5 text-[13px] text-[#1a1a1a] sticky top-24 h-fit"
+              style={{ width: 180 }}
+            >
+              {/* Category */}
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1.5 text-[#747474]">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M9 21h6M12 3a6 6 0 0 1 6 6c0 2.2-1.2 4.1-3 5.2V17H9v-2.8A6 6 0 0 1 6 9a6 6 0 0 1 6-6z" />
+                  </svg>
+                  <span>קטגוריה</span>
+                </div>
+                {renderCategoryLinks()}
+              </div>
+
+              {/* Product */}
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1.5 text-[#747474]">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  </svg>
+                  <span>מוצר</span>
+                </div>
+                <div className="ps-[22px] text-black">
+                  VOW
+                </div>
+              </div>
+
+              {/* Date */}
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1.5 text-[#747474]">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <span>תאריך</span>
+                </div>
+                <div className="ps-[22px] text-black">{formattedDate}</div>
+              </div>
+
+              {/* Reading time */}
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1.5 text-[#747474]">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 3" />
+                  </svg>
+                  <span>זמן קריאה</span>
+                </div>
+                <div className="ps-[22px] text-black font-medium">
+                  {post.readingTimeMinutes} דק׳
+                </div>
+              </div>
+
+              {/* Share */}
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1.5 text-[#747474]">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <circle cx="18" cy="5" r="3" />
+                    <circle cx="6" cy="12" r="3" />
+                    <circle cx="18" cy="19" r="3" />
+                    <path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98" />
+                  </svg>
+                  <span>שיתוף</span>
+                </div>
+                <div className="ps-[22px]">
+                  <CopyLinkButton href={shareUrl} />
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Related posts ─── */}
+      {related.length ? (
+        <section
+          aria-label="מאמרים נוספים"
+          dir="rtl"
+          className="pb-[var(--space-section)]"
+        >
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-[980px]">
+              <h2 className="w-full">מאמרים נוספים באותה קטגוריה</h2>
+            </div>
+          </div>
+          <div className="mt-2">
+            {related.map((a) => (
+              <BlogPostRow
+                key={a.slug}
+                href={`/blog/${a.slug}`}
+                title={a.title}
+                date={a.date}
+                category={a.category}
+                readingTimeMinutes={a.readingTimeMinutes}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </BlogShell>
+  )
+}
