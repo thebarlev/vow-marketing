@@ -53,7 +53,7 @@ export function Hero() {
                            lg:text-[100px]
                            xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]"
               >
-                פיתוח אתרים חכמים, מערכות AI ושיווק שמייצר תוצאות
+                פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות
               </span>
               <span
                 className="block w-full text-right tracking-[-0.8px]
