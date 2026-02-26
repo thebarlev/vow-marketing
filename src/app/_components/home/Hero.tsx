@@ -30,7 +30,7 @@ export function Hero() {
           <div className="flex flex-col items-end text-right mt-5">
             <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9]">
-              פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות
+              פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות!
               </span>
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9] mb-1">
                 
@@ -53,7 +53,7 @@ export function Hero() {
                            lg:text-[100px]
                            xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]"
               >
-                פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות
+                פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות!
               </span>
               <span
                 className="block w-full text-right tracking-[-0.8px]
@@ -79,9 +79,8 @@ export function Hero() {
             </div>
           </div>
           {/* IMAGE (שמאל) */}
-          <div className="w-full order-2">
-            <div className="relative w-full overflow-hidden rounded-3xl shadow-lg aspect-[4/5]">
-              <Image
+          <div className="w-full order-2 flex items-end justify-end">
+          <div className="relative lg:w-4/5 md:w-4/5 overflow-hidden lg:rounded-3xl shadow-lg aspect-[4/5]">              <Image
                 src="/D-hero.webp"
                 alt=""
                 fill
