@@ -79,9 +79,8 @@ export function Hero() {
             </div>
           </div>
           {/* IMAGE (שמאל) */}
-          <div className="w-full order-2">
-            <div className="relative w-full overflow-hidden rounded-3xl shadow-lg aspect-[4/5]">
-              <Image
+          <div className="w-full order-2 flex items-end justify-end">
+          <div className="relative lg:w-4/5 md:w-4/5 overflow-hidden lg:rounded-3xl shadow-lg aspect-[4/5]">              <Image
                 src="/D-hero.webp"
                 alt=""
                 fill
