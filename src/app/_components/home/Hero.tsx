@@ -30,7 +30,7 @@ export function Hero() {
           <div className="flex flex-col items-end text-right mt-5">
             <h1 className="text-black w-full text-right font-semibold leading-[1.05]">
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9]">
-              פיתוח אתרים חכמים, מערכות AI ושיווק שמייצר תוצאות
+              פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות
               </span>
               <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9] mb-1">
                 
