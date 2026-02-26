@@ -1,9 +1,8 @@
 "use client";
 import { CheckIcon } from "./CheckIcon"
 import { OUR_PACKAGES } from "./home.constants"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import { Popup, LeadSource } from "./Popup"
-import { LEAD_POPUP_EVENT, type LeadPopupEventDetail } from "./leadPopupEvent"
 import { POPUP_OVERRIDES_BY_PATH, type PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
 export function PackagesSection() {
@@ -49,27 +48,6 @@ export function PackagesSection() {
     },
     [handleOpen]
   )
-
-  useEffect(() => {
-    const onOpenLeadPopup = (event: Event) => {
-      const detail = (event as CustomEvent<LeadPopupEventDetail>).detail
-      const source = detail?.source
-      if (!source) return
-
-      const pkg = OUR_PACKAGES.find((p) => p.source === source)
-      if (!pkg) return
-      openPopupWithPossibleOverride({
-        title: pkg.title,
-        description: pkg.kicker,
-        toptext: pkg.toppopup ?? "",
-        source: pkg.source,
-      })
-    }
-
-    window.addEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
-    return () => window.removeEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
-  }, [openPopupWithPossibleOverride]);
-
 
   return (
     <section aria-label="החבילות שלנו" className="py-[var(--space-section)]  bg-[#F4F1EC]">

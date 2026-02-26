@@ -17,7 +17,7 @@ const MOBILE_MENU_SECTIONS = [
       { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
       { href: "/pricing", label: "מחירים" },
       { href: "/marketing", label: "שיווק דיגיטלי" },
-      { href: "/contact", label: "יצירת קשר" },
+      { href: "/portfolio", label: "פרויקטים נבחרים" },
     ],
   },
   {
@@ -214,7 +214,7 @@ export function SiteHeader() {
           <div className="flex flex-col flex-1 overflow-y-auto px-6 py-6 gap-8">
             {MOBILE_MENU_SECTIONS.map((section) => (
               <div key={section.title}>
-                <p className="text-[14px] font-semibold text-[#A1A1A1] mb-3 tracking-wide">
+                <p className="text-[14px] font-semibold text-[#A1A1A1] mb-1 tracking-wide">
                   {section.title}
                 </p>
                 <ul className="flex flex-col">
@@ -236,7 +236,7 @@ export function SiteHeader() {
 
           {/* כפתורים — נצמדים לתחתית */}
           <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
-            <div className="flex flex-row-reverse items-center justify-between gap-2 bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2">
+            <div className="flex flex-row-reverse items-center justify-end gap-2 bg-white/90 backdrop-blur-sm  px-3 py-2">
               <div className="flex items-center gap-2">
                 <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
                   הצטרפות
@@ -245,7 +245,7 @@ export function SiteHeader() {
                   התחברות
                 </a>
               </div>
-              <span className="text-right" style={{ fontSize: "14px", lineHeight: "18px" }}>
+              <span className="text-right max-w-[120px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
                 חשבונית דיגיטלית שנה חינם
               </span>
             </div>

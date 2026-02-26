@@ -9,8 +9,7 @@ import { Bot, CheckCircle, Sparkles, X } from "lucide-react"
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
 const formSchema = z.object({
-  firstName: z.string().min(1, "שם פרטי חובה"),
-  lastName: z.string().min(1, "שם משפחה חובה"),
+  fullName: z.string().trim().min(2, "שם מלא חובה"),
   email: z.string().email("כתובת אימייל לא תקינה"),
   phone: z.string().min(9, "מספר טלפון לא תקין"),
 })
@@ -66,8 +65,7 @@ export function Popup({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          firstName: data.firstName,
-          lastName: data.lastName,
+          fullName: data.fullName,
           email: data.email,
           phone: data.phone,
           source,
@@ -102,7 +100,7 @@ export function Popup({
       </>
     ) : (
       <p className="text-[22px] font-semibold leading-relaxed text-[#747474]">
-        תודה על ההרשמה! ניצור איתך קשר בהקדם.
+       ניצור איתך קשר בהקדם.
       </p>
     )
 
@@ -112,7 +110,7 @@ export function Popup({
       onClick={onClose}
     >
       {/* עטיפה פנימית עם מרווח — מאפשרת גלילה לכל הפופאפ */}
-      <div className="flex min-h-full items-start justify-center py-10">
+      <div className="flex min-h-full items-start justify-center py-10 ">
         <div
           className="relative w-full max-w-[637px] rounded-xl bg-white p-5 text-right"
           onClick={(e) => e.stopPropagation()}
@@ -129,7 +127,7 @@ export function Popup({
 
           {!isSuccess ? (
             <>
-              <div className="mb-s flex justify-center">
+              <div className="mb-0.2 flex justify-center">
                 {iconVariant === "develop-ai" ? (
                   <Bot className="h-12 w-12 text-[#5389BB]" aria-hidden="true" />
                 ) : (
@@ -152,43 +150,27 @@ export function Popup({
               </h6>
 
               <form
-                className="mx-auto max-w-[336px] space-y-4"
+                className="mx-auto max-w-[336px] space-y-4 pb-5"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <div>
-                  <label htmlFor="firstName" className="mb-1 block text-[20px] font-semibold">
-                    שם פרטי
+                  <label htmlFor="fullName" className="mb-0.2 block text-[20px] font-semibold">
+                    שם מלא
                   </label>
                   <input
-                    id="firstName"
+                    id="fullName"
                     type="text"
-                    {...register("firstName")}
+                    {...register("fullName")}
                     className="w-full rounded border px-3 py-3"
                     dir="rtl"
                   />
-                  {errors.firstName && (
-                    <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
+                  {errors.fullName && (
+                    <p className="mt-1 text-sm text-red-600">{errors.fullName.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="lastName" className="mb-1 block text-[20px] font-semibold">
-                    שם משפחה
-                  </label>
-                  <input
-                    id="lastName"
-                    type="text"
-                    {...register("lastName")}
-                    className="w-full rounded border px-3 py-3"
-                    dir="rtl"
-                  />
-                  {errors.lastName && (
-                    <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="mb-1 block text-[20px] font-semibold">
+                  <label htmlFor="email" className="mb-0.2 block text-[20px] font-semibold">
                     דוא&quot;ל
                   </label>
                   <input
@@ -204,7 +186,7 @@ export function Popup({
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="mb-1 block text-[20px] font-semibold">
+                  <label htmlFor="phone" className="mb-0.2 block text-[20px] font-semibold">
                     נייד
                   </label>
                   <input
@@ -230,7 +212,7 @@ export function Popup({
                   disabled={isSubmitting}
                   className="mt-2 w-full rounded bg-black py-3 text-[20px] text-white cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "שולח..." : "הרשמה"}
+                  {isSubmitting ? "שולח..." : "שליחה"}
                 </button>
               </form>
             </>
@@ -240,7 +222,7 @@ export function Popup({
                 <CheckCircle className="h-16 w-16 text-green-600" aria-hidden="true" />
               </div>
 
-              <h2 className="text-[40px] font-bold">ההרשמה התקבלה בהצלחה</h2>
+              <h2 className="text-[40px] font-bold">הפנייה התקבלה בהצלחה</h2>
 
               {successMessage}
 
