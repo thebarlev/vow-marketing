@@ -32,7 +32,7 @@ export function DoubleHeadingCtaSection({
             {subtitle}
           </p>
 
-          <button type="button" className="btn-primary mt-7 w-full sm:w-auto" onClick={onClick}>
+          <button type="button" className="btn-primary mt-7 w-full sm:w-auto mx-auto" onClick={onClick}>
             {buttonLabel}
           </button>
         </div>

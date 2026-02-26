@@ -37,7 +37,7 @@ export function CookieBanner() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-[9999] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] px-4 py-4 sm:px-6"
+      className="hidden fixed bottom-0 left-0 right-0 z-[9999] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] px-4 py-4 sm:px-6"
       role="dialog"
       aria-live="polite"
       aria-label="Cookie consent"
@@ -76,7 +76,7 @@ export function CookieBanner() {
           </div>
         </div>
 
-        {/* דסקטופ: טקסט וכפתורים בשורה אחת */}
+        {/* דסקטופ: טקסט וכפתורים בשורה אחת   */}
         <div className="hidden sm:flex items-start gap-4 flex-1">
           <Image
             src="/cookies.svg"
@@ -85,8 +85,8 @@ export function CookieBanner() {
             height={40}
             className="flex-shrink-0"
           />
-          <div className="flex-1 flex items-start gap-4">
-            <div className="flex flex-col gap-1 flex-1 min-w-0">
+          <div className="flex-1 flex items-start gap-4 " >
+            <div className="flex flex-col gap-1 flex-1 min-w-0 hidden">
               <h3 className="text-[20px] font-semibold text-[#FF6B35] leading-[1.2]">
                 כל הקליקים על המשולחן
               </h3>

@@ -4,6 +4,7 @@ import { OUR_PACKAGES } from "./home.constants"
 import { useCallback, useEffect, useState } from "react"
 import { Popup, LeadSource } from "./Popup"
 import { LEAD_POPUP_EVENT, type LeadPopupEventDetail } from "./leadPopupEvent"
+import { POPUP_OVERRIDES_BY_PATH, type PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
 
 export function PackagesSection() {
 
@@ -12,18 +13,42 @@ export function PackagesSection() {
     title: string; 
     description: string; 
     toptext: string; 
-    source: LeadSource 
+    source: LeadSource;
+    iconVariant?: PopupIconVariant;
   }>({
     title: '',
     description: '',
     toptext: '',
     source: 'design_development',
+    iconVariant: "default",
   });
 
-  const handleOpen = useCallback((title: string, description: string, toptext: string, source: LeadSource) => {
-    setPopupData({ title, description, toptext, source });
+  const handleOpen = useCallback(
+    (title: string, description: string, toptext: string, source: LeadSource, iconVariant: PopupIconVariant = "default") => {
+      setPopupData({ title, description, toptext, source, iconVariant })
     setOpen(true);
-  }, []);
+    },
+    []
+  );
+
+  const openPopupWithPossibleOverride = useCallback(
+    (fallback: { title: string; description: string; toptext?: string; source: LeadSource }) => {
+      const override = POPUP_OVERRIDES_BY_PATH[window.location.pathname]
+      if (override) {
+        handleOpen(
+          override.title,
+          override.description,
+          override.toptext ?? "",
+          override.source ?? fallback.source,
+          override.iconVariant ?? "default"
+        )
+        return
+      }
+
+      handleOpen(fallback.title, fallback.description, fallback.toptext ?? "", fallback.source, "default")
+    },
+    [handleOpen]
+  )
 
   useEffect(() => {
     const onOpenLeadPopup = (event: Event) => {
@@ -33,13 +58,17 @@ export function PackagesSection() {
 
       const pkg = OUR_PACKAGES.find((p) => p.source === source)
       if (!pkg) return
-
-      handleOpen(pkg.title, pkg.kicker, pkg.toppopup ?? "", pkg.source)
+      openPopupWithPossibleOverride({
+        title: pkg.title,
+        description: pkg.kicker,
+        toptext: pkg.toppopup ?? "",
+        source: pkg.source,
+      })
     }
 
     window.addEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
     return () => window.removeEventListener(LEAD_POPUP_EVENT, onOpenLeadPopup)
-  }, [handleOpen]);
+  }, [openPopupWithPossibleOverride]);
 
 
   return (
@@ -66,7 +95,14 @@ export function PackagesSection() {
               <button
   type="button"
   className="vow-btn-primary mt-4 w-full cursor-pointer"
-  onClick={() => handleOpen(p.title, p.kicker, p.toppopup, p.source)}
+  onClick={() =>
+    openPopupWithPossibleOverride({
+      title: p.title,
+      description: p.kicker,
+      toptext: p.toppopup ?? "",
+      source: p.source,
+    })
+  }
 >
   {p.buttonLabel}
 </button>
@@ -91,6 +127,7 @@ export function PackagesSection() {
           description={popupData.description}
           toptext = {popupData.toptext}
           source={popupData.source}
+          iconVariant={popupData.iconVariant}
           onClose={() => setOpen(false)}
         />
       )}

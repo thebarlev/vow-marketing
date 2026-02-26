@@ -1,61 +1,82 @@
 "use client"
+
+import * as React from "react"
 import Image from "next/image"
 import { openLeadPopup } from "./leadPopupEvent"
 
-const CARDS = [
-  {
-    src: "/4.webp",
-    alt: "פיתוח MVP ליזמים וסטארטאפים",
-    caption: "פיתוח MVP ליזמים וסטארטאפים",
-  },
-  {
-    src: "/3.webp",
-    alt: "תכנון ופיתוח אתרים ואפליקציות",
-    caption: "תכנון ופיתוח אתרים ואפליקציות",
-  },
-  {
-    src: "/2.webp",
-    alt: "שיפור ביצועים, חוויית משתמש וסקייל",
-    caption: "שיפור ביצועים, חוויית משתמש וסקייל",
-  },
-  {
-    src: "/1.webp",
-    alt: "אוטומציות, אינטגרציות ו-AI עסקי",
-    caption: "אוטומציות, אינטגרציות ו-AI עסקי",
-  },
-  
+export type VisionCard = {
+  id: string
+  src: string
+  alt: string
+  caption: string
+}
 
+type Props = {
+  title?: string
+  subtitle?: string
+  ctaLabel?: string
+  source?: "design_development" | "digital_marketing" | "smart_accounting_ai"
+  ctaHref?: string
+  cards?: VisionCard[]
+}
 
-] as const
+const DEFAULT_CARDS: VisionCard[] = [
+  { id: "default-4", src: "/4.webp", alt: "Google Ads", caption: "Google Ads" },
+  { id: "default-3", src: "/services/develop/d2.webp", alt: "ניהול קמפיינים בפייסבוק", caption: "ניהול קמפיינים בפייסבוק" },
+  { id: "default-2", src: "/services/develop/d3.webp", alt: "אנליטיקה ושיפור ביצועים", caption: "אנליטיקה ושיפור ביצועים" },
+  { id: "default-1", src: "/5.webp", alt: "קופירייטינג /קריאטיב ו-A/B test", caption: "קופירייטינג /קריאטיב ו-A/B test" },
+]
 
-export function VisionToExecutionSection() {
+export function VisionToExecutionSection({
+  title ="מביאים תוצאות מהיום הראשון",
+  subtitle = "עם מעל 20 שנות ניסיון בשיווק דיגיטלי, אנחנו בונים אסטרטגיה מדויקת, קריאייטיב שממיר ומערך קמפיינים שעובד - לא ניסויים, אלא ביצועים.",
+  ctaLabel = "להשארת פרטים",
+  source = "design_development",
+  ctaHref,
+  cards = DEFAULT_CARDS,
+}: Props) {
   const onCtaClick = () => {
-    document
-      .getElementById("lead-design-development")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" })
-    openLeadPopup({ source: "design_development" })
+    document.getElementById("lead-design-development")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+    openLeadPopup({ source })
   }
 
   return (
-    <section aria-label="פיתוח, עיצוב ושיווק דיגיטלי מבוסס AI שמייצר צמיחה" className="py-[var(--space-section)] bg-[#F4F1EC]">
+    <section
+      aria-label={title}
+      className="py-[var(--space-section)] bg-[#F4F1EC]"
+    >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-      <div className="text-right md:text-center">
-      <h2 className="text-right md:text-center w-full  pb-2">פיתוח, עיצוב ושיווק דיגיטלי מבוסס AI שמייצר צמיחה</h2>
+        <div className="text-right md:text-center">
+          <h2 className="text-right md:text-center w-full pb-2">{title}</h2>
+
           <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
-          ב-VOW בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים.
+            {subtitle}
           </h3>
-          <button
-            type="button"
-            onClick={onCtaClick}
-            className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
-          >
-            להשארת פרטים
-          </button>
+
+          {ctaHref ? (
+            <a
+              href={ctaHref}
+              className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+            >
+              {ctaLabel}
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={onCtaClick}
+              className="mt-7 inline-flex max-w-[260px] items-center justify-center rounded-[10px] bg-black px-10 py-3 text-[18px] font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+            >
+              {ctaLabel}
+            </button>
+          )}
         </div>
 
         <div className="mt-10 mx-auto w-[97%] grid grid-cols-2 gap-6 lg:grid-cols-4 lg:max-w-6xl">
-          {CARDS.map((card) => (
-            <figure key={card.src} className="flex flex-col w-full items-start">
+          {cards.map((card) => (
+            <figure key={card.id} className="flex flex-col w-full items-start">
               <div className="relative aspect-[1/1] w-full overflow-hidden rounded-none bg-white shadow-sm">
                 <Image
                   src={card.src}
@@ -65,6 +86,7 @@ export function VisionToExecutionSection() {
                   className="object-cover"
                 />
               </div>
+
               <figcaption className="mt-1 mb-2 text-right text-[20px] lg:text-[24px] font-semibold leading-tight text-black">
                 {card.caption}
               </figcaption>
