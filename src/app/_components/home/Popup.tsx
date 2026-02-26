@@ -7,6 +7,9 @@ import { z } from "zod"
 import { Bot, CheckCircle, Sparkles, X } from "lucide-react"
 
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+import { getAttribution } from "@/lib/tracking/attribution"
+import { pushDataLayer } from "@/lib/tracking/dataLayer"
+import { inferPageContext, mapLeadSourceToService } from "@/lib/tracking/pageContext"
 
 const formSchema = z.object({
   fullName: z.string().trim().min(2, "שם מלא חובה"),
@@ -49,6 +52,26 @@ export function Popup({
     resolver: zodResolver(formSchema),
   })
 
+  const generateLeadId = () => {
+    try {
+      if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+        return crypto.randomUUID()
+      }
+    } catch {
+      // ignore
+    }
+    return `lead_${Date.now()}_${Math.random().toString(16).slice(2)}`
+  }
+
+  const getTopicFromUrl = () => {
+    try {
+      const sp = new URLSearchParams(window.location.search)
+      return sp.get("topic") ?? sp.get("offer") ?? undefined
+    } catch {
+      return undefined
+    }
+  }
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true)
     setError(null)
@@ -61,10 +84,13 @@ export function Popup({
         action: "submit_lead",
       })
 
+      const leadId = generateLeadId()
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          lead_id: leadId,
           fullName: data.fullName,
           email: data.email,
           phone: data.phone,
@@ -76,7 +102,72 @@ export function Popup({
       })
 
       const result = await response.json()
-      if (!response.ok || !result.ok) throw new Error(result.error || "שגיאה בשמירת הנתונים")
+
+      if (!response.ok || !result.ok) {
+        const attribution = getAttribution()
+        const ctx = inferPageContext(pagePathOverride ?? window.location.pathname)
+        const ctxNoService = { ...ctx }
+        delete (ctxNoService as { service?: unknown }).service
+
+        pushDataLayer("vow_lead_submit_error", {
+          lead_id: leadId,
+          lead_source: source,
+          topic: getTopicFromUrl(),
+          form_location: "popup",
+          status_code: response.status,
+          error_message: String(result?.error ?? "lead_submit_failed"),
+          ...ctxNoService,
+          service: mapLeadSourceToService(source),
+          ...attribution,
+          source: attribution.utm_source,
+          medium: attribution.utm_medium,
+          campaign: attribution.utm_campaign,
+          term: attribution.utm_term,
+          content: attribution.utm_content,
+          referrer: document.referrer,
+        })
+        throw new Error(result?.error || "שגיאה בשמירת הנתונים")
+      }
+
+      const returnedLeadId = typeof result?.lead_id === "string" ? result.lead_id : leadId
+      const attribution = getAttribution()
+      const ctx = inferPageContext(pagePathOverride ?? window.location.pathname)
+      const ctxNoService = { ...ctx }
+      delete (ctxNoService as { service?: unknown }).service
+
+      pushDataLayer("vow_lead_submit", {
+        lead_id: returnedLeadId,
+        lead_source: source,
+        topic: getTopicFromUrl(),
+        form_location: "popup",
+        ...ctxNoService,
+        service: mapLeadSourceToService(source),
+        ...attribution,
+        source: attribution.utm_source,
+        medium: attribution.utm_medium,
+        campaign: attribution.utm_campaign,
+        term: attribution.utm_term,
+        content: attribution.utm_content,
+        gclid: attribution.gclid,
+        fbclid: attribution.fbclid,
+        referrer: document.referrer,
+      })
+
+      pushDataLayer("vow_lead_submit_success", {
+        lead_id: returnedLeadId,
+        lead_source: source,
+        topic: getTopicFromUrl(),
+        form_location: "popup",
+        ...ctxNoService,
+        service: mapLeadSourceToService(source),
+        ...attribution,
+        source: attribution.utm_source,
+        medium: attribution.utm_medium,
+        campaign: attribution.utm_campaign,
+        term: attribution.utm_term,
+        content: attribution.utm_content,
+        referrer: document.referrer,
+      })
 
       setIsSuccess(true)
     } catch (err) {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 
@@ -119,11 +120,15 @@ export default function AboutPage() {
 
       {/* תמונה */}
       <div className="mx-auto mb-4 h-[160px] w-[160px] rounded-full overflow-hidden">
-        <img
-          src="/team/itzik.webp"
-          alt="איציק ברלב"
-          className="h-full w-full object-cover object-top"
-        />
+        <div className="relative h-full w-full">
+          <Image
+            src="/team/itzik.webp"
+            alt="איציק ברלב"
+            fill
+            sizes="160px"
+            className="object-cover object-top"
+          />
+        </div>
       </div>
 
       <h2 className=" text-[32px] pb-1 font-semibold text-black sm:text-[40px] mb-1 lg:py-0">

@@ -72,11 +72,11 @@ const SECTIONS_ORDER: readonly ProductSectionType[] = [
 export const developAiConfig: ProductPageConfig = {
   slug: "develop-ai",
   metadata: {
-    title: "פיתוח בהתאמה אישית בסביבת AI",
-    description: "פיתוח תוכנה מבוסס AI-פתרונות תוכנה מותאמים אישית לעסק שלכם. אנחנו משתמשים ב-AI כדי לפתח מהר יותר, חכם יותר - ולהעניק לכם יתרון תחרותי אמיתי.",
+    title: "פיתוח תוכנה ומערכות AI בהתאמה אישית לעסקים וחברות",
+    description: "ארכיטקטורה, פיתוח Full-Stack ואוטומציות. מהר יותר עם AI, בלי להתפשר על איכות ואבטחה.",
   },
   hero: {
-    title: "פיתוח בהתאמה אישית בסביבת AI",
+    title: "פיתוח תוכנה/מערכות בסביבת AI",
     subtitle: "",
     tags: ["Python", "React / Next.js", "Node.js / TypeScript", "REST / Webhooks"],
     ctaLabel: "להשארת פרטים",
@@ -224,7 +224,7 @@ export const invoiceConfig: ProductPageConfig = {
 export const accountAiConfig: ProductPageConfig = {
   slug: "account-ai",
   metadata: {
-    title: "Account AI | VOW",
+    title: "רואה חשבון AI לעוסק פטור ועוסק מורשה",
     description: "רואה חשבון AI ראיית חשבון חכמה ב-200 ₪ בלבד. VOW מספקת ליווי עסקי 24/7 עם ידע של 1,000 רואי חשבון - ישירות לעסק הקטן שלכם.",
   },
   hero: {
@@ -237,7 +237,7 @@ export const accountAiConfig: ProductPageConfig = {
     imageAlt: "Account AI",
   },
   vision: {
-    title: "חשבונית דיגיטלית מאובטחת",
+    title: "רואה החשבון AI לעוסקים פטורים / מורשים",
     subtitle: "הנהלת חשבונות, מע״מ, מס הכנסה וביטוח לאומי - מנוהלים חכם, אוטומטית ובפיקוח רגולטורי מלא.",
     ctaLabel: "להשארת פרטים",
     source: "smart_accounting_ai",

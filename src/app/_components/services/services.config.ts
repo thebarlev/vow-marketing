@@ -68,8 +68,8 @@ const SECTIONS_ORDER: readonly ServiceSectionType[] = [
 export const designConfig: ServicePageConfig = {
     slug: "design",
     metadata: {
-      title: "עיצוב ומיתוג",
-      description: "עמוד שירות — עיצוב",
+      title: "עיצוב ומיתוג לעסקים ויזים",
+      description: "מיתוג, UX/UI ואתרים שנראים מעולה וגם ממירים. שפה מותגית שמדברת לקהל הנכון.",
     },
     hero: {
       title: "עיצוב ומיתוג לעסקים וליזמים",
@@ -140,11 +140,11 @@ export const designConfig: ServicePageConfig = {
 export const developConfig: ServicePageConfig = {
   slug: "develop",
   metadata: {
-    title: "Develop | VOW",
-    description: "עמוד שירות — פיתוח",
+    title: "VOW – פיתוח אתרים, מערכות AI ושיווק שממיר",
+    description: "אתרי תדמית, חנויות ומערכות – מהירים, נגישים ומוכנים לקידום. תהליך מדיד שמייצר המרות.",
   },
   hero: {
-    title: "פיתוח אתרים מבוסס AI",
+    title: "פיתוח אתרים מבוסס AI לעסקים",
     tags: ["אתרי תדמית / חנויות", "אפליקציות", "מערכות / SaaS", "אוטומציות"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
@@ -195,11 +195,11 @@ export const developConfig: ServicePageConfig = {
 export const marketingConfig: ServicePageConfig = {
   slug: "marketing",
   metadata: {
-    title: "Marketing | VOW",
-    description: "עמוד שירות — שיווק",
+    title: "שיווק דיגיטלי שמייצר ROI לעסקים שרוצים לגדול",
+    description: "קמפיינים בגוגל ובמטא, CRO, אנליטיקס ומשפכים. מפסיקים לנחש - מתחילים למדוד.",
   },
   hero: {
-    title: "שיווק שמביא לקוחות",
+    title: "שיווק דיגיטלי שמייצר ROI / הכנסות",
     tags: ["ניהול קמפיינים", "SEO", "קריאטיב"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",

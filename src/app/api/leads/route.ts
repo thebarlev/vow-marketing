@@ -4,6 +4,7 @@ import { getSupabaseAdmin } from "@/lib/supabase/admin"
 
 import { verifyCaptcha } from "@/lib/captcha/verify"
 import { NextRequest, NextResponse } from "next/server"
+import { randomUUID } from "node:crypto"
 import { z } from "zod"
 
 const sourceEnum = z.enum([
@@ -13,6 +14,7 @@ const sourceEnum = z.enum([
 ])
 
 const baseLeadSchema = z.object({
+  lead_id: z.string().min(1).optional(),
   email: z.string().email("כתובת אימייל לא תקינה"),
   phone: z.string().min(9, "מספר טלפון לא תקין"),
   source: sourceEnum,
@@ -52,12 +54,14 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const { email, phone, source, pagePath, userAgent, captchaToken } = parsed.data
+    const { email, phone, source, pagePath, userAgent, captchaToken, lead_id } = parsed.data
 
     const { firstName, lastName } =
       "fullName" in parsed.data
         ? splitFullName(parsed.data.fullName)
         : { firstName: parsed.data.firstName, lastName: parsed.data.lastName }
+
+    const leadId = lead_id ?? randomUUID()
 
     if (process.env.NODE_ENV !== "production" && captchaToken === "BYPASS") {
       // dev bypass
@@ -74,6 +78,7 @@ export async function POST(req: NextRequest) {
     const supabase = getSupabaseAdmin()
 
     const { error } = await supabase.from("leads").insert({
+      client_lead_id: leadId,
       first_name: firstName,
       last_name: lastName,
       email,
@@ -120,7 +125,7 @@ export async function POST(req: NextRequest) {
       throw e
     }
 
-    return NextResponse.json({ ok: true })
+    return NextResponse.json({ ok: true, lead_id: leadId })
   } catch (err) {
     console.error("API /leads error:", err)
     return NextResponse.json(

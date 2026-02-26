@@ -3,6 +3,8 @@ import Script from "next/script";
 import { Assistant } from "next/font/google";
 import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
+import { TrackingProvider } from "@/app/_components/tracking/TrackingProvider";
+import { Suspense } from "react";
 import "./globals.css";
 
 const assistant = Assistant({
@@ -13,8 +15,8 @@ const assistant = Assistant({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://app.vow.co.il"),
-  title: "VOW",
-  description: "חותמים על הצלחה",
+  title: "מחירים – חשבונית דיגיטלית שנה חינם VOW",
+  description: "חבילות חינם/מקצועי/אקסטרה להפקת מסמכים. התחילו ניסיון חינם והצטרפו למערכת.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=2" },
@@ -38,6 +40,9 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={assistant.variable}>
       <body className="antialiased font-sans">
         {children}
+        <Suspense fallback={null}>
+          <TrackingProvider />
+        </Suspense>
         <LeadPopupHost />
         <WhatsAppButton />
         {siteKey && (
