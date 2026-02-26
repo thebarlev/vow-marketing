@@ -1,5 +1,5 @@
 "use client"
-
+pushDataLayer("vow_tracking_init" as any, { ok: true })
 import { useEffect, useMemo, useRef } from "react"
 import { usePathname, useSearchParams } from "next/navigation"
 
