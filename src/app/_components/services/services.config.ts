@@ -15,7 +15,7 @@ export type ServiceSectionType =
   | "SiteFooter"
 
 export type ServicePageConfig = {
-  slug: "design" | "develop" | "marketing" | "roi"
+  slug: "design" | "develop" | "marketing" | "roi" | "seo-ai"
   metadata: Metadata
   hero: {
     title: string
@@ -153,14 +153,47 @@ export const developConfig: ServicePageConfig = {
 
   },
   doubleHeading: {
-    title: "יותר תוצאות. יותר מדוייק.",
-    subtitle: "אם כבר יש לכם אתר או מערכת פעילה - אנחנו יכולים להפוך אותה ליעילה יותר, מדויקת יותר ורווחית יותר.",
+    title: "פיתוח אתרי וורדפרס וחנויות אונליין מבוססי AI עם 20 שנות ניסיון",
+    subtitle: "משלבים ניסיון עמוק בבניית אתרים, SEO וקידום עסקים במנועי AI, כדי לבנות לך נוכחות דיגיטלית שמייצרת תוצאות עסקיות אמיתיות.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "design_development",
   },
+  vision: {
+    title: "פיתוח אתרים מבוססי AI שמנצחים את המתחרים",
+    subtitle:
+      "אתר חכם שמתחיל לייצר מכירות / לידים ולהחזיר השקעה כבר מהחודש הראשון",
+    ctaLabel: "להשארת פרטים",
+    source: "design_development",
+    cards: [
+      {
+        id: "develop-vision-1",
+        src: "/services/develop/d1.webp",
+        alt: "אתרים שמוכרים ומייצרים לידים",
+        caption: "אתרים שמוכרים ומייצרים לידים",
+      },
+      {
+        id: "develop-vision-2",
+        src: "/services/develop/d2.webp",
+        alt: "אוטומציות שחוסכות שעות עבודה",
+        caption:  "אוטומציות שחוסכות שעות עבודה",
+      },
+      {
+        id: "develop-vision-3",
+        src: "/services/develop/d3.webp",
+        alt: "טכנולוגיה שמביאה תנועה אורגנית SEO",
+        caption: "טכנולוגיה שמביאה תנועה אורגנית SEO",
+      },
+      {
+        id: "develop-vision-4",
+        src: "/services/develop/d4.webp",
+        alt: "פיתוח בהתאמה אישית ייחודית לעסק שלך",
+        caption: "פיתוח בהתאמה אישית ייחודית לעסק שלך",
+      },
+    ],
+  },
   about: {
-    title: "פיתוח דיגיטלי בלי בזבוז זמן וכסף בעזרת AI.",
-    subtitle: "כל מוצר נבנה מתוך חשיבה תוצאתית: בין אם מדובר באתר, אפליקציה או מערכת פנימית - אנחנו מפתחים כדי לייצר ערך עסקי ברור.",
+    title: "פיתוח אתרי תדמית וחנויות אונליין מבוססי AI לעסקים, בלי לפגוע בכיס!",
+    subtitle: "כל אתר מתוכנן מהיום הראשון להביא לקוחות, מכירות ולידים - לא רק להיראות טוב.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     items: [
@@ -192,29 +225,70 @@ export const developConfig: ServicePageConfig = {
   sections: SECTIONS_ORDER,
 }
 
-export const marketingConfig: ServicePageConfig = {
+export const marketingPpcConfig: ServicePageConfig = {
   slug: "marketing",
   metadata: {
-    title: "שיווק דיגיטלי שמייצר ROI לעסקים שרוצים לגדול",
-    description: "קמפיינים בגוגל ובמטא, CRO, אנליטיקס ומשפכים. מפסיקים לנחש - מתחילים למדוד.",
+    title: "שיווק PPC | VOW",
+    description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש — מתחילים למדוד.",
+    openGraph: {
+      title: "שיווק PPC | VOW",
+      description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש — מתחילים למדוד.",
+      url: "/marketing/ppc",
+      type: "website",
+    },
   },
   hero: {
-    title: "שיווק דיגיטלי שמייצר ROI / הכנסות",
-    tags: ["ניהול קמפיינים", "SEO", "קריאטיב"],
+    title: "שיווק PPC",
+    subtitle: "Google Ads + Meta Ads עם תהליך מדיד: משפך, אנליטיקס ואופטימיזציה שמכוונת להכנסות — לא לניחושים.",
+    tags: ["Google Ads", "Meta Ads", "קריאייטיב", "אנליטיקס"],
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",
-    imageAlt: "שיווק דיגיטלי",
+    imageAlt: "שיווק PPC",
   },
   doubleHeading: {
-    title: "החברות הגדולות כבר כאן!",
-    subtitle: "הגיע הזמן שגם העסק שלכם יקבל שיווק ברמה אחרת.",
+    title: "גם אתם יכולים לשחק בליגה של הגדולים.",
+    subtitle: "בונים קמפיינים שמתחברים למספרים: עלות ליד, איכות, יחס סגירה ו‑LTV — ומקבלים החלטות לפי דאטה.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "digital_marketing",
   },
+  vision: {
+    title: "פחות ניחושים. יותר נתונים.",
+    subtitle:
+      "אנחנו בונים מערכת שיווק שמבוססת מדידה: קמפיינים, קריאייטיב, אנליטיקס ואופטימיזציה — עם החלטות שמחוברות ל‑ROI.",
+    ctaLabel: "להשארת פרטים",
+    source: "digital_marketing",
+    cards: [
+      {
+        id: "marketing-vision-1",
+        src: "/services/marketing/1.webp",
+        alt: "Google Ads",
+        caption: "Google Ads",
+      },
+      {
+        id: "marketing-vision-2",
+        src: "/services/marketing/2.webp",
+        alt: "Meta Ads",
+        caption: "Meta Ads",
+      },
+      {
+        id: "marketing-vision-3",
+        src: "/services/marketing/3.webp",
+        alt: "אנליטיקה ו‑CRO",
+        caption: "אנליטיקה ו‑CRO",
+      },
+      {
+        id: "marketing-vision-4",
+        src: "/services/marketing/4.webp",
+        alt: "קריאייטיב ו‑A/B Testing",
+        caption: "קריאייטיב ו‑A/B Testing",
+      },
+    ],
+  },
   about: {
-    title: "שיווק שמבוסס על ניסיון אמיתי. תוצאות אמיתיות.",
-    subtitle: "עם מעל 20 שנות ניסיון ועבודה עם החברות המובילות במשק אנחנו יודעים איך לבנות אסטרטגיה שמביאה צמיחה.",
+    title: "שיווק PPC שמבוסס ניסיון אמיתי. תוצאות אמיתיות.",
+    subtitle:
+      "עם מעל 20 שנות ניסיון — אנחנו יודעים לחבר קריאייטיב, קמפיינים ודאטה כדי לבנות תהליך שמייצר צמיחה ולא רק קליקים.",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     items: [
@@ -239,22 +313,22 @@ export const marketingConfig: ServicePageConfig = {
     ],
   },
   faq: {
-    title: "שאלות נפוצות על שיווק דיגיטלי",
+    title: "שאלות נפוצות על שיווק PPC",
     items: [
       {
         id: "marketing-faq-1",
-        question: "באילו פלטפורמות אתם מפרסמים?",
-        answer: "לרוב Google/Meta, ובמידת הצורך גם ערוצים נוספים.",
+        question: "באילו פלטפורמות אתם מנהלים PPC?",
+        answer: "בעיקר Google Ads ו‑Meta Ads. בהתאם לקהל ולמוצר נשלב גם ערוצים נוספים כשזה משרת את ה‑ROI.",
       },
       {
         id: "marketing-faq-2",
         question: "איך מודדים הצלחה?",
-        answer: "מגדירים KPI, מודדים משפך, ומשפרים באופן שוטף לפי נתונים.",
+        answer: "מגדירים KPI לפי יעד עסקי (לידים/מכירות), מודדים משפך מקצה לקצה, ומשפרים באופן שוטף לפי נתונים.",
       },
       {
         id: "marketing-faq-3",
         question: "האם אתם מטפלים גם בתוכן וקריאייטיב?",
-        answer: "כן. קריאייטיב, קופי ותוכן כחלק מהתהליך.",
+        answer: "כן. קריאייטיב, קופי ונכסי נחיתה כחלק מהתהליך — כדי לשפר CTR, יחס המרה ועלות רכישה.",
       },
     ],
   },
@@ -329,6 +403,129 @@ export const roiConfig: ServicePageConfig = {
         question: "אתם גם מבצעים את השינויים בפועל?",
         answer:
           "כן. אנחנו יכולים להוביל גם את התכנון וגם את היישום (עיצוב/פיתוח) כדי שהשיפורים ייצאו מהר וימדדו נכון.",
+      },
+    ],
+  },
+  sections: SECTIONS_ORDER,
+}
+
+export const seoAiConfig: ServicePageConfig = {
+  slug: "seo-ai",
+  metadata: {
+    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    description:
+      "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+    openGraph: {
+      title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+      description:
+      "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+      url: "/seo-ai",
+      type: "website",
+    },
+  },
+  hero: {
+    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    subtitle:
+      " ",
+    tags: ["סריקת עומק", "יצירת פרופיל DNA", "ייצור ערך מיידי", "קידום אורגני מבוסס AI"],
+    ctaLabel: "להשארת פרטים",
+    ctaSource: "digital_marketing",
+    imageSrc: "/services/seo-ai/hero.webp",
+    imageAlt: "קידום אורגני מבוסס AI לגוגל ול-AI",
+  },
+  doubleHeading: {
+    title: "SEO זה לא רק מיקומים. זה איכות ליד.",
+    subtitle:
+      "בעידן של תשובות AI חלק מהחיפושים מקבלים תשובה בלי קליק — לכן אנחנו בונים אסטרטגיה שמודדת איכות, משפך והכנסות, לא רק תנועה.",
+    buttonLabel: "להשארת פרטים",
+    buttonSource: "digital_marketing",
+  },
+  vision: {
+    title: "קידום שמביא תנועה וגם הופכת אותה ללידים",
+    subtitle:
+      "היום עסקים מבזבזים אלפי שקלים על ניסוי וטעייה, חוסר סדר, וחוסר יכולת לייצר תוכן וקמפיינים בקצב שהשוק דורש. הפתרון: AI שמבוסס על פרופיל עסק + RAG + מודולים חכמים.",
+    ctaLabel: "להשארת פרטים",
+    source: "digital_marketing",
+    cards: [
+      {
+        id: "seo-ai-vision-1",
+        src: "/services/seo-ai/1.webp",
+        alt: "מודולים AI שמייצרים ערך מיידי",
+        caption: "מודולים AI שמייצרים ערך מיידי",
+      },
+      {
+        id: "seo-ai-vision-2",
+        src: "/services/seo-ai/2.webp",
+        alt: "החזר השקעה (ROI) גבוה",
+        caption: "החזר השקעה (ROI) גבוה",
+      },
+      {
+        id: "seo-ai-vision-3",
+        src: "/services/seo-ai/3.webp",
+        alt: "מאות סוכני AI מקדמים את עסק שלך",
+        caption: "מאות סוכני AI מקדמים את עסק שלך",
+      },
+      {
+        id: "seo-ai-vision-4",
+        src: "/services/seo-ai/4.webp",
+        alt: "ביצועי SEO משופרים",
+        caption: "ביצועי SEO משופרים",
+      },
+    ],
+  },
+  about: {
+    title: " קידום עסקים באמצעות כלים חדשניים ושילוב AI, חוסכת עלויות ומביאה תוצאות מהירות.",
+    subtitle:
+      "חיסכון משמעותי בעלויות, פחות שעות עבודה ידניות, פחות תלות בספקים חיצוניים.",
+    ctaLabel: "להשארת פרטים",
+    ctaSource: "digital_marketing",
+    items: [
+      {
+        id: "seo-ai-about-1",
+        title: "יעילות תפעולית וחיסכון בעלויות",
+        description: "המערכת מחליפה שעות עבודה ידניות, מפחיתה תלות בספקים חיצוניים ומאפשרת להפיק תוצרים שיווקיים, ניתוחים וחשיפה במהירות.",
+        icon: "/services/seo-ai/1.svg",
+      },
+      {
+        id: "seo-ai-about-2",
+        title: "דיוק מבוסס נתונים אמיתיים",
+        description: "המערכת נשענת על פרופיל עסק מובנה ושכבת ידע (RAG), ולכן מפיקה תוצרים מדויקים, עקביים ומותאמים לעסק, ללא המצאות או טעויות אנוש.",
+        icon: "/services/seo-ai/2.svg",
+      },
+      {
+        id: "seo-ai-about-3",
+        title: "עמידה ביעדים העסקיים",
+        description: "המערכת מזהה נקודות חולשה באתר, בתוכן ובתהליך המכירה, ומציעה פתרונות פרקטיים שמעלים את אחוזי ההמרה.",
+        icon: "/services/seo-ai/3.svg",
+      },
+    ],
+  },
+  faq: {
+    title: "שאלות נפוצות על SEO / AI",
+    items: [
+      {
+        id: "seo-ai-faq-1",
+        question: "מתי רואים תוצאות?",
+        answer:
+          "בדרך כלל יש שיפור ראשוני בתוך 4–8 שבועות, ותוצאות משמעותיות יותר אחרי 3–6 חודשים — תלוי בתחרות ובמצב האתר היום.",
+      },
+      {
+        id: "seo-ai-faq-2",
+        question: "האם צריך בלוג?",
+        answer:
+          "לא תמיד. המטרה היא לכסות כוונת חיפוש. לפעמים דפי שירות חזקים + FAQ עושים עבודה מצוינת, ובמקרים אחרים בלוג הוא המנוע.",
+      },
+      {
+        id: "seo-ai-faq-3",
+        question: "איך AI משנה את המשחק?",
+        answer:
+          "יותר תשובות בלי קליק, יותר חשיבות לאמינות ומבנה. לכן אנחנו מתמקדים גם בנראות וגם באיכות ליד והתקדמות במשפך.",
+      },
+      {
+        id: "seo-ai-faq-4",
+        question: "אתם מטפלים גם בטכני וגם בתוכן?",
+        answer:
+          "כן. טכני, תוכן, וקישורים/סמכות — כחבילה אחת שמכוונת לתוצאה עסקית.",
       },
     ],
   },

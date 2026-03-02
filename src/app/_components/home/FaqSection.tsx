@@ -1,9 +1,6 @@
 "use client"
 
 import { useId, useMemo, useState } from "react"
-import Link from "next/link"
-
-import type { ReactNode } from "react"
 
 type FaqItem = {
   id: string

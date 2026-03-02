@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - contentlayer2
+  - esbuild
+  - protobufjs
+

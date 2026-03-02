@@ -8,6 +8,11 @@ const HEADER_DEV_DROPDOWN = [
   { href: "/develop-ai", label: "פיתוח תוכנה בסביבת AI" },
 ] as const
 
+const HEADER_MARKETING_DROPDOWN = [
+  { href: "/marketing/ppc", label: "שיווק PPC" },
+  { href: "/marketing/seo-ai", label: "שיווק אורגני SEO / AI" },
+] as const
+
 const MOBILE_MENU_SECTIONS = [
   {
     title: "שירותים של VOW",
@@ -16,7 +21,8 @@ const MOBILE_MENU_SECTIONS = [
       { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
       { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
       { href: "/pricing", label: "מחירים" },
-      { href: "/marketing", label: "שיווק דיגיטלי" },
+      { href: "/marketing/ppc", label: "שיווק PPC" },
+      { href: "/marketing/seo-ai", label: "שיווק אורגני SEO / AI" },
       { href: "/portfolio", label: "פרויקטים נבחרים" },
     ],
   },
@@ -180,13 +186,33 @@ export function SiteHeader() {
                 </div>
               </li>
 
-              <li className="hidden md:flex md:items-center">
-                <Link
-                  href="/marketing"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
+              {/* שיווק — דרופדאון */}
+              <li className="hidden md:flex md:items-center relative group">
+                <button
+                  type="button"
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline inline-flex items-center gap-1"
+                  aria-haspopup="menu"
                 >
                   שיווק
-                </Link>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-[2px]">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <div className="pointer-events-none absolute right-0 top-full z-50 mt-0 w-[240px] rounded-xl border border-black/10 bg-white shadow-lg opacity-0 translate-y-1 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                  <ul role="menu" className="py-2 text-right">
+                    {HEADER_MARKETING_DROPDOWN.map((item) => (
+                      <li key={item.href} role="none">
+                        <Link
+                          role="menuitem"
+                          href={item.href}
+                          className="block px-4 py-2 text-[16px] font-semibold text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md mx-2"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
               <li className="hidden md:flex md:items-center">
                 <Link

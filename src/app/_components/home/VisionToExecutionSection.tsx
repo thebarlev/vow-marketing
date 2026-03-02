@@ -23,13 +23,13 @@ type Props = {
 const DEFAULT_CARDS: VisionCard[] = [
   { id: "default-4", src: "/4.webp", alt: "Google Ads", caption: "Google Ads" },
   { id: "default-3", src: "/services/develop/d2.webp", alt: "ניהול קמפיינים בפייסבוק", caption: "ניהול קמפיינים בפייסבוק" },
-  { id: "default-2", src: "/services/develop/d3.webp", alt: "אנליטיקה ושיפור ביצועים", caption: "אנליטיקה ושיפור ביצועים" },
+  { id: "default-2", src: "/services/develop/d3.webp", alt: "אנליטיקה ושיפו22ר ביצועים", caption: "אנליטיקה ושיפור ביצועים" },
   { id: "default-1", src: "/5.webp", alt: "קופירייטינג /קריאטיב ו-A/B test", caption: "קופירייטינג /קריאטיב ו-A/B test" },
 ]
 
 export function VisionToExecutionSection({
-  title ="מביאים תוצאות מהיום הראשון",
-  subtitle = "עם מעל 20 שנות ניסיון בשיווק דיגיטלי, אנחנו בונים אסטרטגיה מדויקת, קריאייטיב שממיר ומערך קמפיינים שעובד - לא ניסויים, אלא ביצועים.",
+  title ="פיתוח אתרים מבוססי AI לעסקים שרוצים לגדול",
+  subtitle = "אתרים שמביאים תוצאות מהיום הראשון - מייצרים לידים ומגדילים מכירות",
   ctaLabel = "להשארת פרטים",
   source = "design_development",
   ctaHref,
