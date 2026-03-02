@@ -412,11 +412,11 @@ export const roiConfig: ServicePageConfig = {
 export const seoAiConfig: ServicePageConfig = {
   slug: "seo-ai",
   metadata: {
-    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    title: "קידום עסקים במנועי AI",
     description:
       "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
     openGraph: {
-      title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+      title: "קידום עסקים במנועי AI",
       description:
       "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
       url: "/seo-ai",
@@ -424,14 +424,14 @@ export const seoAiConfig: ServicePageConfig = {
     },
   },
   hero: {
-    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    title: "קידום עסקים במנועי AI",
     subtitle:
-      " ",
+      "החל מ-97 ₪ לחודש",
     tags: ["סריקת עומק", "יצירת פרופיל DNA", "ייצור ערך מיידי", "קידום אורגני מבוסס AI"],
-    ctaLabel: "להשארת פרטים",
+    ctaLabel: "להצטרפות",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero.webp",
-    imageAlt: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    imageAlt: "קידום עסקים במנועי AI",
   },
   doubleHeading: {
     title: "SEO זה לא רק מיקומים. זה איכות ליד.",

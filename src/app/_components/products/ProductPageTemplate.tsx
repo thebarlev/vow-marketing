@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LogoRow } from "@/app/_components/home/LogoRow"
+import { PriceSection } from "@/app/_components/home/PriceSection"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
 
@@ -37,6 +38,7 @@ const SECTION_RENDERERS: Record<ProductSectionType, (config: ProductPageConfig) 
     ) : null,
   DoubleHeadingCtaSection: (config) => <DoubleHeadingCtaSection {...config.doubleHeading} />,
   FaqSection: (config) => (config.faq ? <ServiceFaqSection {...config.faq} /> : null),
+  PriceSection: () => <PriceSection />,
   PackagesSection: () => <PackagesSection />,
   SiteFooter: () => <SiteFooter />,
 }

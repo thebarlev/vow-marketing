@@ -19,59 +19,53 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
   {
     title: "בסיסי",
     kicker: "מנועי חיפוש AI",
-    buttonLabel: "לתיאום שיחת היכרות",
+    buttonLabel: "להצטרפות",
     buttonHref: "/contact",
     price: "97 ₪ לחודש",
-    priceextra: "מיועדת לעסקים קטנים שרוצים התחלה חכמה ומהירה",
+    priceextra: "מיועדת לעסקים קטנים שרוצים חשיפה מוגברת ב AI",
     badge: "",
     bullets: [
-    " סריקת אתר אוטומטית (עד 20 עמודים)",
-    " ציון SEO טכני (0–100)",
-    " בדיקת robots.txt + sitemap",
-    " בדיקת Schema בסיסית",
-    "זיהוי נוכחות",
-    "יצירת llms.txt",
-    "יצירת ai.json",
-    "pass / warn / fail חיווי ",
+ "סריקת אתר אוטומטית",
+ "יצירת כלים לחשיפה ב-AI",
+ "ניתוח וקבלת כלים לשיפור מבנה",
+ "תבנית Meta Titles בסיסית",
     ],
   },
   {
     title: "מקצועי",
     kicker: " SEO + מנועי חיפוש AI",
-    buttonLabel: "לתיאום שיחת היכרות",
+    buttonLabel: "להצטרפות",
     buttonHref: "/contact",
-    price: "197 ₪ לחודש",
+    price: "497 ₪ לחודש",
     priceextra: " SEO + מנועי חיפוש AI",
     badge: "המומלץ ביותר",
     bullets: [
-    "כולל את מה שקיים בבסיסי",
-    "ניתוח מבני מלא",
-    "זיהוי Titles/Descriptions חלשים או כפולים",
-    "הצעות Meta Titles משופרות",
-    "הצעות Meta Descriptions מותאמות",
-    "בדיקת מבנה תוכן לעמודי שירות",
-    "יצירת תוצרים שמקדמים חשיפה",
-    "זיהוי חוסר FAQ + יצירת 8–12 שאלות רלוונטיות",
+"כל מה שבבסיסי +",
+"מחקר מילות מפתח ראשוני",
+"אופטימיזציית Titles + Descriptions",
+"המלצות מבנה H1/H2",
+"בניית תוכן לקידום ב-AI ואורגני",
+"תוכנית תוכן לחשיפה מהירה",
+"בדיקת Schema מלאה",
     ],
   },
   {
     title: "מומחים",
     kicker: "SEO + מנועי חיפוש AI + מומחה אישי",
-    buttonLabel: "לתיאום שיחת היכרות",
+    buttonLabel: "השאירו פרטים ונחזור אליכם",
     buttonHref: "/contact",
     price: "החל מ-997 ₪ לחודש",
     priceextra: "לעסקים שרוצים ליווי אמיתי ותוצאות מקסימליות",
     badge: "",
     bullets: [
-"כולל הכל ממקצועי +",
-"ניתוח עומק של עמודי שירות",
-"בניית 2 עמודי תוכן לקידום אורגני",
-"בניית 2 עמודי תוכן לקידום אורגני",
+"כל מה שבבייסיק +",
+"ניתוח עומק מלא של האתר",
+"התאמת אסטרטגיית תוכן אישית",
+"בניית מבנה משפך אורגני",
+"תכנון 3 חודשי תוכן",
 "שיחת אסטרטגיה 1:1",
-"תעדוף משימות לפי ROI",
-"מעקב חודשי והשוואת ציון",
+"התאמה למטרות העסק",
 "אופטימיזציה מתקדמת ל-AI Exposure",
-"התאמה לשאילתות חיפוש מבוססות AI",
     ],
   },
 ] as const
@@ -81,7 +75,7 @@ export default function SeoAiServicePage() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
       <SiteHeader />
       <main id="main" role="main">
-        <ServiceHero {...seoAiConfig.hero} />
+        <ServiceHero {...seoAiConfig.hero} ctaHref="#price" />
         <LogoRow />
         <VisionToExecutionSection
           title={seoAiConfig.vision?.title}
@@ -102,9 +96,9 @@ export default function SeoAiServicePage() {
         ) : null}
 
         {/* Unique pricing section ONLY for /seo-ai */}
-        <PriceSection
+        <PriceSection id="price"
           title="מחירון — SEO / AI אורגני"
-          subtitle="3 מסלולים ברורים כדי להתחיל לזוז קדימה. (אפשר להחליף את הטקסט בהתאם לשירות החדש.)"
+          subtitle="מגדילים את ההחשיפה והנוכחות של עסק שלנו!"
           plans={SEO_AI_PRICING}
           variant="seo-ai"
         />
