@@ -12,6 +12,7 @@ export type ProductSectionType =
   | "AboutSection"
   | "DoubleHeadingCtaSection"
   | "FaqSection"
+  | "PriceSection"
   | "PackagesSection"
   | "SiteFooter"
 
@@ -63,9 +64,9 @@ const SECTIONS_ORDER: readonly ProductSectionType[] = [
   "LogoRow",
   "VisionToExecutionSection",
   "AboutSection",
+  "PackagesSection",
   "DoubleHeadingCtaSection",
   "FaqSection",
-  "PackagesSection",
   "SiteFooter",
 ] as const
 
@@ -218,7 +219,18 @@ export const invoiceConfig: ProductPageConfig = {
       
     ],
   },
-  sections: SECTIONS_ORDER,
+  sections: [
+    "SiteHeader",
+    "ServiceHero",
+    "LogoRow",
+    "VisionToExecutionSection",
+    "AboutSection",
+    "DoubleHeadingCtaSection",
+    "FaqSection",
+    "PackagesSection",
+    "PriceSection",
+    "SiteFooter",
+  ],
 }
 
 export const accountAiConfig: ProductPageConfig = {

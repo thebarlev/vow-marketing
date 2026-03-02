@@ -25,6 +25,15 @@ export function ServiceHero({
   imageSrc = "/D-hero.webp",
   imageAlt = "",
 }: ServiceHeroProps) {
+  const onHashLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!ctaHref || !ctaHref.startsWith("#")) return
+    const id = ctaHref.slice(1)
+    const el = document.getElementById(id)
+    if (!el) return
+    e.preventDefault()
+    el.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   const onCtaClick = () => {
     document
       .getElementById("lead-design-development")
@@ -51,7 +60,11 @@ export function ServiceHero({
               <HeroRotatingTags items={tags} />
             </div>
             {ctaHref ? (
-              <a href={ctaHref} className="btn-primary mt-7 !w-[170px] sm:w-auto text-center">
+              <a
+                href={ctaHref}
+                onClick={ctaHref.startsWith("#") ? onHashLinkClick : undefined}
+                className="btn-primary mt-7 !w-[170px] sm:w-auto text-center"
+              >
                 {ctaLabel}
               </a>
             ) : (

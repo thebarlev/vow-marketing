@@ -10,9 +10,9 @@ const LEGAL_LINKS = [
 ] as const
 
 const PRODUCTS_LINKS = [
+  { href: "/seo-ai", label: "קידום עסקים במנועי AI" },
   { href: "/account-ai", label: "רואה חשבון AI" },
   { href: "/invoice", label: "חשבונית דיגיטלית מאובטחת" },
-  { href: "/pricing", label: "מחירים" },
 ] as const
 
 const PAGES_LINKS = [
@@ -25,6 +25,7 @@ const PAGES_LINKS = [
 ] as const
 
 const VOW_LINKS = [
+  { href: "/blog", label: "בלוג" },
   { href: "/about", label: "אודות" },
   { href: "/contact", label: "יצירת קשר" },
 ] as const

@@ -19,13 +19,14 @@ export type PricePlan = {
 }
 
 export type PriceSectionProps = {
+  id?: string
   title?: string
   subtitle?: string
   plans?: readonly PricePlan[]
   variant?: "default" | "seo-ai"
 }
 
-export function PriceSection({ title, subtitle, plans, variant = "default" }: PriceSectionProps) {
+export function PriceSection({ id, title, subtitle, plans, variant = "default" }: PriceSectionProps) {
   // URL לאפליקציה – עובד בלוקאל ובפרודקשן
   const APP_BASE_URL =
     process.env.NEXT_PUBLIC_APP_BASE_URL ?? "https://app.vow.co.il";
@@ -45,7 +46,7 @@ export function PriceSection({ title, subtitle, plans, variant = "default" }: Pr
   });
 
   return (
-    <section aria-label="החבילות שלנו" className="py-[var(--space-section)]">
+    <section id={id} aria-label="החבילות שלנו" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
         <h2 className="text-center text-[44px] font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
           {title ?? "חשבונית ירוקה מאובטחת"}
@@ -119,6 +120,8 @@ export function PriceSection({ title, subtitle, plans, variant = "default" }: Pr
                   ) : (
                     <a
                       href={buttonHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
                     >
                       {p.buttonLabel}
@@ -141,8 +144,8 @@ export function PriceSection({ title, subtitle, plans, variant = "default" }: Pr
                 <div className="mb-5 h-px w-full bg-[color:var(--vow-border)]" />
 
                 <ul className="mt-4 space-y-0 text-left text-[18px] font-normal leading-[30px] text-black sm:text-[20px] sm:leading-[56px]">
-                  {p.bullets.map((b) => (
-                    <li key={b} className="flex items-center gap-1 text-[20px]">
+                  {p.bullets.map((b, idx) => (
+                    <li key={`${p.title}-${idx}`} className="flex items-center gap-1 text-[20px]">
                       <CheckIcon className="shrink-0" />
                       <span>{b}</span>
                     </li>
