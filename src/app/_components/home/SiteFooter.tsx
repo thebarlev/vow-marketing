@@ -25,6 +25,7 @@ const PAGES_LINKS = [
 ] as const
 
 const VOW_LINKS = [
+  { href: "/blog", label: "בלוג" },
   { href: "/about", label: "אודות" },
   { href: "/contact", label: "יצירת קשר" },
 ] as const
