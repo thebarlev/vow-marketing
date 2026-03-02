@@ -21,7 +21,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     kicker: "מנועי חיפוש AI",
     buttonLabel: "להצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor/register?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.vow.co.il/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "97 ₪ לחודש",
     priceextra: "מיועדת לעסקים קטנים שרוצים חשיפה מוגברת ב AI",
     badge: "",
@@ -37,7 +37,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     kicker: " SEO + מנועי חיפוש AI",
     buttonLabel: "להצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor/register?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.vow.co.il/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "497 ₪ לחודש",
     priceextra: " SEO + מנועי חיפוש AI",
     badge: "המומלץ ביותר",
