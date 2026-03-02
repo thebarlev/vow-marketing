@@ -1,3 +1,4 @@
+import path from "path"
 import { defineDocumentType, makeSource } from "contentlayer2/source-files"
 
 export const Article = defineDocumentType(() => ({
@@ -31,5 +32,14 @@ export const Article = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "content",
   documentTypes: [Article],
+  mdx: {
+    esbuildOptions: (options) => {
+      options.alias = {
+        ...(options.alias ?? {}),
+        "@": path.join(process.cwd(), "src"),
+      }
+      return options
+    },
+  },
 })
 

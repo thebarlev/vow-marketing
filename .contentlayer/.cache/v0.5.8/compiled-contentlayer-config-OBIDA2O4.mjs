@@ -1,4 +1,5 @@
 // contentlayer.config.ts
+import path from "path";
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 var Article = defineDocumentType(() => ({
   name: "Article",
@@ -29,10 +30,19 @@ var Article = defineDocumentType(() => ({
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "content",
-  documentTypes: [Article]
+  documentTypes: [Article],
+  mdx: {
+    esbuildOptions: (options) => {
+      options.alias = {
+        ...options.alias ?? {},
+        "@": path.join(process.cwd(), "src")
+      };
+      return options;
+    }
+  }
 });
 export {
   Article,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-TL76BGCG.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-OBIDA2O4.mjs.map

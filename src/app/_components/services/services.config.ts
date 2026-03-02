@@ -15,7 +15,7 @@ export type ServiceSectionType =
   | "SiteFooter"
 
 export type ServicePageConfig = {
-  slug: "design" | "develop" | "marketing" | "roi"
+  slug: "design" | "develop" | "marketing" | "roi" | "seo-ai"
   metadata: Metadata
   hero: {
     title: string
@@ -403,6 +403,129 @@ export const roiConfig: ServicePageConfig = {
         question: "אתם גם מבצעים את השינויים בפועל?",
         answer:
           "כן. אנחנו יכולים להוביל גם את התכנון וגם את היישום (עיצוב/פיתוח) כדי שהשיפורים ייצאו מהר וימדדו נכון.",
+      },
+    ],
+  },
+  sections: SECTIONS_ORDER,
+}
+
+export const seoAiConfig: ServicePageConfig = {
+  slug: "seo-ai",
+  metadata: {
+    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    description:
+      "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+    openGraph: {
+      title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+      description:
+      "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+      url: "/seo-ai",
+      type: "website",
+    },
+  },
+  hero: {
+    title: "קידום אורגני מבוסס AI לגוגל ול-AI",
+    subtitle:
+      " ",
+    tags: ["סריקת עומק", "יצירת פרופיל DNA", "ייצור ערך מיידי", "קידום אורגני מבוסס AI"],
+    ctaLabel: "להשארת פרטים",
+    ctaSource: "digital_marketing",
+    imageSrc: "/services/seo-ai/hero.webp",
+    imageAlt: "קידום אורגני מבוסס AI לגוגל ול-AI",
+  },
+  doubleHeading: {
+    title: "SEO זה לא רק מיקומים. זה איכות ליד.",
+    subtitle:
+      "בעידן של תשובות AI חלק מהחיפושים מקבלים תשובה בלי קליק — לכן אנחנו בונים אסטרטגיה שמודדת איכות, משפך והכנסות, לא רק תנועה.",
+    buttonLabel: "להשארת פרטים",
+    buttonSource: "digital_marketing",
+  },
+  vision: {
+    title: "קידום שמביא תנועה וגם הופכת אותה ללידים",
+    subtitle:
+      "היום עסקים מבזבזים אלפי שקלים על ניסוי וטעייה, חוסר סדר, וחוסר יכולת לייצר תוכן וקמפיינים בקצב שהשוק דורש. הפתרון: AI שמבוסס על פרופיל עסק + RAG + מודולים חכמים.",
+    ctaLabel: "להשארת פרטים",
+    source: "digital_marketing",
+    cards: [
+      {
+        id: "seo-ai-vision-1",
+        src: "/services/seo-ai/1.webp",
+        alt: "מודולים AI שמייצרים ערך מיידי",
+        caption: "מודולים AI שמייצרים ערך מיידי",
+      },
+      {
+        id: "seo-ai-vision-2",
+        src: "/services/seo-ai/2.webp",
+        alt: "החזר השקעה (ROI) גבוה",
+        caption: "החזר השקעה (ROI) גבוה",
+      },
+      {
+        id: "seo-ai-vision-3",
+        src: "/services/seo-ai/3.webp",
+        alt: "מאות סוכני AI מקדמים את עסק שלך",
+        caption: "מאות סוכני AI מקדמים את עסק שלך",
+      },
+      {
+        id: "seo-ai-vision-4",
+        src: "/services/seo-ai/4.webp",
+        alt: "ביצועי SEO משופרים",
+        caption: "ביצועי SEO משופרים",
+      },
+    ],
+  },
+  about: {
+    title: " קידום עסקים באמצעות כלים חדשניים ושילוב AI, חוסכת עלויות ומביאה תוצאות מהירות.",
+    subtitle:
+      "חיסכון משמעותי בעלויות, פחות שעות עבודה ידניות, פחות תלות בספקים חיצוניים.",
+    ctaLabel: "להשארת פרטים",
+    ctaSource: "digital_marketing",
+    items: [
+      {
+        id: "seo-ai-about-1",
+        title: "יעילות תפעולית וחיסכון בעלויות",
+        description: "המערכת מחליפה שעות עבודה ידניות, מפחיתה תלות בספקים חיצוניים ומאפשרת להפיק תוצרים שיווקיים, ניתוחים וחשיפה במהירות.",
+        icon: "/services/seo-ai/1.svg",
+      },
+      {
+        id: "seo-ai-about-2",
+        title: "דיוק מבוסס נתונים אמיתיים",
+        description: "המערכת נשענת על פרופיל עסק מובנה ושכבת ידע (RAG), ולכן מפיקה תוצרים מדויקים, עקביים ומותאמים לעסק, ללא המצאות או טעויות אנוש.",
+        icon: "/services/seo-ai/2.svg",
+      },
+      {
+        id: "seo-ai-about-3",
+        title: "עמידה ביעדים העסקיים",
+        description: "המערכת מזהה נקודות חולשה באתר, בתוכן ובתהליך המכירה, ומציעה פתרונות פרקטיים שמעלים את אחוזי ההמרה.",
+        icon: "/services/seo-ai/3.svg",
+      },
+    ],
+  },
+  faq: {
+    title: "שאלות נפוצות על SEO / AI",
+    items: [
+      {
+        id: "seo-ai-faq-1",
+        question: "מתי רואים תוצאות?",
+        answer:
+          "בדרך כלל יש שיפור ראשוני בתוך 4–8 שבועות, ותוצאות משמעותיות יותר אחרי 3–6 חודשים — תלוי בתחרות ובמצב האתר היום.",
+      },
+      {
+        id: "seo-ai-faq-2",
+        question: "האם צריך בלוג?",
+        answer:
+          "לא תמיד. המטרה היא לכסות כוונת חיפוש. לפעמים דפי שירות חזקים + FAQ עושים עבודה מצוינת, ובמקרים אחרים בלוג הוא המנוע.",
+      },
+      {
+        id: "seo-ai-faq-3",
+        question: "איך AI משנה את המשחק?",
+        answer:
+          "יותר תשובות בלי קליק, יותר חשיבות לאמינות ומבנה. לכן אנחנו מתמקדים גם בנראות וגם באיכות ליד והתקדמות במשפך.",
+      },
+      {
+        id: "seo-ai-faq-4",
+        question: "אתם מטפלים גם בטכני וגם בתוכן?",
+        answer:
+          "כן. טכני, תוכן, וקישורים/סמכות — כחבילה אחת שמכוונת לתוצאה עסקית.",
       },
     ],
   },
