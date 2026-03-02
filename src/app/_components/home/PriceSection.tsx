@@ -120,6 +120,8 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default" }
                   ) : (
                     <a
                       href={buttonHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
                     >
                       {p.buttonLabel}
