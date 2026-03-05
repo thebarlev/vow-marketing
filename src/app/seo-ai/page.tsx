@@ -6,68 +6,72 @@ import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import type { PricePlan } from "@/app/_components/home/PriceSection"
 import { PriceSection } from "@/app/_components/home/PriceSection"
+import { SuccessSection } from "@/app/_components/home/SuccessSection"
+import { Testimonials } from "@/app/_components/home/Testimonials"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
 import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
+import { SeoAiProcessSteps } from "@/app/_components/services/SeoAiProcessSteps"
 import { ServiceAboutSection } from "@/app/_components/services/ServiceAboutSection"
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
+import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfig } from "@/app/_components/services/services.config"
 
 export const metadata: Metadata = seoAiConfig.metadata
 
 const SEO_AI_PRICING: readonly PricePlan[] = [
   {
-    title: "בסיסי",
+    title: "מתחילים",
     kicker: "מנועי חיפוש AI",
-    buttonLabel: "להצטרפות",
+    buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
       "https://app.vow.co.il/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
-    price: "97 ₪ לחודש",
-    priceextra: "מיועדת לעסקים קטנים שרוצים חשיפה מוגברת ב AI",
+    price: "197 ₪ לחודש",
+    priceextra: "מתאים ל: עסקים בתחילת דרך או תקציב מוגבל",
     badge: "",
     bullets: [
- "סריקת אתר אוטומטית",
- "יצירת כלים לחשיפה ב-AI",
- "ניתוח וקבלת כלים לשיפור מבנה",
- "תבנית Meta Titles בסיסית",
+ 'סריקה חודשית + דו"ח ממוקד',
+ "רשימת 5 פעולות עדיפות לחודש",
+ "עדכון תוכן אחד לחודש",
+ "מדדי ביצוע בסיסיים",
+ "תמיכה בצ׳אט",
     ],
   },
   {
     title: "מקצועי",
-    kicker: " SEO + מנועי חיפוש AI",
-    buttonLabel: "להצטרפות",
+    kicker: "ליווי מומחה + ביצוע חודשי מלא",
+    buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
       "https://app.vow.co.il/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
-    price: "497 ₪ לחודש",
-    priceextra: " SEO + מנועי חיפוש AI",
+    price: "597 ₪ לחודש",
+    priceextra: "מתאים ל: עסקים שרוצים תוצאות בלי להתעסק",
     badge: "המומלץ ביותר",
     bullets: [
 "כל מה שבבסיסי +",
-"מחקר מילות מפתח ראשוני",
-"אופטימיזציית Titles + Descriptions",
-"המלצות מבנה H1/H2",
-"בניית תוכן לקידום ב-AI ואורגני",
-"תוכנית תוכן לחשיפה מהירה",
-"בדיקת Schema מלאה",
+ "סריקה מעמיקה + תכנית עבודה",
+ "שדרוג תוכן ומבנה, 2–4 משימות/חודש",
+ "ChatGPT, Gemini, Copilot...",
+ "יצירת עמודים חדשים שמביאים תנועה",
+ 'דו"ח תוצאות חודשי + שיחת עדכון',
+ "ליווי מומחה ישיר (לא בוט)",
+
     ],
   },
   {
     title: "מומחים",
-    kicker: "SEO + מנועי חיפוש AI + מומחה אישי",
-    buttonLabel: "השאירו פרטים ונחזור אליכם",
+    kicker: "SEO + מנועי AI + מומחה אישי",
+    buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref: "/contact",
-    price: "החל מ-997 ₪ לחודש",
-    priceextra: "לעסקים שרוצים ליווי אמיתי ותוצאות מקסימליות",
+    price: "1,497 ₪ לחודש",
+    priceextra: 'מתאים ל: רפואה / עו"ד / נדל"ן / פיננסים',
     badge: "",
     bullets: [
-"כל מה שבבייסיק +",
-"ניתוח עומק מלא של האתר",
-"התאמת אסטרטגיית תוכן אישית",
-"בניית מבנה משפך אורגני",
-"תכנון 3 חודשי תוכן",
-"שיחת אסטרטגיה 1:1",
-"התאמה למטרות העסק",
-"אופטימיזציה מתקדמת ל-AI Exposure",
+"כל מה שמקצועי +",
+"יצירה של עמודים חדשים",
+"אסטרטגיית נושאים ותוכן מלאה",
+"סכמות מתקדמות + לינקים פנימיים",
+"מעקב מתקדם + שיחה דו-שבועית",
+"עדיפות בתגובה + SLA מוגדר",
     ],
   },
 ] as const
@@ -77,8 +81,20 @@ export default function SeoAiServicePage() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
       <SiteHeader />
       <main id="main" role="main">
-        <ServiceHero {...seoAiConfig.hero} ctaHref="#price" />
+        <ServiceHero
+          {...seoAiConfig.hero}
+          ariaLabel={seoAiConfig.hero.title}
+          ctaHref="#price"
+          subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
+          title={
+            <>
+              לקוחות כבר לא <span className="line-through">מחפשים בגוגל</span> הם שואלים AI.
+            </>
+          }
+        />
         <LogoRow />
+        <SeoAiStatsBar />
+        <SeoAiProcessSteps />
         <VisionToExecutionSection
           title={seoAiConfig.vision?.title}
           subtitle={seoAiConfig.vision?.subtitle}
@@ -99,13 +115,16 @@ export default function SeoAiServicePage() {
 
         {/* Unique pricing section ONLY for /seo-ai */}
         <PriceSection id="price"
-          title="מחירון — SEO / AI אורגני"
-          subtitle="מגדילים את ההחשיפה והנוכחות של עסק שלנו!"
+          title="חבילות  ומחירים"
+          subtitle="בחר את החבילה שמתאימה לשלב שבו העסק שלך נמצא. אפשר לשדרג בכל עת."
           plans={SEO_AI_PRICING}
           variant="seo-ai"
         />
 
-        <DoubleHeadingCtaSection {...seoAiConfig.doubleHeading} />
+        <SuccessSection />
+        <Testimonials />
+
+        <DoubleHeadingCtaSection {...seoAiConfig.doubleHeading} buttonHref="#price" />
         {seoAiConfig.faq ? <ServiceFaqSection {...seoAiConfig.faq} /> : null}
         <PackagesSection />
       </main>

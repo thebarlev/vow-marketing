@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
 
@@ -8,6 +10,7 @@ export type DoubleHeadingCtaSectionProps = {
   subtitle: string
   buttonLabel: string
   buttonSource: LeadSource
+  buttonHref?: string
 }
 
 export function DoubleHeadingCtaSection({
@@ -15,7 +18,17 @@ export function DoubleHeadingCtaSection({
   subtitle,
   buttonLabel,
   buttonSource,
+  buttonHref,
 }: DoubleHeadingCtaSectionProps) {
+  const onHashLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!buttonHref || !buttonHref.startsWith("#")) return
+    const id = buttonHref.slice(1)
+    const el = document.getElementById(id)
+    if (!el) return
+    e.preventDefault()
+    el.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   const onClick = () => {
     document
       .getElementById("lead-design-development")
@@ -32,9 +45,25 @@ export function DoubleHeadingCtaSection({
             {subtitle}
           </p>
 
-          <button type="button" className="btn-primary mt-7 w-full sm:w-auto mx-auto" onClick={onClick}>
-            {buttonLabel}
-          </button>
+          {buttonHref ? (
+            buttonHref.startsWith("/") ? (
+              <Link href={buttonHref} className="btn-primary mt-7 w-full sm:w-auto mx-auto">
+                {buttonLabel}
+              </Link>
+            ) : (
+              <a
+                href={buttonHref}
+                onClick={buttonHref.startsWith("#") ? onHashLinkClick : undefined}
+                className="btn-primary mt-7 w-full sm:w-auto mx-auto"
+              >
+                {buttonLabel}
+              </a>
+            )
+          ) : (
+            <button type="button" className="btn-primary mt-7 w-full sm:w-auto mx-auto" onClick={onClick}>
+              {buttonLabel}
+            </button>
+          )}
         </div>
       </div>
     </section>
