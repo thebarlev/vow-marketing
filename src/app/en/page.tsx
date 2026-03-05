@@ -68,10 +68,10 @@ export const metadata: Metadata = {
 
 export default function EnHomePage() {
   return (
-    <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
+    <div className="min-h-screen bg-[#F4F1EC]">
       <SiteHeader />
 
-      <main id="main" role="main">
+      <main id="main" role="main" dir="ltr"><main id="main" role="main" dir="ltr">
         <Hero />
         <LogoRow />
         <VisionToExecutionSection
