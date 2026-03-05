@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { headers } from "next/headers";
 import { Assistant } from "next/font/google";
 import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
@@ -14,7 +15,7 @@ const assistant = Assistant({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://app.vow.co.il"),
+  metadataBase: new URL("https://vow.co.il"),
   title: "מחירים – חשבונית דיגיטלית שנה חינם VOW",
   description: "חבילות חינם/מקצועי/אקסטרה להפקת מסמכים. התחילו ניסיון חינם והצטרפו למערכת.",
   icons: {
@@ -30,14 +31,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const locale = headersList.get("x-locale") ?? "he";
+  const dir = locale === "en" ? "ltr" : "rtl";
+  const lang = locale === "en" ? "en" : "he";
+
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   return (
-    <html lang="he" dir="rtl" className={assistant.variable}>
+    <html lang={lang} dir={dir} className={assistant.variable}>
       <body className="antialiased font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>

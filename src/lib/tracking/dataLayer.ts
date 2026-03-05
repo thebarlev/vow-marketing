@@ -1,5 +1,5 @@
-export type PageLanguage = "he"
-export type PageDir = "rtl"
+export type PageLanguage = "he" | "en"
+export type PageDir = "rtl" | "ltr"
 
 export type TrackingService =
   | "web_development"
@@ -30,6 +30,13 @@ declare global {
   }
 }
 
+function getLocaleFromPathname(pathname: string): { language: PageLanguage; dir: PageDir } {
+  const isEn = pathname === "/en" || pathname.startsWith("/en/")
+  return isEn
+    ? { language: "en", dir: "ltr" }
+    : { language: "he", dir: "rtl" }
+}
+
 function getBasePayload(): BaseDataLayerPayload {
   const now = new Date().toISOString()
 
@@ -43,12 +50,15 @@ function getBasePayload(): BaseDataLayerPayload {
     }
   }
 
+  const pathname = window.location.pathname
+  const { language, dir } = getLocaleFromPathname(pathname)
+
   return {
     timestamp: now,
-    page_path: window.location.pathname,
+    page_path: pathname,
     page_title: typeof document !== "undefined" ? document.title : "",
-    page_language: "he",
-    page_dir: "rtl",
+    page_language: language,
+    page_dir: dir,
   }
 }
 
