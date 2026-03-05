@@ -53,7 +53,7 @@ export function SiteFooter() {
           {/* 4 עמודות קישורים — ימין לשמאל ב-RTL */}
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title} className="text-right">
-              <p className="text-[18px] font-semibold text-[#A1A1A1] mb-4">
+              <p className="text-[18px] font-semibold text-[#A1A1A1] mb-4 leading-[1.1] sm:leading-[1.3]">
                 {col.title}
               </p>
               <ul className="space-y-2">
@@ -61,7 +61,7 @@ export function SiteFooter() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors"
+                      className="leading-[1.2] text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors "
                     >
                       {item.label}
                     </Link>

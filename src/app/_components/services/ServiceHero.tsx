@@ -5,8 +5,10 @@ import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 import type { LeadSource } from "@/app/_components/home/Popup"
 
 export type ServiceHeroProps = {
-  title: string
-  subtitle?: string
+  title: React.ReactNode
+  subtitle?: React.ReactNode
+  ariaLabel?: string
+  subtitleClassName?: string
   tags: readonly string[]
   ctaLabel: string
   ctaSource: LeadSource
@@ -18,6 +20,8 @@ export type ServiceHeroProps = {
 export function ServiceHero({
   title,
   subtitle,
+  ariaLabel,
+  subtitleClassName,
   tags,
   ctaLabel,
   ctaSource,
@@ -25,6 +29,8 @@ export function ServiceHero({
   imageSrc = "/D-hero.webp",
   imageAlt = "",
 }: ServiceHeroProps) {
+  const sectionAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "Hero")
+
   const onHashLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!ctaHref || !ctaHref.startsWith("#")) return
     const id = ctaHref.slice(1)
@@ -42,17 +48,22 @@ export function ServiceHero({
   }
 
   return (
-    <section aria-label={title} className="w-full bg-[#F4F1EC]" dir="rtl">
+    <section aria-label={sectionAriaLabel} className="w-full bg-[#F4F1EC]" dir="rtl">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
 
           {/* Text */}
           <div className="order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)] ">
-            <h1 className="text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[96px] lg:leading-[0.98]">
+            <h1 className="text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]">
               {title}
             </h1>
             {subtitle ? (
-              <p className="mt-5 text-[20px] font-semibold leading-[34px] text-[color:var(--vow-muted)] sm:text-[22px] sm:leading-[36px]">
+              <p
+                className={
+                  subtitleClassName ??
+                  "mt-5 text-[20px] font-semibold leading-[34px] text-[color:var(--vow-muted)] sm:text-[22px] sm:leading-[36px]"
+                }
+              >
                 {subtitle}
               </p>
             ) : null}
@@ -63,12 +74,12 @@ export function ServiceHero({
               <a
                 href={ctaHref}
                 onClick={ctaHref.startsWith("#") ? onHashLinkClick : undefined}
-                className="btn-primary mt-7 !w-[170px] sm:w-auto text-center"
+                className="btn-primary mt-7 !w-[300px] sm:w-auto text-center"
               >
                 {ctaLabel}
               </a>
             ) : (
-              <button type="button" className="btn-primary mt-7 !w-[170px] sm:w-auto" onClick={onCtaClick}>
+              <button type="button" className="btn-primary mt-7 !w-[240px] sm:w-auto" onClick={onCtaClick}>
                 {ctaLabel}
               </button>
             )}

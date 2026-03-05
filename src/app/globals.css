@@ -188,7 +188,6 @@ body {
     @apply font-semibold text-black text-center;
     font-size: 40px;
     line-height: 43px;
-    letter-spacing: -0.6px;
     margin-bottom: 5px;
   }
 
@@ -217,7 +216,6 @@ body {
     h2 {
       font-size: 60px;
       line-height: 66px;
-      letter-spacing: -0.8px;
     }
 
     h3 {
@@ -465,16 +463,14 @@ body {
     font-weight: 600;
     text-align: right;
     font-size: 40px;
-    line-height: 50px;
-    letter-spacing: -0.6px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: 1024px) {
   .free-year-heading {
     font-size: 60px;
-    line-height: 76px;
-    letter-spacing: -0.8px;
+    line-height: 70px;
   }
 }
 
