@@ -3,11 +3,11 @@ import Link from "next/link"
 import { CheckIcon } from "./CheckIcon"
 
 const BENEFITS: readonly string[] = [
-"מופיעים בתשובות של ChatGPT ו-Gemini",
-  "דירוג גבוה יותר בגוגל, בלי קמפיינים",
-  "כלים מתקדמים + מומחה צמוד לעסק שלך",
-  "יותר חשיפה, יותר לקוחות",
-  "ליווי מומחה אישי, לא בוט",
+"מופיעים בתשובות של ChatGPT ו-Gemini.",
+  "דירוג גבוה יותר בגוגל, בלי קמפיינים.",
+  "כלים מתקדמים + מומחה צמוד לעסק שלך.",
+  "יותר חשיפה, יותר לקוחות.",
+  "ליווי מומחה אישי, לא בוט.",
 ] as const
 
 export function GreenInvoiceSection() {
