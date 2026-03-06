@@ -75,6 +75,7 @@ export function SiteHeader() {
         ref={headerRef}
         role="banner"
         className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EC]"
+        dir="rtl"
       >
         <a href="#main" className="skip-link">דלג לתוכן</a>
         <div className="mx-auto max-w-[1440px] px-2 sm:px-6 lg:px-4">
@@ -83,10 +84,9 @@ export function SiteHeader() {
             aria-label="ניווט ראשי"
             className="flex flex-row-reverse items-center justify-between gap-3 py-4 lg:py-6"
           >
-            {/* Logo */}
             <Link
               href="/"
-              className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md"
+              className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md shrink-0"
               aria-label="VOW — חזרה לעמוד הבית"
             >
               <Image
@@ -96,42 +96,23 @@ export function SiteHeader() {
                 height={46}
                 priority
                 className={[
-                  "h-auto w-[149px] transition-transform duration-300 ease-in-out origin-left",
+                  "h-auto w-[149px] transition-transform duration-300 ease-in-out origin-right",
                   scrolled ? "sm:scale-100 scale-[0.8]" : "scale-100",
                 ].join(" ")}
               />
             </Link>
 
-            {/* ===== כפתורים באמצע — דסקטופ בלבד ===== */}
-{/* ===== כפתורים באמצע — דסקטופ בלבד ===== */}
-<div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
-  <span
-    className="text-right w-[115px] shrink-0 leading-[1.3]"
-    style={{ fontSize: "16px" }}
-  >
-    חשבונית דיגיטלית שנה חינם
-  </span>
-  <div className="flex items-center gap-2 shrink-0">
-    <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
-      הצטרפות
-    </a>
-    <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">
-      התחברות
-    </a>
-  </div>
-</div>
+            <div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
+              <span className="text-right w-[115px] shrink-0 leading-[1.3]" style={{ fontSize: "16px" }}>חשבונית דיגיטלית שנה חינם</span>
+              <div className="flex items-center gap-2 shrink-0">
+                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">הצטרפות</a>
+                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
+              </div>
+            </div>
 
-            {/* קישורי ניווט + המבורגר */}
             <ul className="flex flex-nowrap items-center gap-1">
-              {/* המבורגר — מובייל בלבד */}
               <li className="sm:hidden flex items-center">
-                <button
-                  type="button"
-                  aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
-                  aria-expanded={menuOpen}
-                  onClick={() => setMenuOpen((v) => !v)}
-                  className="flex h-8 w-10 items-center justify-center rounded-md transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)]"
-                >
+                <button type="button" aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"} aria-expanded={menuOpen} onClick={() => setMenuOpen((v) => !v)} className="flex h-8 w-10 items-center justify-center rounded-md transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)]">
                   {menuOpen ? (
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
                       <line x1="2" y1="2" x2="20" y2="20" stroke="black" strokeWidth="2.2" strokeLinecap="round" />
@@ -146,24 +127,11 @@ export function SiteHeader() {
                   )}
                 </button>
               </li>
-
-              {/* קישורים — דסקטופ */}
               <li className="hidden md:flex md:items-center">
-                <Link
-                  href="/design"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
-                >
-                  עיצוב ומיתוג
-                </Link>
+                <Link href="/design" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline">עיצוב ומיתוג</Link>
               </li>
-
-              {/* פיתוח AI — דרופדאון */}
               <li className="hidden md:flex md:items-center relative group">
-                <button
-                  type="button"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline inline-flex items-center gap-1"
-                  aria-haspopup="menu"
-                >
+                <button type="button" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline inline-flex items-center gap-1" aria-haspopup="menu">
                   פיתוח AI
                   <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-[2px]">
                     <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -173,26 +141,14 @@ export function SiteHeader() {
                   <ul role="menu" className="py-2 text-right">
                     {HEADER_DEV_DROPDOWN.map((item) => (
                       <li key={item.href} role="none">
-                        <Link
-                          role="menuitem"
-                          href={item.href}
-                          className="block px-4 py-2 text-[16px] font-semibold text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md mx-2"
-                        >
-                          {item.label}
-                        </Link>
+                        <Link role="menuitem" href={item.href} className="block px-4 py-2 text-[16px] font-semibold text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md mx-2">{item.label}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               </li>
-
-              {/* שיווק — דרופדאון */}
               <li className="hidden md:flex md:items-center relative group">
-                <button
-                  type="button"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline inline-flex items-center gap-1"
-                  aria-haspopup="menu"
-                >
+                <button type="button" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline inline-flex items-center gap-1" aria-haspopup="menu">
                   שיווק
                   <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-[2px]">
                     <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -202,25 +158,14 @@ export function SiteHeader() {
                   <ul role="menu" className="py-2 text-right">
                     {HEADER_MARKETING_DROPDOWN.map((item) => (
                       <li key={item.href} role="none">
-                        <Link
-                          role="menuitem"
-                          href={item.href}
-                          className="block px-4 py-2 text-[16px] font-semibold text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md mx-2"
-                        >
-                          {item.label}
-                        </Link>
+                        <Link role="menuitem" href={item.href} className="block px-4 py-2 text-[16px] font-semibold text-black hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md mx-2">{item.label}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               </li>
               <li className="hidden md:flex md:items-center">
-                <Link
-                  href="/contact"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
-                >
-                  יצירת קשר
-                </Link>
+                <Link href="/contact" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline">יצירת קשר</Link>
               </li>
             </ul>
           </nav>
@@ -230,14 +175,14 @@ export function SiteHeader() {
       {/* Spacer */}
       <div style={{ height: headerHeight }} aria-hidden="true" />
 
-      {/* תפריט נפתח מובייל — ללא שינוי */}
+      {/* Mobile menu */}
       {menuOpen && (
         <div
           dir="rtl"
           className="sm:hidden fixed left-0 right-0 bottom-0 z-40 bg-white flex flex-col"
           style={{ top: headerHeight }}
         >
-          <div className="flex flex-col flex-1 overflow-y-auto px-6 py-6 gap-8">
+          <div className="flex flex-col flex-1 overflow-y-auto px-6 py-6 gap-8 text-right">
             {MOBILE_MENU_SECTIONS.map((section) => (
               <div key={section.title}>
                 <p className="text-[14px] font-semibold text-[#A1A1A1] mb-1 tracking-wide">
@@ -260,16 +205,11 @@ export function SiteHeader() {
             ))}
           </div>
 
-          {/* כפתורים — נצמדים לתחתית */}
           <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
-            <div className="flex flex-row-reverse items-center justify-end gap-2 bg-white/90 backdrop-blur-sm  px-3 py-2">
+            <div className="flex flex-row-reverse items-center justify-end gap-2 bg-white/90 backdrop-blur-sm px-3 py-2">
               <div className="flex items-center gap-2">
-                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
-                  הצטרפות
-                </a>
-                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">
-                  התחברות
-                </a>
+                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">הצטרפות</a>
+                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
               </div>
               <span className="text-right max-w-[120px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
                 חשבונית דיגיטלית שנה חינם

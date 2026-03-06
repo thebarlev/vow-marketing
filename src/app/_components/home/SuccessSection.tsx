@@ -1,11 +1,16 @@
-export function SuccessSection() {
+export function SuccessSection({ locale = "he" }: { locale?: "he" | "en" }) {
+  const isEn = locale === "en"
   return (
-    <section aria-label="הצלחה" className="py-[var(--space-section)] bg-[#F4F1EC]">
+    <section aria-label={isEn ? "Success" : "הצלחה"} className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4 ">
         <div className="space-y-3">
-          <h2 className="text-right sm:text-center">הצלחה לא נבנית במקרה</h2>
-          <h3 className="text-right sm:text-center">
-            היא נבנית מהחלטות נכונות, תשתית מדויקת וניהול חכם לאורך זמן.
+          <h2 className={isEn ? "text-left sm:text-center" : "text-right sm:text-center"}>
+            {isEn ? "Success isn't built by chance" : "הצלחה לא נבנית במקרה"}
+          </h2>
+          <h3 className={isEn ? "text-left sm:text-center" : "text-right sm:text-center"}>
+            {isEn
+              ? "It's built from right decisions, solid foundation, and smart management over time."
+              : "היא נבנית מהחלטות נכונות, תשתית מדויקת וניהול חכם לאורך זמן."}
           </h3>
         </div>
       </div>

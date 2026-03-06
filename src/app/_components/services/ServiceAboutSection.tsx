@@ -17,6 +17,7 @@ export type ServiceAboutSectionProps = {
   ctaSource: LeadSource
   ctaHref?: string
   items: ServiceAboutItem[]
+  dir?: "ltr" | "rtl"
 }
 
 export function ServiceAboutSection({
@@ -26,6 +27,7 @@ export function ServiceAboutSection({
   ctaSource,
   ctaHref,
   items,
+  dir = "rtl",
 }: ServiceAboutSectionProps) {
   const onCtaClick = () => {
     document
@@ -34,18 +36,19 @@ export function ServiceAboutSection({
     openLeadPopup({ source: ctaSource })
   }
 
+  const isLtr = dir === "ltr"
   return (
-    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]" dir="rtl">
+    <section aria-label={title} className="py-[var(--space-section)] mobile-margin-top bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-4 lg:px-4 relative">
         <div className="relative rounded-[10px] grid bg-white p-1 px-3 main-row gap-4 lg:grid-cols-2">
 
-          {/* Card - ימין */}
+          {/* Card */}
           <div className="relative z-10 min-w-0 max-w-full overflow-hidden flex justify-start items-center w-full">
             <div className="w-full min-w-0 max-w-full  lg:px-10
               py-[20px] px-[10px]
               sm:py-[35px] sm:px-4 sm:translate-x-0
             ">
-              <h2 className="text-right break-words">{title}</h2>
+              <h2 className={isLtr ? "text-left break-words" : "text-right break-words"}>{title}</h2>
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%] break-words">
                 {subtitle}
               </p>
@@ -91,7 +94,7 @@ export function ServiceAboutSection({
                   <h3 className="h3-title sm:text-[30px] font-semibold">{item.title}</h3>
                 </div>
                 {item.description ? (
-                  <p className="text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]">
+                  <p className={isLtr ? "text-left text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]" : "text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]"}>
                     {item.description}
                   </p>
                 ) : null}

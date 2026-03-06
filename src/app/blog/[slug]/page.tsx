@@ -15,7 +15,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const post = allArticles.find((a) => a.slug === slug)
+  const post = allArticles.find(
+    (a) => a.slug === slug && ((a.locale as string | undefined) !== "en" || !(a.locale as string | undefined))
+  )
   if (!post) return { title: "בלוג | VOW" }
 
   return {
@@ -38,10 +40,13 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = allArticles.find((a) => a.slug === slug)
+  const post = allArticles.find(
+    (a) => a.slug === slug && ((a.locale as string | undefined) !== "en" || !(a.locale as string | undefined))
+  )
   if (!post) notFound()
 
   const related = allArticles
+    .filter((a) => (a.locale as string | undefined) !== "en")
     .filter((a) => a.slug !== post.slug)
     .filter((a) => a.category === post.category)
     .slice()
@@ -69,7 +74,7 @@ export default async function BlogPostPage({
           <div className="mx-auto max-w-[980px]">
             <nav
               aria-label="breadcrumb"
-              className="flex items-center gap-2 text-[12px] leading-5 text-[#747474]"
+              className="flex items-center gap-2 text-[18px] leading-5 text-[#747474]"
             >
               <Link href="/blog" className="hover:text-black transition-colors">
                 בלוג
@@ -110,7 +115,7 @@ export default async function BlogPostPage({
               ) : null}
 
               {/* ─── Desktop horizontal meta row (below title + description) ─── */}
-              <div className="hidden lg:flex items-center gap-6 text-[13px] text-[#747474] mt-6 flex-wrap">
+              <div className="hidden lg:flex items-center gap-6 text-[18px] text-[#747474] mt-6 flex-wrap">
 
                 {/* Category */}
                 <div className="flex items-center gap-1.5">
@@ -176,7 +181,7 @@ export default async function BlogPostPage({
               </div>
 
               {/* ─── Mobile meta ─── */}
-              <div className="mt-8 flex flex-col gap-4 text-[13px] text-[#1a1a1a] lg:hidden">
+              <div className="mt-8 flex flex-col gap-4 text-[18px] text-[#1a1a1a] lg:hidden">
                 <div className="inline-flex items-center gap-2 text-[#747474]">
                   <span>קטגוריה</span>
                   <span className="text-black font-medium">
@@ -220,7 +225,7 @@ export default async function BlogPostPage({
         >
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-[980px]">
-              <h2 className="w-full">מאמרים נוספים באותה קטגוריה</h2>
+              <h2 className="w-full text-[18px] sm:text-[20px]">מאמרים נוספים באותה קטגוריה</h2>
             </div>
           </div>
           <div className="mt-2">

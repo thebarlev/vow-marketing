@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Assistant } from "next/font/google";
 import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
+import { LanguageBar } from "@/app/_components/LanguageBar";
 import { TrackingProvider } from "@/app/_components/tracking/TrackingProvider";
 import { Suspense } from "react";
 import "./globals.css";
@@ -62,6 +63,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
+        <LanguageBar />
         {children}
         <Suspense fallback={null}>
           <TrackingProvider />

@@ -11,12 +11,14 @@ var Article = defineDocumentType(() => ({
     date: { type: "date", required: true },
     coverImage: { type: "string", required: true },
     category: { type: "string", required: true },
-    tags: { type: "json", required: false }
+    tags: { type: "json", required: false },
+    locale: { type: "string", required: false },
+    slug: { type: "string", required: false }
   },
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.flattenedPath.split("/").pop()
+      resolve: (doc) => doc.slug ?? doc._raw.flattenedPath.split("/").pop()
     },
     readingTimeMinutes: {
       type: "number",
@@ -45,4 +47,4 @@ export {
   Article,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-OBIDA2O4.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-C5AMISOT.mjs.map

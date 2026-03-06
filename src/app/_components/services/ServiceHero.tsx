@@ -15,6 +15,7 @@ export type ServiceHeroProps = {
   ctaHref?: string
   imageSrc?: string
   imageAlt?: string
+  dir?: "ltr" | "rtl"
 }
 
 export function ServiceHero({
@@ -28,6 +29,7 @@ export function ServiceHero({
   ctaHref,
   imageSrc = "/D-hero.webp",
   imageAlt = "",
+  dir = "rtl",
 }: ServiceHeroProps) {
   const sectionAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "Hero")
 
@@ -47,14 +49,27 @@ export function ServiceHero({
     openLeadPopup({ source: ctaSource })
   }
 
+  const isLtr = dir === "ltr"
   return (
-    <section aria-label={sectionAriaLabel} className="w-full bg-[#F4F1EC]" dir="rtl">
+    <section aria-label={sectionAriaLabel} className="w-full bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
 
           {/* Text */}
-          <div className="order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)] ">
-            <h1 className="text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]">
+          <div
+            className={
+              isLtr
+                ? "order-1 md:order-1 w-full text-left px-4 sm:px-6 lg:px-4 py-[var(--space-section)]"
+                : "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)]"
+            }
+          >
+            <h1
+              className={
+                isLtr
+                  ? "text-black w-full text-left font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]"
+                  : "text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]"
+              }
+            >
               {title}
             </h1>
             {subtitle ? (
@@ -67,8 +82,8 @@ export function ServiceHero({
                 {subtitle}
               </p>
             ) : null}
-            <div className="mt-6 w-full text-right">
-              <HeroRotatingTags items={tags} />
+            <div className={isLtr ? "mt-6 w-full text-left" : "mt-6 w-full text-right"}>
+              <HeroRotatingTags items={tags} dir={dir} />
             </div>
             {ctaHref ? (
               <a
@@ -86,7 +101,13 @@ export function ServiceHero({
           </div>
 
           {/* Image */}
-          <div className="order-1 md:order-2 md:flex md:justify-end md:px-4 md:py-[var(--space-section)]">
+          <div
+            className={
+              isLtr
+                ? "order-2 md:order-2 md:flex md:justify-start md:px-4 md:py-[var(--space-section)]"
+                : "order-1 md:order-2 md:flex md:justify-end md:px-4 md:py-[var(--space-section)]"
+            }
+          >
             <div className="relative h-[250px] w-full overflow-hidden rounded-none shadow-none md:h-auto md:max-w-[80%] md:rounded-3xl md:shadow-lg md:aspect-[1/1]">
               <Image
                 src={imageSrc}

@@ -26,16 +26,17 @@ export default async function BlogIndexPage({
   const sort = coerceBlogSort(sp.sort)
   const tags = parseTagsParam(sp.tags)
 
+  const heArticles = allArticles.filter((a) => (a.locale as string | undefined) !== "en")
   const availableTags = Array.from(
     new Set(
-      allArticles
+      heArticles
         .flatMap((a) => (Array.isArray(a.tags) ? (a.tags as unknown[]) : []))
         .map((t) => (typeof t === "string" ? t : ""))
         .filter(Boolean)
     )
   ).sort((a, b) => a.localeCompare(b, "he"))
 
-  const filtered = allArticles
+  const filtered = heArticles
     .filter((a) => (category === "all" ? true : a.category === category))
     .filter((a) => {
       if (!tags.length) return true
@@ -101,7 +102,7 @@ export default async function BlogIndexPage({
           ) : (
             <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-0 py-10">
               <p className="text-[18px] font-semibold text-black">לא נמצאו מאמרים.</p>
-              <p className="mt-2 text-[16px] text-[#747474]">נסו לשנות את הסינון או לאפס.</p>
+              <p className="mt-2 text-[18px] text-[#747474]">נסו לשנות את הסינון או לאפס.</p>
             </div>
           )}
         </div>

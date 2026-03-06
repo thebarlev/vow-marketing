@@ -1,0 +1,130 @@
+"use client"
+
+import { useCallback, useState } from "react"
+import { CheckIcon } from "@/app/_components/home/CheckIcon"
+import { OUR_PACKAGES_EN } from "./homeEn.constants"
+import { PopupEN } from "./PopupEN"
+import { POPUP_OVERRIDES_BY_PATH } from "@/app/_components/products/productPopupOverrides"
+import type { LeadSource } from "./PopupEN"
+import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+
+export function PackagesSectionEN() {
+  const [open, setOpen] = useState(false)
+  const [popupData, setPopupData] = useState<{
+    title: string
+    description: string
+    toptext: string
+    source: LeadSource
+    iconVariant?: PopupIconVariant
+  }>({
+    title: "",
+    description: "",
+    toptext: "",
+    source: "design_development",
+    iconVariant: "default",
+  })
+
+  const handleOpen = useCallback(
+    (title: string, description: string, toptext: string, source: LeadSource, iconVariant: PopupIconVariant = "default") => {
+      setPopupData({ title, description, toptext, source, iconVariant })
+      setOpen(true)
+    },
+    []
+  )
+
+  const openPopupWithPossibleOverride = useCallback(
+    (fallback: { title: string; description: string; toptext?: string; source: LeadSource }) => {
+      const override = POPUP_OVERRIDES_BY_PATH[window.location.pathname]
+      if (override) {
+        handleOpen(
+          override.title,
+          override.description,
+          override.toptext ?? "",
+          override.source ?? fallback.source,
+          override.iconVariant ?? "default"
+        )
+        return
+      }
+
+      handleOpen(fallback.title, fallback.description, fallback.toptext ?? "", fallback.source, "default")
+    },
+    [handleOpen]
+  )
+
+  return (
+    <section dir="ltr" aria-label="Our services" className="py-[var(--space-section)] bg-[#F4F1EC]">
+      <div id="lead-design-development" className="scroll-mt-24" />
+      <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
+        <h2 className="text-center text-[44px] pb-0 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+          Our Services
+        </h2>
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-1 lg:place-items-stretch lg:justify-center">
+          {OUR_PACKAGES_EN.map((p) => (
+            <article
+              dir="ltr"
+              key={p.title}
+              className="rounded-[10px] bg-white w-[98%] max-w-[386px] mx-auto lg:w-full lg:max-w-[350px] lg:mx-auto p-6 shadow-[0_0_24px_10px_rgba(0,0,0,0.07)] flex flex-col items-stretch text-left"
+            >
+              <p className="text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)] text-left">
+                {p.kicker}
+              </p>
+              <h3 className="h3-title text-[40px] py-2 text-left">
+                {p.title}
+              </h3>
+
+              <button
+                type="button"
+                className="vow-btn-primary mt-4 w-full cursor-pointer"
+                onClick={() =>
+                  openPopupWithPossibleOverride({
+                    title: p.title,
+                    description: p.kicker,
+                    toptext: p.toppopup ?? "",
+                    source: p.source,
+                  })
+                }
+              >
+                {p.buttonLabel}
+              </button>
+              <div className="mt-7 h-px w-full bg-[color:var(--vow-border)]" />
+
+              <ul
+                dir="ltr"
+                className="mt-4 space-y-1 text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]"
+              >
+                {p.bullets.map((b) => (
+                  <li
+                    key={b}
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "auto 1fr",
+                      alignItems: "center",
+                      gap: "8px",
+                      textAlign: "left",
+                      direction: "ltr",
+                    }}
+                  >
+                    <CheckIcon />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {open && (
+        <PopupEN
+          title={popupData.title}
+          description={popupData.description}
+          toptext={popupData.toptext}
+          source={popupData.source}
+          iconVariant={popupData.iconVariant}
+          onClose={() => setOpen(false)}
+        />
+      )}
+    </section>
+  )
+}

@@ -18,6 +18,7 @@ type Props = {
   source?: "design_development" | "digital_marketing" | "smart_accounting_ai"
   ctaHref?: string
   cards?: VisionCard[]
+  dir?: "ltr" | "rtl"
 }
 
 const DEFAULT_CARDS: VisionCard[] = [
@@ -34,6 +35,7 @@ export function VisionToExecutionSection({
   source = "design_development",
   ctaHref,
   cards = DEFAULT_CARDS,
+  dir = "rtl",
 }: Props) {
   const onCtaClick = () => {
     document.getElementById("lead-design-development")?.scrollIntoView({
@@ -43,14 +45,16 @@ export function VisionToExecutionSection({
     openLeadPopup({ source })
   }
 
+  const isLtr = dir === "ltr"
   return (
     <section
       aria-label={title}
       className="py-[var(--space-section)] bg-[#F4F1EC]"
+      dir={dir}
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="text-right md:text-center">
-          <h2 className="text-right md:text-center w-full pb-2">{title}</h2>
+        <div className={isLtr ? "text-left md:text-center" : "text-right md:text-center"}>
+          <h2 className={isLtr ? "text-left md:text-center w-full pb-2" : "text-right md:text-center w-full pb-2"}>{title}</h2>
 
           <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
             {subtitle}
@@ -87,7 +91,7 @@ export function VisionToExecutionSection({
                 />
               </div>
 
-              <figcaption className="mt-1 mb-2 text-right text-[20px] lg:text-[24px] font-semibold leading-tight text-black">
+              <figcaption className={isLtr ? "mt-1 mb-2 text-left text-[20px] lg:text-[24px] font-semibold leading-tight text-black" : "mt-1 mb-2 text-right text-[20px] lg:text-[24px] font-semibold leading-tight text-black"}>
                 {card.caption}
               </figcaption>
             </figure>

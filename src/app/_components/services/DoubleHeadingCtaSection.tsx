@@ -11,6 +11,7 @@ export type DoubleHeadingCtaSectionProps = {
   buttonLabel: string
   buttonSource: LeadSource
   buttonHref?: string
+  dir?: "ltr" | "rtl"
 }
 
 export function DoubleHeadingCtaSection({
@@ -19,6 +20,7 @@ export function DoubleHeadingCtaSection({
   buttonLabel,
   buttonSource,
   buttonHref,
+  dir = "rtl",
 }: DoubleHeadingCtaSectionProps) {
   const onHashLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!buttonHref || !buttonHref.startsWith("#")) return
@@ -36,10 +38,11 @@ export function DoubleHeadingCtaSection({
     openLeadPopup({ source: buttonSource })
   }
 
+  const isLtr = dir === "ltr"
   return (
-    <section aria-label={title} className="py-[var(--space-section)] bg-[#F4F1EC]" dir="rtl">
+    <section aria-label={title} className="py-[var(--space-section)] bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
-        <div className="mx-auto w-full max-w-[900px] text-right md:text-center">
+        <div className={isLtr ? "mx-auto w-full max-w-[900px] text-left md:text-center" : "mx-auto w-full max-w-[900px] text-right md:text-center"}>
           <h2 className="pb-2">{title}</h2>
           <p className="mx-auto max-w-[780px] text-[20px] font-semibold leading-[34px] text-[color:var(--vow-muted)]">
             {subtitle}

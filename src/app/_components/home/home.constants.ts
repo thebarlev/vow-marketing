@@ -58,6 +58,52 @@ export const TESTIMONIALS = [
   },
 ] as const
 
+export const TESTIMONIALS_EN = [
+  {
+    name: "Hulda",
+    title: "Hulda Transformer",
+    kicker: "",
+    text: '"We moved from gut feeling to real data. VOW gave us full clarity on the business — insights that surprised us again and again and revealed opportunities that were always there. Results: more sales, more customers, real control."',
+    imageSrc: "/testimonials/שנאי חולדה.webp",
+    imageAlt: "Hulda Transformer",
+  },
+  {
+    name: "Seldat",
+    title: "Seldat",
+    text: '"VOW is a quality AI-based development company, combining exceptional innovation with deep marketing and development expertise. They deliver precise solutions that raise management standards and drive measurable results."',
+    imageSrc: "/testimonials/סלדט.webp",
+    imageAlt: "Seldat",
+  },
+  {
+    name: "Altshuler Shaham",
+    title: "Altshuler Shaham Finance",
+    text: '"We turned to VOW to build a solution that works smoothly. The team quickly showed deep understanding of our product and customers, often more than we did. Committed, professional, and determined to succeed at every step. A true partnership."',
+    imageSrc: "/testimonials/אלטשולר שחם פיננסים סרביסס.webp",
+    imageAlt: "Altshuler Shaham Finance",
+  },
+  {
+    name: "Carrefour",
+    title: "Carrefour",
+    text: '"We discovered we didn\'t really know our business. VOW showed us a clear picture — where we profit, where we lose, and how to improve. Every report led to a "how didn\'t I know this before" moment. Results spoke for themselves: significant growth and profitability."',
+    imageSrc: "/testimonials/Carrefoure.webp",
+    imageAlt: "Carrefour",
+  },
+  {
+    name: "Youa",
+    title: "Youa",
+    text: '"We achieved significant revenue growth with precise marketing and a fast, smooth site. We expanded our customer base and gained full control of our business data. VOW revealed insights we didn\'t know existed — "how did we miss this" moments that led to immediate improvement in sales processes."',
+    imageSrc: "/testimonials/youa.webp",
+    imageAlt: "Youa",
+  },
+  {
+    name: "Savonella",
+    title: "Savonella",
+    text: '"Highly recommend! VOW works with full reliability, delivers everything on time, with high quality, and keeps us updated on every step. It\'s rare to find this level of solution in the market today!"',
+    imageSrc: "/testimonials/סבונלה.webp",
+    imageAlt: "Savonella",
+  },
+] as const
+
 export const PACKAGE_CARDS = [
   {
     kicker: "חינם לשנה",
@@ -131,6 +177,50 @@ export const OUR_PACKAGES = [
     kicker: "הרואה חשבון שלך עובד 24/7",
     buttonLabel: "להשארת פרטים",
     bullets: PACKAGE_CARDS[1].bullets,
+    source: "smart_accounting_ai" as const,
+  },
+] as const
+
+export const OUR_PACKAGES_EN = [
+  {
+    title: "Design & Development",
+    kicker: "Design experience. Build the future.",
+    toppopup: "",
+    buttonLabel: "Get in touch",
+    bullets: [
+      "Website and system development",
+      "Custom development",
+      "Security, speed, accessibility",
+      "Smart integrations",
+    ],
+    source: "design_development" as const,
+  },
+  {
+    title: "Digital Marketing",
+    toppopup: "Leave your details and we'll get back within hours",
+    kicker: "Build a winning digital presence",
+    buttonLabel: "Get in touch",
+    bullets: [
+      "Branding that tells a story",
+      "Paid and organic promotion",
+      "Marketing funnels",
+      "Converting content",
+      "Social media branding",
+    ],
+    source: "digital_marketing" as const,
+  },
+  {
+    title: "AI Accountant",
+    toppopup: "Limited to 100 | Fewer than 10 spots left",
+    kicker: "Your accountant works 24/7",
+    buttonLabel: "Get in touch",
+    bullets: [
+      "Knowledge of 1,000+ accountants",
+      "Approved by Tax Authority and VAT",
+      "100% accuracy",
+      "Expert in law and regulation",
+      "Fewer errors. More profit.",
+    ],
     source: "smart_accounting_ai" as const,
   },
 ] as const
