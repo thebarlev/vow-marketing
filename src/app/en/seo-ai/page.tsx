@@ -17,14 +17,15 @@ import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
 
 export const metadata: Metadata = seoAiConfigEn.metadata
 
-const SEO_AI_PRICING: readonly PricePlan[] = [
+const SEO_AI_PRICING_EN: readonly PricePlan[] = [
   {
+    id: "price-starter-en",
     title: "Starter",
     kicker: "AI search engines",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
-    price: "₪197/month",
+      "https://app.vow.co.il/auditor?link_id=a_basic_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
+    price: "$55/month",
     priceextra: "For: early-stage businesses or limited budget",
     badge: "",
     bullets: [
@@ -36,18 +37,19 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     ],
   },
   {
+    id: "price-pro-en",
     title: "Pro",
     kicker: "Expert support + full monthly execution",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
-    price: "₪597/month",
+      "https://app.vow.co.il/auditor?link_id=a_pro_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
+    price: "$165/month",
     priceextra: "For: businesses that want results without the hassle",
     badge: "Most popular",
     bullets: [
       "Everything in Starter +",
       "Deep scan + work plan",
-      "Content and structure upgrades, 2–4 tasks/month",
+      "Content & structure upgrades (2–4/mo)",
       "ChatGPT, Gemini, Copilot...",
       "New pages that drive traffic",
       "Monthly results report + update call",
@@ -55,12 +57,13 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     ],
   },
   {
+    id: "price-expert-en",
     title: "Expert",
     kicker: "SEO + AI engines + personal expert",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_premium&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
-    price: "₪1,497/month",
+      "https://app.vow.co.il/auditor?link_id=a_premium_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
+    price: "$415/month",
     priceextra: "For: medical / legal / real estate / finance",
     badge: "",
     bullets: [
@@ -117,8 +120,9 @@ export default function SeoAiPageEn() {
           id="price"
           title="Plans & pricing"
           subtitle="Choose the plan that fits your business stage. Upgrade anytime."
-          plans={SEO_AI_PRICING}
+          plans={SEO_AI_PRICING_EN}
           variant="seo-ai"
+          locale="en"
         />
 
         <SuccessSection locale="en" />

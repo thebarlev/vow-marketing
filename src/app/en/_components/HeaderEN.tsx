@@ -108,6 +108,14 @@ export function HeaderEN() {
             </EnLink>
 
             <ul className="hidden md:flex flex-nowrap items-center gap-1 flex-1 ">
+            <li>
+                <EnLink
+                  href="/en/contact"
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
+                >
+                  Contact
+                </EnLink>
+              </li>
               <li>
                 <EnLink
                   href="/en/design"
@@ -172,14 +180,7 @@ export function HeaderEN() {
                   </ul>
                 </div>
               </li>
-              <li>
-                <EnLink
-                  href="/en/contact"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
-                >
-                  Contact
-                </EnLink>
-              </li>
+
             </ul>
 
 

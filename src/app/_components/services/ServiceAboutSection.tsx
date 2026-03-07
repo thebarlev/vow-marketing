@@ -91,7 +91,7 @@ export function ServiceAboutSection({
                       className="max-w-[39px] h-auto"
                     />
                   ) : null}
-                  <h3 className="h3-title sm:text-[30px] font-semibold">{item.title}</h3>
+                  <h3 dir="ltr" className="text-lefth3-title sm:text-[30px] font-semibold">{item.title}</h3>
                 </div>
                 {item.description ? (
                   <p className={isLtr ? "text-left text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]" : "text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]"}>

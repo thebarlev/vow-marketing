@@ -15,10 +15,10 @@ export const seoAiConfigEn: ServicePageConfig = {
     },
   },
   hero: {
-    title: "Customers don't search Google anymore — they ask AI.",
+    title: "Customers don't search Google anymore - they ask AI.",
     subtitle: "Does your business show up in the answer?",
     tags: [
-      "We turn your site into an asset that brings customers — from Google and AI engines. No paid campaigns. No ad budget dependency.",
+      "We turn your site into an asset that brings customers - from Google and AI engines. No paid campaigns. No ad budget dependency.",
     ],
     ctaLabel: "Get a free presence audit",
     ctaSource: "digital_marketing",
@@ -28,7 +28,7 @@ export const seoAiConfigEn: ServicePageConfig = {
   doubleHeading: {
     title: "SEO isn't just rankings. It's lead quality.",
     subtitle:
-      "We build a strategy that measures quality, funnel, and revenue — not just traffic.",
+      "We build a strategy that measures quality, funnel, and revenue - not just traffic.",
     buttonLabel: "Get started",
     buttonSource: "digital_marketing",
   },
@@ -68,7 +68,7 @@ export const seoAiConfigEn: ServicePageConfig = {
   about: {
     title: "Your site exists, but it doesn't bring customers. We fix that.",
     subtitle:
-      "SEO + AI presence — monthly support that delivers results without chasing ads.",
+      "SEO + AI presence - monthly support that delivers results without chasing ads.",
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
     items: [
@@ -88,7 +88,7 @@ export const seoAiConfigEn: ServicePageConfig = {
       },
       {
         id: "seo-ai-about-3",
-        title: "Month after month, the site gets stronger",
+        title: "More traffic and visibility every month",
         description:
           "At VOW we identify weak points in the site, content, and sales process, and offer practical solutions that boost conversion rates.",
         icon: "/services/seo-ai/3.svg",
@@ -102,13 +102,13 @@ export const seoAiConfigEn: ServicePageConfig = {
         id: "seo-ai-faq-1",
         question: "How long until you see results?",
         answer:
-          "Most clients see measurable change — more impressions, more clicks — within 4–8 weeks. First organic inquiries usually arrive in months 2–3. SEO is an asset that grows, not a tap that opens instantly — but unlike ads, it doesn't stop when you stop paying.",
+          "Most clients see measurable change - more impressions, more clicks - within 4–8 weeks. First organic inquiries usually arrive in months 2–3. SEO is an asset that grows, not a tap that opens instantly - but unlike ads, it doesn't stop when you stop paying.",
       },
       {
         id: "seo-ai-faq-2",
         question: "What exactly do you do each month?",
         answer:
-          "At the start of each month you get a detailed work plan: which pages to upgrade, which content to write, which technical changes to make. At month end, a report with real data. Not 'we did SEO' — we did X, Y, Z and here's the result.",
+          "At the start of each month you get a detailed work plan: which pages to upgrade, which content to write, which technical changes to make. At month end, a report with real data. Not 'we did SEO' - we did X, Y, Z and here's the result.",
       },
       {
         id: "seo-ai-faq-3",
@@ -120,25 +120,25 @@ export const seoAiConfigEn: ServicePageConfig = {
         id: "seo-ai-faq-4",
         question: "Do you handle both technical and content?",
         answer:
-          "Yes. Technical, content, and links/authority — as one package aimed at business results.",
+          "Yes. Technical, content, and links/authority - as one package aimed at business results.",
       },
       {
         id: "seo-ai-faq-5",
         question: "Is this instead of paid ads?",
         answer:
-          "Not necessarily — but it definitely reduces dependence. Clients working with us 3–6 months report 30–60% lower ad spend while keeping the same lead volume. Paid ads can stay as acceleration, not the backbone.",
+          "Not necessarily - but it definitely reduces dependence. Clients working with us 3–6 months report 30–60% lower ad spend while keeping the same lead volume. Paid ads can stay as acceleration, not the backbone.",
       },
       {
         id: "seo-ai-faq-6",
         question: "What happens if you stop paying?",
         answer:
-          "The big difference from ads: what we built stays. The upgraded site, content, pages — they're yours forever. Of course ongoing improvement comes with support, but you don't go back to zero the moment you stop.",
+          "The big difference from ads: what we built stays. The upgraded site, content, pages - they're yours forever. Of course ongoing improvement comes with support, but you don't go back to zero the moment you stop.",
       },
       {
         id: "seo-ai-faq-7",
         question: "Do you need site access?",
         answer:
-          "Yes, for actual changes we need access. We work with WordPress, Wix, Webflow, and almost any platform. If your site is on a unique platform — we'll do a free initial check before committing to anything.",
+          "Yes, for actual changes we need access. We work with WordPress, Wix, Webflow, and almost any platform. If your site is on a unique platform - we'll do a free initial check before committing to anything.",
       },
     ],
   },

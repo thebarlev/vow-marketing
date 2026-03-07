@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Popup, LeadSource } from "./Popup";
 
 export type PricePlan = {
+  id?: string
   title: string
   toppopup?: string
   kicker: string
@@ -24,9 +25,10 @@ export type PriceSectionProps = {
   subtitle?: string
   plans?: readonly PricePlan[]
   variant?: "default" | "seo-ai"
+  locale?: "he" | "en"
 }
 
-export function PriceSection({ id, title, subtitle, plans, variant = "default" }: PriceSectionProps) {
+export function PriceSection({ id, title, subtitle, plans, variant = "default", locale = "he" }: PriceSectionProps) {
   // URL לאפליקציה – עובד בלוקאל ובפרודקשן
   const APP_BASE_URL =
     process.env.NEXT_PUBLIC_APP_BASE_URL ?? "https://app.vow.co.il";
@@ -64,10 +66,12 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default" }
             return (
               <article
                 key={p.title}
+                id={'id' in p ? p.id : undefined}
+                dir={locale === "en" ? "ltr" : undefined}
                 className="rounded-[18px] relative inline-block border border-[color:var(--vow-border)] bg-white p-6 shadow-sm"
               >
                 {p.badge && (
-                  <span className="absolute top-2 left-2 bg-[#5389BB] text-white text-[20px] font-semibold px-4 py-2 rounded-[15px]">
+                  <span className={`absolute top-2 bg-[#5389BB] text-white text-[20px] font-semibold px-4 py-2 rounded-[15px] ${locale === "en" ? "right-2" : "left-2"}`}>
                     {p.badge}
                   </span>
                 )}
@@ -143,9 +147,19 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default" }
 
                 <div className="mb-5 h-px w-full bg-[color:var(--vow-border)]" />
 
-                <ul className="mt-4 space-y-0 text-left text-[18px] font-normal leading-[30px] text-black sm:text-[20px] sm:leading-[56px]">
+                <ul
+                  className={`mt-4 space-y-0 text-[18px] font-normal leading-[30px] text-black sm:text-[20px] sm:leading-[56px] ${
+                    locale === "en"
+                      ? "text-left [&_li]:!text-left [&_li]:![direction:ltr]"
+                      : ""
+                  }`}
+                  dir={locale === "en" ? "ltr" : undefined}
+                >
                   {p.bullets.map((b, idx) => (
-                    <li key={`${p.title}-${idx}`} className="flex items-center gap-1 text-[20px]">
+                    <li
+                      key={`${p.title}-${idx}`}
+                      className={`flex items-center gap-1 text-[20px] ${locale === "en" ? "flex-row justify-start" : ""}`}
+                    >
                       <CheckIcon className="shrink-0" />
                       <span>{b}</span>
                     </li>

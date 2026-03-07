@@ -12,7 +12,7 @@ const STEPS_HE: readonly Step[] = [
     number: "1",
     title: "אבחון מעמיק, ביום הראשון",
     description:
-      "סריקה עמוקה לאתר שלך: תוכן, מבנה, מהירות, נכונות AI, תחרות. תקבל דו״ח עם 5 דברים קריטיים לתיקון עכשיו.",
+      "סריקה עמוקה לאתר שלך: תוכן, מבנה, מהירות, נכונות AI, תחרות. ",
     timing: "יום 1–3",
   },
   {
@@ -47,7 +47,7 @@ const STEPS_EN: readonly Step[] = [
     number: "1",
     title: "Deep audit, day one",
     description:
-      "Deep scan of your site: content, structure, speed, AI readiness, competition. You get a report with 5 critical fixes for now.",
+      "Deep scan of your site: content, structure, speed, AI readiness, competition. ",
     timing: "Days 1–3",
   },
   {

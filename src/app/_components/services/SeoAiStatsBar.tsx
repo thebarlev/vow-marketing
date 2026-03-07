@@ -7,8 +7,11 @@ export function SeoAiStatsBar({ locale = "he" }: { locale?: "he" | "en" }) {
           <div className="flex flex-col items-center gap-16 text-center sm:flex-row sm:justify-center sm:gap-24">
             <div>
               <div className="text-white text-[56px] font-semibold leading-none sm:text-[64px] lg:text-[72px] [unicode-bidi:plaintext]">
-                <span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1">₪</span>
-                0
+                {isEn ? (
+                  <><span className="text-[40px] sm:text-[40px] lg:text-[40px] mr-1">$</span>0</>
+                ) : (
+                  <><span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1">₪</span>0</>
+                )}
               </div>
               <div className="mt-3 text-white/90 text-[16px] font-semibold leading-[1.5] sm:text-[16px] lg:text-[18px]">
                 <div>{isEn ? "No ad budget needed" : "לא צריך תקציב פרסום"}</div>
