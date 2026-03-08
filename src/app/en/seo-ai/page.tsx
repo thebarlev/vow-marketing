@@ -24,8 +24,8 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "AI search engines",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_basic_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
-    price: "$55/month",
+      "https://app.vow.co.il/en/auditor?link_id=a_basic",
+    price: "$100/month",
     priceextra: "For: early-stage businesses or limited budget",
     badge: "",
     bullets: [
@@ -42,8 +42,8 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "Expert support + full monthly execution",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_pro_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
-    price: "$165/month",
+      "https://app.vow.co.il/en/auditor/register?link_id=a_pro",
+    price: "$270/month",
     priceextra: "For: businesses that want results without the hassle",
     badge: "Most popular",
     bullets: [
@@ -62,8 +62,8 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "SEO + AI engines + personal expert",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_premium_en&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing_en",
-    price: "$415/month",
+      "https://app.vow.co.il/en/auditor/register?link_id=a_premium",
+    price: "$670/month",
     priceextra: "For: medical / legal / real estate / finance",
     badge: "",
     bullets: [
