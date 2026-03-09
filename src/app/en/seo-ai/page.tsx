@@ -89,7 +89,8 @@ export default function SeoAiPageEn() {
           subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
           title={
             <>
-              Make your business appear in ChatGPT, Google and AI search.
+              Not showing up in AI search?<br />
+We fix that.
             </>
           }
         />

@@ -2,7 +2,7 @@ import Image from "next/image"
 import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 import { HERO_TAGS_EN } from "./homeEn.constants"
 
-const HERO_TITLE_EN = "Websites, AI Systems & Marketing That Deliver"
+const HERO_TITLE_EN = "Not showing up in AI search? We fix that."
 
 export function HeroEN() {
   return (
@@ -12,9 +12,12 @@ export function HeroEN() {
           {/* Text + H1: first on mobile, first on desktop — single H1 for SEO */}
           <div className="order-2 md:order-1 flex flex-col items-start text-left px-0">
             <h1 className="text-black w-full text-left font-semibold leading-[1.05]">
-              <span className="block w-full tracking-[-1px] text-[64px] leading-[0.9] md:text-[70px] md:leading-[0.98] lg:text-[100px] xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]">
-                {HERO_TITLE_EN}
-              </span>
+            <span
+  className="block w-full tracking-[-1px] text-[64px] leading-[0.9] md:text-[70px] md:leading-[0.98] lg:text-[100px] xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]"
+  style={{ whiteSpace: "pre-line" }}
+>
+  {HERO_TITLE_EN}
+</span>
             </h1>
             <div className="mt-4 md:mt-8 w-full flex flex-col items-start">
               <HeroRotatingTags items={HERO_TAGS_EN} dir="ltr" />
