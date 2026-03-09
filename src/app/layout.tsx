@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Assistant } from "next/font/google";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
 import { LanguageBar } from "@/app/_components/LanguageBar";
@@ -63,6 +64,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
+        <GoogleAnalytics />
         <LanguageBar />
         {children}
         <Suspense fallback={null}>

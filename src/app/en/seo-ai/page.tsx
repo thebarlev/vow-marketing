@@ -89,7 +89,7 @@ export default function SeoAiPageEn() {
           subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
           title={
             <>
-              Customers don't <span className="line-through">search Google</span> anymore — they ask AI.
+              Make your business appear in ChatGPT, Google and AI search.
             </>
           }
         />
