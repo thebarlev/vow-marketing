@@ -2,10 +2,19 @@
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function AccessibilityPage() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
+      <JsonLd
+        data={webPageSchema({
+          name: "נגישות | VOW",
+          description: "VOW מחויבת לנגישות. האתר עומד בתקן ת\"י 5568 ו-WCAG 2.1 ברמת AA.",
+          url: "https://vow.co.il/accessibility",
+          dateModified: "2025-02-01",
+        })}
+      />
       <SiteHeader />
 
       <main id="main" role="main">

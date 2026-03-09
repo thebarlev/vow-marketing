@@ -1,9 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function TermsPageEn() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
+      <JsonLd
+        data={webPageSchema({
+          name: "Terms of Use | VOW",
+          description: "VOW Terms of Use - Last updated February 2026",
+          url: "https://vow.co.il/en/terms",
+          dateModified: "2026-02-16",
+        })}
+      />
       <div id="main" role="main">
         <LegalTemplate
           title="Terms of Use"

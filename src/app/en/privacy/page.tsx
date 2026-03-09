@@ -1,9 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function PrivacyPageEn() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
+      <JsonLd
+        data={webPageSchema({
+          name: "Privacy Policy | VOW",
+          description: "VOW's Privacy Policy - How We Protect Your Personal Information",
+          url: "https://vow.co.il/en/privacy",
+          dateModified: "2026-02-01",
+        })}
+      />
       <div id="main" role="main">
         <LegalTemplate
           title="Privacy Policy"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Assistant } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { JsonLd, ORGANIZATION_SCHEMA } from "@/components/JsonLd";
 import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
 import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
 import { LanguageBar } from "@/app/_components/LanguageBar";
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={assistant.variable}>
       <body className="antialiased font-sans">
+        <JsonLd data={ORGANIZATION_SCHEMA} />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

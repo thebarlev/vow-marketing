@@ -2,10 +2,19 @@
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
+      <JsonLd
+        data={webPageSchema({
+          name: "תנאי שימוש | VOW",
+          description: "תנאי השימוש של VOW - עדכון אחרון פברואר 2026",
+          url: "https://vow.co.il/terms",
+          dateModified: "2026-02-16",
+        })}
+      />
       <SiteHeader />
 
       <main id="main" role="main">

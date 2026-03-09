@@ -1,9 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function AccessibilityPageEn() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
+      <JsonLd
+        data={webPageSchema({
+          name: "Accessibility | VOW",
+          description: "VOW is committed to accessibility. The site meets Israeli Standard 5568 and WCAG 2.1 Level AA.",
+          url: "https://vow.co.il/en/accessibility",
+          dateModified: "2025-02-01",
+        })}
+      />
       <div id="main" role="main">
         <LegalTemplate
           title="Accessibility"

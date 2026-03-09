@@ -1,7 +1,10 @@
 // src/app/page.tsx
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { Hero } from "@/app/_components/home/Hero"
+import { JsonLd, faqPageSchema } from "@/components/JsonLd"
+import { FAQ_ITEMS } from "@/app/_components/home/home.constants"
 import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
@@ -71,6 +74,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
+      <JsonLd data={faqPageSchema(FAQ_ITEMS.map((i) => ({ question: i.question, answer: i.answer })))} />
       <SiteHeader />
 
       <main id="main" role="main">
@@ -115,6 +119,15 @@ export default function HomePage() {
 
         <PackagesSection />
         <FaqSection />
+        <p className="mx-auto max-w-[1440px] px-4 pb-8 text-center text-[18px] text-[color:var(--vow-muted)]">
+          <Link href="/portfolio" className="text-[#5389BB] underline hover:no-underline">
+            פרויקטים
+          </Link>
+          {" · "}
+          <Link href="/blog" className="text-[#5389BB] underline hover:no-underline">
+            תובנות ומדריכים
+          </Link>
+        </p>
       </main>
 
       <CookieBanner />

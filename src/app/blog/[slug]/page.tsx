@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allArticles } from "contentlayer/generated"
 import { BlogShell } from "@/app/_components/blog/BlogShell"
+import { JsonLd, articleSchema } from "@/components/JsonLd"
 import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
 import { MdxContent } from "@/app/_components/blog/MdxContent"
 import { BlogEndCta } from "@/app/_components/blog/BlogEndCta"
@@ -54,6 +55,12 @@ export default async function BlogPostPage({
     .slice(0, 4)
 
   const shareUrl = `https://vow.co.il/blog/${post.slug}`
+  const articleSchemaData = articleSchema({
+    headline: post.title,
+    description: post.description ?? undefined,
+    image: post.coverImage ? (post.coverImage.startsWith("http") ? post.coverImage : `https://vow.co.il${post.coverImage}`) : undefined,
+    datePublished: post.date,
+  });
 
   const formattedDate = new Date(post.date).toLocaleDateString("he-IL", {
     year: "numeric",
@@ -63,6 +70,7 @@ export default async function BlogPostPage({
 
   return (
     <BlogShell>
+      <JsonLd data={articleSchemaData} />
       <section
         dir="rtl"
         aria-label="מאמר"

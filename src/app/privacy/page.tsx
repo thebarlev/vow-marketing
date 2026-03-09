@@ -2,10 +2,19 @@
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
+      <JsonLd
+        data={webPageSchema({
+          name: "מדיניות פרטיות | VOW",
+          description: "מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך",
+          url: "https://vow.co.il/privacy",
+          dateModified: "2026-02-01",
+        })}
+      />
       <SiteHeader />
 
       <main id="main" role="main">

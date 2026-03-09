@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className={WRAP_NARROW}>
             <span className={LABEL}>אודות VOW</span>
             <h1 className="text-[38px] font-semibold leading-[1.1] text-black sm:text-[52px] lg:text-[64px]">
-              בונים פתרונות<br />שמייצרות תוצאות.
+              אודות VOW — פיתוח ושיווק דיגיטלי
             </h1>
             <p className="mt-5 text-[24px] leading-[28px] text-[#000000] sm:text-[22px] sm:leading-[32px]">
               רוב העסקים לא נכשלים בגלל חוסר רעיון - הם נתקעים
@@ -67,8 +67,11 @@ export default function AboutPage() {
         </section>
 
         {/* ════ SERVICES ════ */}
-        <section className="pb-12">
+        <section className="pb-12" aria-labelledby="services-heading">
   <div className={WRAP_MID}>
+    <h2 id="services-heading" className="text-[28px] font-semibold text-black sm:text-[34px] mb-6 text-right">
+      השירותים שלנו
+    </h2>
     <div className="rounded-2xl bg-white border border-black/[0.07] overflow-hidden">
       {SERVICES.map((s, i) => (
         <div key={s.num}>
@@ -79,9 +82,9 @@ export default function AboutPage() {
             </span>
             {/* תוכן */}
             <div className="flex-1 text-right">
-              <p className="text-[20px] sm:text-[24px] font-semibold text-black mb-1 leading-snug">
+              <h3 className="text-[20px] sm:text-[24px] font-semibold text-black mb-1 leading-snug">
                 {s.title}
-              </p>
+              </h3>
               <p className="text-[18px] sm:text-[20px] leading-[26px] text-[#000000]">
                 {s.body}
               </p>
@@ -163,7 +166,9 @@ export default function AboutPage() {
                 השאירו פרטים
               </h2>
               <p className="text-[18px] leading-[24px] text-[#000000] sm:text-[18px] sm:leading-[30px] max-w-[690px] mx-auto mb-8">
-                אם אתם בתחילת הדרך - אנחנו מציעים פתרון מלא הכולל מיתוג, אתר ונגישות דיגיטליים מוכנים להשקה. כך תוכלו לצאת לשוק מהר, נכון ועם ראות מקצועית.
+                אם אתם בתחילת הדרך - אנחנו מציעים פתרון מלא הכולל מיתוג, אתר ונגישות דיגיטליים מוכנים להשקה.{" "}
+                <a href="/portfolio" className="text-[#5389BB] underline hover:no-underline">דוגמאות מהעבודות</a>
+                {" "}— כך תוכלו לצאת לשוק מהר, נכון ועם ראות מקצועית.
               </p>
               <a
                 href="/contact"
