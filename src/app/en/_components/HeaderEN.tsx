@@ -11,7 +11,7 @@ const DEV_DROPDOWN = [
 
 const MARKETING_DROPDOWN = [
   { href: "/en/marketing/ppc", label: "PPC Marketing" },
-  { href: "/en/marketing/seo-ai", label: "SEO / AI Marketing" },
+  { href: "/en/marketing/seo-ai", label: "Search Performance Optimization" },
 ] as const
 
 const MOBILE_SECTIONS = [
@@ -23,7 +23,7 @@ const MOBILE_SECTIONS = [
       { href: "/en/develop-ai", label: "Software Development" },
       { href: "/en/pricing", label: "Pricing" },
       { href: "/en/marketing/ppc", label: "PPC Marketing" },
-      { href: "/en/marketing/seo-ai", label: "SEO / AI Marketing" },
+      { href: "/en/marketing/seo-ai", label: "Search Performance Optimization" },
       { href: "/en/portfolio", label: "Portfolio" },
     ],
   },
@@ -107,7 +107,21 @@ export function HeaderEN() {
               />
             </EnLink>
 
-            <ul className="hidden md:flex flex-nowrap items-center gap-1 flex-1 ">
+            <div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
+              <span className="text-left w-[140px] shrink-0 leading-[1.3]" style={{ fontSize: "16px" }}>
+              Search Performance Optimization
+              </span>
+              <div className="flex items-center gap-2 shrink-0">
+                <a href="https://app.vow.co.il/en/auditor/register" className="vow-btn-primary !h-[44px]">
+                  Sign up
+                </a>
+                <a href="https://app.vow.co.il/en/auditor/login" className="vow-btn-secondary !h-[44px]">
+                  Log in
+                </a>
+              </div>
+            </div>
+
+            <ul className="hidden md:flex flex-nowrap items-center gap-1">
             <li>
                 <EnLink
                   href="/en/contact"
@@ -252,8 +266,8 @@ export function HeaderEN() {
                   Log in
                 </a>
               </div>
-              <span className="text-left max-w-[120px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
-                Free digital invoice
+              <span className="text-left max-w-[140px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
+                Free digital invoice for one year
               </span>
             </div>
           </div>

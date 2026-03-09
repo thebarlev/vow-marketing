@@ -1,9 +1,12 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 import { OUR_PACKAGES } from "@/app/_components/home/home.constants"
+import { OUR_PACKAGES_EN } from "@/app/en/_components/home/homeEn.constants"
 import { Popup, type LeadSource } from "@/app/_components/home/Popup"
+import { PopupEN } from "@/app/en/_components/home/PopupEN"
 import {
   LEAD_POPUP_EVENT,
   type LeadPopupEventDetail,
@@ -23,6 +26,10 @@ type PopupData = {
 }
 
 export function LeadPopupHost() {
+  const pathname = usePathname()
+  const isEn = pathname?.startsWith("/en") ?? false
+  const packages = isEn ? OUR_PACKAGES_EN : OUR_PACKAGES
+
   const [open, setOpen] = useState(false)
   const [popupData, setPopupData] = useState<PopupData>({
     title: "",
@@ -32,8 +39,9 @@ export function LeadPopupHost() {
     iconVariant: "default",
   })
 
-  const openFromSource = useCallback((source: LeadSource) => {
-    const pkg = OUR_PACKAGES.find((p) => p.source === source)
+  const openFromSource = useCallback(
+    (source: LeadSource) => {
+      const pkg = packages.find((p) => p.source === source)
     if (!pkg) return
 
     const override = POPUP_OVERRIDES_BY_PATH[window.location.pathname]
@@ -58,7 +66,9 @@ export function LeadPopupHost() {
       iconVariant: "default",
     })
     setOpen(true)
-  }, [])
+  },
+    [packages],
+  )
 
   useEffect(() => {
     const onOpenLeadPopup = (event: Event) => {
@@ -73,16 +83,16 @@ export function LeadPopupHost() {
 
   if (!open) return null
 
-  return (
-    <Popup
-      title={popupData.title}
-      description={popupData.description}
-      toptext={popupData.toptext}
-      source={popupData.source}
-      iconVariant={popupData.iconVariant}
-      pagePathOverride={popupData.pagePathOverride}
-      onClose={() => setOpen(false)}
-    />
-  )
+  const popupProps = {
+    title: popupData.title,
+    description: popupData.description,
+    toptext: popupData.toptext,
+    source: popupData.source,
+    iconVariant: popupData.iconVariant,
+    pagePathOverride: popupData.pagePathOverride,
+    onClose: () => setOpen(false),
+  }
+
+  return isEn ? <PopupEN {...popupProps} /> : <Popup {...popupProps} />
 }
 

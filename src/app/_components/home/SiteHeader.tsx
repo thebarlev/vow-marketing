@@ -10,7 +10,7 @@ const HEADER_DEV_DROPDOWN = [
 
 const HEADER_MARKETING_DROPDOWN = [
   { href: "/marketing/ppc", label: "שיווק PPC" },
-  { href: "/marketing/seo-ai", label: "שיווק אורגני SEO / AI" },
+  { href: "/marketing/seo-ai", label: "קידום ביצועי חיפוש" },
 ] as const
 
 const MOBILE_MENU_SECTIONS = [
@@ -22,7 +22,7 @@ const MOBILE_MENU_SECTIONS = [
       { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
       { href: "/pricing", label: "מחירים" },
       { href: "/marketing/ppc", label: "שיווק PPC" },
-      { href: "/marketing/seo-ai", label: "שיווק אורגני SEO / AI" },
+      { href: "/marketing/seo-ai", label: "קידום ביצועי חיפוש" },
       { href: "/portfolio", label: "פרויקטים נבחרים" },
     ],
   },
