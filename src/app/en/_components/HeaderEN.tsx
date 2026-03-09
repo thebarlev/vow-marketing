@@ -32,6 +32,7 @@ const MOBILE_SECTIONS = [
     items: [
       { href: "/en/account-ai", label: "AI Accountant" },
       { href: "/en/invoice", label: "Digital Invoice" },
+      { href: "/en/seo-ai", label: "Search Performance Optimization" },
     ],
   },
 ] as const
@@ -245,7 +246,7 @@ export function HeaderEN() {
                       <EnLink
                         href={item.href}
                         onClick={() => setMenuOpen(false)}
-                        className="block text-[19px] font-normal leading-normal py-[10px] text-black hover:text-[#5389BB] transition-colors no-underline"
+                        className="block text-[19px] text-left font-normal leading-normal py-[7px] text-black hover:text-[#5389BB] transition-colors no-underline"
                       >
                         {item.label}
                       </EnLink>
@@ -259,16 +260,17 @@ export function HeaderEN() {
           <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
             <div className="flex flex-row items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-2">
               <div className="flex items-center gap-2">
-                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">
+              <span className="text-left max-w-[140px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
+              Search Performance Optimization
+              </span>
+                <a href="https://app.vow.co.il/en/auditor/register" className="vow-btn-primary !h-[44px]">
                   Sign up
                 </a>
-                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">
+                <a href="https://app.vow.co.il/en/auditor/login" className="vow-btn-secondary !h-[44px]">
                   Log in
                 </a>
               </div>
-              <span className="text-left max-w-[140px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
-                Free digital invoice for one year
-              </span>
+
             </div>
           </div>
         </div>
