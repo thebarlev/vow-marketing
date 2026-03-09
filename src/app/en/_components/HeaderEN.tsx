@@ -11,7 +11,7 @@ const DEV_DROPDOWN = [
 
 const MARKETING_DROPDOWN = [
   { href: "/en/marketing/ppc", label: "PPC Marketing" },
-  { href: "/en/marketing/seo-ai", label: "Search Performance Optimization" },
+  { href: "/en/seo-ai", label: "Search Performance Optimization" },
 ] as const
 
 const MOBILE_SECTIONS = [
@@ -23,7 +23,7 @@ const MOBILE_SECTIONS = [
       { href: "/en/develop-ai", label: "Software Development" },
       { href: "/en/pricing", label: "Pricing" },
       { href: "/en/marketing/ppc", label: "PPC Marketing" },
-      { href: "/en/marketing/seo-ai", label: "Search Performance Optimization" },
+      { href: "/en/seo-ai", label: "Search Performance Optimization" },
       { href: "/en/portfolio", label: "Portfolio" },
     ],
   },
