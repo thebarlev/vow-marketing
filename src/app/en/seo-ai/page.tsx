@@ -100,6 +100,7 @@ export default function SeoAiPageEn() {
           title={seoAiConfigEn.vision?.title}
           subtitle={seoAiConfigEn.vision?.subtitle}
           ctaLabel={seoAiConfigEn.vision?.ctaLabel}
+          ctaHref={seoAiConfigEn.vision?.ctaHref}
           source={seoAiConfigEn.vision?.source}
           cards={seoAiConfigEn.vision?.cards}
           dir="ltr"

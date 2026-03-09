@@ -36,7 +36,8 @@ export const seoAiConfigEn: ServicePageConfig = {
     title: "Promotion that brings traffic and turns it into leads",
     subtitle:
       "Most business owners pay for ads every month and get leads that stop the moment the budget runs out. That's not strategy. That's a tap that can always be turned off.",
-    ctaLabel: "Get in touch",
+    ctaLabel: "Plans & pricing",
+    ctaHref: "#price",
     source: "digital_marketing",
     cards: [
       {
@@ -69,8 +70,8 @@ export const seoAiConfigEn: ServicePageConfig = {
     title: "Your site exists, but it doesn't bring customers. We fix that.",
     subtitle:
       "SEO + AI presence - monthly support that delivers results without chasing ads.",
-    ctaLabel: "Get in touch",
-    ctaSource: "digital_marketing",
+    ctaLabel: "Free website audit",
+    ctaSource: "#price",
     items: [
       {
         id: "seo-ai-about-1",

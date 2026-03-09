@@ -30,6 +30,7 @@ export type ServicePageConfig = {
     title?: string
     subtitle?: string
     ctaLabel?: string
+    ctaHref?: string
     source?: LeadSource
     cards?: Array<{ id: string; src: string; alt: string; caption: string }>
   }
