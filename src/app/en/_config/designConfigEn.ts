@@ -13,7 +13,7 @@ export const designConfigEn: ServicePageConfig = {
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-design.webp",
-    imageAlt: "Design and branding for businesses",
+    imageAlt: "Branding and UX design for business growth and digital presence",
   },
   doubleHeading: {
     title: "Full branding and launch package",

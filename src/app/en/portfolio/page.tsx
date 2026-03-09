@@ -34,7 +34,7 @@ function getPortfolioImages(): PortfolioImage[] {
 
   return numericWebps.map((x, idx) => ({
     src: `/portfolio/${x.name}`,
-    alt: `VOW Project ${idx + 1}`,
+    alt: `VOW website development project ${idx + 1} — AI-powered design and digital marketing`,
   }))
 }
 

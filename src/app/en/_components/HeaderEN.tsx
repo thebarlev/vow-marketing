@@ -96,7 +96,7 @@ export function HeaderEN() {
             >
               <Image
                 src="/logo.svg"
-                alt="VOW Logo"
+                alt="VOW logo — digital marketing, SEO AI and website development"
                 width={150}
                 height={46}
                 priority

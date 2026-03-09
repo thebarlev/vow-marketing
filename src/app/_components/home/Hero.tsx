@@ -19,7 +19,7 @@ export function Hero() {
           <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6">
             <Image
               src="/m-woman-vow.webp"
-              alt=""
+              alt="VOW digital marketing and AI SEO platform for growing businesses"
               fill
               priority
               className="object-cover"
@@ -82,7 +82,7 @@ export function Hero() {
           <div className="w-full order-2 flex items-end justify-end">
           <div className="relative lg:w-4/5 md:w-4/5 overflow-hidden lg:rounded-3xl shadow-lg aspect-[4/5]">              <Image
                 src="/D-hero.webp"
-                alt=""
+                alt="VOW website development and digital marketing for business growth"
                 fill
                 priority
                 className="object-cover"

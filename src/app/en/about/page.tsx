@@ -112,7 +112,7 @@ export default function AboutPageEn() {
                 <div className="relative h-full w-full">
                   <Image
                     src="/team/itzik.webp"
-                    alt="Itzik Barlev"
+                    alt="Itzik Barlev — VOW founder, digital marketing and website development expert"
                     fill
                     sizes="160px"
                     className="object-cover object-top"

@@ -22,7 +22,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",
-    imageAlt: "PPC Marketing",
+    imageAlt: "PPC digital marketing for business growth and lead generation",
   },
   doubleHeading: {
     title: "Play in the big leagues.",

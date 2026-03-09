@@ -13,7 +13,7 @@ export const developConfigEn: ServicePageConfig = {
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",
-    imageAlt: "AI-powered development",
+    imageAlt: "AI-powered website development for business growth and digital presence",
   },
   doubleHeading: {
     title: "WordPress sites and online stores powered by AI—20 years of experience",

@@ -79,7 +79,7 @@ export const designConfig: ServicePageConfig = {
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
       imageSrc: "/services/d-design.webp",
-      imageAlt: "עיצוב ומיתוג לעסקים",
+      imageAlt: "Branding and UX design for business growth and digital presence",
     },
     doubleHeading: {
       title: "חבילת מיתוג והשקה מלאה לעסק",
@@ -151,7 +151,7 @@ export const developConfig: ServicePageConfig = {
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",
-    imageAlt: "פיתוח מבוסס AI",
+    imageAlt: "AI-powered website development for business growth and digital presence",
 
   },
   doubleHeading: {
@@ -246,7 +246,7 @@ export const marketingPpcConfig: ServicePageConfig = {
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",
-    imageAlt: "שיווק PPC",
+    imageAlt: "PPC digital marketing for business growth and lead generation",
   },
   doubleHeading: {
     title: "גם אתם יכולים לשחק בליגה של הגדולים.",
@@ -349,7 +349,7 @@ export const roiConfig: ServicePageConfig = {
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/m-woman-vow.webp",
-    imageAlt: "ROI פחות תנועה - יותר מכירות",
+    imageAlt: "ROI marketing strategy — less traffic, more sales for business growth",
   },
   doubleHeading: {
     title: "ממקסמים המרות בלי להגדיל תקציב",
@@ -433,7 +433,7 @@ export const seoAiConfig: ServicePageConfig = {
     ctaLabel: "קבל אבחון נוכחות - בחינם",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero1.webp",
-    imageAlt: "קידום עסקים במנועי AI",
+    imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
   },
   doubleHeading: {
     title: "SEO זה לא רק מיקומים. זה איכות ליד.",

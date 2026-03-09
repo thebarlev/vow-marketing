@@ -44,7 +44,7 @@ export function GreenInvoiceSection() {
         <div className="relative w-full min-h-[320px] lg:min-h-[640px] overflow-hidden order-1 lg:order-2">
           <Image
             src="/manmobile.webp"
-            alt="חשבונית ירוקה מאובטחת — תצוגה במובייל"
+            alt="VOW secure digital invoicing app — mobile view for business document management"
             fill
             priority
             sizes="100vw"
@@ -52,7 +52,7 @@ export function GreenInvoiceSection() {
           />
           <Image
             src="/manvow.webp"
-            alt="חשבונית ירוקה מאובטחת — תצוגה בדסקטופ"
+            alt="VOW secure digital invoicing app — desktop view for business document management"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="hidden object-cover lg:block"

@@ -23,7 +23,7 @@ export const seoAiConfigEn: ServicePageConfig = {
     ctaLabel: "Get a free presence audit",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero1.webp",
-    imageAlt: "Business promotion in AI engines",
+    imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
   },
   doubleHeading: {
     title: "SEO isn't just rankings. It's lead quality.",
@@ -43,25 +43,25 @@ export const seoAiConfigEn: ServicePageConfig = {
       {
         id: "seo-ai-vision-1",
         src: "/services/seo-ai/1.webp",
-        alt: "AI modules that deliver immediate value",
+        alt: "AI SEO modules delivering immediate value for business visibility",
         caption: "AI modules that deliver immediate value",
       },
       {
         id: "seo-ai-vision-2",
         src: "/services/seo-ai/2.webp",
-        alt: "High ROI",
+        alt: "High ROI from AI SEO and digital marketing strategy",
         caption: "High ROI",
       },
       {
         id: "seo-ai-vision-3",
         src: "/services/seo-ai/3.webp",
-        alt: "Hundreds of AI agents promote your business",
+        alt: "Hundreds of AI agents promoting your business in search results",
         caption: "Hundreds of AI agents promote your business",
       },
       {
         id: "seo-ai-vision-4",
         src: "/services/seo-ai/4.webp",
-        alt: "Improved SEO performance",
+        alt: "Improved SEO performance for business growth and lead generation",
         caption: "Improved SEO performance",
       },
     ],

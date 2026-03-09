@@ -14,7 +14,7 @@ export const developAiConfigEn: ProductPageConfig = {
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/developai/vow.webp",
-    imageAlt: "AI-powered development",
+    imageAlt: "AI-powered website development for business growth and digital presence",
   },
   vision: {
     title: "Boutique tech. Enterprise grade.",

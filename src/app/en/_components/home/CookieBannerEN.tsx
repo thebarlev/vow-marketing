@@ -70,7 +70,7 @@ export function CookieBannerEN() {
             </div>
             <Image
               src="/cookies.svg"
-              alt="cookies"
+              alt="Cookie policy icon for website privacy and consent settings"
               width={68}
               height={68}
               className="flex-shrink-0"
@@ -81,7 +81,7 @@ export function CookieBannerEN() {
         <div className="hidden sm:flex items-start gap-4 flex-1">
           <Image
             src="/cookies.svg"
-            alt="cookies"
+            alt="Cookie policy icon for website privacy and consent settings"
             width={40}
             height={40}
             className="flex-shrink-0"

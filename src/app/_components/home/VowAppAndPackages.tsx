@@ -56,7 +56,7 @@ export function VowAppAndPackages() {
               <div className="relative mx-auto w-full max-w-[420px]">
                 <Image
                   src="/vowapp.webp"
-                  alt="תצוגת אפליקציית VOW"
+                  alt="VOW digital invoicing app interface for business document management"
                   width={840}
                   height={1100}
                   className="h-auto w-full object-contain"
