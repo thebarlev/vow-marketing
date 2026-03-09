@@ -240,13 +240,13 @@ export function ContactForm({ locale = "he" }: { locale?: "he" | "en" }) {
 
           <div>
             <label htmlFor="message" className="mb-1 block text-[20px] font-semibold">
-              הודעה
+              {labels.message}
             </label>
             <textarea
               id="message"
               {...register("message")}
               className=" bg-white min-h-[140px] w-full resize-y rounded border px-3 py-3"
-              dir="rtl"
+              dir={isEn ? "ltr" : "rtl"}
             />
             {errors.message && (
               <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>

@@ -6,384 +6,384 @@ export default function PrivacyPageEn() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
       <div id="main" role="main">
         <LegalTemplate
-          title="מדיניות פרטיות"
-          subtitle="מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך"
-          lastUpdated="פברואר 2026"
+          title="Privacy Policy"
+          subtitle="VOW's Privacy Policy - How We Protect Your Personal Information"
+          lastUpdated="February 2026"
           dir="ltr"
         >
           <section>
             <p className="text-[18px] leading-relaxed mb-6">
-              חברת Bugo Media LTD, ח.פ. 515960508 (להלן: "VOW", "אנחנו" או "החברה") מתחייבת לשמור על פרטיותך ולאפשר לך שליטה על המידע האישי שלך.
+              Bugo Media LTD, Company No. 515960508 (hereinafter: "VOW", "we" or "the Company") is committed to protecting your privacy and enabling you to have control over your personal information.
             </p>
             <p className="text-[18px] leading-relaxed mb-6">
-              מדיניות פרטיות זו מסבירה איזה מידע אנחנו אוספים, למה אנחנו משתמשים בו, עם מי אנחנו משתפים אותו, ואיך אתה יכול לשלוט בו.
+              This privacy policy explains what information we collect, why we use it, who we share it with, and how you can control it.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg my-6">
-              <p><strong>כתובת המערכת:</strong> <a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a></p>
-              <p><strong>דוא"ל:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>System Address:</strong> <a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a></p>
+              <p><strong>Email:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">1. למי מדיניות זו מיועדת</h2>
-            
-            <p>מדיניות פרטיות זו חלה על כל מי שמשתמש בשירותי VOW, לרבות:</p>
-            <ul className="list-disc mr-6 my-4 space-y-2">
-              <li>האתר השיווקי שלנו (<a href="https://vow.co.il" className="text-blue-600 underline">vow.co.il</a>)</li>
-              <li>המערכת ליצירת מסמכים חשבונאיים (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
-              <li>שירות החתימה הדיגיטלית (<a href="https://dsign.vow.co.il" className="text-blue-600 underline">dsign.vow.co.il</a>)</li>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">1. Who This Policy Applies To</h2>
+
+            <p>This privacy policy applies to anyone who uses VOW's services, including:</p>
+            <ul className="list-disc ml-6 my-4 space-y-2">
+              <li>Our marketing website (<a href="https://vow.co.il" className="text-blue-600 underline">vow.co.il</a>)</li>
+              <li>The accounting document creation system (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
+              <li>The digital signature service (<a href="https://dsign.vow.co.il" className="text-blue-600 underline">dsign.vow.co.il</a>)</li>
             </ul>
 
-            <div className="bg-yellow-50 border-r-4 border-yellow-400 p-4 my-6">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800">
-                על ידי שימוש בשירותים שלנו, אתה מסכים למדיניות פרטיות זו. אם אינך מסכים - אל תשתמש בשירותים.
+                By using our services, you agree to this privacy policy. If you do not agree — do not use the services.
               </p>
             </div>
 
-            <p>מונחים שאינם מוגדרים כאן יפורשו לפי תנאי השימוש שלנו.</p>
+            <p>Terms not defined herein shall be interpreted in accordance with our Terms of Use.</p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">2. איזה מידע אנחנו אוספים</h2>
-            
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">2.1 מידע שאתה מספק לנו</h3>
-            
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">בעת יצירת חשבון:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>שם מלא</li>
-              <li>תעודת זהות</li>
-              <li>כתובת דוא"ל</li>
-              <li>מספר טלפון</li>
-              <li>פרטי העסק שלך (שם, מספר עוסק או ח.פ., כתובת, תחום פעילות)</li>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">2. What Information We Collect</h2>
+
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">2.1 Information You Provide to Us</h3>
+
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">When creating an account:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Full name</li>
+              <li>National ID number</li>
+              <li>Email address</li>
+              <li>Phone number</li>
+              <li>Your business details (name, business/company number, address, field of activity)</li>
             </ul>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">בעת ביצוע תשלום:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>פרטי כרטיס אשראי (מועברים ישירות לספק התשלומים - אנחנו לא שומרים מספרי כרטיס אשראי)</li>
-              <li>כתובת לחיוב</li>
-              <li>פרטי עסקה (סכום, תאריך, סוג מנוי)</li>
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">When making a payment:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Credit card details (transferred directly to the payment provider — we do not store credit card numbers)</li>
+              <li>Billing address</li>
+              <li>Transaction details (amount, date, subscription type)</li>
             </ul>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">מסמכים ותוכן עסקי שאתה יוצר:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>חשבוניות, קבלות ומסמכים חשבונאיים שאתה מייצר במערכת</li>
-              <li>פרטי לקוחות שלך (שמות, כתובות, מספרי טלפון, דוא"ל)</li>
-              <li>פרטי עסקאות שאתה מזין</li>
-              <li>קבצים שאתה מעלה (לוגו, תמונות, מסמכים)</li>
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Business documents and content you create:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Invoices, receipts, and accounting documents you generate in the system</li>
+              <li>Your clients' details (names, addresses, phone numbers, email)</li>
+              <li>Transaction details you enter</li>
+              <li>Files you upload (logo, images, documents)</li>
             </ul>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">פניות שירות:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>כל מידע שתשתף איתנו בצ'אט, דוא"ל או טלפון</li>
-              <li>תיעוד השיחה או ההתכתבות</li>
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Support inquiries:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Any information you share with us via chat, email, or phone</li>
+              <li>Records of the conversation or correspondence</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">2.2 מידע שנאסף אוטומטית</h3>
-            
-            <p>כשאתה משתמש בשירותים שלנו, אנחנו אוספים:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>כתובת IP</li>
-              <li>סוג דפדפן ומערכת הפעלה</li>
-              <li>מזהה מכשיר (Device ID)</li>
-              <li>דפים שביקרת בהם</li>
-              <li>זמן ומשך השימוש</li>
-              <li>פעולות שביצעת במערכת</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">2.2 Automatically Collected Information</h3>
+
+            <p>When you use our services, we collect:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>IP address</li>
+              <li>Browser type and operating system</li>
+              <li>Device ID</li>
+              <li>Pages you visited</li>
+              <li>Time and duration of use</li>
+              <li>Actions performed in the system</li>
             </ul>
-            
-            <p className="mt-4">מידע זה נאסף באמצעות עוגיות וטכנולוגיות מעקב דומות (ראה סעיף 8).</p>
+
+            <p className="mt-4">This information is collected using cookies and similar tracking technologies (see section 8).</p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">3. למה אנחנו משתמשים במידע שלך</h2>
-            
-            <p>אנחנו משתמשים במידע שלך למטרות הבאות:</p>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">3. Why We Use Your Information</h2>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.1 הפעלת השירות</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>אספקת גישה למערכת ולכלים שלנו</li>
-              <li>יצירה ושליחה של מסמכים חשבונאיים</li>
-              <li>אחסון המסמכים שלך</li>
-              <li>מתן שירות חתימה דיגיטלית (Dsign)</li>
-              <li>תמיכה טכנית ושירות לקוחות</li>
+            <p>We use your information for the following purposes:</p>
+
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.1 Operating the Service</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Providing access to our system and tools</li>
+              <li>Creating and sending accounting documents</li>
+              <li>Storing your documents</li>
+              <li>Providing the digital signature service (Dsign)</li>
+              <li>Technical support and customer service</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.2 שיפור וביטחון</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>ניתוח דפוסי שימוש לשיפור המערכת</li>
-              <li>זיהוי ומניעת ניסיונות הונאה</li>
-              <li>טיפול בתקלות ובעיות טכניות</li>
-              <li>פיתוח תכונות חדשות על בסיס צרכי המשתמשים</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.2 Improvement and Security</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Analyzing usage patterns to improve the system</li>
+              <li>Detecting and preventing fraud attempts</li>
+              <li>Handling bugs and technical issues</li>
+              <li>Developing new features based on user needs</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.3 תקשורת ושיווק</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>שליחת עדכונים על השירות (שינויי מחיר, תכונות חדשות)</li>
-              <li>משלוח ניוזלטר וטיפים לניהול עסק (אם הסכמת)</li>
-              <li>פרסום ממוקד המותאם להעדפותיך</li>
-              <li>סקרי שביעות רצון</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.3 Communication and Marketing</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Sending service updates (price changes, new features)</li>
+              <li>Sending newsletters and business management tips (if you consented)</li>
+              <li>Targeted advertising tailored to your preferences</li>
+              <li>Satisfaction surveys</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.4 חובות משפטיות</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>עמידה בדרישות מס הכנסה ורשויות אחרות</li>
-              <li>שמירת רישומים כנדרש בחוק</li>
-              <li>שיתוף פעולה עם רשויות אכיפת החוק</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.4 Legal Obligations</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Compliance with tax authority and other regulatory requirements</li>
+              <li>Maintaining records as required by law</li>
+              <li>Cooperating with law enforcement authorities</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">4. עם מי אנחנו משתפים את המידע שלך</h2>
-            
-            <p className="font-semibold text-lg mb-4">אנחנו לא מוכרים מידע אישי לצדדים שלישיים.</p>
-            <p>אנחנו משתפים מידע רק במקרים הבאים:</p>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">4. Who We Share Your Information With</h2>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.1 ספקי שירות טכניים</h3>
-            
-            <p>אנחנו עובדים עם ספקי שירותים חיצוניים שעוזרים לנו להפעיל את המערכת ולספק את השירותים:</p>
+            <p className="font-semibold text-lg mb-4">We do not sell personal information to third parties.</p>
+            <p>We share information only in the following cases:</p>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">שירותי אחסון ושרתים:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>אחסון קבצים, תוכניות ומסמכים במערכת</li>
-              <li>כל המידע שנאסף מאוחסן אצל ספקי השירות שלנו</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.1 Technical Service Providers</h3>
+
+            <p>We work with external service providers who help us operate the system and deliver services:</p>
+
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Hosting and server services:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Storage of files, applications, and documents in the system</li>
+              <li>All collected data is stored with our service providers</li>
             </ul>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">שירותי עיבוד תשלומים:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>קבלת תשלומים בכרטיס אשראי</li>
-              <li>פרטי כרטיס אשראי מועברים ישירות לספק התשלומים, לא דרכנו</li>
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Payment processing services:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Receiving credit card payments</li>
+              <li>Credit card details are transferred directly to the payment provider, not through us</li>
             </ul>
 
-            <div className="bg-blue-50 border-r-4 border-blue-400 p-4 my-6">
-              <p className="font-semibold text-blue-800 mb-2">חשוב לדעת:</p>
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+              <p className="font-semibold text-blue-800 mb-2">Important to know:</p>
               <ul className="text-blue-800 space-y-1">
-                <li>• כל ספקי השירות מחויבים בהסכמי סודיות ואבטחת מידע</li>
-                <li>• חלק מספקי השירות ממוקמים מחוץ לישראל</li>
-                <li>• רמת ההגנה על מידע במדינות אלה עשויה להיות שונה מזו שבישראל</li>
-                <li>• בשימוש בשירותי VOW, אתה מסכים להעברת המידע האישי שלך לספקים אלה</li>
+                <li>• All service providers are bound by confidentiality and data security agreements</li>
+                <li>• Some service providers are located outside of Israel</li>
+                <li>• The level of data protection in those countries may differ from that in Israel</li>
+                <li>• By using VOW's services, you consent to the transfer of your personal information to these providers</li>
               </ul>
             </div>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.2 כלי פרסום ואנליטיקה</h3>
-            
-            <p className="mb-4">אנחנו משתמשים בשירותי צדדים שלישיים כדי להבין איך משתמשים בשירותים שלנו ולהציג לך פרסום רלוונטי:</p>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.2 Advertising and Analytics Tools</h3>
+
+            <p className="mb-4">We use third-party services to understand how our services are used and to show you relevant advertising:</p>
 
             <ul className="space-y-2 my-4">
               <li>
-                <strong>Google Analytics</strong> - ניתוח דפוסי שימוש
+                <strong>Google Analytics</strong> — usage pattern analysis
                 <br />
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Google Ads</strong> - פרסום ממוקד
+                <strong>Google Ads</strong> — targeted advertising
                 <br />
                 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Meta (Facebook/Instagram)</strong> - פרסום ברשתות חברתיות
+                <strong>Meta (Facebook/Instagram)</strong> — social media advertising
                 <br />
                 <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Microsoft Clarity</strong> - ניתוח חוויית משתמש
+                <strong>Microsoft Clarity</strong> — user experience analysis
                 <br />
                 <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>TikTok</strong> - פרסום ברשת TikTok
+                <strong>TikTok</strong> — advertising on TikTok
                 <br />
                 <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Taboola</strong> - פרסום ממוקד
+                <strong>Taboola</strong> — targeted advertising
                 <br />
                 <a href="https://www.taboola.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
-                  מדיניות פרטיות
+                  Privacy Policy
                 </a>
               </li>
             </ul>
 
-            <p className="mt-4">שירותים אלה משתמשים בעוגיות וטכנולוגיות מעקב כדי לאסוף מידע על השימוש שלך במערכת ובאתרים אחרים.</p>
-            <p className="mt-2"><strong>איך לנהל פרסום ממוקד:</strong> ראה סעיף 8.4</p>
+            <p className="mt-4">These services use cookies and tracking technologies to collect information about your use of our system and other websites.</p>
+            <p className="mt-2"><strong>How to manage targeted advertising:</strong> See section 8.4</p>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.3 הלקוחות שלך</h3>
-            
-            <p>כשאתה שולח מסמך (חשבונית, קבלה) ללקוחות שלך באמצעות המערכת, הלקוחות רואים:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>פרטי העסק שלך</li>
-              <li>תוכן המסמך</li>
-              <li>חתימה דיגיטלית</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.3 Your Clients</h3>
+
+            <p>When you send a document (invoice, receipt) to your clients via the system, clients will see:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Your business details</li>
+              <li>Document content</li>
+              <li>Digital signature</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.4 רשויות ואכיפת חוק</h3>
-            
-            <p>אנחנו נשתף מידע עם רשויות אכיפה או גורמים משפטיים אם:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>נדרש על פי צו שיפוטי או דרישה חוקית</li>
-              <li>יש חשד לפעילות בלתי חוקית או הונאה</li>
-              <li>יש צורך להגן על זכויותינו או זכויות אחרים</li>
-              <li>יש חשד להפרת תנאי השימוש</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.4 Authorities and Law Enforcement</h3>
+
+            <p>We will share information with enforcement authorities or legal entities if:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Required by court order or legal requirement</li>
+              <li>There is suspicion of illegal activity or fraud</li>
+              <li>There is a need to protect our rights or the rights of others</li>
+              <li>There is suspicion of a breach of the Terms of Use</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.5 העברת עסק</h3>
-            
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">4.5 Business Transfer</h3>
+
             <p>
-              במקרה של מיזוג, מכירה או העברת נכסי החברה, המידע שלך עשוי לעבור לגורם הרוכש. במקרה כזה, המידע ימשיך להיות כפוף למדיניות פרטיות זו.
+              In the event of a merger, sale, or transfer of the company's assets, your information may be transferred to the acquiring entity. In such a case, the information will continue to be subject to this privacy policy.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">5. איך אנחנו מגנים על המידע שלך</h2>
-            
-            <p>אנחנו נוקטים באמצעי אבטחה סבירים ומקובלים בתעשייה, כולל:</p>
-            <ul className="list-disc mr-6 my-4 space-y-2">
-              <li>הצפנת מידע בעת העברה (SSL/TLS)</li>
-              <li>הגבלת גישה למידע רק לעובדים מורשים</li>
-              <li>גיבוי תקופתי של נתונים</li>
-              <li>ניטור פעילות חשודה</li>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">5. How We Protect Your Information</h2>
+
+            <p>We take reasonable and industry-standard security measures, including:</p>
+            <ul className="list-disc ml-6 my-4 space-y-2">
+              <li>Data encryption during transmission (SSL/TLS)</li>
+              <li>Restricting access to information to authorized employees only</li>
+              <li>Periodic data backups</li>
+              <li>Monitoring for suspicious activity</li>
             </ul>
 
-            <div className="bg-yellow-50 border-r-4 border-yellow-400 p-4 my-6">
-              <p className="font-semibold text-yellow-800 mb-2">אבל:</p>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+              <p className="font-semibold text-yellow-800 mb-2">However:</p>
               <p className="text-yellow-800">
-                אף שיטת אחסון או העברה באינטרנט אינה מאובטחת ב-100%. אנחנו לא יכולים להבטיח אבטחה מוחלטת.
+                No method of storage or transmission over the internet is 100% secure. We cannot guarantee absolute security.
               </p>
             </div>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">האחריות שלך:</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>שמור על סיסמתך בסוד</li>
-              <li>אל תשתף גישה לחשבון שלך</li>
-              <li>התנתק ממכשירים ציבוריים</li>
-              <li>דווח מיד על חשד לפריצה</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">Your Responsibilities:</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Keep your password confidential</li>
+              <li>Do not share access to your account</li>
+              <li>Log out from public devices</li>
+              <li>Report any suspected breach immediately</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">6. הזכויות שלך</h2>
-            
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.1 זכות עיון</h3>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">6. Your Rights</h2>
+
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.1 Right of Access</h3>
             <p>
-              לפי סעיף 13 לחוק הגנת הפרטיות, התשמ"א-1981, אתה זכאי לבקש לעיין במידע האישי שלך המצוי אצלנו.
+              Under Section 13 of the Privacy Protection Law, 5741-1981, you are entitled to request access to your personal information held by us.
             </p>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.2 זכות תיקון ומחיקה</h3>
-            <p>לפי סעיף 14 לחוק הגנת הפרטיות, אתה זכאי לבקש:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>תיקון מידע שגוי או לא מעודכן</li>
-              <li>מחיקת מידע (בכפוף לחובות משפטיות)</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.2 Right to Correction and Deletion</h3>
+            <p>Under Section 14 of the Privacy Protection Law, you are entitled to request:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Correction of inaccurate or outdated information</li>
+              <li>Deletion of information (subject to legal obligations)</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.3 איך לממש את הזכויות שלך</h3>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">6.3 How to Exercise Your Rights</h3>
             <p>
-              שלח בקשה לכתובת: <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>
+              Send a request to: <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>
             </p>
-            <p className="mt-2">נשיב תוך 21 יום ונעדכן אותך על הפעולות שננקטו.</p>
+            <p className="mt-2">We will respond within 21 days and inform you of the actions taken.</p>
 
-            <div className="bg-blue-50 border-r-4 border-blue-400 p-4 my-6">
-              <p className="font-semibold text-blue-800 mb-2">חשוב לדעת:</p>
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+              <p className="font-semibold text-blue-800 mb-2">Important to know:</p>
               <ul className="text-blue-800 space-y-1">
-                <li>• אנחנו עשויים לבקש אימות זהות לפני מתן מידע רגיש</li>
-                <li>• במקרים מסוימים (חובה משפטית, הגנה על זכויות אחרים) לא נוכל למחוק מידע</li>
+                <li>• We may request identity verification before providing sensitive information</li>
+                <li>• In certain cases (legal obligation, protection of others' rights) we may be unable to delete information</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">7. כמה זמן אנחנו שומרים את המידע שלך</h2>
-            
-            <p>נשמור את המידע האישי שלך למשך הזמן הדרוש על מנת:</p>
-            <ul className="list-disc mr-6 my-4 space-y-2">
-              <li>לממש את מטרות השימוש במידע המפורטות במדיניות הפרטיות</li>
-              <li>לעמוד בהתחייבויות המשפטיות שלנו</li>
-              <li>לפתור סכסוכים</li>
-              <li>לאכוף את ההסכמים שלנו</li>
-              <li>או למשך פרק זמן ארוך יותר כפי שיידרש לפי הוראות הדין הרלוונטי</li>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">7. How Long We Retain Your Information</h2>
+
+            <p>We will retain your personal information for as long as necessary to:</p>
+            <ul className="list-disc ml-6 my-4 space-y-2">
+              <li>Fulfill the purposes of use described in this privacy policy</li>
+              <li>Comply with our legal obligations</li>
+              <li>Resolve disputes</li>
+              <li>Enforce our agreements</li>
+              <li>Or for a longer period as required by applicable law</li>
             </ul>
 
             <p className="mt-4">
-              אנו עשויים למחוק את המידע שלך מבלי להודיע לך על כך, ככל שאנו רואים שאין עוד צורך להחזיק בו למטרות המפורטות לעיל.
+              We may delete your information without notifying you, if we determine it is no longer needed for the purposes described above.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">8. עוגיות וטכנולוגיות מעקב</h2>
-            
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.1 מה זה עוגיות?</h3>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">8. Cookies and Tracking Technologies</h2>
+
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.1 What Are Cookies?</h3>
             <p>
-              עוגיות הן קבצי טקסט קטנים שנשמרים במכשיר שלך כשאתה גולש באתר. הן עוזרות לנו לזכור אותך, להבין איך אתה משתמש בשירות, ולשפר את החוויה שלך.
+              Cookies are small text files stored on your device when you browse a website. They help us remember you, understand how you use the service, and improve your experience.
             </p>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.2 סוגי העוגיות שאנחנו משתמשים</h3>
-            
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.2 Types of Cookies We Use</h3>
+
             <div className="space-y-4 my-4">
               <div className="bg-white p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">עוגיות חיוניות:</h4>
-                <ul className="list-disc mr-6 space-y-1">
-                  <li>תפעול בסיסי - התחברות, ניווט, זיכרון העדפות</li>
-                  <li><strong>לא ניתן לחסום</strong> (בלעדיהן המערכת לא תעבוד)</li>
+                <h4 className="font-semibold mb-2">Essential cookies:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  <li>Basic operation — login, navigation, preference memory</li>
+                  <li><strong>Cannot be blocked</strong> (without them the system will not work)</li>
                 </ul>
               </div>
 
               <div className="bg-white p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">עוגיות אבטחה:</h4>
-                <ul className="list-disc mr-6 space-y-1">
-                  <li>זיהוי משתמש, מניעת התחזות, הגנה מפני התקפות</li>
-                  <li><strong>לא ניתן לחסום</strong></li>
+                <h4 className="font-semibold mb-2">Security cookies:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  <li>User identification, impersonation prevention, protection against attacks</li>
+                  <li><strong>Cannot be blocked</strong></li>
                 </ul>
               </div>
 
               <div className="bg-white p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">עוגיות תפעוליות:</h4>
-                <ul className="list-disc mr-6 space-y-1">
-                  <li>זיכרון העדפות שלך (שפה, תצוגה)</li>
-                  <li><strong>ניתן לחסום</strong></li>
+                <h4 className="font-semibold mb-2">Functional cookies:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  <li>Remembering your preferences (language, display)</li>
+                  <li><strong>Can be blocked</strong></li>
                 </ul>
               </div>
 
               <div className="bg-white p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">עוגיות אנליטיות:</h4>
-                <ul className="list-disc mr-6 space-y-1">
-                  <li>הבנת דפוסי שימוש (Google Analytics)</li>
-                  <li><strong>ניתן לחסום</strong></li>
+                <h4 className="font-semibold mb-2">Analytical cookies:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  <li>Understanding usage patterns (Google Analytics)</li>
+                  <li><strong>Can be blocked</strong></li>
                 </ul>
               </div>
 
               <div className="bg-white p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">עוגיות פרסומיות:</h4>
-                <ul className="list-disc mr-6 space-y-1">
-                  <li>הצגת פרסום ממוקד</li>
-                  <li><strong>ניתן לחסום</strong></li>
+                <h4 className="font-semibold mb-2">Advertising cookies:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  <li>Displaying targeted advertising</li>
+                  <li><strong>Can be blocked</strong></li>
                 </ul>
               </div>
             </div>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.3 עוגיות צד שלישי</h3>
-            <p>אנחנו משתמשים בעוגיות של הגורמים הבאים:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>Google Analytics - ניתוח תעבורה</li>
-              <li>Google Ads, Meta, TikTok, Taboola, Microsoft Clarity - פרסום ממוקד</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.3 Third-Party Cookies</h3>
+            <p>We use cookies from the following parties:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Google Analytics — traffic analysis</li>
+              <li>Google Ads, Meta, TikTok, Taboola, Microsoft Clarity — targeted advertising</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.4 איך לנהל עוגיות</h3>
-            
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">חסימת עוגיות בדפדפן:</h4>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li><strong>Chrome:</strong> הגדרות → פרטיות ואבטחה → עוגיות</li>
-              <li><strong>Firefox:</strong> הגדרות → פרטיות ואבטחה → עוגיות</li>
-              <li><strong>Safari:</strong> העדפות → פרטיות → חסום עוגיות</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.4 How to Manage Cookies</h3>
+
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Blocking cookies in your browser:</h4>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies</li>
+              <li><strong>Firefox:</strong> Settings → Privacy & Security → Cookies</li>
+              <li><strong>Safari:</strong> Preferences → Privacy → Block Cookies</li>
             </ul>
 
-            <h4 className="text-[18px] font-semibold mb-2 mt-4">ביטול פרסום ממוקד:</h4>
+            <h4 className="text-[18px] font-semibold mb-2 mt-4">Opting out of targeted advertising:</h4>
             <ul className="space-y-2 my-3">
               <li>
                 <strong>Google:</strong>{" "}
@@ -397,102 +397,102 @@ export default function PrivacyPageEn() {
                   facebook.com/ads/preferences
                 </a>
               </li>
-              <li><strong>TikTok:</strong> הגדרות → פרטיות → פרסומות</li>
+              <li><strong>TikTok:</strong> Settings → Privacy → Ads</li>
             </ul>
 
-            <div className="bg-red-50 border-r-4 border-red-400 p-4 my-6">
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 my-6">
               <p className="font-semibold text-red-800">
-                חשוב: חסימת עוגיות חיוניות תמנע ממך להשתמש בחלק מהשירותים.
+                Important: Blocking essential cookies will prevent you from using parts of the services.
               </p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">9. שירותי צד שלישי</h2>
-            
+            <h2 className="text-[24px] font-bold mb-4 mt-8">9. Third-Party Services</h2>
+
             <p>
-              המערכת שלנו עשויה לכלול קישורים או אינטגרציות לשירותים חיצוניים (כמו WhatsApp, Google Drive).
+              Our system may include links or integrations to external services (such as WhatsApp, Google Drive).
             </p>
 
             <p className="mt-4">
-              <strong>אחריות:</strong> השימוש בשירותים אלה הוא על אחריותך הבלעדית ובהתאם למדיניות הפרטיות שלהם. אנחנו לא אחראים על תוכן, מדיניות או פעולות של צדדים שלישיים.
+              <strong>Responsibility:</strong> Use of these services is solely at your own risk and subject to their own privacy policies. We are not responsible for the content, policies, or actions of third parties.
             </p>
 
             <p className="mt-4">
-              <strong>המלצה:</strong> קרא את מדיניות הפרטיות של כל שירות צד שלישי לפני השימוש.
+              <strong>Recommendation:</strong> Read the privacy policy of each third-party service before use.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">10. שימוש על ידי קטינים</h2>
-            
-            <div className="bg-red-50 border-r-4 border-red-400 p-4 my-6">
+            <h2 className="text-[24px] font-bold mb-4 mt-8">10. Use by Minors</h2>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 my-6">
               <p className="font-semibold text-red-800">
-                אין להשתמש בשירותי VOW אם אתה מתחת לגיל 18.
+                VOW's services must not be used by anyone under the age of 18.
               </p>
             </div>
 
             <p>
-              אם אתה הורה או אפוטרופוס וגילית שקטין השתמש בשירות בלי רשותך, צור איתנו קשר מיד ב-<a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a> ונסגור את החשבון.
+              If you are a parent or guardian and have discovered that a minor has used the service without your permission, contact us immediately at <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a> and we will close the account.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">11. תקשורת והודעות</h2>
-            
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">11.1 הודעות שירות (חובה)</h3>
-            <p>אנחנו שומרים את הזכות לשלוח לך הודעות הקשורות לשירות, כגון:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>שינויים במדיניות הפרטיות או בתנאי השימוש</li>
-              <li>עדכונים על התחייבויות תשלום</li>
-              <li>התראות אבטחה</li>
-              <li>שינויים בזמינות השירות</li>
-            </ul>
-            <p className="mt-4"><strong>לא ניתן לבטל הודעות אלה אלא אם תסגור את החשבון.</strong></p>
+            <h2 className="text-[24px] font-bold mb-4 mt-8">11. Communications and Notifications</h2>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">11.2 דיוור שיווקי (אופציונלי)</h3>
-            <p>אם הסכמת לקבל דיוור שיווקי (ניוזלטר, טיפים, הצעות), תוכל לבטל בכל עת:</p>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>לחץ על "הסר עצמי" בתחתית כל דוא"ל</li>
-              <li>פנה אלינו ב-<a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">11.1 Service Notifications (Mandatory)</h3>
+            <p>We reserve the right to send you service-related notifications, such as:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Changes to the privacy policy or terms of use</li>
+              <li>Updates regarding payment obligations</li>
+              <li>Security alerts</li>
+              <li>Changes in service availability</li>
+            </ul>
+            <p className="mt-4"><strong>These notifications cannot be cancelled unless you close your account.</strong></p>
+
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">11.2 Marketing Communications (Optional)</h3>
+            <p>If you have consented to receive marketing communications (newsletter, tips, offers), you may unsubscribe at any time:</p>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Click "Unsubscribe" at the bottom of any email</li>
+              <li>Contact us at <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">12. שינויים במדיניות זו</h2>
-            
+            <h2 className="text-[24px] font-bold mb-4 mt-8">12. Changes to This Policy</h2>
+
             <p>
-              אנחנו עשויים לעדכן מדיניות זו מעת לעת כדי לשקף שינויים בשירות או בחוק.
+              We may update this policy from time to time to reflect changes in the service or applicable law.
             </p>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">איך נודיע לך:</h3>
-            <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>פרסום הודעה במערכת (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
-              <li>שליחת דוא"ל למשתמשים רשומים (שינויים מהותיים בלבד)</li>
-              <li>עדכון תאריך "עודכן לאחרונה" בראש המסמך</li>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">How we will notify you:</h3>
+            <ul className="list-disc ml-6 my-3 space-y-1">
+              <li>Publishing a notice in the system (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
+              <li>Sending an email to registered users (for material changes only)</li>
+              <li>Updating the "Last Updated" date at the top of this document</li>
             </ul>
 
-            <p className="mt-4">מומלץ לבקר בדף זה מדי פעם כדי להישאר מעודכן.</p>
+            <p className="mt-4">We recommend visiting this page periodically to stay up to date.</p>
 
-            <div className="bg-yellow-50 border-r-4 border-yellow-400 p-4 my-6">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800">
-                המשך שימוש בשירות לאחר עדכון = הסכמה למדיניות המעודכנת.
+                Continued use of the service after an update constitutes acceptance of the updated policy.
               </p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-[24px] font-bold mb-4 mt-8">13. צור קשר</h2>
-            
+            <h2 className="text-[24px] font-bold mb-4 mt-8">13. Contact Us</h2>
+
             <p className="mb-4">
-              יש לך שאלות על מדיניות הפרטיות? רוצה לממש את זכויותיך?
+              Do you have questions about the privacy policy? Would you like to exercise your rights?
             </p>
 
             <div className="bg-white p-6 rounded-lg">
-              <p><strong>דוא"ל:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
-              <p><strong>שם החברה:</strong> Bugo Media LTD</p>
-              <p><strong>מספר חברה:</strong> 515960508</p>
-              <p className="mt-4 text-sm text-gray-600">מאגר מידע רשום</p>
+              <p><strong>Email:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>Company Name:</strong> Bugo Media LTD</p>
+              <p><strong>Company Number:</strong> 515960508</p>
+              <p className="mt-4 text-sm text-gray-600">Registered data repository</p>
             </div>
           </section>
         </LegalTemplate>

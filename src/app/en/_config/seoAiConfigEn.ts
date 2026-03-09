@@ -71,7 +71,8 @@ export const seoAiConfigEn: ServicePageConfig = {
     subtitle:
       "SEO + AI presence - monthly support that delivers results without chasing ads.",
     ctaLabel: "Free website audit",
-    ctaSource: "#price",
+    ctaHref: "#price",
+    ctaSource: "digital_marketing",
     items: [
       {
         id: "seo-ai-about-1",

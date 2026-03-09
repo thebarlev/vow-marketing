@@ -45,6 +45,7 @@ export type ServicePageConfig = {
     subtitle: string
     ctaLabel: string
     ctaSource: LeadSource
+    ctaHref?: string
     items: ServiceAboutItem[]
   }
   faq?: {

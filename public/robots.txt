@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vow.co.il/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

@@ -263,7 +263,7 @@ export default function TermsPageEn() {
             <div className="bg-white p-4 rounded-lg my-4">
               <h4 className="font-semibold mb-2">Monthly subscription:</h4>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Cost: ₪27/month</li>
+                <li>Cost: $27/month</li>
                 <li>Up to 50 documents per month</li>
               </ul>
             </div>
@@ -271,7 +271,7 @@ export default function TermsPageEn() {
             <div className="bg-white p-4 rounded-lg my-4">
               <h4 className="font-semibold mb-2">Overage:</h4>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Each document beyond 50: ₪1/document</li>
+                <li>Each document beyond 50: $1/document</li>
                 <li>Charged automatically</li>
               </ul>
             </div>
@@ -279,7 +279,7 @@ export default function TermsPageEn() {
             <div className="bg-white p-4 rounded-lg my-4">
               <h4 className="font-semibold mb-2">Annual subscription:</h4>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Cost: ₪290/year (paid in advance)</li>
+                <li>Cost: $290/year (paid in advance)</li>
                 <li>Up to 50 documents per month</li>
               </ul>
             </div>
@@ -351,17 +351,17 @@ export default function TermsPageEn() {
             <div className="bg-blue-50 p-4 rounded-lg my-4 font-mono text-sm">
               <p>Credit = Annual subscription value</p>
               <p className="ml-8">minus: Prorated value of period used until cancellation</p>
-              <p className="ml-8">minus: Cancellation fee (5% of subscription value or ₪100, whichever is lower)</p>
+              <p className="ml-8">minus: Cancellation fee (5% of subscription value or $100, whichever is lower)</p>
             </div>
 
             <div className="bg-white p-4 rounded-lg my-4">
               <p className="font-semibold mb-2">Example:</p>
               <ul className="space-y-1">
-                <li>Annual subscription: ₪290</li>
+                <li>Annual subscription: $290</li>
                 <li>Cancelled after 7 days</li>
-                <li>Calculation: ₪290 − (₪290 ÷ 365 × 7) = ₪284.5</li>
-                <li>Cancellation fee: ₪100 (lower of ₪100 vs ₪14.5)</li>
-                <li className="font-semibold">Final credit: ₪184.5</li>
+                <li>Calculation: $290 − ($290 ÷ 365 × 7) = $284.5</li>
+                <li>Cancellation fee: $100 (lower of $100 vs $14.5)</li>
+                <li className="font-semibold">Final credit: $184.5</li>
               </ul>
             </div>
 
@@ -370,17 +370,17 @@ export default function TermsPageEn() {
             <div className="bg-blue-50 p-4 rounded-lg my-4 font-mono text-sm">
               <p>Credit = Last annual charge value</p>
               <p className="ml-8">minus: (Monthly price × months used)</p>
-              <p className="ml-8">minus: Cancellation fee (5% of annual charge or ₪100, whichever is lower)</p>
+              <p className="ml-8">minus: Cancellation fee (5% of annual charge or $100, whichever is lower)</p>
             </div>
 
             <div className="bg-white p-4 rounded-lg my-4">
               <p className="font-semibold mb-2">Example:</p>
               <ul className="space-y-1">
-                <li>Annual subscription: ₪290</li>
+                <li>Annual subscription: $290</li>
                 <li>Cancelled after 4 months</li>
-                <li>Calculation: ₪290 − (₪27 × 4) = ₪182</li>
-                <li>Cancellation fee: ₪14.5 (5% of ₪290)</li>
-                <li className="font-semibold">Final credit: ₪167.5</li>
+                <li>Calculation: $290 − ($27 × 4) = $182</li>
+                <li>Cancellation fee: $14.5 (5% of $290)</li>
+                <li className="font-semibold">Final credit: $167.5</li>
               </ul>
             </div>
 

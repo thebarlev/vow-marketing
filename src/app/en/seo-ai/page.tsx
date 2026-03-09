@@ -39,7 +39,7 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
   {
     id: "price-pro-en",
     title: "Pro",
-    kicker: "Expert support + full monthly execution",
+    kicker: "Expert support. Monthly execution",
     buttonLabel: "Free presence audit & join",
     buttonHref:
       "https://app.vow.co.il/en/auditor/register?link_id=a_pro",
@@ -112,6 +112,7 @@ export default function SeoAiPageEn() {
             subtitle={seoAiConfigEn.about.subtitle}
             ctaLabel={seoAiConfigEn.about.ctaLabel}
             ctaSource={seoAiConfigEn.about.ctaSource}
+            ctaHref={seoAiConfigEn.about.ctaHref}
             items={seoAiConfigEn.about.items}
             dir="ltr"
           />
