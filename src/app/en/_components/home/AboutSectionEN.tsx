@@ -68,7 +68,7 @@ export function AboutSectionEN() {
                 Branding, Websites & AI Systems That Move Your Business Forward
               </h2>
               <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
-                We combine AI at every step—from spec to marketing—to build a precise, fast, profitable business.
+                We combine AI at every step-from spec to marketing, to build a precise, fast, profitable business.
               </p>
               <button
                 type="button"

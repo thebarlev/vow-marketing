@@ -21,7 +21,6 @@ const SERVICES_LINKS = [
   { href: "/en/develop", label: "Web Development" },
   { href: "/en/develop-ai", label: "Software Development" },
   { href: "/en/marketing/ppc", label: "PPC Marketing" },
-  { href: "/en/marketing/seo-ai", label: "Search Performance Optimization" },
   { href: "/en/portfolio", label: "Portfolio" },
 ] as const
 

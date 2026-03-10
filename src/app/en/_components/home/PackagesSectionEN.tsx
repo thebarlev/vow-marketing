@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useCallback, useState } from "react"
 import { CheckIcon } from "@/app/_components/home/CheckIcon"
 import { OUR_PACKAGES_EN } from "./homeEn.constants"
@@ -73,20 +74,29 @@ export function PackagesSectionEN() {
                 {p.title}
               </h3>
 
-              <button
-                type="button"
-                className="vow-btn-primary mt-4 w-full cursor-pointer"
-                onClick={() =>
-                  openPopupWithPossibleOverride({
-                    title: p.title,
-                    description: p.kicker,
-                    toptext: p.toppopup ?? "",
-                    source: p.source,
-                  })
-                }
-              >
-                {p.buttonLabel}
-              </button>
+              {"ctaHref" in p && p.ctaHref ? (
+                <Link
+                  href={p.ctaHref}
+                  className="vow-btn-primary mt-4 w-full cursor-pointer text-center block"
+                >
+                  {p.buttonLabel}
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  className="vow-btn-primary mt-4 w-full cursor-pointer"
+                  onClick={() =>
+                    openPopupWithPossibleOverride({
+                      title: p.title,
+                      description: p.kicker,
+                      toptext: p.toppopup ?? "",
+                      source: p.source,
+                    })
+                  }
+                >
+                  {p.buttonLabel}
+                </button>
+              )}
               <div className="mt-7 h-px w-full bg-[color:var(--vow-border)]" />
 
               <ul

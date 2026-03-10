@@ -2,7 +2,7 @@ import Image from "next/image"
 import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 import { HERO_TAGS_EN } from "./homeEn.constants"
 
-const HERO_TITLE_EN = "Not showing up in AI search? We fix that."
+const HERO_TITLE_EN = "AI-Powered Websites, SEO & Digital Growth Platform."
 
 export function HeroEN() {
   return (
@@ -13,7 +13,7 @@ export function HeroEN() {
           <div className="order-2 md:order-1 flex flex-col items-start text-left px-0">
             <h1 className="text-black w-full text-left font-semibold leading-[1.05]">
             <span
-  className="block w-full tracking-[-1px] text-[64px] leading-[0.9] md:text-[70px] md:leading-[0.98] lg:text-[100px] xl:text-[106px] xl:leading-[104px] xl:tracking-[-1.56px]"
+  className="block w-full tracking-[-1px] text-[64px] leading-[0.9] md:text-[70px] md:leading-[0.98] lg:text-[100px] xl:text-[86px] xl:leading-[90px] xl:tracking-[-1.56px]"
   style={{ whiteSpace: "pre-line" }}
 >
   {HERO_TITLE_EN}
@@ -25,8 +25,8 @@ export function HeroEN() {
           </div>
 
           {/* Image: second on mobile, second on desktop */}
-          <div className="order-1 md:order-2 flex justify-start">
-            <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6 md:mx-0 md:w-4/5 md:aspect-[4/5] md:rounded-3xl md:shadow-lg overflow-hidden">
+          <div className="order-1 md:order-2 flex justify-end">
+            <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6 md:mx-0 md:w-4/5 md:aspect-[4/5] md:rounded-3xl md:shadow-lg overflow-hidden md:h-[80vh]">
               <Image
                 src="/m-woman-vow.webp"
                 alt="VOW digital marketing and AI SEO platform for growing businesses"
