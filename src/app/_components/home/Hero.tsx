@@ -1,14 +1,7 @@
 import Image from "next/image"
-import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
-
-const HERO_TAGS = [
-
-  "פיתוח ועיצוב אתרים מבוססי AI",
-  "מערכות ואוטומציות AI לעסק",
-  "שיווק דיגיטלי שמייצר ROI אמיתי",
-]
 
 const HERO_TITLE = "פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות!"
+const HERO_SUBHEADING = "פיתוח ועיצוב אתרים מבוססי AI, מערכות ואוטומציות ושיווק דיגיטלי שמייצר ROI אמיתי"
 
 export function Hero() {
   return (
@@ -44,9 +37,9 @@ export function Hero() {
                 {HERO_TITLE}
               </span>
             </h1>
-            <div className="mt-4 md:mt-8 w-full flex flex-col items-start md:items-end">
-              <HeroRotatingTags items={HERO_TAGS} />
-            </div>
+            <h2 className="mt-4 md:mt-8 w-full text-right text-[30px] font-normal leading-[36px] text-black">
+              {HERO_SUBHEADING}
+            </h2>
           </div>
         </div>
       </div>

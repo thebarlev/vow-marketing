@@ -1,15 +1,15 @@
 "use client"
 import Image from "next/image"
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
-import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
 import type { LeadSource } from "@/app/_components/home/Popup"
 
 export type ServiceHeroProps = {
   title: React.ReactNode
   subtitle?: React.ReactNode
+  heroSubheading?: string
   ariaLabel?: string
   subtitleClassName?: string
-  tags: readonly string[]
+  tags?: readonly string[]
   ctaLabel: string
   ctaSource: LeadSource
   ctaHref?: string
@@ -21,6 +21,7 @@ export type ServiceHeroProps = {
 export function ServiceHero({
   title,
   subtitle,
+  heroSubheading,
   ariaLabel,
   subtitleClassName,
   tags,
@@ -82,9 +83,17 @@ export function ServiceHero({
                 {subtitle}
               </p>
             ) : null}
-            <div className={isLtr ? "mt-6 w-full text-left" : "mt-6 w-full text-right"}>
-              <HeroRotatingTags items={tags} dir={dir} />
-            </div>
+            {heroSubheading ? (
+              <h2
+                className={
+                  isLtr
+                    ? "mt-6 w-full text-left text-[30px] font-normal leading-[36px] text-black"
+                    : "mt-6 w-full text-right text-[30px] font-normal leading-[36px] text-black"
+                }
+              >
+                {heroSubheading}
+              </h2>
+            ) : null}
             {ctaHref ? (
               <a
                 href={ctaHref}

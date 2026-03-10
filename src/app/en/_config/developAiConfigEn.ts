@@ -10,7 +10,7 @@ export const developAiConfigEn: ProductPageConfig = {
   hero: {
     title: "AI-powered software and systems development",
     subtitle: "",
-    tags: ["Python", "React / Next.js", "Node.js / TypeScript", "REST / Webhooks"],
+    heroSubheading: "Python, React, Node.js — custom systems with AI at the core",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/developai/vow.webp",

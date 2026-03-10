@@ -9,7 +9,7 @@ export const developConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "AI-powered web development for businesses",
-    tags: ["Corporate sites / E‑commerce", "Apps", "Systems / SaaS", "Automations"],
+    heroSubheading: "Corporate sites, e‑commerce, apps and systems — fast, accessible, ready for growth",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",

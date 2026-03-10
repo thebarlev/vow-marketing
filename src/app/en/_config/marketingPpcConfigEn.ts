@@ -18,7 +18,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
     title: "PPC Marketing",
     subtitle:
       "Google Ads + Meta Ads with a measurable process: funnel, analytics, and optimization focused on revenue—not guesses.",
-    tags: ["Google Ads", "Meta Ads", "Creative", "Analytics"],
+    heroSubheading: "Google Ads, Meta Ads, creative and analytics — decisions tied to ROI",
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",

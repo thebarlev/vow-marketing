@@ -20,7 +20,8 @@ export type ServicePageConfig = {
   hero: {
     title: string
     subtitle?: string
-    tags: readonly string[]
+    heroSubheading?: string
+    tags?: readonly string[]
     ctaLabel: string
     ctaSource: LeadSource
     imageSrc?: string
@@ -75,7 +76,7 @@ export const designConfig: ServicePageConfig = {
     },
     hero: {
       title: "עיצוב ומיתוג לעסקים וליזמים",
-      tags: ["אתר", "אפליקציה", "SaaS ומערכות", "קריאייטיב", "לוגו"],
+      heroSubheading: "אתר, אפליקציה, SaaS ומערכות — קריאייטיב ולוגו שמדברים לקהל הנכון",
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
       imageSrc: "/services/d-design.webp",
@@ -147,7 +148,7 @@ export const developConfig: ServicePageConfig = {
   },
   hero: {
     title: "פיתוח אתרים מבוסס AI לעסקים",
-    tags: ["אתרי תדמית / חנויות", "אפליקציות", "מערכות / SaaS", "אוטומציות"],
+    heroSubheading: "אתרי תדמית, חנויות אונליין, אפליקציות ומערכות — מהירים, נגישים ומוכנים לקידום",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",
@@ -242,7 +243,7 @@ export const marketingPpcConfig: ServicePageConfig = {
   hero: {
     title: "שיווק PPC",
     subtitle: "Google Ads + Meta Ads עם תהליך מדיד: משפך, אנליטיקס ואופטימיזציה שמכוונת להכנסות - לא לניחושים.",
-    tags: ["Google Ads", "Meta Ads", "קריאייטיב", "אנליטיקס"],
+    heroSubheading: "Google Ads, Meta Ads, קריאייטיב ואנליטיקס — החלטות שמחוברות ל‑ROI",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",
@@ -345,7 +346,7 @@ export const roiConfig: ServicePageConfig = {
   },
   hero: {
     title: "ROI: פחות תנועה - יותר מכירות",
-    tags: ["CRO", "משפכים", "A/B Testing", "מהירות", "אנליטיקס"],
+    heroSubheading: "CRO, משפכים, A/B Testing ומהירות — ניתוח מדויק שמעלה המרות בלי להגדיל תקציב",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/m-woman-vow.webp",
@@ -429,7 +430,7 @@ export const seoAiConfig: ServicePageConfig = {
     title: "לקוחות כבר לא מחפשים בגוגל הם שואלים AI.",
     subtitle:
       "האם העסק שלך מופיע בתשובה?",
-    tags: ["אנחנו הופכים את האתר שלך לנכס שמביא לקוחות, גם מגוגל וגם ממנועי AI. בלי קמפיינים ממומנים. בלי תלות בתקציב פרסום."],
+    heroSubheading: "אנחנו הופכים את האתר שלך לנכס שמביא לקוחות, גם מגוגל וגם ממנועי AI. בלי קמפיינים ממומנים. בלי תלות בתקציב פרסום.",
     ctaLabel: "קבל אבחון נוכחות - בחינם",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero1.webp",

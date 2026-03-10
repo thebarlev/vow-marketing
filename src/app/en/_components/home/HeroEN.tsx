@@ -1,8 +1,7 @@
 import Image from "next/image"
-import { HeroRotatingTags } from "@/app/_components/home/HeroRotatingTags"
-import { HERO_TAGS_EN } from "./homeEn.constants"
 
-const HERO_TITLE_EN = "AI-Powered Websites, SEO & Digital Growth Platform."
+const HERO_TITLE_EN = "Websites, SEO and AI tools to grow your business"
+const HERO_SUBHEADING_EN = "Not showing up in AI search? We fix that."
 
 export function HeroEN() {
   return (
@@ -19,9 +18,9 @@ export function HeroEN() {
   {HERO_TITLE_EN}
 </span>
             </h1>
-            <div className="mt-4 md:mt-8 w-full flex flex-col items-start">
-              <HeroRotatingTags items={HERO_TAGS_EN} dir="ltr" />
-            </div>
+            <h2 className="mt-4 md:mt-8 w-full text-left text-[30px] font-normal leading-[36px] text-black">
+              {HERO_SUBHEADING_EN}
+            </h2>
           </div>
 
           {/* Image: second on mobile, second on desktop */}

@@ -17,9 +17,7 @@ export const seoAiConfigEn: ServicePageConfig = {
   hero: {
     title: "Customers don't search Google anymore - they ask AI.",
     subtitle: "Not showing up in AI search? We can fix that.",
-    tags: [
-      "",
-    ],
+    heroSubheading: "",
     ctaLabel: "Get a free presence audit",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero1.webp",

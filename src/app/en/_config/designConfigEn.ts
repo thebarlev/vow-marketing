@@ -9,7 +9,7 @@ export const designConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "Design & Branding for Businesses",
-    tags: ["Website", "App", "SaaS & Systems", "Creative", "Logo"],
+    heroSubheading: "Website, app, SaaS & systems — creative and logos that speak to your audience",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-design.webp",
