@@ -21,7 +21,7 @@ const staticRoutes = [
   "/portfolio",
   "/marketing",
   "/marketing/ppc",
-  "/marketing/seo-ai",
+  "/seo-ai",
   "/roi",
   "/seo-ai",
   "/checkout/success",
@@ -44,7 +44,6 @@ const staticRoutes = [
   "/en/portfolio",
   "/en/marketing",
   "/en/marketing/ppc",
-  "/en/marketing/seo-ai",
   "/en/seo-ai",
 ] as const
 

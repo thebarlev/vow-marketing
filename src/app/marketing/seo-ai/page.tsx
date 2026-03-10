@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "שיווק אורגני SEO / AI | VOW",
     description:
       "בונים נוכחות אורגנית שמייצרת לידים לאורך זמן: SEO טכני, תוכן, מדידה והתאמה למנועי חיפוש בעידן ה‑AI.",
-    url: "/marketing/seo-ai",
+    url: "/seo-ai",
     type: "website",
   },
 }

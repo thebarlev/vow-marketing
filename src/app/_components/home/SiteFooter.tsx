@@ -20,7 +20,6 @@ const PAGES_LINKS = [
   { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
   { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
   { href: "/marketing/ppc", label: "שיווק PPC" },
-  { href: "/marketing/seo-ai", label: "קידום ביצועי חיפוש" },
   { href: "/portfolio", label: "פרויקטים נבחרים" },
 ] as const
 

@@ -570,7 +570,7 @@ H2: שאלות נפוצות
 | Itzik Barlev | Person | מייסד, 20+ שנות ניסיון | עמוד אודות |
 | חשבונית דיגיטלית | Product/Service | מערכת להפקת מסמכים, שנה חינם | /invoice, /pricing |
 | רואה חשבון AI | Product/Service | ליווי חשבונאי מבוסס AI | /account-ai |
-| קידום AI / SEO AI | Service | קידום במנועי AI וגוגל | /seo-ai, /marketing/seo-ai |
+| קידום AI / SEO AI | Service | קידום במנועי AI וגוגל | /seo-ai, /seo-ai |
 | פיתוח אתרים | Service | אתרים מבוססי AI | /develop |
 | עיצוב ומיתוג | Service | מיתוג, UX/UI | /design |
 | שיווק PPC | Service | Google Ads, Meta Ads | /marketing/ppc |

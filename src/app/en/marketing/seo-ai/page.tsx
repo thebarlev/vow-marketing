@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Organic Marketing SEO / AI | VOW",
     description:
       "Build organic presence that drives leads over time: technical SEO, content, measurement, and AI search alignment.",
-    url: "/en/marketing/seo-ai",
+    url: "/en/seo-ai",
     type: "website",
   },
 }
