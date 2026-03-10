@@ -59,7 +59,7 @@ export function FooterEN() {
     <li key={item.href} className="w-full">
       <EnLink
         href={item.href}
-        className="block text-left leading-[1.2] text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors"
+        className="block text-left leading-[1.1] text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors"
       >
         {item.label}
       </EnLink>

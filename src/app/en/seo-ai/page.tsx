@@ -89,8 +89,7 @@ export default function SeoAiPageEn() {
           subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
           title={
             <>
-              Not showing up in AI search?<br />
-We fix that.
+Does your business show up in the answer?
             </>
           }
         />

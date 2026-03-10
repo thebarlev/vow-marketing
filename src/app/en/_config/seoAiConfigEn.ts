@@ -16,9 +16,9 @@ export const seoAiConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "Customers don't search Google anymore - they ask AI.",
-    subtitle: "Does your business show up in the answer?",
+    subtitle: "Not showing up in AI search? We can fix that.",
     tags: [
-      "We turn your site into an asset that brings customers - from Google and AI engines. No paid campaigns. No ad budget dependency.",
+      "",
     ],
     ctaLabel: "Get a free presence audit",
     ctaSource: "digital_marketing",
@@ -67,7 +67,7 @@ export const seoAiConfigEn: ServicePageConfig = {
     ],
   },
   about: {
-    title: "Your site exists, but it doesn't bring customers. We fix that.",
+    title: "Your site exists, but it doesn't bring customers. We canfix that.",
     subtitle:
       "SEO + AI presence - monthly support that delivers results without chasing ads.",
     ctaLabel: "Free website audit",
