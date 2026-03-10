@@ -10,7 +10,7 @@ export function Hero() {
         <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:items-center">
           {/* Image: first on mobile, second on desktop */}
           <div className="order-1 md:order-2 flex justify-end">
-            <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6 md:mx-0 md:w-4/5 md:aspect-[4/5] md:rounded-3xl md:shadow-lg overflow-hidden">
+            <div className="relative w-screen h-[300px] -mx-4 sm:-mx-6 md:mx-0 md:w-4/5 md:aspect-[4/5] md:rounded-3xl md:shadow-lg overflow-hidden md:h-[80vh]">
               <Image
                 src="/m-woman-vow.webp"
                 alt="VOW digital marketing and AI SEO platform for growing businesses"
