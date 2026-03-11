@@ -11,7 +11,7 @@ const DEV_DROPDOWN = [
 
 const MARKETING_DROPDOWN = [
   { href: "/en/marketing/ppc", label: "PPC Marketing" },
-  { href: "/en/seo-ai", label: "Search Performance Optimization" },
+  { href: "/en/seo-ai", label: "Search Optimization" },
 ] as const
 
 const MOBILE_SECTIONS = [
@@ -23,7 +23,7 @@ const MOBILE_SECTIONS = [
       { href: "/en/develop-ai", label: "Software Development" },
       { href: "/en/pricing", label: "Pricing" },
       { href: "/en/marketing/ppc", label: "PPC Marketing" },
-      { href: "/en/seo-ai", label: "Search Performance Optimization" },
+      { href: "/en/seo-ai", label: "Search Optimization" },
       { href: "/en/portfolio", label: "Portfolio" },
     ],
   },
@@ -32,7 +32,7 @@ const MOBILE_SECTIONS = [
     items: [
       { href: "/en/account-ai", label: "AI Accountant" },
       { href: "/en/invoice", label: "Digital Invoice" },
-      { href: "/en/seo-ai", label: "Search Performance Optimization" },
+      { href: "/en/seo-ai", label: "Search Optimization" },
     ],
   },
 ] as const
@@ -110,7 +110,7 @@ export function HeaderEN() {
 
             <div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
               <span className="text-left w-[140px] shrink-0 leading-[1.3]" style={{ fontSize: "16px" }}>
-              Search Performance Optimization
+              Search Optimization
               </span>
               <div className="flex items-center gap-2 shrink-0">
                 <a href="https://app.vow.co.il/en/auditor/register" className="vow-btn-primary !h-[44px]">

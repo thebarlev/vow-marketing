@@ -11,7 +11,7 @@ const LEGAL_LINKS = [
 ] as const
 
 const PRODUCTS_LINKS = [
-  { href: "/en/seo-ai", label: "Search Performance Optimization" },
+  { href: "/en/seo-ai", label: "Search Optimization" },
   { href: "/en/account-ai", label: "AI Accountant" },
   { href: "/en/invoice", label: "Digital Invoice" },
 ] as const

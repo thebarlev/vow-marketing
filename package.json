@@ -21,6 +21,7 @@
     "next": "16.1.6",
     "next-contentlayer2": "^0.5.8",
     "nodemailer": "^6.10.1",
+    "posthog-js": "^1.360.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
