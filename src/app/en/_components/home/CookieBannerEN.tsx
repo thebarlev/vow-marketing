@@ -59,7 +59,7 @@ export function CookieBannerEN() {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="hidden flex items-center justify-between">
             <div className="flex items-center gap-3">
               <button type="button" className="btn-secondary w-[80px]" onClick={() => setConsent("rejected")}>
                 Decline
