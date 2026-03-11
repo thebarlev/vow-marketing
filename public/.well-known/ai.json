@@ -1,0 +1,8 @@
+{
+  "name": "VOW",
+  "url": "https://vow.co.il",
+  "description": "AI-powered accountant, digital invoicing and website development platform.",
+  "contact": "[support@vow.co.il](mailto:support@vow.co.il)",
+  "ai_crawling_allowed": true,
+  "languages": ["he", "en"]
+}

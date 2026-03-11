@@ -1,5 +1,13 @@
+import type { Metadata } from "next"
+
 import { HeaderEN } from "./_components/HeaderEN"
 import { FooterEN } from "./_components/FooterEN"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/en",
+  },
+}
 
 export default function EnLayout({
   children,

@@ -1,0 +1,11 @@
+{
+  "name": "VOW",
+  "url": "https://vow.co.il",
+  "logo": "https://vow.co.il/logo.svg",
+  "description": "AI-powered accountant, digital invoicing and website development platform.",
+  "founder": "Itzik Barlev",
+  "contact": {
+    "email": "[support@vow.co.il](mailto:support@vow.co.il)"
+  },
+  "languages": ["he", "en"]
+}

@@ -17,7 +17,15 @@ const assistant = Assistant({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://app.vow.co.il"),
+  metadataBase: new URL("https://vow.co.il"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "he-IL": "/",
+      en: "/en",
+      "x-default": "/",
+    },
+  },
   title: "מחירים – חשבונית דיגיטלית שנה חינם VOW",
   description: "חבילות חינם/מקצועי/אקסטרה להפקת מסמכים. התחילו ניסיון חינם והצטרפו למערכת.",
   icons: {
