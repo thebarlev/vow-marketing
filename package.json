@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate:ai-sitemap": "node scripts/generate-ai-sitemap.mjs",
     "dev": "contentlayer2 dev & next dev --webpack",
-    "build": "contentlayer2 build && next build",
+    "build": "node scripts/generate-ai-sitemap.mjs && contentlayer2 build && next build",
     "start": "next start",
     "lint": "eslint"
   },

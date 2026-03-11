@@ -1,0 +1,124 @@
+{
+  "site": "https://vow.co.il",
+  "brand": "VOW",
+  "description": "AI-powered accountant, digital invoicing and website development platform.",
+  "generated_at": "2026-03-11T11:49:19.237Z",
+  "priority_pages": [
+    {
+      "url": "https://vow.co.il",
+      "type": "homepage"
+    },
+    {
+      "url": "https://vow.co.il/en",
+      "type": "homepage_en"
+    },
+    {
+      "url": "https://vow.co.il/account-ai",
+      "type": "product"
+    },
+    {
+      "url": "https://vow.co.il/en/account-ai",
+      "type": "product"
+    },
+    {
+      "url": "https://vow.co.il/en/invoice",
+      "type": "product"
+    },
+    {
+      "url": "https://vow.co.il/invoice",
+      "type": "product"
+    },
+    {
+      "url": "https://vow.co.il/design",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/develop",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/develop-ai",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/en/design",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/en/develop",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/en/develop-ai",
+      "type": "development"
+    },
+    {
+      "url": "https://vow.co.il/en/marketing/ppc",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/en/marketing/seo-ai",
+      "type": "seo"
+    },
+    {
+      "url": "https://vow.co.il/en/portfolio",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/en/pricing",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/en/seo-ai",
+      "type": "seo"
+    },
+    {
+      "url": "https://vow.co.il/marketing/ppc",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/marketing/seo-ai",
+      "type": "seo"
+    },
+    {
+      "url": "https://vow.co.il/portfolio",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/pricing",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/roi",
+      "type": "services"
+    },
+    {
+      "url": "https://vow.co.il/seo-ai",
+      "type": "seo"
+    },
+    {
+      "url": "https://vow.co.il/blog",
+      "type": "blog"
+    },
+    {
+      "url": "https://vow.co.il/en/blog",
+      "type": "blog"
+    },
+    {
+      "url": "https://vow.co.il/about",
+      "type": "page"
+    },
+    {
+      "url": "https://vow.co.il/contact",
+      "type": "page"
+    },
+    {
+      "url": "https://vow.co.il/en/about",
+      "type": "page"
+    },
+    {
+      "url": "https://vow.co.il/en/contact",
+      "type": "page"
+    }
+  ]
+}
