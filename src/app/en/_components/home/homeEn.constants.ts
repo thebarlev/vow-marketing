@@ -126,44 +126,61 @@ export const ABOUT_US_EN = [
 export const FAQ_ITEMS_EN = [
   {
     id: "home-faq-en-1",
-    question: "What is VOW?",
-    answer: "VOW is a full-service digital agency. We design, develop, market, and manage digital presence-from websites and complex systems to digital invoicing and AI accounting.",
+    question: "What services does VOW provide?",
+    answer: "VOW provides professional digital services including website design, branding, SEO, PPC advertising, AI-powered search optimization, and development of websites, SaaS platforms and AI tools. Our goal is to help businesses grow through modern technology, strong design, and data-driven marketing.",
   },
   {
     id: "home-faq-en-2",
-    question: "What services does VOW offer?",
-    answer: "Design & branding, UI/UX, logos\n• AI-powered web and system development\n• Complex platforms, CRM, automations\n• Digital marketing: Google, Meta, content, SEO\n• Digital invoicing with tax authority connection\n• AI accountant for small businesses",
+    question: "What is Search Optimization and why is it important?",
+    answer: "Search Optimization focuses on improving your visibility in Google, AI search engines, and modern discovery platforms like ChatGPT and Gemini. It includes SEO, structured content, technical optimization and AI-friendly content strategies that help your business appear when potential customers search for your services.",
   },
   {
     id: "home-faq-en-3",
-    question: "How long does a website take?",
-    answer: "Corporate site: 7–14 working days. Complex systems depend on scope. Our AI environment speeds development without sacrificing quality.",
+    question: "Do you offer PPC advertising management?",
+    answer: "Yes. VOW provides PPC campaign management including Google Ads strategy, keyword research, ad creation, conversion tracking and performance optimization. Our goal is to generate qualified traffic and measurable business growth.",
   },
   {
     id: "home-faq-en-4",
-    question: "Do you work with small businesses?",
-    answer: "Yes-that's our focus. We specialize in SMBs that want agency-level service at a size-appropriate price.",
+    question: "Do you design and build websites?",
+    answer: "Yes. We design and develop modern, high-performance websites optimized for SEO, AI search engines, speed and conversion. Our websites are built with scalable technologies and a strong focus on user experience.",
   },
   {
     id: "home-faq-en-5",
-    question: "What is VOW digital invoicing?",
-    answer: "A system for invoices and 12 business document types, with secure digital signing and direct tax authority connection. Start free for a full year.",
+    question: "Do you also provide branding and visual design?",
+    answer: "Yes. VOW offers branding and design services including brand identity, visual language, product design and website UI/UX. Our design approach focuses on creating a clear, professional and memorable brand presence.",
   },
   {
     id: "home-faq-en-6",
-    question: "What is AI Accountant?",
-    answer: "24/7 AI service for expenses, income, reports, and accounting questions. Under ₪200/month instead of thousands for a traditional accountant.",
+    question: "Can you build AI SaaS platforms and digital systems?",
+    answer: "Yes. With over 20 years of experience in product design and development, we build advanced SaaS platforms, AI-powered tools and custom digital systems tailored to business needs.",
   },
   {
     id: "home-faq-en-7",
-    question: "How do I get started?",
-    answer: "Leave your details on the site or WhatsApp 054-5215193. We'll reach out within hours for a short, no-obligation intro call.",
+    question: "Who are your services best suited for?",
+    answer: "Our services are designed for startups, entrepreneurs and growing businesses that want to improve their digital presence, attract more customers and use modern technologies such as AI, SEO and digital marketing.",
   },
   {
     id: "home-faq-en-8",
-    question: "Is there support after launch?",
-    answer: "Yes. We offer ongoing support, maintenance, updates, and technical help via phone, email, and chat.",
+    question: "Why work with VOW?",
+    answer: "VOW combines strategy, design, development and marketing in one integrated approach. With more than 20 years of experience in product design, technology and digital growth, we help businesses build strong digital foundations and scale their online presence.",
   },
+  {
+    id: "home-faq-en-9",
+    question: "What is AI search optimization?",
+    answer: "AI search optimization focuses on improving how your business appears in AI-powered search engines and assistants such as ChatGPT, Gemini and Perplexity. It combines SEO, structured content, technical optimization and authority signals so AI systems can easily understand, reference and recommend your business.",
+  },
+  {
+    id: "home-faq-en-10",
+    question: "Do I need SEO if I run Google Ads?",
+    answer: "Yes. Google Ads can bring immediate traffic, but SEO builds long-term visibility and credibility in search engines. Businesses that combine SEO with PPC usually achieve better results because they capture both paid and organic traffic.",
+  },
+  {
+    id: "home-faq-en-11",
+    question: "How long does it take to rank on Google?",
+    answer: "SEO is a long-term strategy. Most websites start seeing measurable improvements within 3–6 months, depending on competition, website quality, and content strategy. Strong technical foundations and consistent optimization help accelerate results.",
+  },
+
+
 ] as const
 
 export const GREEN_INVOICE_BENEFITS_EN = [
