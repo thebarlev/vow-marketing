@@ -14,9 +14,9 @@ import { GreenInvoiceSectionEN } from "./_components/home/GreenInvoiceSectionEN"
 export const metadata: Metadata = {
   metadataBase: new URL("https://vow.co.il"),
 
-  title: "VOW – AI Accountant, Digital Invoice & Web Development",
+  title: "VOW | AI Websites, SEO & Marketing for Business Growth",
   description:
-    "VOW provides advanced services for small and medium businesses: smart AI accountant, secure digital invoice for one year free, marketing, design and web development.",
+    "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with VOW.",
 
   keywords: [
     "AI accountant",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "VOW – AI Accountant, Digital Invoice & Web Development",
+    title: "VOW | AI Websites, SEO & Marketing for Business Growth",
     description:
-      "VOW provides advanced services for small and medium businesses: smart AI accountant, secure digital invoice for one year free, marketing, design and web development.",
+      "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with VOW.",
     url: "https://vow.co.il/en",
     siteName: "VOW",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "VOW – AI Accountant, Digital Invoice & Web Development",
+    title: "VOW | AI Websites, SEO & Marketing for Business Growth",
     description:
       "One year free for secure digital invoice + AI accountant, marketing, branding and systems development for businesses.",
     images: ["https://vow.co.il/og-home.jpg"],
