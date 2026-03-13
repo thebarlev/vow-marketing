@@ -5,6 +5,7 @@ import { CheckIcon } from "./CheckIcon";
 import { OUR_PRICE } from "./home.constants";
 import { useState } from "react";
 import { Popup, LeadSource } from "./Popup";
+import { inferFunnelPlan, pushEvent } from "@/lib/tracking/events";
 
 export type PricePlan = {
   id?: string
@@ -46,6 +47,15 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
     toptext: "",
     source: "smart_accounting_ai",
   });
+
+  const trackPackageClick = (plan: PricePlan) => {
+    const planName = inferFunnelPlan(plan.buttonHref ?? plan.id ?? plan.title)
+    if (!planName) return
+
+    pushEvent("package_click", {
+      plan: planName,
+    })
+  }
 
   return (
     <section id={id} aria-label="החבילות שלנו" className="py-[var(--space-section)]">
@@ -117,6 +127,9 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                   buttonHref.startsWith("/") ? (
                     <Link
                       href={buttonHref}
+                      onClick={() => {
+                        if (variant === "seo-ai") trackPackageClick(p)
+                      }}
                       className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
                     >
                       {p.buttonLabel}
@@ -126,6 +139,9 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                       href={buttonHref}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => {
+                        if (variant === "seo-ai") trackPackageClick(p)
+                      }}
                       className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
                     >
                       {p.buttonLabel}
