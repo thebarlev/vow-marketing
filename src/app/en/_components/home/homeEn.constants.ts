@@ -89,7 +89,7 @@ export const OUR_PACKAGES_EN = [
     source: "digital_marketing" as const,
   },
   {
-    title: "Search Optimization",
+    title: "Google & AI Search Optimization",
     toppopup: "Limited to 100 | Fewer than 10 spots left",
     kicker: "Your business appears in AI answers",
     buttonLabel: "Learn more",
@@ -127,12 +127,12 @@ export const FAQ_ITEMS_EN = [
   {
     id: "home-faq-en-1",
     question: "What services does VOW provide?",
-    answer: "VOW provides professional digital services including website design, branding, SEO, PPC advertising, AI-powered search optimization, and development of websites, SaaS platforms and AI tools. Our goal is to help businesses grow through modern technology, strong design, and data-driven marketing.",
+    answer: "VOW provides professional digital services including website design, branding, SEO, PPC advertising, AI-powered Google & AI Search Optimization, and development of websites, SaaS platforms and AI tools. Our goal is to help businesses grow through modern technology, strong design, and data-driven marketing.",
   },
   {
     id: "home-faq-en-2",
-    question: "What is Search Optimization and why is it important?",
-    answer: "Search Optimization focuses on improving your visibility in Google, AI search engines, and modern discovery platforms like ChatGPT and Gemini. It includes SEO, structured content, technical optimization and AI-friendly content strategies that help your business appear when potential customers search for your services.",
+    question: "What is Google & AI Search Optimization and why is it important?",
+    answer: "Google & AI Search Optimization focuses on improving your visibility in Google, AI search engines, and modern discovery platforms like ChatGPT and Gemini. It includes SEO, structured content, technical optimization and AI-friendly content strategies that help your business appear when potential customers search for your services.",
   },
   {
     id: "home-faq-en-3",
@@ -166,8 +166,8 @@ export const FAQ_ITEMS_EN = [
   },
   {
     id: "home-faq-en-9",
-    question: "What is AI search optimization?",
-    answer: "AI search optimization focuses on improving how your business appears in AI-powered search engines and assistants such as ChatGPT, Gemini and Perplexity. It combines SEO, structured content, technical optimization and authority signals so AI systems can easily understand, reference and recommend your business.",
+    question: "What is AI Google & AI Search Optimization?",
+    answer: "AI Google & AI Search Optimization focuses on improving how your business appears in AI-powered search engines and assistants such as ChatGPT, Gemini and Perplexity. It combines SEO, structured content, technical optimization and authority signals so AI systems can easily understand, reference and recommend your business.",
   },
   {
     id: "home-faq-en-10",

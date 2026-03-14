@@ -103,10 +103,10 @@ export function SiteHeader() {
             </Link>
 
             <div className="hidden sm:flex items-center bg-white/90 backdrop-blur-sm shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-gray-100 rounded-2xl px-3 py-2 gap-2">
-              <span className="text-right w-[115px] shrink-0 leading-[1.3]" style={{ fontSize: "16px" }}>חשבונית דיגיטלית שנה חינם</span>
+              <span className="text-right w-[85px] shrink-0 leading-[1.3]" style={{ fontSize: "16px" }}>קידום עסקים בגוגל וב-AI</span>
               <div className="flex items-center gap-2 shrink-0">
-                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">הצטרפות</a>
-                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
+                <a href="https://app.vow.co.il/auditor/register" className="vow-btn-primary !h-[44px]">הצטרפות</a>
+                <a href="https://app.vow.co.il/auditor/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
               </div>
             </div>
 
@@ -208,11 +208,11 @@ export function SiteHeader() {
           <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
             <div className="flex flex-row-reverse items-center justify-end gap-2 bg-white/90 backdrop-blur-sm px-3 py-2">
               <div className="flex items-center gap-2">
-                <a href="https://app.vow.co.il" className="vow-btn-primary !h-[44px]">הצטרפות</a>
-                <a href="https://app.vow.co.il/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
+                <a href="https://app.vow.co.il/auditor/register" className="vow-btn-primary !h-[44px]">הצטרפות</a>
+                <a href="https://app.vow.co.il/auditor/login" className="vow-btn-secondary !h-[44px]">התחברות</a>
               </div>
               <span className="text-right max-w-[120px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
-                חשבונית דיגיטלית שנה חינם
+                קידום עסקים בגוגל וב-AI
               </span>
             </div>
           </div>
