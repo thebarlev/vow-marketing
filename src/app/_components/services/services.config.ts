@@ -157,7 +157,7 @@ export const developConfig: ServicePageConfig = {
   },
   doubleHeading: {
     title: "פיתוח אתרי וורדפרס וחנויות אונליין מבוססי AI עם 20 שנות ניסיון",
-    subtitle: "משלבים ניסיון עמוק בבניית אתרים, SEO וקידום עסקים במנועי AI, כדי לבנות לך נוכחות דיגיטלית שמייצרת תוצאות עסקיות אמיתיות.",
+    subtitle: "משלבים ניסיון עמוק בבניית אתרים, SEO וקידום עסקים בגוגל וב-AI, כדי לבנות לך נוכחות דיגיטלית שמייצרת תוצאות עסקיות אמיתיות.",
     buttonLabel: "להשארת פרטים",
     buttonSource: "design_development",
   },
@@ -415,11 +415,11 @@ export const roiConfig: ServicePageConfig = {
 export const seoAiConfig: ServicePageConfig = {
   slug: "seo-ai",
   metadata: {
-    title: "קידום עסקים במנועי AI",
+    title: "קידום עסקים בגוגל וב-AI",
     description:
       "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
     openGraph: {
-      title: "קידום עסקים במנועי AI",
+      title: "קידום עסקים בגוגל וב-AI",
       description:
       "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
       url: "/seo-ai",
