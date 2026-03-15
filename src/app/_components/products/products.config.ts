@@ -80,7 +80,7 @@ export const developAiConfig: ProductPageConfig = {
   hero: {
     title: "פיתוח תוכנה/מערכות בסביבת AI",
     subtitle: "",
-    heroSubheading: "Python, React, Node.js — מערכות בהתאמה אישית עם AI בליבה",
+    heroSubheading: "Python, React, Node.js - מערכות בהתאמה אישית עם AI בליבה",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     imageSrc: "/services/developai/vow.webp",
@@ -168,7 +168,7 @@ export const invoiceConfig: ProductPageConfig = {
   hero: {
     title: "חשבונית דיגיטלית מאובטחת שנה חינם",
     subtitle: "",
-    heroSubheading: "הפקת מסמכים, ניהול לקוחות והפקת דוחות — חתימה דיגיטלית מאובטחת וחיבור לרשות המיסים",
+    heroSubheading: "הפקת מסמכים, ניהול לקוחות והפקת דוחות - חתימה דיגיטלית מאובטחת וחיבור לרשות המיסים",
     ctaLabel: "להצטרפות",
     ctaSource: "smart_accounting_ai",
     ctaHref: "https://app.vow.co.il",
@@ -243,7 +243,7 @@ export const accountAiConfig: ProductPageConfig = {
   hero: {
     title: "רואה חשבון AI ליגה אחרת",
     subtitle: "ה-AI של VOW מזהה הזדמנויות רגולטוריות שאחרים מפספסים. הופך את הניהול הפיננסי שלך למדויק, אוטומטי ורווחי הרבה יותר.",
-    heroSubheading: "הנהלת חשבונות, דיווח מע״מ, דוחות שנתיים והצהרת הון — מקצועיות של 1,000 רואי חשבון ב־AI אחד",
+    heroSubheading: "הנהלת חשבונות, דיווח מע״מ, דוחות שנתיים והצהרת הון - מקצועיות של 1,000 רואי חשבון ב־AI אחד",
     ctaLabel: "להשארת פרטים",
     ctaSource: "smart_accounting_ai",
     imageSrc: "/services/d-account-ai.webp",
