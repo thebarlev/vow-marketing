@@ -5,12 +5,12 @@ export const developAiConfigEn: ProductPageConfig = {
   metadata: {
     title: "Custom AI Software & Systems for Businesses | VOW",
     description:
-      "Architecture, full-stack development, and automations. Faster with AI—without compromising quality or security.",
+      "Architecture, full-stack development, and automations. Faster with AI-without compromising quality or security.",
   },
   hero: {
     title: "AI-powered software and systems development",
     subtitle: "",
-    heroSubheading: "Python, React, Node.js — custom systems with AI at the core",
+    heroSubheading: "Python, React, Node.js - custom systems with AI at the core",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/developai/vow.webp",
@@ -19,7 +19,7 @@ export const developAiConfigEn: ProductPageConfig = {
   vision: {
     title: "Boutique tech. Enterprise grade.",
     subtitle:
-      "We specify, design, and build complex internal systems—fully custom, enterprise-level, with smart architecture and AI at the core.",
+      "We specify, design, and build complex internal systems-fully custom, enterprise-level, with smart architecture and AI at the core.",
     ctaLabel: "Get in touch",
     source: "design_development",
     cards: [
@@ -98,7 +98,7 @@ export const developAiConfigEn: ProductPageConfig = {
         id: "develop-ai-faq-3",
         question: "How long does a project take?",
         answer:
-          "We start with a deep spec of business needs, workflows, and goals. Only after a clear, agreed spec do we begin development—with milestones, full transparency, and accountability for the defined outcome.",
+          "We start with a deep spec of business needs, workflows, and goals. Only after a clear, agreed spec do we begin development-with milestones, full transparency, and accountability for the defined outcome.",
       },
       {
         id: "develop-ai-faq-4",
@@ -110,7 +110,7 @@ export const developAiConfigEn: ProductPageConfig = {
         id: "develop-ai-faq-5",
         question: "Can you integrate with any API or existing system?",
         answer:
-          "Yes. We integrate with any system that supports API, webhooks, or direct DB connection—including CRM, accounting, payment, SaaS, BI, and internal systems.",
+          "Yes. We integrate with any system that supports API, webhooks, or direct DB connection-including CRM, accounting, payment, SaaS, BI, and internal systems.",
       },
       {
         id: "develop-ai-faq-6",

@@ -9,7 +9,7 @@ export const designConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "Design & Branding for Businesses",
-    heroSubheading: "Website, app, SaaS & systems — creative and logos that speak to your audience",
+    heroSubheading: "Website, app, SaaS & systems - creative and logos that speak to your audience",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-design.webp",
@@ -38,7 +38,7 @@ export const designConfigEn: ServicePageConfig = {
   about: {
     title: "New business?\nStart right from day one",
     subtitle:
-      "Every project is built to drive action—whether leads, sales, or contact—turning visitors into customers.",
+      "Every project is built to drive action-whether leads, sales, or contact-turning visitors into customers.",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     items: [

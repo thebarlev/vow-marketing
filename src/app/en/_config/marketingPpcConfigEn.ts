@@ -5,11 +5,11 @@ export const marketingPpcConfigEn: ServicePageConfig = {
   metadata: {
     title: "PPC Marketing | VOW",
     description:
-      "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing—start measuring.",
+      "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing-start measuring.",
     openGraph: {
       title: "PPC Marketing | VOW",
       description:
-        "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing—start measuring.",
+        "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing-start measuring.",
       url: "/en/marketing/ppc",
       type: "website",
     },
@@ -27,14 +27,14 @@ export const marketingPpcConfigEn: ServicePageConfig = {
   doubleHeading: {
     title: "Play in the big leagues.",
     subtitle:
-      "We build campaigns tied to numbers: cost per lead, quality, close rate, LTV—and make decisions based on data.",
+      "We build campaigns tied to numbers: cost per lead, quality, close rate, LTV-and make decisions based on data.",
     buttonLabel: "Get in touch",
     buttonSource: "digital_marketing",
   },
   vision: {
     title: "Less guessing. More data.",
     subtitle:
-      "We build a marketing system based on measurement: campaigns, creative, analytics, and optimization—with decisions tied to ROI.",
+      "We build a marketing system based on measurement: campaigns, creative, analytics, and optimization-with decisions tied to ROI.",
     ctaLabel: "Get in touch",
     source: "digital_marketing",
     cards: [
@@ -67,7 +67,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
   about: {
     title: "PPC built on real experience. Real results.",
     subtitle:
-      "With 20+ years of experience—we connect creative, campaigns, and data to build a process that drives growth, not just clicks.",
+      "With 20+ years of experience-we connect creative, campaigns, and data to build a process that drives growth, not just clicks.",
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
     items: [
@@ -75,7 +75,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
         id: "marketing-about-1",
         title: "Deep business understanding",
         description:
-          "Not just campaigns—financial, product, and marketing insight tied to the numbers.",
+          "Not just campaigns-financial, product, and marketing insight tied to the numbers.",
         icon: "/about/briefcase.svg",
       },
       {
@@ -87,7 +87,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
       {
         id: "marketing-about-3",
         title: "True growth partnership",
-        description: "We're not a vendor—we're a partner focused on your business outcome.",
+        description: "We're not a vendor-we're a partner focused on your business outcome.",
         icon: "/about/analytics.svg",
       },
     ],
@@ -111,7 +111,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
         id: "marketing-faq-3",
         question: "Do you handle content and creative too?",
         answer:
-          "Yes. Creative, copy, and landing assets are part of the process—to improve CTR, conversion rate, and CAC.",
+          "Yes. Creative, copy, and landing assets are part of the process-to improve CTR, conversion rate, and CAC.",
       },
     ],
   },

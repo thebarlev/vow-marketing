@@ -5,18 +5,18 @@ export const developConfigEn: ServicePageConfig = {
   metadata: {
     title: "AI-Powered Web Development for Businesses | VOW",
     description:
-      "Corporate sites, e‑commerce, and systems—fast, accessible, and ready for growth. A measurable process that drives conversions.",
+      "Corporate sites, e‑commerce, and systems-fast, accessible, and ready for growth. A measurable process that drives conversions.",
   },
   hero: {
     title: "AI-powered web development for businesses",
-    heroSubheading: "Corporate sites, e‑commerce, apps and systems — fast, accessible, ready for growth",
+    heroSubheading: "Corporate sites, e‑commerce, apps and systems - fast, accessible, ready for growth",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",
     imageAlt: "AI-powered website development for business growth and digital presence",
   },
   doubleHeading: {
-    title: "WordPress sites and online stores powered by AI—20 years of experience",
+    title: "WordPress sites and online stores powered by AI-20 years of experience",
     subtitle:
       "We combine deep expertise in web development, SEO, and AI business promotion to build a digital presence that delivers real results.",
     buttonLabel: "Get in touch",
@@ -25,7 +25,7 @@ export const developConfigEn: ServicePageConfig = {
   vision: {
     title: "AI-powered sites that outperform the competition",
     subtitle:
-      "Smart sites that start generating sales and leads—and ROI—from month one.",
+      "Smart sites that start generating sales and leads-and ROI-from month one.",
     ctaLabel: "Get in touch",
     source: "design_development",
     cards: [
@@ -56,9 +56,9 @@ export const developConfigEn: ServicePageConfig = {
     ],
   },
   about: {
-    title: "Corporate sites and online stores powered by AI—without breaking the bank",
+    title: "Corporate sites and online stores powered by AI-without breaking the bank",
     subtitle:
-      "Every site is planned from day one to bring customers, sales, and leads—not just look good.",
+      "Every site is planned from day one to bring customers, sales, and leads-not just look good.",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
     items: [
@@ -89,7 +89,7 @@ export const developConfigEn: ServicePageConfig = {
         id: "develop-faq-1",
         question: "What technologies do you use?",
         answer:
-          "Mainly corporate sites and online stores with React, WordPress, PHP, Java, and Next.js—including AI solutions and full integration support.",
+          "Mainly corporate sites and online stores with React, WordPress, PHP, Java, and Next.js-including AI solutions and full integration support.",
       },
       {
         id: "develop-faq-2",

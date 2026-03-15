@@ -24,13 +24,13 @@ export function PortfolioHero({ locale = "he" }: { locale?: "he" | "en" }) {
               <>
                 At VOW we build fast sites, AI systems, and digital solutions tied to performance.
                 <br />
-                From spec to launch — every decision is measured by outcome: more leads, more sales, more ROI.
+                From spec to launch - every decision is measured by outcome: more leads, more sales, more ROI.
               </>
             ) : (
               <>
                 ב־VOW אנחנו בונים אתרים מהירים, מערכות AI ופתרונות דיגיטליים שמחוברים לביצועים.
                 <br />
-                מהאפיון ועד ההשקה — כל החלטה נמדדת לפי תוצאה: יותר לידים, יותר מכירות, ויותר ROI.
+                מהאפיון ועד ההשקה - כל החלטה נמדדת לפי תוצאה: יותר לידים, יותר מכירות, ויותר ROI.
               </>
             )}
           </p>
