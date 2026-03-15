@@ -241,9 +241,9 @@ export const marketingPpcConfig: ServicePageConfig = {
     },
   },
   hero: {
-    title: "שיווק PPC",
-    subtitle: "Google Ads + Meta Ads עם תהליך מדיד: משפך, אנליטיקס ואופטימיזציה שמכוונת להכנסות - לא לניחושים.",
-    heroSubheading: "Google Ads, Meta Ads, קריאייטיב ואנליטיקס — החלטות שמחוברות ל‑ROI",
+    title: "קידום ממומן PPC שמייצר לקוחות",
+    subtitle: "ניהול קמפיינים ב-Google Ads וב-Meta Ads עם תהליך מבוסס נתונים - מטרגוט ועד אופטימיזציה שמגדילה לידים ומכירות.",
+    heroSubheading: "",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",

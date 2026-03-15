@@ -15,10 +15,10 @@ export const marketingPpcConfigEn: ServicePageConfig = {
     },
   },
   hero: {
-    title: "PPC Marketing",
+    title: "PPC Marketing That Brings Real Customers",
     subtitle:
-      "Google Ads + Meta Ads with a measurable process: funnel, analytics, and optimization focused on revenue—not guesses.",
-    heroSubheading: "Google Ads, Meta Ads, creative and analytics — decisions tied to ROI",
+      "Run profitable campaigns on Google Ads and Meta Ads with a data-driven strategy focused on leads, sales, and measurable ROI.",
+    heroSubheading: "",
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
     imageSrc: "/services/d-marketing.webp",

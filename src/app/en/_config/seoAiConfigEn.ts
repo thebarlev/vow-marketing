@@ -65,7 +65,7 @@ export const seoAiConfigEn: ServicePageConfig = {
     ],
   },
   about: {
-    title: "Your site exists, but it doesn't bring customers. We canfix that.",
+    title: "Your site exists, but it doesn't bring customers. We can fix that.",
     subtitle:
       "SEO + AI presence - monthly support that delivers results without chasing ads.",
     ctaLabel: "Free website audit",
