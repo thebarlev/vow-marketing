@@ -5,7 +5,6 @@ import { LogoRowEN } from "./_components/home/LogoRowEN"
 import { PackagesSectionEN } from "./_components/home/PackagesSectionEN"
 import { SuccessSectionEN } from "./_components/home/SuccessSectionEN"
 import { TestimonialsEN } from "./_components/home/TestimonialsEN"
-import { CookieBannerEN } from "./_components/home/CookieBannerEN"
 import { AboutSectionEN } from "./_components/home/AboutSectionEN"
 import { VisionToExecutionSectionEN } from "./_components/home/VisionToExecutionSectionEN"
 import { FaqSectionEN } from "./_components/home/FaqSectionEN"
@@ -107,7 +106,6 @@ export default function EnHomePage() {
       <GreenInvoiceSectionEN />
       <PackagesSectionEN />
       <FaqSectionEN />
-      <CookieBannerEN />
     </>
   )
 }
