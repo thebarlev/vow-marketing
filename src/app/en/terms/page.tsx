@@ -514,7 +514,7 @@ export default function TermsPageEn() {
               The system is not intended to fulfill legal record-keeping obligations that apply to you or your accountant.
             </p>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.5 Document Links — Limited Validity</h3>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">8.5 Document Links - Limited Validity</h3>
             <p>
               Where the system allows sending a document link (instead of a PDF), the link is valid for <strong>3 months</strong> from creation.
             </p>
@@ -531,7 +531,7 @@ export default function TermsPageEn() {
               <li>Changes to or discontinuation of third-party services</li>
             </ul>
             <p>
-              Example: If you use a third-party integration and it fails — that is the third party's responsibility, not VOW's.
+              Example: If you use a third-party integration and it fails - that is the third party's responsibility, not VOW's.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.7 Internet Connection</h3>

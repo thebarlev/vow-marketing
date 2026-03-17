@@ -36,7 +36,7 @@ export default function AccountDeletionPageEn() {
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800 mb-2">Important to know:</p>
               <p className="text-yellow-800">
-                In general, the Company may be required to retain certain types of documents and data — including accounting documents, digitally signed documents, and operational logs — for varying periods, in accordance with legal requirements, operational needs, information security, and legal protection purposes.
+                In general, the Company may be required to retain certain types of documents and data - including accounting documents, digitally signed documents, and operational logs - for varying periods, in accordance with legal requirements, operational needs, information security, and legal protection purposes.
               </p>
             </div>
             <p>

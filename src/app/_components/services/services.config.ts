@@ -76,7 +76,7 @@ export const designConfig: ServicePageConfig = {
     },
     hero: {
       title: "עיצוב ומיתוג לעסקים וליזמים",
-      heroSubheading: "אתר, אפליקציה, SaaS ומערכות — קריאייטיב ולוגו שמדברים לקהל הנכון",
+      heroSubheading: "אתר, אפליקציה, SaaS ומערכות - קריאייטיב ולוגו שמדברים לקהל הנכון",
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
       imageSrc: "/services/d-design.webp",
@@ -148,7 +148,7 @@ export const developConfig: ServicePageConfig = {
   },
   hero: {
     title: "פיתוח אתרים מבוסס AI לעסקים",
-    heroSubheading: "אתרי תדמית, חנויות אונליין, אפליקציות ומערכות — מהירים, נגישים ומוכנים לקידום",
+    heroSubheading: "אתרי תדמית, חנויות אונליין, אפליקציות ומערכות - מהירים, נגישים ומוכנים לקידום",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
     imageSrc: "/services/d-develop.webp",
@@ -346,11 +346,11 @@ export const roiConfig: ServicePageConfig = {
   },
   hero: {
     title: "ROI: פחות תנועה - יותר מכירות",
-    heroSubheading: "CRO, משפכים, A/B Testing ומהירות — ניתוח מדויק שמעלה המרות בלי להגדיל תקציב",
+    heroSubheading: "CRO, משפכים, A/B Testing ומהירות - ניתוח מדויק שמעלה המרות בלי להגדיל תקציב",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
     imageSrc: "/m-woman-vow.webp",
-    imageAlt: "ROI marketing strategy — less traffic, more sales for business growth",
+    imageAlt: "ROI marketing strategy - less traffic, more sales for business growth",
   },
   doubleHeading: {
     title: "ממקסמים המרות בלי להגדיל תקציב",

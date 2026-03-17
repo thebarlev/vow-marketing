@@ -16,7 +16,7 @@ const Box = ({ children, style = {} }: { children: React.ReactNode; style?: Reac
 )
 
 const FIRST_STEPS = [
-  { n: "01", title: "Open a free account", body: "Easiest to start: Make.com (formerly Integromat). For something even simpler — Zapier.", tag: "5 min", tagColor: c.greenSoft, tagText: c.green },
+  { n: "01", title: "Open a free account", body: "Easiest to start: Make.com (formerly Integromat). For something even simpler - Zapier.", tag: "5 min", tagColor: c.greenSoft, tagText: c.green },
   { n: "02", title: "Watch a 10-minute video", body: 'Search YouTube: "first automation in Make" or "n8n for beginners". Goal: understand what a basic flow looks like, not learn everything.', tag: "10 min", tagColor: c.blueSoft, tagText: c.blue },
   { n: "03", title: "Pick one recurring task", body: "Take 3 tasks you do over and over. Write on paper: trigger (what starts it) → actions (what happens next).", tag: "10 min", tagColor: c.amberSoft, tagText: c.amber },
   { n: "04", title: "Build your first automation", body: "In Make: choose Webhook as trigger → connect to form → add Google Sheets → Add Row. Run a test and see it update in real time.", tag: "30 min", tagColor: c.purpleSoft, tagText: c.purple },

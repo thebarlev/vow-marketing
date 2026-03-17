@@ -59,10 +59,10 @@ export default async function BlogIndexPage({
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <h1 className="text-balance text-[44px] font-semibold leading-[1.05] text-black sm:text-[56px] lg:text-[70px]">
-                  בלוג VOW — פיתוח, שיווק ו-AI
+                  בלוג VOW - פיתוח, שיווק ו-AI
                 </h1>
                 <p className="mt-4 text-pretty text-[18px] leading-[30px] text-[#747474] sm:text-[20px] sm:leading-[34px]">
-                  תובנות קצרות ומעשיות על פיתוח אתרים, אוטומציות, שיווק ו‑AI — כדי לבנות תהליך דיגיטלי שמייצר תוצאה.
+                  תובנות קצרות ומעשיות על פיתוח אתרים, אוטומציות, שיווק ו‑AI - כדי לבנות תהליך דיגיטלי שמייצר תוצאה.
                 </p>
                 <p className="mt-3 text-[16px] text-[#747474]">
                   <Link href="/seo-ai" className="text-[#5389BB] underline hover:no-underline">קידום AI</Link>

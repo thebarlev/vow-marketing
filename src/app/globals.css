@@ -457,7 +457,7 @@ body {
     outline-offset: 2px;
   }
 
-  /* Free Year Heading — matches h2 tokens exactly */
+  /* Free Year Heading - matches h2 tokens exactly */
   .free-year-heading {
     color: var(--vow-accent);
     font-weight: 600;

@@ -16,7 +16,7 @@ export const seoAiConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "Customers don't search Google anymore - they ask AI.",
-    subtitle: "We don’t do “SEO”. We make your business show up where customers actually look — Google, ChatGPT, and AI search.",
+    subtitle: "We don’t do “SEO”. We make your business show up where customers actually look - Google, ChatGPT, and AI search.",
     heroSubheading: "",
     ctaLabel: "Get your free growth plan",
     ctaSource: "digital_marketing",

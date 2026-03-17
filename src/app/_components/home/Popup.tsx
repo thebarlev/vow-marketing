@@ -200,13 +200,13 @@ export function Popup({
       className="fixed inset-0 z-[9999] overflow-y-auto bg-[#000000D6] px-4"
       onClick={onClose}
     >
-      {/* עטיפה פנימית עם מרווח — מאפשרת גלילה לכל הפופאפ */}
+      {/* עטיפה פנימית עם מרווח - מאפשרת גלילה לכל הפופאפ */}
       <div className="flex min-h-full items-start justify-center py-10 ">
         <div
           className="relative w-full max-w-[637px] rounded-xl bg-white p-5 text-right"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* כפתור X — פינה שמאלית עליונה */}
+          {/* כפתור X - פינה שמאלית עליונה */}
           <button
             type="button"
             onClick={onClose}

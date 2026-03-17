@@ -9,7 +9,7 @@ export function BlogEndCta() {
           רוצים שנבדוק את התהליך בעסק?
         </H2>
         <p className="mt-4 text-pretty text-[18px] leading-[34px] text-[#747474] sm:text-[20px]">
-          השאירו פרטים ונחזור עם כיוון ברור ומהלך פרקטי — בלי התחייבות.
+          השאירו פרטים ונחזור עם כיוון ברור ומהלך פרקטי - בלי התחייבות.
         </p>
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">

@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 
 import type { PricePlan } from "@/app/_components/home/PriceSection"
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
-import { H2, H3 } from "@/components/ui/Heading"
+import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
 
 export const metadata: Metadata = seoAiConfigEn.metadata
 
@@ -113,30 +112,15 @@ export default function SeoAiPageEn() {
       }}
       faq={seoAiConfigEn.faq}
       extraContent={
-        <section className="bg-[#F4F1EC] py-[var(--space-section)]" aria-label="Related growth guides">
-          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
-            <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-left">
-              <H2>
-                Growth Guides
-              </H2>
-              <H3 className="mt-4 max-w-[760px]">
-                Read practical guides that support SEO and AI visibility:
-                {" "}
-                <Link href="/en/growth-guides/how-to-improve-website-seo" className="text-[#5389BB] underline hover:no-underline">
-                  How to Improve Website SEO
-                </Link>
-                {" · "}
-                <Link href="/en/growth-guides/how-to-rank-on-google-fast" className="text-[#5389BB] underline hover:no-underline">
-                  How to Rank on Google Fast
-                </Link>
-                {" · "}
-                <Link href="/en/growth-guides" className="text-[#5389BB] underline hover:no-underline">
-                  All Growth Guides
-                </Link>
-              </H3>
-            </div>
-          </div>
-        </section>
+        <GrowthGuidesCard
+          title="Growth Guides"
+          description="Practical guides on traffic, SEO, and customer acquisition to help you grow faster."
+          links={[
+            { href: "/en/growth-guides/how-to-get-traffic-to-my-website", label: "How to Get Traffic to Your Website" },
+            { href: "/en/growth-guides/how-to-get-customers-online", label: "How to Get Customers Online" },
+          ]}
+          indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
+        />
       }
     />
   )

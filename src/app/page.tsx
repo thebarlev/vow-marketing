@@ -15,7 +15,7 @@ import { AboutSection } from "@/app/_components/home/AboutSection"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
 import { FaqSection } from "@/app/_components/home/FaqSection"
 import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
-import { H2, H3 } from "@/components/ui/Heading"
+import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
 
 export const metadata: Metadata = {
   // ✅ זה האתר השיווקי (לא app)
@@ -118,28 +118,16 @@ export default function HomePage() {
         <GreenInvoiceSection />
 
         <PackagesSection />
-        <section className="mx-auto max-w-[1440px] px-4 pb-10 sm:px-6 lg:px-4" aria-label="מדריכי צמיחה">
-          <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-right">
-            <H2>
-              מדריכי צמיחה
-            </H2>
-            <H3 className="mt-4 max-w-[760px]">
-              מדריכים פרקטיים על תנועה, SEO וצמיחה עסקית:
-              {" "}
-              <Link href="/growth-guides/how-to-get-traffic-to-my-website" className="text-[#5389BB] underline hover:no-underline">
-                איך להביא תנועה לאתר
-              </Link>
-              {" · "}
-              <Link href="/growth-guides/how-to-get-customers-online" className="text-[#5389BB] underline hover:no-underline">
-                איך לקבל לקוחות אונליין
-              </Link>
-              {" · "}
-              <Link href="/growth-guides" className="text-[#5389BB] underline hover:no-underline">
-                לכל המדריכים
-              </Link>
-            </H3>
-          </div>
-        </section>
+        <GrowthGuidesCard
+          title="מדריכי צמיחה"
+          description="מדריכים פרקטיים על תנועה, SEO וצמיחה עסקית שיעזרו לך לצמוח מהר יותר."
+          dir="rtl"
+          links={[
+            { href: "/growth-guides/how-to-get-traffic-to-my-website", label: "איך להביא תנועה לאתר" },
+            { href: "/growth-guides/how-to-get-customers-online", label: "איך לקבל לקוחות אונליין" },
+          ]}
+          indexLink={{ href: "/growth-guides", label: "לכל המדריכים" }}
+        />
         <FaqSection />
         <p className="mx-auto max-w-[1440px] px-4 pb-8 text-center text-[18px] text-[color:var(--vow-muted)]">
           <Link href="/portfolio" className="text-[#5389BB] underline hover:no-underline">

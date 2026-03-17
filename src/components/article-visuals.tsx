@@ -81,8 +81,8 @@ const BAR_DATA_EN: BarItem[] = [
 export function SpeedBarChart({ locale = "he" }: { locale?: "he" | "en" }) {
   const data = locale === "en" ? BAR_DATA_EN : BAR_DATA_HE
   const caption = locale === "en"
-    ? "Load time impact on conversion rate — vs. fast site"
-    : "השפעת זמן טעינה על שיעור ההמרה — ביחס לאתר מהיר"
+    ? "Load time impact on conversion rate - vs. fast site"
+    : "השפעת זמן טעינה על שיעור ההמרה - ביחס לאתר מהיר"
   const textAlign = locale === "en" ? "left" : "right"
   return (
     <figure className="my-8 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm not-prose">
@@ -344,13 +344,13 @@ export function PlatformComparisonTable({ locale = "he" }: { locale?: "he" | "en
 
 const PLATFORM_MISTAKES_HE = [
   { num: "01", title: "לבחור לפי טרנד, לא לפי צורך",            desc: "טכנולוגיה פופולרית לא בהכרח מתאימה לפרויקט שלך." },
-  { num: "02", title: "לבנות SaaS על תשתית שמתאימה לבלוג",      desc: "הצרכים שונים לחלוטין — תכנן את התשתית לפי הלוגיקה העסקית." },
+  { num: "02", title: "לבנות SaaS על תשתית שמתאימה לבלוג",      desc: "הצרכים שונים לחלוטין - תכנן את התשתית לפי הלוגיקה העסקית." },
   { num: "03", title: "לבנות אתר תדמית קטן על תשתית מורכבת מדי", desc: "מורכבות מיותרת מאטה פיתוח ומגדילה עלויות תחזוקה." },
   { num: "04", title: "לא לחשוב על תחזוקה לטווח ארוך",           desc: "בחירת פלטפורמה היא גם בחירה של מי יתחזק אותה ואיך." },
 ];
 const PLATFORM_MISTAKES_EN = [
   { num: "01", title: "Choosing by trend, not by need",            desc: "Popular tech doesn't necessarily fit your project." },
-  { num: "02", title: "Building SaaS on a blog-friendly stack",    desc: "Needs are completely different — plan infra for business logic." },
+  { num: "02", title: "Building SaaS on a blog-friendly stack",    desc: "Needs are completely different - plan infra for business logic." },
   { num: "03", title: "Building a small corporate site on overly complex stack", desc: "Unnecessary complexity slows dev and increases maintenance cost." },
   { num: "04", title: "Not thinking about long-term maintenance", desc: "Choosing a platform is also choosing who maintains it and how." },
 ];
@@ -382,12 +382,12 @@ export function PlatformSelector({ locale = "he" }: { locale?: "he" | "en" }) {
 const PILLARS_HE = [
   { icon: "💬", title: "תשובה ברורה לשאלה ברורה", desc: 'כותרות שמנוסחות כמו שאילתות אמיתיות: "מה זה…", "איך עושים…", "כמה עולה…"', color: "border-blue-200 bg-blue-50", titleColor: "text-blue-800" },
   { icon: "🗂️", title: "מבנה נקי ומסודר", desc: "פסקאות קצרות, כותרות H2/H3 ברורות, רשימות וסעיפי FAQ. תוכן מבולגן מקשה על חילוץ תשובה.", color: "border-violet-200 bg-violet-50", titleColor: "text-violet-800" },
-  { icon: "🏅", title: "אמינות וזיהוי מומחיות", desc: "מי כתב? מה הניסיון שלו? האם האתר מתמקד בתחום אחד? AI מחפשת מקור — לא כותב אנונימי.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
+  { icon: "🏅", title: "אמינות וזיהוי מומחיות", desc: "מי כתב? מה הניסיון שלו? האם האתר מתמקד בתחום אחד? AI מחפשת מקור - לא כותב אנונימי.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
 ];
 const PILLARS_EN = [
   { icon: "💬", title: "Clear answer to a clear question", desc: 'Headlines phrased like real queries: "What is…", "How to…", "How much…"', color: "border-blue-200 bg-blue-50", titleColor: "text-blue-800" },
   { icon: "🗂️", title: "Clean, structured layout", desc: "Short paragraphs, clear H2/H3 headings, lists and FAQ. Messy content makes it hard to extract answers.", color: "border-violet-200 bg-violet-50", titleColor: "text-violet-800" },
-  { icon: "🏅", title: "Credibility and expertise", desc: "Who wrote it? What's their experience? Does the site focus on one area? AI looks for a source — not an anonymous writer.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
+  { icon: "🏅", title: "Credibility and expertise", desc: "Who wrote it? What's their experience? Does the site focus on one area? AI looks for a source - not an anonymous writer.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
 ];
 
 export function AiReadabilityPillars({ locale = "he" }: { locale?: "he" | "en" }) {
@@ -475,14 +475,14 @@ interface TimelinePhase {
 const TIMELINE_HE: TimelinePhase[] = [
   { weeks: "שבוע 1–2", title: "הגדרת נושאי ליבה", tasks: ["בחירת 3–5 שירותים שאתה רוצה להיות מזוהה איתם", "רישום 10–20 שאלות אמיתיות שלקוחות שואלים סביב כל אחד"], color: "border-blue-200 bg-blue-50", dot: "bg-blue-400" },
   { weeks: "שבוע 3–6", title: "בניית עמודי עוגן", tasks: ["כותרת ברורה + פסקת תשובה ישירה בתחילת כל עמוד", "סעיפים במבנה שאלה–תשובה", "FAQ מסודר בסוף כל עמוד"], color: "border-violet-200 bg-violet-50", dot: "bg-violet-400" },
-  { weeks: "שבוע 7–10", title: "פרסום מאמרי תמיכה", tasks: ["מאמרים שמעמיקים בנקודות ספציפיות", "קישורים פנימיים ברורים לעמוד העוגן", "פרסום עקבי — לפחות מאמר אחד בשבוע"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
-  { weeks: "שבוע 11–12", title: "בדיקה וחיזוק", tasks: ["חיפוש שאלות בתחום שלך ב-Perplexity / ChatGPT / Gemini", "בדיקה מי מצוטט — ומה חסר בתוכן שלך", "עדכון והעמקת עמודים שלא מספיק חזקים"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
+  { weeks: "שבוע 7–10", title: "פרסום מאמרי תמיכה", tasks: ["מאמרים שמעמיקים בנקודות ספציפיות", "קישורים פנימיים ברורים לעמוד העוגן", "פרסום עקבי - לפחות מאמר אחד בשבוע"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
+  { weeks: "שבוע 11–12", title: "בדיקה וחיזוק", tasks: ["חיפוש שאלות בתחום שלך ב-Perplexity / ChatGPT / Gemini", "בדיקה מי מצוטט - ומה חסר בתוכן שלך", "עדכון והעמקת עמודים שלא מספיק חזקים"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
 ];
 const TIMELINE_EN: TimelinePhase[] = [
   { weeks: "Week 1–2", title: "Define core topics", tasks: ["Choose 3–5 services you want to be known for", "List 10–20 real questions customers ask around each"], color: "border-blue-200 bg-blue-50", dot: "bg-blue-400" },
   { weeks: "Week 3–6", title: "Build pillar pages", tasks: ["Clear headline + direct answer paragraph at top of each page", "Sections in Q&A structure", "Organized FAQ at end of each page"], color: "border-violet-200 bg-violet-50", dot: "bg-violet-400" },
-  { weeks: "Week 7–10", title: "Publish support articles", tasks: ["Articles that go deep on specific points", "Clear internal links to pillar page", "Consistent publishing — at least one article per week"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
-  { weeks: "Week 11–12", title: "Review and strengthen", tasks: ["Search questions in your field on Perplexity / ChatGPT / Gemini", "Check who gets cited — and what's missing from your content", "Update and deepen pages that aren't strong enough"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
+  { weeks: "Week 7–10", title: "Publish support articles", tasks: ["Articles that go deep on specific points", "Clear internal links to pillar page", "Consistent publishing - at least one article per week"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
+  { weeks: "Week 11–12", title: "Review and strengthen", tasks: ["Search questions in your field on Perplexity / ChatGPT / Gemini", "Check who gets cited - and what's missing from your content", "Update and deepen pages that aren't strong enough"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
 ];
 
 export function ChecklistTimeline({ locale = "he" }: { locale?: "he" | "en" }) {
@@ -559,11 +559,11 @@ const INVOICING_MISTAKES_HE = [
   { icon: "🔓", title: "אבטחת מידע חלשה", points: ["אין גיבוי אוטומטי לטווח ארוך", "אין שקיפות לגבי מדיניות שמירת נתונים", "אין עמידה בתקני אבטחה רלוונטיים לנתונים פיננסיים"], note: "אתה עובד עם נתונים פיננסיים של לקוחות – זה קריטי." },
 ];
 const INVOICING_MISTAKES_EN = [
-  { icon: "⚖️", title: "Incomplete regulation", points: ["Allocation numbers not sent automatically to tax authority", "Digital signature not personal or not compliant", "Cumbersome reporting processes"], note: "This isn't a nice feature — it's a legal requirement." },
+  { icon: "⚖️", title: "Incomplete regulation", points: ["Allocation numbers not sent automatically to tax authority", "Digital signature not personal or not compliant", "Cumbersome reporting processes"], note: "This isn't a nice feature - it's a legal requirement." },
   { icon: "🐌", title: "System that slows you down", points: ["Long production time per document at high volume", "No API or integrations with existing tools", "Limits on document count in free plan"], note: "Every small delay adds up to hours by month end." },
-  { icon: "💸", title: "Price that looks cheap — until you start using", points: ["High processing fees not shown on pricing page", "Paid add-ons for features that seem basic", "Per-document cost that jumps fast past plan limit"], note: "Check the full picture, not just the initial price." },
-  { icon: "🙉", title: "Support that doesn't really help", points: ["Chatbot instead of a real person", "Long response times exactly when you need urgent help", "No onboarding support for initial setup"], note: "When something breaks at a critical moment — you need fast human response." },
-  { icon: "🔓", title: "Weak data security", points: ["No long-term automatic backup", "No transparency on data retention policy", "No compliance with security standards for financial data"], note: "You're handling customer financial data — it's critical." },
+  { icon: "💸", title: "Price that looks cheap - until you start using", points: ["High processing fees not shown on pricing page", "Paid add-ons for features that seem basic", "Per-document cost that jumps fast past plan limit"], note: "Check the full picture, not just the initial price." },
+  { icon: "🙉", title: "Support that doesn't really help", points: ["Chatbot instead of a real person", "Long response times exactly when you need urgent help", "No onboarding support for initial setup"], note: "When something breaks at a critical moment - you need fast human response." },
+  { icon: "🔓", title: "Weak data security", points: ["No long-term automatic backup", "No transparency on data retention policy", "No compliance with security standards for financial data"], note: "You're handling customer financial data - it's critical." },
 ];
 
 export function CommonMistakesAccordion({ locale = "he" }: { locale?: "he" | "en" }) {
@@ -645,7 +645,7 @@ const CHECKLIST_HE = [
 const CHECKLIST_EN = [
   "Does the system fully support Israeli invoices and automatic allocation numbers?", "Is the digital signature personal and archived as required?", "Is there a real free trial without entering a credit card?",
   "Are there integrations or API if you'll need them later?", "What payment methods are available and what's the actual fee?", "Is the interface full in your language and mobile-friendly?",
-  "What does support look like: phone? chat? response time?", "What reports exist and are they enough for your needs?", "What happens when you grow — does the price jump significantly?", "What do real users say in external reviews?",
+  "What does support look like: phone? chat? response time?", "What reports exist and are they enough for your needs?", "What happens when you grow - does the price jump significantly?", "What do real users say in external reviews?",
 ];
 
 export function BeforeSigningChecklist({ locale = "he" }: { locale?: "he" | "en" }) {
@@ -814,7 +814,7 @@ const STEPS_HE = [
 ];
 const STEPS_EN = [
   "Open 2–3 trial accounts in parallel", "Issue at least 50–100 real documents in each system", "Check payment, reports and export to accountant",
-  "Contact support with a real question and see how they respond", "Calculate total cost by annual document count — not monthly",
+  "Contact support with a real question and see how they respond", "Calculate total cost by annual document count - not monthly",
 ];
 
 export function HowToChooseSteps({ locale = "he" }: { locale?: "he" | "en" }) {
@@ -881,7 +881,7 @@ const SUMMARY_EN = [
   { icon: "💰", label: "Cost transparency",    desc: "No surprises, clear fees, open pricing" },
   { icon: "📈", label: "Growth fit",           desc: "Smooth scale, user management, plan flexibility" },
 ];
-const SUMMARY_FOOTER = { he: "אל תבחר לפי פרסומת או מחיר בלבד. בחר לפי התאמה אמיתית לצרכים של העסק שלך היום – ובעוד שנה.", en: "Don't choose by ad or price alone. Choose by real fit for your business needs today — and in a year." }
+const SUMMARY_FOOTER = { he: "אל תבחר לפי פרסומת או מחיר בלבד. בחר לפי התאמה אמיתית לצרכים של העסק שלך היום – ובעוד שנה.", en: "Don't choose by ad or price alone. Choose by real fit for your business needs today - and in a year." }
 
 export function FinalSummaryGrid({ locale = "he" }: { locale?: "he" | "en" }) {
   const summary = locale === "en" ? SUMMARY_EN : SUMMARY_HE
@@ -980,7 +980,7 @@ const FLOW_STEPS_EN = [
   { n: "01", text: "Open the original document" },
   { n: "02", text: 'Select "Cancel" or "Issue negative receipt"' },
   { n: "03", text: "System copies customer and transaction details, flips amount to negative" },
-  { n: "04", text: "Both documents saved in books — original and negative" },
+  { n: "04", text: "Both documents saved in books - original and negative" },
 ];
 const FLOW_EXAMPLE = { he: { doc1: "קבלה #001", doc2: "קבלה שלילית #002", credit: "אשראי", cancel: "ביטול", result: "תוצאה: הספרים מאוזנים" }, en: { doc1: "Receipt #001", doc2: "Negative receipt #002", credit: "Credit", cancel: "Cancel", result: "Result: Books balanced" } }
 
@@ -1077,9 +1077,9 @@ const REQS_HE = [
   { req: "הכללה בדוחות", why: "שני המסמכים מופיעים בדוחות בצורה עקבית", status: { label: "חשוב", bg: c.amberSoft, color: c.amber } },
 ];
 const REQS_EN = [
-  { req: "Automatic negative receipt creation", why: "For payment refund — without manual intervention", status: { label: "Critical", bg: c.redSoft, color: c.red } },
+  { req: "Automatic negative receipt creation", why: "For payment refund - without manual intervention", status: { label: "Critical", bg: c.redSoft, color: c.red } },
   { req: "Clear link between documents", why: "To know which negative receipt belongs to which original", status: { label: "Critical", bg: c.redSoft, color: c.red } },
-  { req: "Clear status per document", why: "Active / Cancelled / Credited — visible in interface", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
+  { req: "Clear status per document", why: "Active / Cancelled / Credited - visible in interface", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
   { req: "Inclusion in reports", why: "Both documents appear in reports consistently", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
 ];
 const REQS_HEADERS = { he: ["דרישה", "למה זה חשוב", "רמת חשיבות"], en: ["Requirement", "Why it matters", "Priority"] } as const

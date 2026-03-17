@@ -16,7 +16,7 @@ export function GreenInvoiceSection() {
     <section aria-label="חשבונית ירוקה מאובטחת" className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div className="grid lg:grid-cols-2 lg:items-center lg:gap-16 bg-white">
 
-        {/* Left: content — shown first on mobile via order, second on desktop */}
+        {/* Left: content - shown first on mobile via order, second on desktop */}
         <div className="flex items-center justify-center order-2 lg:order-1  mx-auto">
           <div dir="rtl" className="py-10 text-right lg:py-0 w-full  mx-auto px-4 sm:px-6 lg:px-8">
             <p className="free-year-heading !text-[20px]">תוצאות כבר מהחודש הראשון</p>
@@ -41,11 +41,11 @@ export function GreenInvoiceSection() {
           </div>
         </div>
 
-        {/* Right: edge-to-edge image — shown second on mobile, first on desktop */}
+        {/* Right: edge-to-edge image - shown second on mobile, first on desktop */}
         <div className="relative w-full min-h-[320px] lg:min-h-[640px] overflow-hidden order-1 lg:order-2">
           <Image
             src="/manmobile.webp"
-            alt="VOW secure digital invoicing app — mobile view for business document management"
+            alt="VOW secure digital invoicing app - mobile view for business document management"
             fill
             priority
             sizes="100vw"
@@ -53,7 +53,7 @@ export function GreenInvoiceSection() {
           />
           <Image
             src="/manvow.webp"
-            alt="VOW secure digital invoicing app — desktop view for business document management"
+            alt="VOW secure digital invoicing app - desktop view for business document management"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="hidden object-cover lg:block"

@@ -23,7 +23,7 @@ export default function AccessibilityPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Our Commitment to Accessibility</h2>
             <p className="text-[18px] leading-relaxed mb-6">
-              VOW Ltd. makes every effort and invests significant resources to provide all customers with access to its website and platform in a respectful, accessible, and professional manner. In accordance with the Equal Rights for Persons with Disabilities Law, 5758-1998, and the regulations enacted thereunder, extensive efforts and resources are dedicated to implementing the required accessibility adjustments — enabling people with disabilities to use the platform and website independently and on equal terms.
+              VOW Ltd. makes every effort and invests significant resources to provide all customers with access to its website and platform in a respectful, accessible, and professional manner. In accordance with the Equal Rights for Persons with Disabilities Law, 5758-1998, and the regulations enacted thereunder, extensive efforts and resources are dedicated to implementing the required accessibility adjustments - enabling people with disabilities to use the platform and website independently and on equal terms.
             </p>
           </section>
 
@@ -37,7 +37,7 @@ export default function AccessibilityPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">Accessible Support</h3>
             <p className="mb-4">
-              You can contact us in writing via email or by direct message on our LinkedIn page. For users with disabilities, we also offer phone support — please contact us in writing with your phone number and we will call you back.
+              You can contact us in writing via email or by direct message on our LinkedIn page. For users with disabilities, we also offer phone support - please contact us in writing with your phone number and we will call you back.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">Additional Contact Methods</h3>

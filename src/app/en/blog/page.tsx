@@ -69,7 +69,7 @@ export default async function BlogIndexPageEn({
                   Blog
                 </h1>
                 <p className="mt-4 text-pretty text-[18px] leading-[30px] text-[#747474] sm:text-[20px] sm:leading-[34px]">
-                  Short, practical insights on web development, automation, marketing, and AI — to build a digital process that delivers results.
+                  Short, practical insights on web development, automation, marketing, and AI - to build a digital process that delivers results.
                 </p>
               </div>
 

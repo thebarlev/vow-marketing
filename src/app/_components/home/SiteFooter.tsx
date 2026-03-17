@@ -76,7 +76,7 @@ export function SiteFooter() {
           <div className="col-span-2 md:col-span-1 flex flex-col items-start gap-2 md:items-end">
             <Image
               src="/footer-logo.svg"
-              alt="VOW logo — digital marketing, SEO AI and website development"
+              alt="VOW logo - digital marketing, SEO AI and website development"
               width={80}
               height={46}
               className="w-auto h-auto"

@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className={WRAP_NARROW}>
             <span className={LABEL}>אודות VOW</span>
             <h1 className="text-[38px] font-semibold leading-[1.1] text-black sm:text-[52px] lg:text-[64px]">
-              אודות VOW — פיתוח ושיווק דיגיטלי
+              אודות VOW - פיתוח ושיווק דיגיטלי
             </h1>
             <p className="mt-5 text-[24px] leading-[28px] text-[#000000] sm:text-[22px] sm:leading-[32px]">
               רוב העסקים לא נכשלים בגלל חוסר רעיון - הם נתקעים
@@ -127,7 +127,7 @@ export default function AboutPage() {
         <div className="relative h-full w-full">
           <Image
             src="/team/itzik.webp"
-            alt="Itzik Barlev — VOW founder, digital marketing and website development expert"
+            alt="Itzik Barlev - VOW founder, digital marketing and website development expert"
             fill
             sizes="160px"
             className="object-cover object-top"
@@ -169,7 +169,7 @@ export default function AboutPage() {
               <p className="text-[18px] leading-[24px] text-[#000000] sm:text-[18px] sm:leading-[30px] max-w-[690px] mx-auto mb-8">
                 אם אתם בתחילת הדרך - אנחנו מציעים פתרון מלא הכולל מיתוג, אתר ונגישות דיגיטליים מוכנים להשקה.{" "}
                 <a href="/portfolio" className="text-[#5389BB] underline hover:no-underline">דוגמאות מהעבודות</a>
-                {" "}— כך תוכלו לצאת לשוק מהר, נכון ועם ראות מקצועית.
+                {" "}- כך תוכלו לצאת לשוק מהר, נכון ועם ראות מקצועית.
               </p>
               <a
                 href="/contact"

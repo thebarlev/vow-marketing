@@ -76,7 +76,7 @@ export function FooterEN() {
           <div className="flex flex-col items-start gap-2 md:items-end md:shrink-0">
             <Image
               src="/footer-logo.svg"
-              alt="VOW logo — digital marketing, SEO AI and website development"
+              alt="VOW logo - digital marketing, SEO AI and website development"
               width={80}
               height={46}
               className="w-auto h-auto"

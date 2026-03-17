@@ -63,7 +63,7 @@ export function GreenInvoiceSectionEN() {
           
           <Image
             src="/manmobile.webp"
-            alt="VOW secure digital invoicing app — mobile view for business document management"
+            alt="VOW secure digital invoicing app - mobile view for business document management"
             fill
             priority
             sizes="100vw"
@@ -72,7 +72,7 @@ export function GreenInvoiceSectionEN() {
 
           <Image
             src="/manvow.webp"
-            alt="VOW secure digital invoicing app — desktop view for business document management"
+            alt="VOW secure digital invoicing app - desktop view for business document management"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="hidden object-cover lg:block"

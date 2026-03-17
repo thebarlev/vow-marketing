@@ -10,7 +10,7 @@ import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
 export const metadata: Metadata = {
   title: "Our Work – VOW | Web Development, AI Systems & Digital Marketing",
   description:
-    "See examples of VOW's work — websites, AI systems, digital stores, and solutions that deliver real ROI for businesses.",
+    "See examples of VOW's work - websites, AI systems, digital stores, and solutions that deliver real ROI for businesses.",
   keywords: "web development, AI systems, web design, digital marketing, business websites",
 }
 
@@ -34,7 +34,7 @@ function getPortfolioImages(): PortfolioImage[] {
 
   return numericWebps.map((x, idx) => ({
     src: `/portfolio/${x.name}`,
-    alt: `VOW website development project ${idx + 1} — AI-powered design and digital marketing`,
+    alt: `VOW website development project ${idx + 1} - AI-powered design and digital marketing`,
   }))
 }
 
@@ -43,7 +43,7 @@ const FAQ_ITEMS = [
     id: "portfolio-faq-1",
     question: "How long does a project take?",
     answer:
-      "Usually 2–6 weeks, depending on scope and complexity. We work in clear sprints and show measurable progress — so you know exactly where things stand and when it goes live.",
+      "Usually 2–6 weeks, depending on scope and complexity. We work in clear sprints and show measurable progress - so you know exactly where things stand and when it goes live.",
   },
   {
     id: "portfolio-faq-2",
@@ -55,7 +55,7 @@ const FAQ_ITEMS = [
     id: "portfolio-faq-3",
     question: "What's the advantage of AI-based development?",
     answer:
-      "AI lets us shorten timelines, sharpen specs, and improve quality — without compromising stability or security. Result: fewer revision rounds, more accuracy, faster path to ROI.",
+      "AI lets us shorten timelines, sharpen specs, and improve quality - without compromising stability or security. Result: fewer revision rounds, more accuracy, faster path to ROI.",
   },
   {
     id: "portfolio-faq-4",
@@ -67,7 +67,7 @@ const FAQ_ITEMS = [
     id: "portfolio-faq-5",
     question: "How much does it cost?",
     answer:
-      "Price depends on scope, technology, and target outcomes. After a short call we can offer a clear range and a detailed proposal — what's included, what's not, and what we measure to ensure success.",
+      "Price depends on scope, technology, and target outcomes. After a short call we can offer a clear range and a detailed proposal - what's included, what's not, and what we measure to ensure success.",
   },
   {
     id: "portfolio-faq-6",

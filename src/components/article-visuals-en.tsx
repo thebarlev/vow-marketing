@@ -72,7 +72,7 @@ export function SpeedBarChart() {
   return (
     <figure className="my-8 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm not-prose" dir="ltr">
       <figcaption className="mb-5 text-[18px] font-semibold uppercase tracking-widest text-neutral-400" style={{ textAlign }}>
-        Load time impact on conversion rate — vs. fast site
+        Load time impact on conversion rate - vs. fast site
       </figcaption>
       <div className="space-y-3">
         {BAR_DATA.map((item) => (
@@ -249,7 +249,7 @@ export function PlatformComparisonTable() {
 
 const PLATFORM_MISTAKES = [
   { num: "01", title: "Choosing by trend, not by need", desc: "Popular tech doesn't necessarily fit your project." },
-  { num: "02", title: "Building SaaS on a blog-friendly stack", desc: "Needs are completely different — plan infra for business logic." },
+  { num: "02", title: "Building SaaS on a blog-friendly stack", desc: "Needs are completely different - plan infra for business logic." },
   { num: "03", title: "Building a small corporate site on overly complex stack", desc: "Unnecessary complexity slows dev and increases maintenance cost." },
   { num: "04", title: "Not thinking about long-term maintenance", desc: "Choosing a platform is also choosing who maintains it and how." },
 ]
@@ -275,7 +275,7 @@ export function PlatformSelector() {
 const PILLARS = [
   { icon: "💬", title: "Clear answer to a clear question", desc: 'Headlines phrased like real queries: "What is…", "How to…", "How much…"', color: "border-blue-200 bg-blue-50", titleColor: "text-blue-800" },
   { icon: "🗂️", title: "Clean, structured layout", desc: "Short paragraphs, clear H2/H3 headings, lists and FAQ. Messy content makes it hard to extract answers.", color: "border-violet-200 bg-violet-50", titleColor: "text-violet-800" },
-  { icon: "🏅", title: "Credibility and expertise", desc: "Who wrote it? What's their experience? Does the site focus on one area? AI looks for a source — not an anonymous writer.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
+  { icon: "🏅", title: "Credibility and expertise", desc: "Who wrote it? What's their experience? Does the site focus on one area? AI looks for a source - not an anonymous writer.", color: "border-emerald-200 bg-emerald-50", titleColor: "text-emerald-800" },
 ]
 
 export function AiReadabilityPillars() {
@@ -335,8 +335,8 @@ export function ContentStructureTable() {
 const TIMELINE = [
   { weeks: "Week 1–2", title: "Define core topics", tasks: ["Choose 3–5 services you want to be known for", "List 10–20 real questions customers ask around each"], color: "border-blue-200 bg-blue-50", dot: "bg-blue-400" },
   { weeks: "Week 3–6", title: "Build pillar pages", tasks: ["Clear headline + direct answer paragraph at top of each page", "Sections in Q&A structure", "Organized FAQ at end of each page"], color: "border-violet-200 bg-violet-50", dot: "bg-violet-400" },
-  { weeks: "Week 7–10", title: "Publish support articles", tasks: ["Articles that go deep on specific points", "Clear internal links to pillar page", "Consistent publishing — at least one article per week"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
-  { weeks: "Week 11–12", title: "Review and strengthen", tasks: ["Search questions in your field on Perplexity / ChatGPT / Gemini", "Check who gets cited — and what's missing from your content", "Update and deepen pages that aren't strong enough"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
+  { weeks: "Week 7–10", title: "Publish support articles", tasks: ["Articles that go deep on specific points", "Clear internal links to pillar page", "Consistent publishing - at least one article per week"], color: "border-emerald-200 bg-emerald-50", dot: "bg-emerald-400" },
+  { weeks: "Week 11–12", title: "Review and strengthen", tasks: ["Search questions in your field on Perplexity / ChatGPT / Gemini", "Check who gets cited - and what's missing from your content", "Update and deepen pages that aren't strong enough"], color: "border-orange-200 bg-orange-50", dot: "bg-orange-400" },
 ]
 
 export function ChecklistTimeline() {
@@ -374,11 +374,11 @@ const Box = ({ children, style = {} }: { children: React.ReactNode; style?: Reac
 )
 
 const INVOICING_MISTAKES = [
-  { icon: "⚖️", title: "Incomplete regulation", points: ["Allocation numbers not sent automatically to tax authority", "Digital signature not personal or not compliant", "Cumbersome reporting processes"], note: "This isn't a nice feature — it's a legal requirement." },
+  { icon: "⚖️", title: "Incomplete regulation", points: ["Allocation numbers not sent automatically to tax authority", "Digital signature not personal or not compliant", "Cumbersome reporting processes"], note: "This isn't a nice feature - it's a legal requirement." },
   { icon: "🐌", title: "System that slows you down", points: ["Long production time per document at high volume", "No API or integrations with existing tools", "Limits on document count in free plan"], note: "Every small delay adds up to hours by month end." },
-  { icon: "💸", title: "Price that looks cheap — until you start using", points: ["High processing fees not shown on pricing page", "Paid add-ons for features that seem basic", "Per-document cost that jumps fast past plan limit"], note: "Check the full picture, not just the initial price." },
-  { icon: "🙉", title: "Support that doesn't really help", points: ["Chatbot instead of a real person", "Long response times exactly when you need urgent help", "No onboarding support for initial setup"], note: "When something breaks at a critical moment — you need fast human response." },
-  { icon: "🔓", title: "Weak data security", points: ["No long-term automatic backup", "No transparency on data retention policy", "No compliance with security standards for financial data"], note: "You're handling customer financial data — it's critical." },
+  { icon: "💸", title: "Price that looks cheap - until you start using", points: ["High processing fees not shown on pricing page", "Paid add-ons for features that seem basic", "Per-document cost that jumps fast past plan limit"], note: "Check the full picture, not just the initial price." },
+  { icon: "🙉", title: "Support that doesn't really help", points: ["Chatbot instead of a real person", "Long response times exactly when you need urgent help", "No onboarding support for initial setup"], note: "When something breaks at a critical moment - you need fast human response." },
+  { icon: "🔓", title: "Weak data security", points: ["No long-term automatic backup", "No transparency on data retention policy", "No compliance with security standards for financial data"], note: "You're handling customer financial data - it's critical." },
 ]
 
 export function CommonMistakesAccordion() {
@@ -418,7 +418,7 @@ export function CommonMistakesAccordion() {
 const CHECKLIST = [
   "Does the system fully support Israeli invoices and automatic allocation numbers?", "Is the digital signature personal and archived as required?", "Is there a real free trial without entering a credit card?",
   "Are there integrations or API if you'll need them later?", "What payment methods are available and what's the actual fee?", "Is the interface full in your language and mobile-friendly?",
-  "What does support look like: phone? chat? response time?", "What reports exist and are they enough for your needs?", "What happens when you grow — does the price jump significantly?", "What do real users say in external reviews?",
+  "What does support look like: phone? chat? response time?", "What reports exist and are they enough for your needs?", "What happens when you grow - does the price jump significantly?", "What do real users say in external reviews?",
 ]
 
 export function BeforeSigningChecklist() {
@@ -516,7 +516,7 @@ export function SupportChecks() {
 
 const STEPS = [
   "Open 2–3 trial accounts in parallel", "Issue at least 50–100 real documents in each system", "Check payment, reports and export to accountant",
-  "Contact support with a real question and see how they respond", "Calculate total cost by annual document count — not monthly",
+  "Contact support with a real question and see how they respond", "Calculate total cost by annual document count - not monthly",
 ]
 
 export function HowToChooseSteps() {
@@ -563,7 +563,7 @@ export function FinalSummaryGrid() {
           ))}
         </div>
         <p style={{ margin: "20px 0 0", padding: "16px 0 0", borderTop: `1px solid ${c.border}`, fontSize: "18px", color: "#3d3a35", lineHeight: "1.7" }}>
-          Don&apos;t choose by ad or price alone. Choose by real fit for your business needs today — and in a year.
+          Don&apos;t choose by ad or price alone. Choose by real fit for your business needs today - and in a year.
         </p>
       </div>
     </Box>
@@ -604,7 +604,7 @@ const FLOW_STEPS = [
   { n: "01", text: "Open the original document" },
   { n: "02", text: 'Select "Cancel" or "Issue negative receipt"' },
   { n: "03", text: "System copies customer and transaction details, flips amount to negative" },
-  { n: "04", text: "Both documents saved in books — original and negative" },
+  { n: "04", text: "Both documents saved in books - original and negative" },
 ]
 
 export function HowItWorksFlow() {
@@ -647,9 +647,9 @@ export function HowItWorksFlow() {
 }
 
 const REQS = [
-  { req: "Automatic negative receipt creation", why: "For payment refund — without manual intervention", status: { label: "Critical", bg: c.redSoft, color: c.red } },
+  { req: "Automatic negative receipt creation", why: "For payment refund - without manual intervention", status: { label: "Critical", bg: c.redSoft, color: c.red } },
   { req: "Clear link between documents", why: "To know which negative receipt belongs to which original", status: { label: "Critical", bg: c.redSoft, color: c.red } },
-  { req: "Clear status per document", why: "Active / Cancelled / Credited — visible in interface", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
+  { req: "Clear status per document", why: "Active / Cancelled / Credited - visible in interface", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
   { req: "Inclusion in reports", why: "Both documents appear in reports consistently", status: { label: "Important", bg: c.amberSoft, color: c.amber } },
 ]
 

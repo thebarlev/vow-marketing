@@ -22,7 +22,7 @@ type Props = {
 
 export function VisionToExecutionSectionEN({
   title = "AI-Powered Development That Drives Growth",
-  subtitle = "Websites that deliver from day one—leads, sales, and measurable results.",
+  subtitle = "Websites that deliver from day one-leads, sales, and measurable results.",
   ctaLabel = "Get in touch",
   source = "design_development",
   ctaHref,

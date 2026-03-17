@@ -93,11 +93,11 @@ export function HeaderEN() {
             <EnLink
               href="/en"
               className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md shrink-0"
-              aria-label="VOW — Back to home"
+              aria-label="VOW - Back to home"
             >
               <Image
                 src="/logo.svg"
-                alt="VOW logo — digital marketing, SEO AI and website development"
+                alt="VOW logo - digital marketing, SEO AI and website development"
                 width={150}
                 height={46}
                 priority

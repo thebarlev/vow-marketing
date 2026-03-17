@@ -45,7 +45,7 @@ export default function PrivacyPageEn() {
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800">
-                By using our services, you agree to this privacy policy. If you do not agree — do not use the services.
+                By using our services, you agree to this privacy policy. If you do not agree - do not use the services.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function PrivacyPageEn() {
 
             <h4 className="text-[18px] font-semibold mb-2 mt-4">When making a payment:</h4>
             <ul className="list-disc ml-6 my-3 space-y-1">
-              <li>Credit card details (transferred directly to the payment provider — we do not store credit card numbers)</li>
+              <li>Credit card details (transferred directly to the payment provider - we do not store credit card numbers)</li>
               <li>Billing address</li>
               <li>Transaction details (amount, date, subscription type)</li>
             </ul>
@@ -178,42 +178,42 @@ export default function PrivacyPageEn() {
 
             <ul className="space-y-2 my-4">
               <li>
-                <strong>Google Analytics</strong> — usage pattern analysis
+                <strong>Google Analytics</strong> - usage pattern analysis
                 <br />
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Google Ads</strong> — targeted advertising
+                <strong>Google Ads</strong> - targeted advertising
                 <br />
                 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Meta (Facebook/Instagram)</strong> — social media advertising
+                <strong>Meta (Facebook/Instagram)</strong> - social media advertising
                 <br />
                 <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Microsoft Clarity</strong> — user experience analysis
+                <strong>Microsoft Clarity</strong> - user experience analysis
                 <br />
                 <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>TikTok</strong> — advertising on TikTok
+                <strong>TikTok</strong> - advertising on TikTok
                 <br />
                 <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <strong>Taboola</strong> — targeted advertising
+                <strong>Taboola</strong> - targeted advertising
                 <br />
                 <a href="https://www.taboola.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
                   Privacy Policy
@@ -338,7 +338,7 @@ export default function PrivacyPageEn() {
               <div className="bg-white p-4 rounded-lg">
                 <h4 className="font-semibold mb-2">Essential cookies:</h4>
                 <ul className="list-disc ml-6 space-y-1">
-                  <li>Basic operation — login, navigation, preference memory</li>
+                  <li>Basic operation - login, navigation, preference memory</li>
                   <li><strong>Cannot be blocked</strong> (without them the system will not work)</li>
                 </ul>
               </div>
@@ -379,8 +379,8 @@ export default function PrivacyPageEn() {
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.3 Third-Party Cookies</h3>
             <p>We use cookies from the following parties:</p>
             <ul className="list-disc ml-6 my-3 space-y-1">
-              <li>Google Analytics — traffic analysis</li>
-              <li>Google Ads, Meta, TikTok, Taboola, Microsoft Clarity — targeted advertising</li>
+              <li>Google Analytics - traffic analysis</li>
+              <li>Google Ads, Meta, TikTok, Taboola, Microsoft Clarity - targeted advertising</li>
             </ul>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.4 How to Manage Cookies</h3>

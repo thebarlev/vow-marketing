@@ -85,7 +85,7 @@ const FIRST_STEPS_EN = [
   {
     n: "01",
     title: "Open a free account",
-    body: "Easiest to start: Make.com (formerly Integromat). For something even simpler — Zapier.",
+    body: "Easiest to start: Make.com (formerly Integromat). For something even simpler - Zapier.",
     tag: "5 min",
     tagColor: c.greenSoft,
     tagText: c.green,

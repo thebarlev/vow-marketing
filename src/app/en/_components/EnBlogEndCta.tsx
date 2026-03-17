@@ -9,7 +9,7 @@ export function EnBlogEndCta() {
           Want us to review your business process?
         </H2>
         <p className="mt-4 text-pretty text-[18px] leading-[34px] text-[#747474] sm:text-[20px]">
-          Leave your details and we&apos;ll return with a clear direction and practical steps — no commitment.
+          Leave your details and we&apos;ll return with a clear direction and practical steps - no commitment.
         </p>
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
