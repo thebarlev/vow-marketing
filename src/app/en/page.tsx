@@ -106,30 +106,54 @@ export default function EnHomePage() {
       <TestimonialsEN />
       <AboutSectionEN />
       <GreenInvoiceSectionEN />
-      <PackagesSectionEN />
       <section className="mx-auto max-w-[1440px] px-4 pb-10 sm:px-6 lg:px-4" aria-label="Growth Guides">
-        <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-left">
-          <H3>
-            Growth Guides
-          </H3>
-          <p className="mt-4 max-w-[760px] text-center">
-            Explore practical guides on traffic, SEO, and customer acquisition:
-            {" "}
-            <Link href="/en/growth-guides/how-to-get-traffic-to-my-website" className="text-[#5389BB] underline hover:no-underline">
-              How to Get Traffic to Your Website
-            </Link>
-            {" · "}
-            <Link href="/en/growth-guides/how-to-get-customers-online" className="text-[#5389BB] underline hover:no-underline">
-              How to Get Customers Online
-            </Link>
-            {" · "}
-            <Link href="/en/growth-guides" className="text-[#5389BB] underline hover:no-underline">
-              All Growth Guides
-            </Link>
-          </p>
+  <div className="mx-auto max-w-[1120px] overflow-hidden rounded-2xl border border-black/[0.07] bg-white">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto]">
+
+      {/* Left: Title + description */}
+      <div className="border-b border-black/[0.07] p-8 md:border-b-0 md:border-r md:p-10">
+        <div className="mb-3 flex items-center gap-2.5">
+          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-blue-50">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <polyline points="1,10 5,5 8,7 13,2" stroke="#3b82f6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="10,2 13,2 13,5" stroke="#3b82f6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <H3>Growth Guides</H3>
         </div>
-      </section>
-      <FaqSectionEN />
+        <p className="max-w-[480px] text-sm leading-relaxed text-gray-500">
+          Practical guides on traffic, SEO, and customer acquisition to help you grow faster.
+        </p>
+      </div>
+
+      {/* Right: Links list */}
+      <div className="flex min-w-[260px] flex-col divide-y divide-black/[0.07]">
+        <Link
+          href="/en/growth-guides/how-to-get-traffic-to-my-website"
+          className="flex items-center justify-between gap-4 px-6 py-3.5 text-[13.5px] text-[#5389BB] transition-colors hover:bg-gray-50"
+        >
+          How to Get Traffic to Your Website
+          <ArrowUpRight className="h-3 w-3 shrink-0 opacity-50" />
+        </Link>
+        <Link
+          href="/en/growth-guides/how-to-get-customers-online"
+          className="flex items-center justify-between gap-4 px-6 py-3.5 text-[13.5px] text-[#5389BB] transition-colors hover:bg-gray-50"
+        >
+          How to Get Customers Online
+          <ArrowUpRight className="h-3 w-3 shrink-0 opacity-50" />
+        </Link>
+        <Link
+          href="/en/growth-guides"
+          className="flex items-center justify-between gap-4 px-6 py-3.5 text-[13.5px] text-gray-500 transition-colors hover:bg-gray-50"
+        >
+          All Growth Guides
+          <ArrowRight className="h-3 w-3 shrink-0 opacity-40" />
+        </Link>
+      </div>
+
+    </div>
+  </div>
+</section>
     </>
   )
 }

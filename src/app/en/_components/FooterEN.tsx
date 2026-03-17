@@ -13,8 +13,6 @@ const LEGAL_LINKS = [
 
 const PRODUCTS_LINKS = [
   { href: "/en/seo-ai", label: "Google & AI Search Optimization" },
-  { href: "/en/account-ai", label: "AI Accountant" },
-  { href: "/en/invoice", label: "Digital Invoice" },
 ] as const
 
 const SERVICES_LINKS = [

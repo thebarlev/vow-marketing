@@ -96,10 +96,6 @@ export const growthGuideTopicsBySlug = new Map<string, GrowthGuideTopic>(
 
 export const growthGuideFooterLinks = [
   {
-    href: "/en/growth-guides",
-    label: "Growth Guides",
-  },
-  {
     href: "/en/growth-guides/how-to-get-traffic-to-my-website",
     label: "How to Get Traffic to Your Website",
   },
@@ -118,10 +114,6 @@ export const growthGuideFooterLinks = [
 ] as const
 
 export const growthGuideFooterLinksHe = [
-  {
-    href: "/growth-guides",
-    label: "מדריכי צמיחה",
-  },
   {
     href: "/growth-guides/how-to-get-traffic-to-my-website",
     label: "איך להביא תנועה לאתר",
