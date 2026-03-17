@@ -16,9 +16,9 @@ export const seoAiConfigEn: ServicePageConfig = {
   },
   hero: {
     title: "Customers don't search Google anymore - they ask AI.",
-    subtitle: "Not showing up in AI search? We can fix that.",
+    subtitle: "We don’t do “SEO”. We make your business show up where customers actually look — Google, ChatGPT, and AI search.",
     heroSubheading: "",
-    ctaLabel: "Get a free presence audit",
+    ctaLabel: "Get your free growth plan",
     ctaSource: "digital_marketing",
     imageSrc: "/services/seo-ai/hero1.webp",
     imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
@@ -33,7 +33,7 @@ export const seoAiConfigEn: ServicePageConfig = {
   vision: {
     title: "Promotion that brings traffic and turns it into leads",
     subtitle:
-      "Most business owners pay for ads every month and get leads that stop the moment the budget runs out. That's not strategy. That's a tap that can always be turned off.",
+      "We build visibility in Google & AI that keeps generating leads, every month.",
     ctaLabel: "Plans & pricing",
     ctaHref: "#price",
     source: "digital_marketing",

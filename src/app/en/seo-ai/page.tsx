@@ -77,7 +77,8 @@ export default function SeoAiPageEn() {
         ariaLabel: seoAiConfigEn.hero.title,
         ctaHref: "#price",
       }}
-      heroTitle={<>Does your business show up in the answer?</>}
+      heroTitle={<>Get your business to appear in Google &amp; AI answers - or stay invisible</>}
+      stats={{ title: "If you're not in AI answers - your competitors are." }}
       heroSubtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
       vision={{
         title: seoAiConfigEn.vision?.title,

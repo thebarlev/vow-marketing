@@ -48,34 +48,34 @@ const STEPS_EN: readonly SeoAiProcessStep[] = [
   {
     id: "seo-ai-step-1",
     number: "1",
-    title: "Deep audit, day one",
+    title: "Pages built to rank in Google & AI",
     description:
       "Deep scan of your site: content, structure, speed, AI readiness, competition. ",
-    timing: "Days 1–3",
+    timing: "Weekly",
   },
   {
     id: "seo-ai-step-2",
     number: "2",
-    title: "Clear monthly work plan",
+    title: "Content optimized for ChatGPT answers",
     description:
       "Clear plan. Actual execution. Measurable results. No reports.",
-    timing: "Week 1",
+    timing: "Weekly",
   },
   {
     id: "seo-ai-step-3",
     number: "3",
-    title: "Execution, not more reports",
+    title: "Ongoing growth system (not one-time SEO)",
     description:
       "Upgrade content, structure, service pages, FAQs, schemas. Optimize for Google and AI engines. We do it, not just recommend.",
-    timing: "Weeks 2–4",
+    timing: "Weekly",
   },
   {
     id: "seo-ai-step-4",
     number: "4",
-    title: "Measurement and reporting, real data",
+    title: "Measurable increase in traffic & leads",
     description:
       "Every month end: how much traffic came, what improved, what's next. Full transparency always.",
-    timing: "End of each month",
+    timing: "Weekly",
   },
 ] as const
 
@@ -101,7 +101,7 @@ export function SeoAiProcessSteps({
           <div className={isLtr ? "text-left" : "text-right"}>
             <div className="text-[#5389BB] text-[14px] font-semibold">{label ?? (isLtr ? "Process" : "התהליך")}</div>
             <H2 className={`mt-2 ${isLtr ? "text-left" : "text-right"}`}>
-              {title ?? (isLtr ? "What happens from day one" : "מה קורה מהיום הראשון")}
+              {title ?? (isLtr ? "What you actually get" : "מה קורה מהיום הראשון")}
             </H2>
             <H3 className="mt-3">
               {subtitle ?? (isLtr ? "Full transparency. Every month you know exactly what was done and what's next." : "שקיפות מלאה. כל חודש אתה יודע בדיוק מה נעשה ומה מצפה לך.")}

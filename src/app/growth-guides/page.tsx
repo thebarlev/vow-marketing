@@ -71,13 +71,13 @@ export default function GrowthGuidesIndexPageHe() {
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
             <div className="mx-auto w-full max-w-[1120px]">
               <div className="max-w-[760px] text-right">
-                <H2 className="text-balance tracking-[-0.2px]">
+                <H2 className="text-balance tracking-[-0.2px] text-right">
                   מדריכי צמיחה שמחברים בין חיפוש, מסר ותוצאה עסקית
                 </H2>
-                <H3 className="mt-5">
+                <p className="mt-5">
                   כל מדריך בנוי סביב שאלה אמיתית של בעלי עסקים: איך להביא תנועה,
                   איך לשפר SEO, איך לקבל לידים ואיך להגדיל צמיחה דיגיטלית בלי להתפזר.
-                </H3>
+                </p>
               </div>
 
               <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">

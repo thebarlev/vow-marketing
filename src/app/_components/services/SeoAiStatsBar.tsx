@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import { H2 } from "@/components/ui/Heading"
 
 export type SeoAiStatsBarItem = {
   value: ReactNode
@@ -23,10 +24,12 @@ export function SeoAiStatsBar({
   locale = "he",
   ariaLabel,
   items,
+  title,
 }: {
   locale?: "he" | "en"
   ariaLabel?: string
   items?: readonly SeoAiStatsBarItem[]
+  title?: ReactNode
 }) {
   const isEn = locale === "en"
   const resolvedItems = items ?? DEFAULT_ITEMS[isEn ? "en" : "he"]
@@ -34,6 +37,9 @@ export function SeoAiStatsBar({
     <section aria-label={ariaLabel ?? (isEn ? "SEO AI metrics" : "מדדים על SEO AI")} className="bg-[#F4F1EC]" dir={isEn ? "ltr" : "rtl"}>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
         <div className="rounded-[18px] bg-black px-6 py-10 shadow-lg sm:px-10 sm:py-12">
+          {title ? (
+            <H2 className="mb-10 text-center text-white">{title}</H2>
+          ) : null}
           <div className="flex flex-col items-center gap-16 text-center sm:flex-row sm:justify-center sm:gap-24">
             {resolvedItems.map((item, index) => (
               <div key={`${index}-${typeof item.line1 === "string" ? item.line1 : "stat"}`}>
