@@ -1,12 +1,15 @@
-type Step = {
+import type { ReactNode } from "react"
+import { H2, H3 } from "@/components/ui/Heading"
+
+export type SeoAiProcessStep = {
   id: string
   number: string
-  title: string
-  description: string
-  timing: string
+  title: ReactNode
+  description: ReactNode
+  timing: ReactNode
 }
 
-const STEPS_HE: readonly Step[] = [
+const STEPS_HE: readonly SeoAiProcessStep[] = [
   {
     id: "seo-ai-step-1",
     number: "1",
@@ -41,7 +44,7 @@ const STEPS_HE: readonly Step[] = [
   },
 ] as const
 
-const STEPS_EN: readonly Step[] = [
+const STEPS_EN: readonly SeoAiProcessStep[] = [
   {
     id: "seo-ai-step-1",
     number: "1",
@@ -76,28 +79,40 @@ const STEPS_EN: readonly Step[] = [
   },
 ] as const
 
-export function SeoAiProcessSteps({ locale = "he" }: { locale?: "he" | "en" }) {
+export function SeoAiProcessSteps({
+  locale = "he",
+  label,
+  title,
+  subtitle,
+  steps,
+}: {
+  locale?: "he" | "en"
+  label?: ReactNode
+  title?: ReactNode
+  subtitle?: ReactNode
+  steps?: readonly SeoAiProcessStep[]
+}) {
   const isLtr = locale === "en"
-  const steps = isLtr ? STEPS_EN : STEPS_HE
+  const resolvedSteps = steps ?? (isLtr ? STEPS_EN : STEPS_HE)
   return (
     <section aria-label={isLtr ? "Process" : "התהליך"} className="py-[var(--space-section)] bg-[#F4F1EC]" dir={isLtr ? "ltr" : "rtl"}>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
         <div className="mx-auto w-full max-w-[620px] rounded-3xl bg-white px-6 py-10 shadow-sm sm:px-10 sm:py-12">
           <div className={isLtr ? "text-left" : "text-right"}>
-            <div className="text-[#5389BB] text-[14px] font-semibold">{isLtr ? "Process" : "התהליך"}</div>
-            <h2 className={`mt-2 text-black text-[34px] font-semibold leading-[1.15] sm:text-[44px] ${isLtr ? "text-left" : "text-right"}`}>
-              {isLtr ? "What happens from day one" : "מה קורה מהיום הראשון"}
-            </h2>
-            <p className="mt-3 text-[22px] font-semibold leading-[28px] text-[color:var(--vow-muted)] sm:text-[20px]">
-              {isLtr ? "Full transparency. Every month you know exactly what was done and what's next." : "שקיפות מלאה. כל חודש אתה יודע בדיוק מה נעשה ומה מצפה לך."}
-            </p>
+            <div className="text-[#5389BB] text-[14px] font-semibold">{label ?? (isLtr ? "Process" : "התהליך")}</div>
+            <H2 className={`mt-2 ${isLtr ? "text-left" : "text-right"}`}>
+              {title ?? (isLtr ? "What happens from day one" : "מה קורה מהיום הראשון")}
+            </H2>
+            <H3 className="mt-3">
+              {subtitle ?? (isLtr ? "Full transparency. Every month you know exactly what was done and what's next." : "שקיפות מלאה. כל חודש אתה יודע בדיוק מה נעשה ומה מצפה לך.")}
+            </H3>
           </div>
 
           <div className="relative mt-10">
             <div className={`absolute top-2 bottom-2 w-px bg-[#B8CFE4] ${isLtr ? "left-6" : "right-6"}`} aria-hidden="true" />
 
             <div className="space-y-10">
-              {steps.map((step) => (
+              {resolvedSteps.map((step) => (
                 <div key={step.id} className={`relative ${isLtr ? "pl-20 text-left" : "pr-20 text-right"}`}>
                   <div
                     className={`absolute top-0 flex h-10 w-10 items-center justify-center rounded-md bg-[#5389BB] text-white text-[14px] font-semibold ${isLtr ? "left-2" : "right-2"}`}

@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa"
 import { EnLink } from "./EnLink"
+import { growthGuideFooterLinks } from "@/lib/growth-guides/topics"
 
 const LEGAL_LINKS = [
   { href: "/en/terms", label: "Terms" },
@@ -30,6 +31,8 @@ const VOW_LINKS = [
   { href: "/en/contact", label: "Contact" },
 ] as const
 
+const GROWTH_GUIDE_LINKS = growthGuideFooterLinks
+
 type FooterColumn = {
   title: string
   items: readonly { href: string; label: string }[]
@@ -39,6 +42,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   { title: "Legal", items: LEGAL_LINKS },
   { title: "Services", items: SERVICES_LINKS },
   { title: "Products", items: PRODUCTS_LINKS },
+  { title: "Growth Guides", items: GROWTH_GUIDE_LINKS },
   { title: "VOW", items: VOW_LINKS },
 ]
 
@@ -48,7 +52,7 @@ export function FooterEN() {
       <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-8">
           {/* Left: Navigation columns */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 md:flex-1 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 md:flex-1">
             {FOOTER_COLUMNS.map((col) => (
               <div key={col.title} className="text-left" dir="ltr">
                 <p className="text-left text-[18px] font-semibold text-[#A1A1A1] mb-4 leading-[20px]">
@@ -56,7 +60,7 @@ export function FooterEN() {
                 </p>
                 <ul className="flex flex-col items-start space-y-3" dir="ltr">
   {col.items.map((item) => (
-    <li key={item.href} className="w-full">
+    <li key={`${item.href}-${item.label}`} className="w-full">
       <EnLink
         href={item.href}
         className="block text-left leading-[1.1] text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors"
@@ -120,6 +124,7 @@ export function FooterEN() {
             © {new Date().getFullYear()} VOW
           </p>
         </div>
+
       </div>
     </footer>
   )

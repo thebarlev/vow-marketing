@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { H2 } from "@/components/ui/Heading"
 
 const HERO_TITLE_EN = "Websites, SEO and AI tools to grow your business"
 const HERO_SUBHEADING_EN = "Not showing up in AI search? We fix that."
@@ -18,9 +19,9 @@ export function HeroEN() {
                 {HERO_TITLE_EN}
               </span>
             </h1>
-            <h2 className="mt-4 md:mt-6 w-full text-left text-[30px] font-normal leading-[36px] text-black">
+            <H2 className="mt-4 w-full text-left font-normal md:mt-6">
               {HERO_SUBHEADING_EN}
-            </h2>
+            </H2>
           </div>
         {/* IMAGE */}
 <div className="order-1 md:order-2 flex justify-end">

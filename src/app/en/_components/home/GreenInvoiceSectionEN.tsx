@@ -2,6 +2,7 @@ import Image from "next/image"
 import { EnLink } from "@/app/en/_components/EnLink"
 import { CheckIcon } from "@/app/_components/home/CheckIcon"
 import { GREEN_INVOICE_BENEFITS_EN } from "./homeEn.constants"
+import { H2 } from "@/components/ui/Heading"
 
 export function GreenInvoiceSectionEN() {
   return (
@@ -20,9 +21,9 @@ export function GreenInvoiceSectionEN() {
               Results from day one
             </p>
 
-            <h2 className="mt-0 text-left text-[40px] font-semibold leading-[1.2] text-black">
-              Site scan that finds Google & AI barriers and delivers an action plan.
-            </h2>
+            <H2 className="mt-0 text-left">
+              We make sure Google and AI find your business - and rank it ahead of the competition.
+            </H2>
 
             <EnLink
               href="/seo-ai"

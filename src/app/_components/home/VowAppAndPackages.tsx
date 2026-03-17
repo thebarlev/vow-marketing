@@ -2,6 +2,7 @@ import Image from "next/image"
 
 import { CheckIcon } from "./CheckIcon"
 import { PACKAGE_CARDS } from "./home.constants"
+import { H3 } from "@/components/ui/Heading"
 
 function PackageCard(props: {
   kicker: string
@@ -15,9 +16,9 @@ function PackageCard(props: {
         {props.kicker}
       </p>
 
-      <h3 className="mt-2 h3-title h3-title--narrow">
+      <H3 className="mt-2 max-w-full w-[var(--h3-width)] text-black">
         {props.headline}
-      </h3>
+      </H3>
 
       <button
         type="button"

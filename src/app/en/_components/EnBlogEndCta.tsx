@@ -1,12 +1,13 @@
 import { EnLink } from "./EnLink"
+import { H2 } from "@/components/ui/Heading"
 
 export function EnBlogEndCta() {
   return (
     <section aria-label="Call to action" className="mt-14" dir="ltr">
       <div className="rounded-3xl border border-black/10 bg-white/60 px-6 py-8 sm:px-10 sm:py-10">
-        <h2 className="text-left w-full pb-0 text-[32px] leading-[1.15] sm:text-[40px] lg:text-[46px]">
+        <H2 className="w-full pb-0 text-left">
           Want us to review your business process?
-        </h2>
+        </H2>
         <p className="mt-4 text-pretty text-[18px] leading-[34px] text-[#747474] sm:text-[20px]">
           Leave your details and we&apos;ll return with a clear direction and practical steps — no commitment.
         </p>

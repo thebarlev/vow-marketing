@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   title: "אודות VOW",
@@ -69,9 +70,9 @@ export default function AboutPage() {
         {/* ════ SERVICES ════ */}
         <section className="pb-12" aria-labelledby="services-heading">
   <div className={WRAP_MID}>
-    <h2 id="services-heading" className="text-[28px] font-semibold text-black sm:text-[34px] mb-6 text-right">
+    <H2 id="services-heading" className="mb-6 text-right">
       השירותים שלנו
-    </h2>
+    </H2>
     <div className="rounded-2xl bg-white border border-black/[0.07] overflow-hidden">
       {SERVICES.map((s, i) => (
         <div key={s.num}>
@@ -82,9 +83,9 @@ export default function AboutPage() {
             </span>
             {/* תוכן */}
             <div className="flex-1 text-right">
-              <h3 className="text-[20px] sm:text-[24px] font-semibold text-black mb-1 leading-snug">
+              <H3 className="mb-1 text-[20px] leading-snug text-black sm:text-[24px]">
                 {s.title}
-              </h3>
+              </H3>
               <p className="text-[18px] sm:text-[20px] leading-[26px] text-[#000000]">
                 {s.body}
               </p>
@@ -103,9 +104,9 @@ export default function AboutPage() {
         <section className="py-4 sm:py-5">
           <div className={WRAP_NARROW}>
             <div className="rounded-2xl bg-white border border-black/[0.07] px-8 py-4 sm:px-12 sm:py-14 text-center">
-              <h2 className="text-[28px] font-semibold text-black sm:text-[38px] leading-[1.15] mb-5">
+              <H2 className="mb-5">
                 עסקים צריכים פתרונות. לא עוד ספק.
-              </h2>
+              </H2>
               <p className="text-[17px] leading-[28px] text-[#000000] sm:text-[20px] sm:leading-[30px] mx-auto">
                 אחרי יותר מ־20 שנה בעולמות האפיון, הפיתוח וניהול המוצר - הצטברה תובנה אחת:
                 הטכנולוגיה התקדמה, AI שינה את חוקי המשחק, אבל רוב בעלי העסקים עדיין עובדים בשיטות
@@ -134,9 +135,9 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <h2 className=" text-[32px] pb-1 font-semibold text-black sm:text-[40px] mb-1 lg:py-0">
+      <H2 className="mb-1 pb-1 lg:py-0">
         איציק ברלב
-      </h2>
+      </H2>
       <p className="  text-[20px] text-black mb-6 leading-relaxed text-center mx-auto">
         למעלה מ־20 שנה באפיון, UX, פיתוח וניהול מוצר. ארבע שנים באיטליה, שמונה שנים ב־MAX (לאומי קארד).<br />
         <span className="font-medium">עסק שלא מחובר לטכנולוגיה חכמה - נשאר מאחור.</span>
@@ -162,9 +163,9 @@ export default function AboutPage() {
         <section className=" lg:py-1 py-0 sm:py-17 lg:pb-19">
           <div className={WRAP_NARROW}>
             <div className="rounded-2xl bg-white border border-black/[0.07] px-8 py-4 sm:px-14 sm:py-16 text-center">
-              <h2 className="text-[28px] font-semibold text-black sm:text-[38px] leading-[1.15] mb-4">
+              <H2 className="mb-4">
                 השאירו פרטים
-              </h2>
+              </H2>
               <p className="text-[18px] leading-[24px] text-[#000000] sm:text-[18px] sm:leading-[30px] max-w-[690px] mx-auto mb-8">
                 אם אתם בתחילת הדרך - אנחנו מציעים פתרון מלא הכולל מיתוג, אתר ונגישות דיגיטליים מוכנים להשקה.{" "}
                 <a href="/portfolio" className="text-[#5389BB] underline hover:no-underline">דוגמאות מהעבודות</a>

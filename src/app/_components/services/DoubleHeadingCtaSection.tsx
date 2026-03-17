@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { H2, H3 } from "@/components/ui/Heading"
 
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
@@ -43,10 +44,10 @@ export function DoubleHeadingCtaSection({
     <section aria-label={title} className="py-[var(--space-section)] bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
         <div className={isLtr ? "mx-auto w-full max-w-[900px] text-left md:text-center" : "mx-auto w-full max-w-[900px] text-right md:text-center"}>
-          <h2 className="pb-2">{title}</h2>
-          <p className="mx-auto max-w-[780px] text-[20px] font-semibold leading-[34px] text-[color:var(--vow-muted)]">
+          <H2 className="pb-2">{title}</H2>
+          <H3 className="mx-auto max-w-[780px]">
             {subtitle}
-          </p>
+          </H3>
 
           {buttonHref ? (
             buttonHref.startsWith("/") ? (

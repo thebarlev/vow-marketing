@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { formatDateEn, formatDateHe, getCategoryLabel, getCategoryLabelEn } from "./blog.utils"
+import { H3 } from "@/components/ui/Heading"
 
 type Props = {
   href: string
@@ -33,9 +34,9 @@ export function BlogPostRow({ href, title, date, category, readingTimeMinutes, l
       <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-0">
         <div className="flex items-start justify-between gap-6">
           <div className="min-w-0">
-            <h3 className="text-balance text-[22px] font-semibold leading-[1.25] text-black sm:text-[26px] lg:text-[30px]">
+            <H3 className="text-balance text-black">
               <span className="underline-offset-4 group-hover:underline">{title}</span>
-            </h3>
+            </H3>
             <p className="mt-2 text-[18px] font-medium text-[#747474] sm:text-[20px]">
               {metaParts.join(" · ")}
             </p>

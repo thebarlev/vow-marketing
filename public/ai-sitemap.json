@@ -2,7 +2,7 @@
   "site": "https://vow.co.il",
   "brand": "VOW",
   "description": "AI-powered accountant, digital invoicing and website development platform.",
-  "generated_at": "2026-03-13T12:00:21.227Z",
+  "generated_at": "2026-03-17T14:12:15.992Z",
   "priority_pages": [
     {
       "url": "https://vow.co.il",
@@ -57,10 +57,6 @@
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/en/seo-ai",
-      "type": "seo"
-    },
-    {
       "url": "https://vow.co.il/en/portfolio",
       "type": "services"
     },
@@ -77,7 +73,7 @@
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/seo-ai",
+      "url": "https://vow.co.il/marketing/seo-ai",
       "type": "seo"
     },
     {
@@ -118,6 +114,14 @@
     },
     {
       "url": "https://vow.co.il/en/contact",
+      "type": "page"
+    },
+    {
+      "url": "https://vow.co.il/en/growth-guides",
+      "type": "page"
+    },
+    {
+      "url": "https://vow.co.il/growth-guides",
       "type": "page"
     }
   ]

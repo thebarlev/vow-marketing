@@ -6,6 +6,7 @@
  */
 
 import React, { useState } from "react"
+import { H3 } from "@/components/ui/Heading"
 
 // ── Types ──────────────────────────────────────
 
@@ -283,7 +284,7 @@ export function AiReadabilityPillars() {
       {PILLARS.map((p) => (
         <div key={p.title} className={`rounded-xl border p-5 ${p.color}`}>
           <div className="text-2xl mb-3">{p.icon}</div>
-          <h3 className={`font-bold text-[18px] mb-2 ${p.titleColor}`}>{p.title}</h3>
+          <H3 className={`mb-2 font-bold ${p.titleColor}`}>{p.title}</H3>
           <p className="text-[18px] text-neutral-600 leading-relaxed">{p.desc}</p>
         </div>
       ))}

@@ -5,6 +5,7 @@ import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
+import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   title: "שיווק אורגני SEO / AI | VOW",
@@ -113,9 +114,9 @@ export default function MarketingSeoAiPage() {
           >
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
               <div className="mx-auto w-full max-w-[900px] text-right">
-                <h2 className="text-balance text-[34px] font-semibold leading-[1.15] tracking-[-0.2px] text-black sm:text-[44px] lg:text-[52px]">
+                <H2 className="text-balance tracking-[-0.2px]">
                   {section.question}
-                </h2>
+                </H2>
 
                 <div className="mt-6 space-y-4 text-[18px] leading-[30px] text-black">
                   {section.answer.map((p) => (

@@ -2,6 +2,7 @@
 
 import { useId, useMemo, useState } from "react"
 import { FAQ_ITEMS } from "./home.constants"
+import { H2 } from "@/components/ui/Heading"
 
 export function FaqSection() {
   const baseId = useId()
@@ -24,9 +25,9 @@ export function FaqSection() {
     <section aria-label="שאלות נפוצות" className="py-[var(--space-section)]  bg-[#F4F1EC]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
         <div dir="rtl" className="mx-auto max-w-[777px] w-full px-4 sm:px-0 text-right">
-          <h2 className="text-balance text-[44px] font-semibold leading-[1.1] tracking-[-0.2px] text-black sm:text-[56px] lg:text-[64px]">
+          <H2 className="text-balance tracking-[-0.2px]">
             שאלות נפוצות
-          </h2>
+          </H2>
 
           <div className="mt-10 border-t border-[color:var(--vow-border)]">
             {FAQ_ITEMS.map((item, idx) => {

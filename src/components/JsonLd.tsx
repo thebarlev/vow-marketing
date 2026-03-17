@@ -11,7 +11,9 @@ export function articleSchema(params: {
   headline: string;
   description?: string;
   image?: string;
-  datePublished: string;
+  url?: string;
+  inLanguage?: string;
+  datePublished?: string;
   dateModified?: string;
 }) {
   return {
@@ -20,6 +22,8 @@ export function articleSchema(params: {
     headline: params.headline,
     description: params.description ?? params.headline,
     image: params.image,
+    mainEntityOfPage: params.url,
+    inLanguage: params.inLanguage,
     datePublished: params.datePublished,
     dateModified: params.dateModified ?? params.datePublished,
     author: { "@type": "Organization", name: "VOW" },
@@ -54,6 +58,25 @@ export function webPageSchema(params: { name: string; description: string; url: 
     description: params.description,
     url: params.url,
     dateModified: params.dateModified,
+  };
+}
+
+export function itemListSchema(params: {
+  name: string;
+  url: string;
+  items: { name: string; url: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: params.name,
+    url: params.url,
+    itemListElement: params.items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
   };
 }
 

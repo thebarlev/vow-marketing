@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
@@ -16,6 +17,7 @@ import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
 import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfig } from "@/app/_components/services/services.config"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = seoAiConfig.metadata
 
@@ -127,6 +129,30 @@ export default function SeoAiServicePage() {
 
         <DoubleHeadingCtaSection {...seoAiConfig.doubleHeading} buttonHref="#price" />
         {seoAiConfig.faq ? <ServiceFaqSection {...seoAiConfig.faq} /> : null}
+        <section className="bg-[#F4F1EC] py-[var(--space-section)]" aria-label="מדריכי צמיחה קשורים">
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
+            <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-right">
+              <H2>
+                מדריכי צמיחה
+              </H2>
+              <H3 className="mt-4 max-w-[760px]">
+                המשיכו למדריכים שמרחיבים על SEO וצמיחה אורגנית:
+                {" "}
+                <Link href="/growth-guides/how-to-improve-website-seo" className="text-[#5389BB] underline hover:no-underline">
+                  איך לשפר SEO לאתר
+                </Link>
+                {" · "}
+                <Link href="/growth-guides/how-to-get-traffic-to-my-website" className="text-[#5389BB] underline hover:no-underline">
+                  איך להביא תנועה לאתר
+                </Link>
+                {" · "}
+                <Link href="/growth-guides" className="text-[#5389BB] underline hover:no-underline">
+                  לכל המדריכים
+                </Link>
+              </H3>
+            </div>
+          </div>
+        </section>
         <PackagesSection />
       </main>
       <SiteFooter />

@@ -3,6 +3,7 @@ import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { ContactForm } from "@/app/_components/contact/ContactForm"
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
+import { H2 } from "@/components/ui/Heading"
 
 const CONTACT_FAQ = [
   { id: "contact-faq-1", question: "תוך כמה זמן תחזרו?", answer: "תוך שעות ספורות בימי עסקים." },
@@ -27,7 +28,7 @@ export default function ContactPage() {
               נשמח לשמוע ממך. מלאו את הפרטים ונחזור תוך שעות ספורות. אפשר גם בוואטסאפ: 054-5215193. ימי א׳–ה׳, 9:00–18:00.
             </p>
 
-            <h2 className="mt-10 text-[28px] font-semibold text-black">השאירו פרטים</h2>
+            <H2 className="mt-10">השאירו פרטים</H2>
             <div className="mt-4">
               <ContactForm />
             </div>

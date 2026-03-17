@@ -214,8 +214,8 @@ body {
 
   @media (min-width: 1024px) {
     h2 {
-      font-size: 60px;
-      line-height: 66px;
+      font-size: 40px;
+      line-height: 46px;
     }
 
     h3 {
@@ -469,8 +469,8 @@ body {
 
 @media (min-width: 1024px) {
   .free-year-heading {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 46px;
   }
 }
 

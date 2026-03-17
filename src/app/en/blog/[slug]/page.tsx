@@ -10,6 +10,7 @@ import { getCategoryLabelEn } from "@/app/_components/blog/blog.utils"
 import { EnLink } from "@/app/en/_components/EnLink"
 import { EnBlogEndCta } from "@/app/en/_components/EnBlogEndCta"
 import { prefixEnPath } from "@/app/en/_lib/prefixEnPath"
+import { H2 } from "@/components/ui/Heading"
 
 function findPostEn(slug: string) {
   return allArticles.find((a) => a.slug === slug && (a.locale as string | undefined) === "en")
@@ -228,7 +229,7 @@ export default async function BlogPostPageEn({
         >
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-[980px]">
-              <h2 className="w-full text-[18px] sm:text-[20px]">More articles in this category</h2>
+              <H2 className="w-full">More articles in this category</H2>
             </div>
           </div>
           <div className="mt-2">

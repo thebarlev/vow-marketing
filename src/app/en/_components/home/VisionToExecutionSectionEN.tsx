@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export type VisionCard = {
   id: string
@@ -43,10 +44,10 @@ export function VisionToExecutionSectionEN({
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="text-left md:text-center">
-          <h2 className="text-left md:text-center w-full pb-2">{title}</h2>
-          <h3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
+          <H2 className="w-full pb-2 text-left md:text-center">{title}</H2>
+          <H3 className="mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
             {subtitle}
-          </h3>
+          </H3>
 
           {ctaHref ? (
             <a

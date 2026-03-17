@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa"
+import { growthGuideFooterLinksHe } from "@/lib/growth-guides/topics"
 
 const LEGAL_LINKS = [
   { href: "/terms", label: "תנאים משפטיים" },
@@ -29,6 +30,8 @@ const VOW_LINKS = [
   { href: "/contact", label: "יצירת קשר" },
 ] as const
 
+const GROWTH_GUIDE_LINKS = growthGuideFooterLinksHe
+
 type FooterColumn = {
   title: string
   items: readonly { href: string; label: string }[]
@@ -38,6 +41,7 @@ const FOOTER_COLUMNS: readonly FooterColumn[] = [
   { title: "חשוב לדעת", items: LEGAL_LINKS },
   { title: "שירותים של VOW", items: PAGES_LINKS },
   { title: "מוצרים של VOW", items: PRODUCTS_LINKS },
+  { title: "מדריכי צמיחה", items: GROWTH_GUIDE_LINKS },
   { title: "VOW", items: VOW_LINKS },
 ] as const
 
@@ -46,7 +50,7 @@ export function SiteFooter() {
     <footer role="contentinfo" className="bg-black" dir="rtl">
       <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-2 gap-x-9 gap-y-10 md:grid-cols-5 md:gap-x-10">
+        <div className="grid grid-cols-2 gap-x-9 gap-y-10 md:grid-cols-6 md:gap-x-10">
 
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title} className="text-right">
@@ -55,7 +59,7 @@ export function SiteFooter() {
               </p>
               <ul className="space-y-2">
                 {col.items.map((item) => (
-                  <li key={item.href}>
+                  <li key={`${item.href}-${item.label}`}>
                     <Link
                       href={item.href}
                       className="leading-[1.2] text-[18px] font-normal text-white hover:text-white underline-offset-4 hover:underline transition-colors "
@@ -120,7 +124,6 @@ export function SiteFooter() {
           </p>
 
         </div>
-
       </div>
     </footer>
   )

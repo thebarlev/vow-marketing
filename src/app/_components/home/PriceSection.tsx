@@ -6,6 +6,7 @@ import { OUR_PRICE } from "./home.constants";
 import { useState } from "react";
 import { Popup, LeadSource } from "./Popup";
 import { inferFunnelPlan, pushEvent } from "@/lib/tracking/events";
+import { H2, H3 } from "@/components/ui/Heading"
 
 export type PricePlan = {
   id?: string
@@ -60,13 +61,13 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
   return (
     <section id={id} aria-label="החבילות שלנו" className="py-[var(--space-section)]">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
-        <h2 className="text-center text-[44px] font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+        <H2 className="text-center">
           {title ?? "חשבונית ירוקה מאובטחת"}
-        </h2>
+        </H2>
 
-        <p className="text-center text-[26px] py-3 text-[#747474] font-semibold leading-[32px]">
+        <H3 className="py-3 text-center">
           {subtitle ?? "תמיכה במודל חשבונית ישראל"}
-        </p>
+        </H3>
 
         <div className="mt-8 grid gap-14 all-package lg:grid-cols-3">
           {(plans ?? OUR_PRICE).map((p) => {
@@ -88,15 +89,15 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
 
                 {isSeoAi ? (
                   <>
-                    <h3 className="text-[30px] font-bold leading-[1.15] text-black pt-2">
+                    <H3 className="pt-2 font-bold text-black">
                       {p.title}
-                    </h3>
+                    </H3>
                     <div className="mt-2 text-[24px] font-semibold leading-[1.1] text-[#5389BB]">
                       {p.kicker}
                     </div>
                   </>
                 ) : (
-                  <h3 className="h3-title text-[40px] py-2">{p.title}</h3>
+                  <H3 className="py-2 text-black">{p.title}</H3>
                 )}
 
                 {isSeoAi ? (

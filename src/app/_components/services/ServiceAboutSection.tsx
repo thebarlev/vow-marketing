@@ -1,18 +1,20 @@
 "use client"
 import Image from "next/image"
+import type { ReactNode } from "react"
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export type ServiceAboutItem = {
   id: string
   title: string
-  description?: string
+  description?: ReactNode
   icon?: string
 }
 
 export type ServiceAboutSectionProps = {
   title: string
-  subtitle: string
+  subtitle: ReactNode
   ctaLabel: string
   ctaSource: LeadSource
   ctaHref?: string
@@ -48,10 +50,10 @@ export function ServiceAboutSection({
               py-[20px] px-[10px]
               sm:py-[35px] sm:px-4 sm:translate-x-0
             ">
-              <h2 className={isLtr ? "text-left break-words" : "text-right break-words"}>{title}</h2>
-              <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%] break-words">
+              <H2 className={isLtr ? "break-words text-left" : "break-words text-right"}>{title}</H2>
+              <H3 className="pt-7 break-words sm:max-w-[90%] lg:max-w-[90%]">
                 {subtitle}
-              </p>
+              </H3>
               {ctaHref ? (
                 <a
                   href={ctaHref}
@@ -91,7 +93,12 @@ export function ServiceAboutSection({
                       className="max-w-[39px] h-auto"
                     />
                   ) : null}
-                  <h3 dir="ltr" className="text-lefth3-title sm:text-[30px] font-semibold">{item.title}</h3>
+                  <H3
+                    dir={isLtr ? "ltr" : "rtl"}
+                    className={isLtr ? "text-left text-black sm:text-[30px] sm:leading-[36px]" : "text-right text-black sm:text-[30px] sm:leading-[36px]"}
+                  >
+                    {item.title}
+                  </H3>
                 </div>
                 {item.description ? (
                   <p className={isLtr ? "text-left text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]" : "text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]"}>

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next"
 import { allArticles } from "contentlayer/generated"
 
+import { growthGuides } from "@/lib/growth-guides/topics"
+
 const BASE_URL = "https://vow.co.il"
 
 const staticRoutes = [
@@ -15,6 +17,7 @@ const staticRoutes = [
   "/account-deletion",
   "/about",
   "/blog",
+  "/growth-guides",
   "/design",
   "/develop",
   "/develop-ai",
@@ -23,7 +26,6 @@ const staticRoutes = [
   "/marketing/ppc",
   "/seo-ai",
   "/roi",
-  "/seo-ai",
   "/checkout/success",
   "/checkout/failed",
   // English
@@ -45,6 +47,7 @@ const staticRoutes = [
   "/en/marketing",
   "/en/marketing/ppc",
   "/en/seo-ai",
+  "/en/growth-guides",
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -69,5 +72,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [...staticEntries, ...blogEntries]
+  const growthGuideEntries: MetadataRoute.Sitemap = growthGuides.flatMap((guide) => [
+    {
+      url: `${BASE_URL}/en/growth-guides/${guide.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    {
+      url: `${BASE_URL}/growth-guides/${guide.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+  ])
+
+  return [...staticEntries, ...blogEntries, ...growthGuideEntries]
 }

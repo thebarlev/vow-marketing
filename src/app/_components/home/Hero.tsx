@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { H2 } from "@/components/ui/Heading"
 
 const HERO_TITLE = "פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות!"
 const HERO_SUBHEADING =
@@ -50,9 +51,9 @@ export function Hero() {
 
             </h1>
 
-            <h2 className="mt-4 md:mt-8 w-full text-right text-[30px] font-normal leading-[36px] text-black">
+            <H2 className="mt-4 w-full text-right font-normal md:mt-8">
               {HERO_SUBHEADING}
-            </h2>
+            </H2>
 
           </div>
 

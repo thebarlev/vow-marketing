@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { EnLink } from "../_components/EnLink"
+import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   title: "About VOW",
@@ -91,9 +92,9 @@ export default function AboutPageEn() {
         <section className="py-4 sm:py-5">
           <div className={WRAP_NARROW}>
             <div className="rounded-2xl bg-white border border-black/[0.07] px-8 py-4 sm:px-12 sm:py-14 text-center">
-              <h2 className="text-[28px] font-semibold text-black sm:text-[38px] leading-[1.15] mb-5">
+              <H2 className="mb-5">
                 Businesses need solutions. Not another vendor.
-              </h2>
+              </H2>
               <p className="text-[17px] leading-[28px] text-[#000000] sm:text-[20px] sm:leading-[30px] mx-auto">
                 After more than 20 years in specification, development and product management - one insight has accumulated:
                 Technology has advanced, AI has changed the rules, but most business owners still work with methods from a decade ago.
@@ -120,9 +121,9 @@ export default function AboutPageEn() {
                 </div>
               </div>
 
-              <h2 className="text-[32px] pb-1 font-semibold text-black sm:text-[40px] mb-1 lg:py-0">
+              <H2 className="mb-1 pb-1 lg:py-0">
                 Itzik Barlev
-              </h2>
+              </H2>
               <p className="text-[20px] text-black mb-6 leading-relaxed text-center mx-auto">
                 Over 20 years in specification, UX, development and product management. Four years in Italy, eight years at MAX (Leumi Card).<br />
                 <span className="font-medium">A business not connected to smart technology - gets left behind.</span>
@@ -145,9 +146,9 @@ export default function AboutPageEn() {
         <section className="lg:py-1 py-0 sm:py-17 lg:pb-19">
           <div className={WRAP_NARROW}>
             <div className="rounded-2xl bg-white border border-black/[0.07] px-8 py-4 sm:px-14 sm:py-16 text-center">
-              <h2 className="text-[28px] font-semibold text-black sm:text-[38px] leading-[1.15] mb-4">
+              <H2 className="mb-4">
                 Leave your details
-              </h2>
+              </H2>
               <p className="text-[18px] leading-[24px] text-[#000000] sm:text-[18px] sm:leading-[30px] max-w-[690px] mx-auto mb-8">
                 If you&apos;re just starting out - we offer a complete solution including branding, website and digital accessibility ready for launch. Get to market fast, right, and with professional visibility.
               </p>

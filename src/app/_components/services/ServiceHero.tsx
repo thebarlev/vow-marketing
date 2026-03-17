@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
+import { H2 } from "@/components/ui/Heading"
 
 export type ServiceHeroProps = {
   title: React.ReactNode
@@ -84,15 +85,15 @@ export function ServiceHero({
               </p>
             ) : null}
             {heroSubheading ? (
-              <h2
+              <H2
                 className={
                   isLtr
-                    ? "mt-6 w-full text-left text-[30px] font-normal leading-[36px] text-black"
-                    : "mt-6 w-full text-right text-[30px] font-normal leading-[36px] text-black"
+                    ? "mt-6 w-full text-left text-[30px] font-normal leading-[36px]"
+                    : "mt-6 w-full text-right text-[30px] font-normal leading-[36px]"
                 }
               >
                 {heroSubheading}
-              </h2>
+              </H2>
             ) : null}
             {ctaHref ? (
               <a

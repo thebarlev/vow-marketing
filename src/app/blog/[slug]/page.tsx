@@ -9,6 +9,7 @@ import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
 import { MdxContent } from "@/app/_components/blog/MdxContent"
 import { BlogEndCta } from "@/app/_components/blog/BlogEndCta"
 import { CopyLinkButton } from "@/app/_components/blog/CopyLinkButton"
+import { H2 } from "@/components/ui/Heading"
 
 export async function generateMetadata({
   params,
@@ -233,7 +234,7 @@ export default async function BlogPostPage({
         >
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-[980px]">
-              <h2 className="w-full text-[18px] sm:text-[20px]">מאמרים נוספים באותה קטגוריה</h2>
+              <H2 className="w-full">מאמרים נוספים באותה קטגוריה</H2>
             </div>
           </div>
           <div className="mt-2">

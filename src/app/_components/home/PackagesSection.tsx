@@ -4,6 +4,7 @@ import { OUR_PACKAGES, OUR_PACKAGES_EN } from "./home.constants"
 import { useCallback, useState } from "react"
 import { Popup, LeadSource } from "./Popup"
 import { POPUP_OVERRIDES_BY_PATH, type PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export function PackagesSection({ locale = "he" }: { locale?: "he" | "en" }) {
   const packages = locale === "en" ? OUR_PACKAGES_EN : OUR_PACKAGES
@@ -55,9 +56,9 @@ export function PackagesSection({ locale = "he" }: { locale?: "he" | "en" }) {
     <section aria-label={isLtr ? "Our services" : "החבילות שלנו"} className="py-[var(--space-section)]  bg-[#F4F1EC]">
       <div id="lead-design-development" className="scroll-mt-24" />
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
-        <h2 className="text-center text-[44px] pb-0 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+        <H2 className="pb-0 text-center">
           {isLtr ? "Our services" : "השירותים שלנו"}
-        </h2>
+        </H2>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-1 lg:place-items-stretch lg:justify-center">
            {packages.map((p) => (
@@ -68,9 +69,9 @@ export function PackagesSection({ locale = "he" }: { locale?: "he" | "en" }) {
               <p className={`text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)] ${isLtr ? "text-left" : "text-right"}`}>
                  {p.kicker}
               </p>
-              <h3 className="h3-title text-[40px] py-2">
+              <H3 className={`py-2 text-black ${isLtr ? "text-left" : "text-right"}`}>
                 {p.title}
-              </h3>
+              </H3>
 
               <button
   type="button"

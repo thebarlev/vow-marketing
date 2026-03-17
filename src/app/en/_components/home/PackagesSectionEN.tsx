@@ -8,6 +8,7 @@ import { PopupEN } from "./PopupEN"
 import { POPUP_OVERRIDES_BY_PATH } from "@/app/_components/products/productPopupOverrides"
 import type { LeadSource } from "./PopupEN"
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export function PackagesSectionEN() {
   const [open, setOpen] = useState(false)
@@ -56,9 +57,9 @@ export function PackagesSectionEN() {
     <section dir="ltr" aria-label="Our services" className="py-[var(--space-section)] bg-[#F4F1EC]">
       <div id="lead-design-development" className="scroll-mt-24" />
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
-        <h2 className="text-center text-[44px] pb-0 font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px] lg:text-[70px] lg:leading-[80px]">
+        <H2 className="pb-0 text-center">
           Our Services
-        </h2>
+        </H2>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-1 lg:place-items-stretch lg:justify-center">
           {OUR_PACKAGES_EN.map((p) => (
@@ -70,9 +71,9 @@ export function PackagesSectionEN() {
               <p className="text-[20px] font-semibold leading-[32px] text-[color:var(--vow-accent)] text-left">
                 {p.kicker}
               </p>
-              <h3 className="h3-title text-[40px] py-2 text-left">
+              <H3 className="py-2 text-left text-black">
                 {p.title}
-              </h3>
+              </H3>
 
               {"ctaHref" in p && p.ctaHref ? (
                 <Link

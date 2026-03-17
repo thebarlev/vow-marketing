@@ -1,6 +1,7 @@
 "use client"
 
 import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
+import { H2 } from "@/components/ui/Heading"
 
 export function PortfolioCtaSection({ locale = "he" }: { locale?: "he" | "en" }) {
   const isEn = locale === "en"
@@ -8,9 +9,9 @@ export function PortfolioCtaSection({ locale = "he" }: { locale?: "he" | "en" })
     <section aria-label={isEn ? "Call to action" : "קריאה לפעולה"} className="py-[var(--space-section)] bg-[#F4F1EC]" dir={isEn ? "ltr" : "rtl"}>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
         <div className="mx-auto max-w-[980px] text-center">
-          <h2 className="text-balance text-[44px] font-semibold leading-[1.1] text-black sm:text-[56px] lg:text-[64px]">
+          <H2 className="text-balance tracking-[-0.2px]">
             {isEn ? "Ready to be our next project?" : "מוכנים להיות הפרויקט הבא שלנו?"}
-          </h2>
+          </H2>
 
           <p className="mt-4 text-pretty text-[18px] leading-[30px] text-black/80 sm:text-[20px] sm:leading-[34px]">
             {isEn

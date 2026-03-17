@@ -5,6 +5,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useMDXComponent } from "next-contentlayer2/hooks"
+import { H2, H3 } from "@/components/ui/Heading"
 
 function createMdxComponents(locale: "he" | "en") {
   const isLtr = locale === "en"
@@ -16,10 +17,10 @@ function createMdxComponents(locale: "he" | "en") {
       <a {...props} className="underline underline-offset-4 hover:text-[#5389BB]" />
     ),
     h2: (props: React.ComponentPropsWithoutRef<"h2">) => (
-      <h2 {...props} className={`mt-12 text-[20px] sm:text-[22px] ${textAlign}`} />
+      <H2 {...props} className={`mt-12 ${textAlign}`} />
     ),
     h3: (props: React.ComponentPropsWithoutRef<"h3">) => (
-      <h3 {...props} className={`mt-8 text-[18px] sm:text-[20px] ${textAlign}`} />
+      <H3 {...props} className={`mt-8 ${textAlign}`} />
     ),
     p: (props: React.ComponentPropsWithoutRef<"p">) => (
       <p {...props} className="mt-5 text-[18px] leading-[34px] text-black/80 sm:text-[20px]" />

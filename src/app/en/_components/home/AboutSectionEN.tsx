@@ -7,6 +7,7 @@ import { PopupEN } from "./PopupEN"
 import { POPUP_OVERRIDES_BY_PATH } from "@/app/_components/products/productPopupOverrides"
 import type { LeadSource } from "./PopupEN"
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export function AboutSectionEN() {
   const [open, setOpen] = useState(false)
@@ -64,12 +65,12 @@ export function AboutSectionEN() {
             className="relative z-10 flex justify-start items-center p-6"
           >
             <div className="w-full py-[35px]">
-              <h2 className="mt-3 text-left">
+              <H2 className="mt-3 text-left">
                 Branding, Websites & AI Systems That Move Your Business Forward
-              </h2>
-              <p className="font-semibold text-[30px] pt-7 leading-[38px] text-[#747474] sm:max-w-[90%] lg:max-w-[90%]">
+              </H2>
+              <H3 className="pt-7 sm:max-w-[90%] lg:max-w-[90%]">
                 We combine AI at every step-from spec to marketing, to build a precise, fast, profitable business.
-              </p>
+              </H3>
               <button
                 type="button"
                 className="vow-btn-primary mt-8 w-full max-w-[323px] cursor-pointer"
@@ -91,9 +92,9 @@ export function AboutSectionEN() {
                     className="max-w-[39px] h-auto"
                     priority
                   />
-                  <h3 className="h3-title sm:text-[30px] font-semibold text-left">
+                  <H3 className="text-left text-black">
                     {p.title}
-                  </h3>
+                  </H3>
                 </div>
                 <p className="text-left text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]">
                   {p.kicker}

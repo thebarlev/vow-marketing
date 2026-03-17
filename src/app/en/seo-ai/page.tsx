@@ -1,19 +1,10 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
-import { LogoRow } from "@/app/_components/home/LogoRow"
-import { PackagesSectionEN } from "@/app/en/_components/home/PackagesSectionEN"
 import type { PricePlan } from "@/app/_components/home/PriceSection"
-import { PriceSection } from "@/app/_components/home/PriceSection"
-import { SuccessSection } from "@/app/_components/home/SuccessSection"
-import { Testimonials } from "@/app/_components/home/Testimonials"
-import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
-import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
-import { SeoAiProcessSteps } from "@/app/_components/services/SeoAiProcessSteps"
-import { ServiceAboutSection } from "@/app/_components/services/ServiceAboutSection"
-import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
-import { ServiceHero } from "@/app/_components/services/ServiceHero"
-import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
+import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = seoAiConfigEn.metadata
 
@@ -80,61 +71,72 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
 
 export default function SeoAiPageEn() {
   return (
-    <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
-      <div id="main" role="main">
-        <ServiceHero
-          {...seoAiConfigEn.hero}
-          ariaLabel={seoAiConfigEn.hero.title}
-          ctaHref="#price"
-          dir="ltr"
-          subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
-          title={
-            <>
-Does your business show up in the answer?
-            </>
-          }
-        />
-        <LogoRow locale="en" />
-        <SeoAiStatsBar locale="en" />
-        <SeoAiProcessSteps locale="en" />
-        <VisionToExecutionSection
-          title={seoAiConfigEn.vision?.title}
-          subtitle={seoAiConfigEn.vision?.subtitle}
-          ctaLabel={seoAiConfigEn.vision?.ctaLabel}
-          ctaHref={seoAiConfigEn.vision?.ctaHref}
-          source={seoAiConfigEn.vision?.source}
-          cards={seoAiConfigEn.vision?.cards}
-          dir="ltr"
-        />
-
-        {seoAiConfigEn.about ? (
-          <ServiceAboutSection
-            title={seoAiConfigEn.about.title}
-            subtitle={seoAiConfigEn.about.subtitle}
-            ctaLabel={seoAiConfigEn.about.ctaLabel}
-            ctaSource={seoAiConfigEn.about.ctaSource}
-            ctaHref={seoAiConfigEn.about.ctaHref}
-            items={seoAiConfigEn.about.items}
-            dir="ltr"
-          />
-        ) : null}
-
-        <PriceSection
-          id="price"
-          title="Plans & pricing"
-          subtitle="Choose the plan that fits your business stage. Upgrade anytime."
-          plans={SEO_AI_PRICING_EN}
-          variant="seo-ai"
-          locale="en"
-        />
-
-        <SuccessSection locale="en" />
-        <Testimonials locale="en" />
-
-        <DoubleHeadingCtaSection {...seoAiConfigEn.doubleHeading} buttonHref="#price" dir="ltr" />
-        {seoAiConfigEn.faq ? <ServiceFaqSection {...seoAiConfigEn.faq} dir="ltr" /> : null}
-        <PackagesSectionEN />
-      </div>
-    </div>
+    <SeoAiTemplateEn
+      hero={{
+        ...seoAiConfigEn.hero,
+        ariaLabel: seoAiConfigEn.hero.title,
+        ctaHref: "#price",
+      }}
+      heroTitle={<>Does your business show up in the answer?</>}
+      heroSubtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
+      vision={{
+        title: seoAiConfigEn.vision?.title,
+        subtitle: seoAiConfigEn.vision?.subtitle,
+        ctaLabel: seoAiConfigEn.vision?.ctaLabel,
+        ctaHref: seoAiConfigEn.vision?.ctaHref,
+        source: seoAiConfigEn.vision?.source,
+        cards: seoAiConfigEn.vision?.cards,
+      }}
+      about={
+        seoAiConfigEn.about
+          ? {
+              title: seoAiConfigEn.about.title,
+              subtitle: seoAiConfigEn.about.subtitle,
+              ctaLabel: seoAiConfigEn.about.ctaLabel,
+              ctaSource: seoAiConfigEn.about.ctaSource,
+              ctaHref: seoAiConfigEn.about.ctaHref,
+              items: seoAiConfigEn.about.items,
+            }
+          : undefined
+      }
+      price={{
+        id: "price",
+        title: "Plans & pricing",
+        subtitle: "Choose the plan that fits your business stage. Upgrade anytime.",
+        plans: SEO_AI_PRICING_EN,
+        variant: "seo-ai",
+      }}
+      doubleHeading={{
+        ...seoAiConfigEn.doubleHeading,
+        buttonHref: "#price",
+      }}
+      faq={seoAiConfigEn.faq}
+      extraContent={
+        <section className="bg-[#F4F1EC] py-[var(--space-section)]" aria-label="Related growth guides">
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4">
+            <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-left">
+              <H2>
+                Growth Guides
+              </H2>
+              <H3 className="mt-4 max-w-[760px]">
+                Read practical guides that support SEO and AI visibility:
+                {" "}
+                <Link href="/en/growth-guides/how-to-improve-website-seo" className="text-[#5389BB] underline hover:no-underline">
+                  How to Improve Website SEO
+                </Link>
+                {" · "}
+                <Link href="/en/growth-guides/how-to-rank-on-google-fast" className="text-[#5389BB] underline hover:no-underline">
+                  How to Rank on Google Fast
+                </Link>
+                {" · "}
+                <Link href="/en/growth-guides" className="text-[#5389BB] underline hover:no-underline">
+                  All Growth Guides
+                </Link>
+              </H3>
+            </div>
+          </div>
+        </section>
+      }
+    />
   )
 }

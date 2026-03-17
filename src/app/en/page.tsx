@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { HeroEN } from "./_components/home/HeroEN"
 import { LogoRowEN } from "./_components/home/LogoRowEN"
@@ -9,6 +10,7 @@ import { AboutSectionEN } from "./_components/home/AboutSectionEN"
 import { VisionToExecutionSectionEN } from "./_components/home/VisionToExecutionSectionEN"
 import { FaqSectionEN } from "./_components/home/FaqSectionEN"
 import { GreenInvoiceSectionEN } from "./_components/home/GreenInvoiceSectionEN"
+import { H2, H3 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vow.co.il"),
@@ -105,6 +107,28 @@ export default function EnHomePage() {
       <AboutSectionEN />
       <GreenInvoiceSectionEN />
       <PackagesSectionEN />
+      <section className="mx-auto max-w-[1440px] px-4 pb-10 sm:px-6 lg:px-4" aria-label="Growth Guides">
+        <div className="mx-auto max-w-[1120px] rounded-2xl border border-black/[0.07] bg-white px-6 py-8 text-left">
+          <H3>
+            Growth Guides
+          </H3>
+          <p className="mt-4 max-w-[760px] text-center">
+            Explore practical guides on traffic, SEO, and customer acquisition:
+            {" "}
+            <Link href="/en/growth-guides/how-to-get-traffic-to-my-website" className="text-[#5389BB] underline hover:no-underline">
+              How to Get Traffic to Your Website
+            </Link>
+            {" · "}
+            <Link href="/en/growth-guides/how-to-get-customers-online" className="text-[#5389BB] underline hover:no-underline">
+              How to Get Customers Online
+            </Link>
+            {" · "}
+            <Link href="/en/growth-guides" className="text-[#5389BB] underline hover:no-underline">
+              All Growth Guides
+            </Link>
+          </p>
+        </div>
+      </section>
       <FaqSectionEN />
     </>
   )
