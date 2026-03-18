@@ -1,22 +1,66 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
 import { DailyExecutionBlock } from "@/components/marketing/DailyExecutionBlock"
+import { campaignSlugs, getCampaign } from "../campaigns"
 
-export const metadata: Metadata = seoAiConfigEn.metadata
+export const dynamicParams = false
 
-export default function SeoAiPageEn() {
+export function generateStaticParams() {
+  return campaignSlugs.map((slug) => ({ slug }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const campaign = getCampaign(slug)
+
+  if (!campaign) {
+    return { title: "VOW" }
+  }
+
+  return {
+    title: campaign.metaTitle,
+    description: campaign.metaDescription,
+    robots: { index: false, follow: true },
+    alternates: {
+      canonical: "/en/seo-ai",
+    },
+    openGraph: {
+      title: campaign.metaTitle,
+      description: campaign.metaDescription,
+      url: `/en/lp/${campaign.slug}`,
+      type: "website",
+    },
+  }
+}
+
+export default async function CampaignLandingPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const campaign = getCampaign(slug)
+
+  if (!campaign) notFound()
+
   return (
     <SeoAiTemplateEn
       hero={{
         ...seoAiConfigEn.hero,
-        ariaLabel: seoAiConfigEn.hero.title,
+        subtitle: campaign.heroSubtitle,
+        ariaLabel: campaign.heroTitle,
         ctaHref: "#price",
       }}
-      heroTitle={<>Get your business to appear in Google & AI answers</>}
+      heroTitle={<>{campaign.heroTitle}</>}
       trustHeading={{
         title: "Industry leaders chose us. Ready to join them?",
         description: "Join the brands that trust us to drive visibility, traffic, and real results.",
