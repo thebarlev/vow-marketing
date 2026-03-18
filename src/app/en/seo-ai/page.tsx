@@ -4,6 +4,7 @@ import type { PricePlan } from "@/app/_components/home/PriceSection"
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
+import { DailyExecutionBlock } from "@/components/marketing/DailyExecutionBlock"
 
 export const metadata: Metadata = seoAiConfigEn.metadata
 
@@ -77,6 +78,29 @@ export default function SeoAiPageEn() {
         ctaHref: "#price",
       }}
       heroTitle={<>Get your business to appear in Google &amp; AI answers - or stay invisible</>}
+      trustHeading={{
+        title: "Trusted by leading brands that grow with us.",
+        description: "We've helped businesses improve visibility, traffic, and conversions across Google and AI platforms.",
+      }}
+      postLogoContent={
+        <DailyExecutionBlock
+          title="Daily & weekly growth execution (not just strategy)"
+          subtitle="We actively grow your visibility every day."
+          bullets={[
+            {
+              label: "Daily execution",
+              description: "Daily execution: we improve pages, content, and AI visibility signals",
+            },
+            {
+              label: "Weekly growth pushes",
+              description: "Weekly growth pushes: new pages, new keywords, new opportunities",
+            },
+          ]}
+          closingLine="More visibility → more clicks → more customers."
+          imageSrc="/services/d-green-invocie.webp"
+          imageAlt="Daily SEO and AI visibility execution by VOW"
+        />
+      }
       stats={{ title: "If you're not in AI answers - your competitors are." }}
       heroSubtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
       vision={{

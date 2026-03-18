@@ -31,7 +31,7 @@ export const seoAiConfigEn: ServicePageConfig = {
     buttonSource: "digital_marketing",
   },
   vision: {
-    title: "Promotion that brings traffic and turns it into leads",
+    title: "We don’t just bring traffic, we turn it into consistent leads",
     subtitle:
       "We build visibility in Google & AI that keeps generating leads, every month.",
     ctaLabel: "Plans & pricing",

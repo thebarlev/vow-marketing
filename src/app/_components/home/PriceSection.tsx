@@ -89,10 +89,10 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
 
                 {isSeoAi ? (
                   <>
-                    <H3 className="pt-2 font-bold text-black">
+                    <H3 className="pt-2 text-bold text-[20px] text-[#5389BB]">
                       {p.title}
                     </H3>
-                    <div className="mt-2 text-[24px] font-semibold leading-[1.1] text-[#5389BB]">
+                    <div className="mt-2 text-[20px] font-semibold leading-[0.6] text-[#5389BB]">
                       {p.kicker}
                     </div>
                   </>
@@ -143,21 +143,21 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                       onClick={() => {
                         if (variant === "seo-ai") trackPackageClick(p)
                       }}
-                      className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
+                      className="vow-btn-primary text-[18px] mt-5 mb-8 w-full cursor-pointer justify-center text-center"
                     >
                       {p.buttonLabel}
                     </a>
                   )
                 ) : (
-                  <button
-                    type="button"
-                    className="vow-btn-primary text-[20px] mt-5 mb-8 w-full cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.location.assign(APP_BASE_URL);
-                    }}
-                  >
+<button
+  type="button"
+  className="vow-btn-primary text-[18px] mt-5 mb-8 w-full cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-transform duration-200"
+  onClick={(e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.assign(APP_BASE_URL);
+  }}
+>
                     {p.buttonLabel}
                   </button>
                 )}
@@ -165,7 +165,7 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                 <div className="mb-5 h-px w-full bg-[color:var(--vow-border)]" />
 
                 <ul
-                  className={`mt-4 space-y-0 text-[18px] font-normal leading-[30px] text-black sm:text-[20px] sm:leading-[56px] ${
+                  className={`mt-4 space-y-0 text-[18px] font-normal leading-[30px] text-black sm:text-[18px] sm:leading-[56px] ${
                     locale === "en"
                       ? "text-left [&_li]:!text-left [&_li]:![direction:ltr]"
                       : ""
@@ -175,7 +175,7 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                   {p.bullets.map((b, idx) => (
                     <li
                       key={`${p.title}-${idx}`}
-                      className={`flex items-center gap-1 text-[20px] ${locale === "en" ? "flex-row justify-start" : ""}`}
+                      className={`flex items-center gap-1 text-[17px] ${locale === "en" ? "flex-row justify-start" : ""}`}
                     >
                       <CheckIcon className="shrink-0" />
                       <span>{b}</span>

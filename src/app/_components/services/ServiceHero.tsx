@@ -68,8 +68,8 @@ export function ServiceHero({
             <h1
               className={
                 isLtr
-                  ? "text-black w-full text-left font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]"
-                  : "text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[72px] sm:leading-[0.98] lg:text-[76px] lg:leading-[0.98]"
+                  ? "text-black w-full text-left font-semibold leading-[1.05] text-balance text-[56px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
+                  : "text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
               }
             >
               {title}
@@ -88,8 +88,8 @@ export function ServiceHero({
               <H2
                 className={
                   isLtr
-                    ? "mt-6 w-full text-left text-[30px] font-normal leading-[36px]"
-                    : "mt-6 w-full text-right text-[30px] font-normal leading-[36px]"
+                    ? "mt-6 w-full text-left text-[26px] font-normal leading-[20px]"
+                    : "mt-6 w-full text-right text-[26px] font-normal leading-[20px]"
                 }
               >
                 {heroSubheading}
@@ -99,7 +99,7 @@ export function ServiceHero({
               <a
                 href={ctaHref}
                 onClick={ctaHref.startsWith("#") ? onHashLinkClick : undefined}
-                className="btn-primary mt-7 !w-[300px] sm:w-auto text-center"
+  className="btn-primary mt-7 !w-[300px] sm:w-auto text-center flex items-center justify-center px-5"
               >
                 {ctaLabel}
               </a>

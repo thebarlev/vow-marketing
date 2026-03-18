@@ -27,7 +27,7 @@ export function GrowthGuidesCard({
   containerClassName,
 }: GrowthGuidesCardProps) {
   const card = (
-    <div className="mx-auto max-w-[1120px] overflow-hidden rounded-2xl border border-black/[0.07] bg-white">
+    <div className="mx-auto max-w-[820px] overflow-hidden rounded-2xl border border-black/[0.07] bg-white">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_auto]">
 
         <div className="border-b border-black/[0.07] p-8 md:border-b-0 md:border-r md:p-10">
@@ -40,7 +40,7 @@ export function GrowthGuidesCard({
             </div>
             <H3>{title}</H3>
           </div>
-          <p className="max-w-[480px] text-sm leading-relaxed text-gray-500">
+          <p className="max-w-[700px] text-[18px] leading-relaxed text-gray-500">
             {description}
           </p>
         </div>
@@ -50,7 +50,7 @@ export function GrowthGuidesCard({
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center justify-between gap-4 px-6 py-3.5 text-[13.5px] text-[#5389BB] transition-colors hover:bg-gray-50"
+              className="flex items-center justify-between gap-4 px-6 py-3.5 text-[16px] text-[#5389BB] transition-colors hover:bg-gray-50"
             >
               {link.label}
               <ArrowUpRight className="h-3 w-3 shrink-0 opacity-50" />

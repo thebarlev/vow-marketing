@@ -12,12 +12,15 @@ import { ServiceAboutSection } from "@/app/_components/services/ServiceAboutSect
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero, type ServiceHeroProps } from "@/app/_components/services/ServiceHero"
 import { SeoAiStatsBar, type SeoAiStatsBarItem } from "@/app/_components/services/SeoAiStatsBar"
+import { H2 } from "@/components/ui/Heading"
 import { PackagesSectionEN } from "./home/PackagesSectionEN"
 
 type SeoAiTemplateEnProps = {
   hero: Omit<ServiceHeroProps, "dir">
   heroTitle?: ReactNode
   heroSubtitleClassName?: string
+  trustHeading?: { title: string; description: string }
+  postLogoContent?: ReactNode
   stats?: {
     ariaLabel?: string
     items?: readonly SeoAiStatsBarItem[]
@@ -48,6 +51,8 @@ export function SeoAiTemplateEn({
   hero,
   heroTitle,
   heroSubtitleClassName,
+  trustHeading,
+  postLogoContent,
   stats,
   process,
   vision,
@@ -68,7 +73,20 @@ export function SeoAiTemplateEn({
           subtitleClassName={heroSubtitleClassName}
           title={heroTitle ?? hero.title}
         />
+
+        {trustHeading ? (
+          <section className="bg-[#F4F1EC] pb-2 pt-[var(--space-section)]">
+            <div className="mx-auto max-w-[1440px] px-4 text-center sm:px-6 lg:px-4">
+              <H2>{trustHeading.title}</H2>
+              <p className="mx-auto mt-3 max-w-[940px] text-[18px] leading-relaxed text-center">
+                {trustHeading.description}
+              </p>
+            </div>
+          </section>
+        ) : null}
+
         <LogoRow locale="en" />
+        {postLogoContent}
         <SeoAiStatsBar locale="en" ariaLabel={stats?.ariaLabel} items={stats?.items} title={stats?.title} />
         <SeoAiProcessSteps
           locale="en"
