@@ -79,8 +79,8 @@ export default function SeoAiPageEn() {
       }}
       heroTitle={<>Get your business to appear in Google &amp; AI answers - or stay invisible</>}
       trustHeading={{
-        title: "Trusted by leading brands that grow with us.",
-        description: "We've helped businesses improve visibility, traffic, and conversions across Google and AI platforms.",
+        title: "Industry leaders chose us. Ready to join them?",
+        description: "Join the brands that trust us to drive visibility, traffic, and real results.",
       }}
       postLogoContent={
         <DailyExecutionBlock
@@ -102,7 +102,7 @@ export default function SeoAiPageEn() {
         />
       }
       stats={{ title: "If you're not in AI answers - your competitors are." }}
-      heroSubtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
+      heroSubtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
       vision={{
         title: seoAiConfigEn.vision?.title,
         subtitle: seoAiConfigEn.vision?.subtitle,

@@ -114,8 +114,8 @@ export function ServiceHero({
           <div
             className={
               isLtr
-                ? "order-2 md:order-2 md:flex md:justify-start md:px-4 md:py-[var(--space-section)]"
-                : "order-1 md:order-2 md:flex md:justify-end md:px-4 md:py-[var(--space-section)]"
+                ? "order-2 md:order-2 md:flex md:justify-end md:px-4 md:py-[var(--space-section)]"
+                : "order-1 md:order-2 md:flex md:justify-start md:px-4 md:py-[var(--space-section)]"
             }
           >
             <div className="relative h-[250px] w-full overflow-hidden rounded-none shadow-none md:h-auto md:max-w-[80%] md:rounded-3xl md:shadow-lg md:aspect-[1/1]">

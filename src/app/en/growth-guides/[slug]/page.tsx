@@ -255,7 +255,7 @@ export default async function GrowthGuidePage({
       <JsonLd data={faqPageSchema(guide.faq.map((item) => ({ question: item.question, answer: item.answer })))} />
       <SeoAiTemplateEn
         hero={template.hero}
-        heroSubtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
+        heroSubtitleClassName="mt-5 text-[25px] font-semibold leading-[32px] text-[color:var(--vow-muted)]"
         stats={template.stats}
         process={template.process}
         vision={template.vision}

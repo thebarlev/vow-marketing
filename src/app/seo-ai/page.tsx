@@ -86,7 +86,7 @@ export default function SeoAiServicePage() {
           {...seoAiConfig.hero}
           ariaLabel={seoAiConfig.hero.title}
           ctaHref="#price"
-          subtitleClassName="mt-5 text-[30px] font-semibold leading-[38px] text-[color:var(--vow-muted)]"
+          subtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
           title={
             <>
               לקוחות כבר לא <span className="line-through">מחפשים בגוגל</span> הם שואלים AI.
