@@ -7,6 +7,7 @@
     "generate:ai-sitemap": "node scripts/generate-ai-sitemap.mjs",
     "dev": "contentlayer2 dev & next dev --webpack",
     "build": "node scripts/generate-ai-sitemap.mjs && contentlayer2 build && next build",
+    "build:analyze": "node scripts/generate-ai-sitemap.mjs && contentlayer2 build && ANALYZE=true next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
@@ -22,17 +23,16 @@
     "next": "16.1.6",
     "next-contentlayer2": "^0.5.8",
     "nodemailer": "^6.10.1",
-    "posthog-js": "^1.360.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.71.1",
-    "react-icons": "^5.5.0",
     "resend": "^6.9.2",
     "tailwind-merge": "^3.4.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/nodemailer": "^7.0.10",

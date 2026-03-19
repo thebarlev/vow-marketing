@@ -7,6 +7,7 @@ import { z } from "zod"
 import { Bot, CheckCircle, Sparkles, X } from "lucide-react"
 
 import type { PopupIconVariant } from "@/app/_components/products/productPopupOverrides"
+import { executeRecaptcha } from "@/lib/captcha/useRecaptcha"
 import { getAttribution } from "@/lib/tracking/attribution"
 import { pushDataLayer } from "@/lib/tracking/dataLayer"
 import { inferPageContext, mapLeadSourceToService } from "@/lib/tracking/pageContext"
@@ -77,12 +78,7 @@ export function Popup({
     setError(null)
 
     try {
-      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-      if (!siteKey) throw new Error("reCAPTCHA not configured")
-
-      const token = await window.grecaptcha.execute(siteKey, {
-        action: "submit_lead",
-      })
+      const token = await executeRecaptcha("submit_lead")
 
       const leadId = generateLeadId()
 

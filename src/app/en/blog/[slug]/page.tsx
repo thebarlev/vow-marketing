@@ -1,10 +1,15 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { allArticles } from "contentlayer/generated"
 import { BlogShell } from "@/app/_components/blog/BlogShell"
 import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
-import { MdxContent } from "@/app/_components/blog/MdxContent"
+
+const MdxContent = dynamic(
+  () => import("@/app/_components/blog/MdxContent").then((m) => m.MdxContent),
+  { ssr: true },
+)
 import { CopyLinkButton } from "@/app/_components/blog/CopyLinkButton"
 import { getCategoryLabelEn } from "@/app/_components/blog/blog.utils"
 import { EnLink } from "@/app/en/_components/EnLink"

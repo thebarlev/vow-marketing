@@ -23,6 +23,8 @@ export function Hero() {
                 alt="בניית אתרים ושיווק דיגיטלי מבוסס AI לעסקים"
                 fill
                 priority
+                fetchPriority="high"
+                quality={60}
                 className="object-contain object-center md:hidden"
                 sizes="100vw"
               />
@@ -33,8 +35,10 @@ export function Hero() {
                 alt="פיתוח אתרים ומערכות AI לצמיחת עסקים בדיגיטל"
                 fill
                 priority
+                fetchPriority="high"
+                quality={60}
                 className="object-contain object-right hidden md:block"
-                sizes="50vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
 
             </div>

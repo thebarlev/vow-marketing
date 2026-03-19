@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import { HeroEN } from "./_components/home/HeroEN"
 import { LogoRowEN } from "./_components/home/LogoRowEN"
-import { PackagesSectionEN } from "./_components/home/PackagesSectionEN"
-import { SuccessSectionEN } from "./_components/home/SuccessSectionEN"
-import { TestimonialsEN } from "./_components/home/TestimonialsEN"
-import { AboutSectionEN } from "./_components/home/AboutSectionEN"
 import { VisionToExecutionSectionEN } from "./_components/home/VisionToExecutionSectionEN"
-import { FaqSectionEN } from "./_components/home/FaqSectionEN"
-import { GreenInvoiceSectionEN } from "./_components/home/GreenInvoiceSectionEN"
-import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
+
+const SuccessSectionEN = dynamic(() => import("./_components/home/SuccessSectionEN").then((m) => m.SuccessSectionEN))
+const TestimonialsEN = dynamic(() => import("./_components/home/TestimonialsEN").then((m) => m.TestimonialsEN))
+const AboutSectionEN = dynamic(() => import("./_components/home/AboutSectionEN").then((m) => m.AboutSectionEN))
+const GreenInvoiceSectionEN = dynamic(() => import("./_components/home/GreenInvoiceSectionEN").then((m) => m.GreenInvoiceSectionEN))
+const PackagesSectionEN = dynamic(() => import("./_components/home/PackagesSectionEN").then((m) => m.PackagesSectionEN))
+const FaqSectionEN = dynamic(() => import("./_components/home/FaqSectionEN").then((m) => m.FaqSectionEN))
+const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuidesCard").then((m) => m.GrowthGuidesCard))
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vow.co.il"),

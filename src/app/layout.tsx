@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import dynamic from "next/dynamic";
 import { Assistant } from "next/font/google";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { JsonLd, ORGANIZATION_SCHEMA } from "@/components/JsonLd";
-import { WhatsAppButton } from "@/app/_components/WhatsAppButton";
-import { LeadPopupHost } from "@/app/_components/home/LeadPopupHost";
+import { DeferredScripts } from "@/components/DeferredScripts";
 import { LanguageBar } from "@/app/_components/LanguageBar";
 import { TrackingProvider } from "@/app/_components/tracking/TrackingProvider";
 import { Suspense } from "react";
 import "./globals.css";
+
+const LeadPopupHost = dynamic(
+  () => import("@/app/_components/home/LeadPopupHost").then((m) => m.LeadPopupHost),
+)
+
+const WhatsAppButton = dynamic(
+  () => import("@/app/_components/WhatsAppButton").then((m) => m.WhatsAppButton),
+)
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -46,12 +52,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   return (
     <html lang="he" dir="rtl" className={assistant.variable}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="preconnect" href="https://us-assets.i.posthog.com" />
+      </head>
       <body className="antialiased font-sans">
         <JsonLd data={ORGANIZATION_SCHEMA} />
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WNGC226Q"
@@ -60,21 +70,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
-        {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="beforeInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WNGC226Q');
-          `}
-        </Script>
-        {/* End Google Tag Manager */}
-
-        <GoogleAnalytics />
         <LanguageBar />
         {children}
         <Suspense fallback={null}>
@@ -82,26 +78,7 @@ export default function RootLayout({
         </Suspense>
         <LeadPopupHost />
         <WhatsAppButton />
-        {siteKey && (
-          <Script
-            src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
-            strategy="afterInteractive"
-          />
-        )}
-        <Script id="facebook-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '4291258411191239');
-            fbq('track', 'PageView');
-          `}
-        </Script>
+        <DeferredScripts />
       </body>
     </html>
   );

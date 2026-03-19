@@ -2,7 +2,7 @@
   "site": "https://vow.co.il",
   "brand": "VOW",
   "description": "AI-powered accountant, digital invoicing and website development platform.",
-  "generated_at": "2026-03-17T22:31:47.464Z",
+  "generated_at": "2026-03-19T19:26:09.767Z",
   "priority_pages": [
     {
       "url": "https://vow.co.il",
@@ -66,6 +66,10 @@
     },
     {
       "url": "https://vow.co.il/en/seo-ai",
+      "type": "seo"
+    },
+    {
+      "url": "https://vow.co.il/en/seo-ai/pricing",
       "type": "seo"
     },
     {

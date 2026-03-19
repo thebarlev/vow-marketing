@@ -1,12 +1,12 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
+import dynamic from "next/dynamic"
 import { usePathname } from "next/navigation"
 
 import { OUR_PACKAGES } from "@/app/_components/home/home.constants"
 import { OUR_PACKAGES_EN } from "@/app/en/_components/home/homeEn.constants"
-import { Popup, type LeadSource } from "@/app/_components/home/Popup"
-import { PopupEN } from "@/app/en/_components/home/PopupEN"
+import type { LeadSource } from "@/app/_components/home/Popup"
 import {
   LEAD_POPUP_EVENT,
   type LeadPopupEventDetail,
@@ -15,6 +15,9 @@ import {
   POPUP_OVERRIDES_BY_PATH,
   type PopupIconVariant,
 } from "@/app/_components/products/productPopupOverrides"
+
+const Popup = dynamic(() => import("@/app/_components/home/Popup").then((m) => m.Popup), { ssr: false })
+const PopupEN = dynamic(() => import("@/app/en/_components/home/PopupEN").then((m) => m.PopupEN), { ssr: false })
 
 type PopupData = {
   title: string

@@ -1,21 +1,23 @@
 // src/app/page.tsx
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Link from "next/link"
 
 import { Hero } from "@/app/_components/home/Hero"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { FAQ_ITEMS } from "@/app/_components/home/home.constants"
 import { LogoRow } from "@/app/_components/home/LogoRow"
-import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
-import { SuccessSection } from "@/app/_components/home/SuccessSection"
-import { Testimonials } from "@/app/_components/home/Testimonials"
-import { AboutSection } from "@/app/_components/home/AboutSection"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
-import { FaqSection } from "@/app/_components/home/FaqSection"
-import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
-import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
+
+const SuccessSection = dynamic(() => import("@/app/_components/home/SuccessSection").then((m) => m.SuccessSection))
+const Testimonials = dynamic(() => import("@/app/_components/home/Testimonials").then((m) => m.Testimonials))
+const AboutSection = dynamic(() => import("@/app/_components/home/AboutSection").then((m) => m.AboutSection))
+const GreenInvoiceSection = dynamic(() => import("@/app/_components/home/GreenInvoiceSection").then((m) => m.GreenInvoiceSection))
+const PackagesSection = dynamic(() => import("@/app/_components/home/PackagesSection").then((m) => m.PackagesSection))
+const FaqSection = dynamic(() => import("@/app/_components/home/FaqSection").then((m) => m.FaqSection))
+const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuidesCard").then((m) => m.GrowthGuidesCard))
 
 export const metadata: Metadata = {
   // ✅ זה האתר השיווקי (לא app)

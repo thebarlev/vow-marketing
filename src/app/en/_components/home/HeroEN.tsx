@@ -31,6 +31,8 @@ export function HeroEN() {
       alt="VOW website development and AI SEO tools for business growth"
       fill
       priority
+      fetchPriority="high"
+      quality={60}
       className="object-contain object-right"
       sizes="(max-width: 768px) 100vw, 60vw"
     />

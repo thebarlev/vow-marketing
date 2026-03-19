@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa"
+import { Facebook, Twitter, Instagram, Mail } from "lucide-react"
 import { EnLink } from "./EnLink"
 import { growthGuideFooterLinks } from "@/lib/growth-guides/topics"
 
@@ -93,28 +93,28 @@ export function FooterEN() {
               className="text-white/60 hover:text-white transition-colors"
               aria-label="Contact"
             >
-              <FaEnvelope size={16} />
+              <Mail className="h-4 w-4" />
             </EnLink>
             <a
               href="https://www.instagram.com/vow.for.success?igsh=MTRiMmRieTNlejlsNQ%3D%3D&utm_source=qr"
               className="text-white/60 hover:text-white transition-colors"
               aria-label="Instagram"
             >
-              <FaInstagram size={16} />
+              <Instagram className="h-4 w-4" />
             </a>
             <a
               href="https://x.com/Vowsuccess"
               className="text-white/60 hover:text-white transition-colors"
               aria-label="Twitter"
             >
-              <FaTwitter size={16} />
+              <Twitter className="h-4 w-4" />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61587713103366"
               className="text-white/60 hover:text-white transition-colors "
               aria-label="Facebook"
             >
-              <FaFacebookF size={16} />
+              <Facebook className="h-4 w-4" />
             </a>
           </div>
 
