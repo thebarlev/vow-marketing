@@ -1,19 +1,56 @@
 import type { ComponentProps, ReactNode } from "react"
+import dynamic from "next/dynamic"
 
-import { LogoRow } from "@/app/_components/home/LogoRow"
 import type { PricePlan } from "@/app/_components/home/PriceSection"
-import { PriceSection } from "@/app/_components/home/PriceSection"
-import { SuccessSection } from "@/app/_components/home/SuccessSection"
-import { Testimonials } from "@/app/_components/home/Testimonials"
-import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
-import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
-import { SeoAiProcessSteps, type SeoAiProcessStep } from "@/app/_components/services/SeoAiProcessSteps"
-import { ServiceAboutSection } from "@/app/_components/services/ServiceAboutSection"
-import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero, type ServiceHeroProps } from "@/app/_components/services/ServiceHero"
-import { SeoAiStatsBar, type SeoAiStatsBarItem } from "@/app/_components/services/SeoAiStatsBar"
+import type { SeoAiProcessStep } from "@/app/_components/services/SeoAiProcessSteps"
+import type { SeoAiStatsBarItem } from "@/app/_components/services/SeoAiStatsBar"
 import { H2 } from "@/components/ui/Heading"
-import { PackagesSectionEN } from "./home/PackagesSectionEN"
+
+const LogoRow = dynamic(
+  () => import("@/app/_components/home/LogoRow").then((m) => m.LogoRow),
+  { ssr: true },
+)
+const PriceSection = dynamic(
+  () => import("@/app/_components/home/PriceSection").then((m) => m.PriceSection),
+  { ssr: true },
+)
+const SuccessSection = dynamic(
+  () => import("@/app/_components/home/SuccessSection").then((m) => m.SuccessSection),
+  { ssr: true },
+)
+const Testimonials = dynamic(
+  () => import("@/app/_components/home/Testimonials").then((m) => m.Testimonials),
+  { ssr: true },
+)
+const VisionToExecutionSection = dynamic(
+  () => import("@/app/_components/home/VisionToExecutionSection").then((m) => m.VisionToExecutionSection),
+  { ssr: true },
+)
+const DoubleHeadingCtaSection = dynamic(
+  () => import("@/app/_components/services/DoubleHeadingCtaSection").then((m) => m.DoubleHeadingCtaSection),
+  { ssr: true },
+)
+const SeoAiProcessSteps = dynamic(
+  () => import("@/app/_components/services/SeoAiProcessSteps").then((m) => ({ default: m.SeoAiProcessSteps })),
+  { ssr: true },
+)
+const ServiceAboutSection = dynamic(
+  () => import("@/app/_components/services/ServiceAboutSection").then((m) => m.ServiceAboutSection),
+  { ssr: true },
+)
+const ServiceFaqSection = dynamic(
+  () => import("@/app/_components/services/ServiceFaqSection").then((m) => m.ServiceFaqSection),
+  { ssr: true },
+)
+const SeoAiStatsBar = dynamic(
+  () => import("@/app/_components/services/SeoAiStatsBar").then((m) => ({ default: m.SeoAiStatsBar })),
+  { ssr: true },
+)
+const PackagesSectionEN = dynamic(
+  () => import("./home/PackagesSectionEN").then((m) => m.PackagesSectionEN),
+  { ssr: true },
+)
 
 type SeoAiTemplateEnProps = {
   hero: Omit<ServiceHeroProps, "dir">

@@ -1,10 +1,18 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
-import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
-import { DailyExecutionBlock } from "@/components/marketing/DailyExecutionBlock"
+
+const DailyExecutionBlock = dynamic(
+  () => import("@/components/marketing/DailyExecutionBlock").then((m) => m.DailyExecutionBlock),
+  { ssr: true },
+)
+const GrowthGuidesCard = dynamic(
+  () => import("@/components/marketing/GrowthGuidesCard").then((m) => m.GrowthGuidesCard),
+  { ssr: true },
+)
 
 export const metadata: Metadata = seoAiConfigEn.metadata
 

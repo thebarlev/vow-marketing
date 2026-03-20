@@ -6,13 +6,19 @@ const GTM_ID = "GTM-WNGC226Q"
 const FB_PIXEL_ID = "4291258411191239"
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
-function injectScript(src: string, id?: string, onload?: () => void) {
+function injectScript(
+  src: string,
+  id?: string,
+  onload?: () => void,
+  onerror?: () => void,
+) {
   if (id && document.getElementById(id)) return
   const s = document.createElement("script")
   s.src = src
   s.async = true
   if (id) s.id = id
   if (onload) s.onload = onload
+  if (onerror) s.onerror = onerror
   document.head.appendChild(s)
 }
 
@@ -24,10 +30,20 @@ function injectInline(code: string, id: string) {
   document.head.appendChild(s)
 }
 
+let gtmLoadFailed = false
+
 function loadGTM() {
+  if (gtmLoadFailed) return
   window.dataLayer = window.dataLayer ?? []
   window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
-  injectScript(`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`, "gtm-script")
+  injectScript(
+    `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`,
+    "gtm-script",
+    undefined,
+    () => {
+      gtmLoadFailed = true
+    },
+  )
 }
 
 function loadGA() {
@@ -57,8 +73,6 @@ const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posth
 function loadPostHog() {
   if (!POSTHOG_KEY) return
   const assetsHost = POSTHOG_HOST.replace(".i.posthog.com", "-assets.i.posthog.com")
-  const key = JSON.stringify(POSTHOG_KEY)
-  const host = JSON.stringify(POSTHOG_HOST)
   injectScript(`${assetsHost}/static/array.js`, "posthog-script", () => {
     if (typeof window !== "undefined" && (window as unknown as { posthog?: { init: (k: string, o: object) => void } }).posthog?.init) {
       ;(window as unknown as { posthog: { init: (k: string, o: object) => void } }).posthog.init(POSTHOG_KEY, {
@@ -71,18 +85,30 @@ function loadPostHog() {
 
 export function DeferredScripts() {
   useEffect(() => {
+    let loaded = false
     const load = () => {
+      if (loaded) return
+      loaded = true
       loadGTM()
       loadGA()
       loadFBPixel()
       loadPostHog()
     }
 
-    if (document.readyState === "complete") {
+    const triggers = ["click", "scroll", "keydown", "touchstart"] as const
+    const handleInteraction = () => {
       load()
+      triggers.forEach((t) => window.removeEventListener(t, handleInteraction))
+    }
+
+    triggers.forEach((t) =>
+      window.addEventListener(t, handleInteraction, { once: true, passive: true }),
+    )
+
+    if (typeof requestIdleCallback !== "undefined") {
+      requestIdleCallback(load, { timeout: 3000 })
     } else {
-      window.addEventListener("load", load, { once: true })
-      return () => window.removeEventListener("load", load)
+      setTimeout(load, 2000)
     }
   }, [])
 

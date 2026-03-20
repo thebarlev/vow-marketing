@@ -123,7 +123,9 @@ export function ServiceHero({
                 src={imageSrc}
                 alt={imageAlt}
                 fill
-                priority={false}
+                priority
+                fetchPriority="high"
+                quality={60}
                 className="object-cover object-center"
                 sizes="(min-width: 768px) 45vw, 100vw"
               />
