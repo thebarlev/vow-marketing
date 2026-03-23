@@ -1,10 +1,20 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 const GTM_ID = "GTM-WNGC226Q"
 const FB_PIXEL_ID = "4291258411191239"
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
+/**
+ * Only load standalone gtag.js when GTM does NOT manage GA (e.g. GTM container has no GA4 tag).
+ * Set NEXT_PUBLIC_GA_STANDALONE=true to force standalone GA. Default: GTM handles GA/Ads.
+ */
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_STANDALONE === "true"
+  ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  : undefined
+
+const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY
+const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com"
 
 function injectScript(
   src: string,
@@ -46,6 +56,7 @@ function loadGTM() {
   )
 }
 
+/** Standalone GA - only when GTM does not manage GA. Avoids ~100KB duplicate. */
 function loadGA() {
   if (!GA_MEASUREMENT_ID) return
   const id = JSON.stringify(GA_MEASUREMENT_ID)
@@ -67,9 +78,6 @@ function loadFBPixel() {
   )
 }
 
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com"
-
 function loadPostHog() {
   if (!POSTHOG_KEY) return
   const assetsHost = POSTHOG_HOST.replace(".i.posthog.com", "-assets.i.posthog.com")
@@ -78,21 +86,49 @@ function loadPostHog() {
       ;(window as unknown as { posthog: { init: (k: string, o: object) => void } }).posthog.init(POSTHOG_KEY, {
         api_host: POSTHOG_HOST,
         disable_session_recording: true,
+        disable_surveys: true,
+        autocapture: false,
+        capture_pageview: true,
+        advanced_disable_feature_flags: true,
       })
     }
   })
 }
 
-export function DeferredScripts() {
-  useEffect(() => {
-    let loaded = false
-    const load = () => {
-      if (loaded) return
-      loaded = true
-      loadGTM()
-      loadGA()
+/** Phase 1: GTM (orchestrates GA/Ads). Phase 2: FB. Phase 3: PostHog (heaviest, last). */
+function runDeferredLoad() {
+  loadGTM()
+  loadGA()
+
+  if (typeof requestAnimationFrame !== "undefined") {
+    requestAnimationFrame(() => {
       loadFBPixel()
-      loadPostHog()
+      requestAnimationFrame(() => {
+        if (typeof requestIdleCallback !== "undefined") {
+          requestIdleCallback(() => loadPostHog(), { timeout: 2000 })
+        } else {
+          setTimeout(loadPostHog, 500)
+        }
+      })
+    })
+  } else {
+    setTimeout(() => {
+      loadFBPixel()
+      setTimeout(loadPostHog, 500)
+    }, 0)
+  }
+}
+
+export function DeferredScripts() {
+  const loadedRef = useRef(false)
+
+  useEffect(() => {
+    if (loadedRef.current) return
+
+    const load = () => {
+      if (loadedRef.current) return
+      loadedRef.current = true
+      runDeferredLoad()
     }
 
     const triggers = ["click", "scroll", "keydown", "touchstart"] as const
@@ -105,11 +141,15 @@ export function DeferredScripts() {
       window.addEventListener(t, handleInteraction, { once: true, passive: true }),
     )
 
-    if (typeof requestIdleCallback !== "undefined") {
-      requestIdleCallback(load, { timeout: 3000 })
-    } else {
-      setTimeout(load, 2000)
+    const scheduleIdle = () => {
+      if (typeof requestIdleCallback !== "undefined") {
+        requestIdleCallback(load, { timeout: 4000 })
+      } else {
+        setTimeout(load, 3500)
+      }
     }
+
+    scheduleIdle()
   }, [])
 
   return null

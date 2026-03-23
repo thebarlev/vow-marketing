@@ -20,6 +20,7 @@ const assistant = Assistant({
   variable: "--font-assistant",
   subsets: ["hebrew", "latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -56,9 +57,9 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={assistant.variable}>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.google.com" />
-        <link rel="preconnect" href="https://us-assets.i.posthog.com" />
+        <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
       </head>
       <body className="antialiased font-sans">
         <JsonLd data={ORGANIZATION_SCHEMA} />
