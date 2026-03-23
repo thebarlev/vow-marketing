@@ -92,7 +92,21 @@ const growthGuideContent = [
         id: "traffic-solution",
         title: "How to Get Traffic to Your Website With a Search-Led System",
         paragraphs: [
-          "The fastest sustainable way to grow traffic is to connect technical SEO, page architecture, and demand-focused content. Instead of publishing random articles, build pages around the exact problems buyers are already searching for.",
+          [
+            {
+              type: "text",
+              text: "The fastest sustainable way to grow traffic is to connect technical SEO, page architecture, and demand-focused content. ",
+            },
+            {
+              type: "link",
+              text: "Website seo services",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " that combine these elements can help you build pages around the exact problems buyers are already searching for.",
+            },
+          ],
           [
             {
               type: "text",
@@ -133,7 +147,21 @@ const growthGuideContent = [
         id: "traffic-vow-cta",
         title: "Use VOW to Turn Traffic Into a Growth Engine",
         paragraphs: [
-          "If you want help turning traffic into qualified demand, VOW combines AI SEO strategy, execution, and measurement with a clear monthly roadmap.",
+          [
+            {
+              type: "text",
+              text: "If you want help turning traffic into qualified demand, an ",
+            },
+            {
+              type: "link",
+              text: "online marketing agency",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " like VOW combines AI SEO strategy, execution, and measurement with a clear monthly roadmap.",
+            },
+          ],
           "You can review the SEO/AI offer, run the Auditor flow, or keep learning from related guides before choosing the right next step.",
         ],
         links: [
@@ -291,7 +319,21 @@ const growthGuideContent = [
         id: "seo-solution",
         title: "How to Improve Website SEO With Better Relevance",
         paragraphs: [
-          "Start by identifying the pages already closest to ranking. Those are the fastest wins. Improve their structure, fill content gaps, and make the value proposition obvious within the first screen.",
+          [
+            {
+              type: "text",
+              text: "Start by identifying the pages already closest to ranking. Those are the fastest wins. A ",
+            },
+            {
+              type: "link",
+              text: "website ranking service",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " can help prioritize which pages to improve first, then fill content gaps and make the value proposition obvious within the first screen.",
+            },
+          ],
           [
             {
               type: "text",
@@ -332,7 +374,21 @@ const growthGuideContent = [
         id: "seo-vow-cta",
         title: "Let VOW Prioritize the SEO Work That Matters",
         paragraphs: [
-          "VOW helps teams improve website SEO by combining audits, execution, content upgrades, and AI search readiness into one operating model.",
+          [
+            {
+              type: "text",
+              text: "A ",
+            },
+            {
+              type: "link",
+              text: "digital marketing agency",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " with SEO focus like VOW helps teams improve website SEO by combining audits, execution, content upgrades, and AI search readiness into one operating model.",
+            },
+          ],
           "Use the links below to review the growth offer, open Auditor, or continue with related guides on ranking and online growth.",
         ],
         links: [
@@ -436,7 +492,21 @@ const growthGuideContent = [
         id: "leads-solution",
         title: "How to Get Leads With Better Offer and Page Fit",
         paragraphs: [
-          "Lead generation improves when each page is built around one concrete problem, one audience, and one next step. A visitor should immediately know who the page is for and what happens after they click.",
+          [
+            {
+              type: "text",
+              text: "Lead generation improves when each page is built around one concrete problem, one audience, and one next step. A visitor should immediately know who the page is for and what happens after they click. ",
+            },
+            {
+              type: "link",
+              text: "SEO services for small business",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " that focus on conversion paths often deliver better qualified leads.",
+            },
+          ],
           [
             {
               type: "text",
@@ -477,7 +547,21 @@ const growthGuideContent = [
         id: "leads-vow-cta",
         title: "Use VOW to Build a Lead System, Not Just More Activity",
         paragraphs: [
-          "VOW helps teams get leads by upgrading the pages, funnels, and search visibility that create qualified demand over time.",
+          [
+            {
+              type: "text",
+              text: "VOW helps teams get leads by upgrading the pages, funnels, and search visibility that create qualified demand over time. ",
+            },
+            {
+              type: "link",
+              text: "Digital marketing services",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " that focus on conversion paths often deliver faster results than scattered marketing activity.",
+            },
+          ],
           "From AI SEO to Auditor and related growth guides, the goal is to help you choose the fastest route to a stronger pipeline.",
         ],
         links: [
@@ -581,7 +665,21 @@ const growthGuideContent = [
         id: "promote-solution",
         title: "How to Promote My Business Online With Better Focus",
         paragraphs: [
-          "Start with the channels where intent is already visible. Search is usually one of the strongest because people are actively looking for a solution.",
+          [
+            {
+              type: "text",
+              text: "Start with the channels where intent is already visible. ",
+            },
+            {
+              type: "link",
+              text: "Web search optimization",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " is usually one of the strongest because people are actively looking for a solution.",
+            },
+          ],
           [
             {
               type: "text",
@@ -622,7 +720,21 @@ const growthGuideContent = [
         id: "promote-vow-cta",
         title: "Promote Smarter With VOW's Growth Stack",
         paragraphs: [
-          "VOW helps businesses promote online with a clearer system: better pages, stronger SEO, AI search readiness, and measurement tied to results.",
+          [
+            {
+              type: "text",
+              text: "An ",
+            },
+            {
+              type: "link",
+              text: "internet marketing agency",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " like VOW helps businesses promote online with a clearer system: better pages, stronger SEO, AI search readiness, and measurement tied to results.",
+            },
+          ],
           "Use the service page, Auditor, and related guides below to decide whether you need visibility, better conversion, or both.",
         ],
         links: [
@@ -726,7 +838,21 @@ const growthGuideContent = [
         id: "customers-solution",
         title: "How to Get Customers Online With Better Demand Capture",
         paragraphs: [
-          "Customer acquisition improves when search visibility, page messaging, and conversion design work together. That creates more efficient demand capture instead of buying every click from scratch.",
+          [
+            {
+              type: "text",
+              text: "Customer acquisition improves when search visibility, page messaging, and conversion design work together. ",
+            },
+            {
+              type: "link",
+              text: "Website seo services",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " that integrate these elements create more efficient demand capture instead of buying every click from scratch.",
+            },
+          ],
           [
             {
               type: "text",
@@ -767,7 +893,21 @@ const growthGuideContent = [
         id: "customers-vow-cta",
         title: "Use VOW to Improve Online Customer Acquisition",
         paragraphs: [
-          "VOW helps businesses get customers online by combining SEO visibility, clearer pages, and better funnel structure into one growth operating model.",
+          [
+            {
+              type: "text",
+              text: "VOW helps businesses get customers online by combining SEO visibility, clearer pages, and better funnel structure into one growth operating model. ",
+            },
+            {
+              type: "link",
+              text: "Digital marketing services",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " that integrate conversion and visibility often produce better customer acquisition outcomes.",
+            },
+          ],
           "Review the SEO/AI page, open Auditor, or continue with related guides to sharpen the next move.",
         ],
         links: [
@@ -913,7 +1053,21 @@ const growthGuideContent = [
         id: "rank-solution",
         title: "How to Rank on Google Fast With Smarter Prioritization",
         paragraphs: [
-          "The fastest ranking gains usually come from improving pages that already show signs of life. If Google is testing a page, better relevance and stronger structure can move it up faster than a new URL.",
+          [
+            {
+              type: "text",
+              text: "The fastest ranking gains usually come from improving pages that already show signs of life. A ",
+            },
+            {
+              type: "link",
+              text: "website ranking service",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " can help identify those pages - if Google is testing a page, better relevance and stronger structure can move it up faster than a new URL.",
+            },
+          ],
           [
             {
               type: "text",
@@ -954,7 +1108,21 @@ const growthGuideContent = [
         id: "rank-vow-cta",
         title: "Use VOW to Find the Fastest Ranking Opportunities",
         paragraphs: [
-          "VOW helps teams rank faster by focusing on pages that are closest to winning, then improving the technical, structural, and content signals that matter.",
+          [
+            {
+              type: "text",
+              text: "A ",
+            },
+            {
+              type: "link",
+              text: "digital marketing agency",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " like VOW helps teams rank faster by focusing on pages that are closest to winning, then improving the technical, structural, and content signals that matter.",
+            },
+          ],
           "The links below point to the SEO/AI offer, the Auditor flow, and related guides that support ranking growth.",
         ],
         links: [
@@ -1058,7 +1226,21 @@ const growthGuideContent = [
         id: "smallbiz-solution",
         title: "How to Grow Small Business Online With Compounding Work",
         paragraphs: [
-          "The best online growth strategy for a small business is usually a simple one: strong service pages, search-driven content, good follow-up, and a few channels you can maintain consistently.",
+          [
+            {
+              type: "text",
+              text: "The best online growth strategy for a small business is usually a simple one: strong service pages, search-driven content, good follow-up, and a few channels you can maintain consistently. ",
+            },
+            {
+              type: "link",
+              text: "SEO services for small business",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: " that focus on these fundamentals often deliver the best long-term results.",
+            },
+          ],
           [
             {
               type: "text",
@@ -1099,7 +1281,21 @@ const growthGuideContent = [
         id: "smallbiz-vow-cta",
         title: "Use VOW to Build Online Growth That Lasts",
         paragraphs: [
-          "VOW works with small businesses that need a practical system for visibility, lead generation, and SEO execution without unnecessary complexity.",
+          [
+            {
+              type: "text",
+              text: "A ",
+            },
+            {
+              type: "link",
+              text: "marketing agency for small business",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " like VOW works with small businesses that need a practical system for visibility, lead generation, and SEO execution without unnecessary complexity.",
+            },
+          ],
           "Use the links below to explore the SEO/AI offer, open Auditor, or continue reading related growth guides.",
         ],
         links: [
@@ -1203,7 +1399,21 @@ const growthGuideContent = [
         id: "clients-solution",
         title: "How to Get Clients Without Ads Through Organic Demand",
         paragraphs: [
-          "The most reliable path is to build pages around real search demand, strengthen authority with proof and expertise, and create internal links that guide users toward contact.",
+          [
+            {
+              type: "text",
+              text: "The most reliable path is to build pages around real search demand and improve ",
+            },
+            {
+              type: "link",
+              text: "web search engine ranking",
+              href: "/en/lp/seo-services",
+            },
+            {
+              type: "text",
+              text: ", strengthen authority with proof and expertise, and create internal links that guide users toward contact.",
+            },
+          ],
           [
             {
               type: "text",
@@ -1244,7 +1454,21 @@ const growthGuideContent = [
         id: "clients-vow-cta",
         title: "Use VOW to Build a Client Engine Beyond Paid Ads",
         paragraphs: [
-          "VOW helps businesses reduce dependence on paid channels by improving SEO, AI visibility, authority content, and conversion structure.",
+          [
+            {
+              type: "text",
+              text: "An ",
+            },
+            {
+              type: "link",
+              text: "online marketing agency",
+              href: "/en/lp/digital-marketing",
+            },
+            {
+              type: "text",
+              text: " like VOW helps businesses reduce dependence on paid channels by improving SEO, AI visibility, authority content, and conversion structure.",
+            },
+          ],
           "The links below let you review the SEO/AI offer, open Auditor, and continue with related guides on traffic and leads.",
         ],
         links: [
