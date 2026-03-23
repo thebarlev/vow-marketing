@@ -9,7 +9,7 @@ type H3Props = ComponentPropsWithoutRef<"h3">
 export function H2({ children, className, ...props }: H2Props) {
   return (
     <h2
-      className={twMerge("text-[40px] font-semibold leading-[36px] text-black", className)}
+      className={twMerge("text-[40px] font-semibold leading-[40px] text-black", className)}
       {...props}
     >
       {children}
