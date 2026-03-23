@@ -92,7 +92,7 @@ export function PriceSection({ id, title, subtitle, plans, variant = "default", 
                     <H3 className="pt-2 text-bold text-[20px] text-[#5389BB]">
                       {p.title}
                     </H3>
-                    <div className="mt-2 text-[20px] font-semibold leading-[0.6] text-[#5389BB]">
+                    <div className="mt-2 text-[20px] font-semibold leading-none text-[#5389BB]">
                       {p.kicker}
                     </div>
                   </>
