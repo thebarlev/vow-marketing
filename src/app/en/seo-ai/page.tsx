@@ -49,7 +49,7 @@ export default function SeoAiPageEn() {
         />
       }
       stats={{ title: "If you're not in AI answers - your competitors are." }}
-      heroSubtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
+      heroSubtitleClassName="mt-5 text-[22px] font-semibold leading-[28px] text-[color:var(--vow-muted)]"
       vision={{
         title: seoAiConfigEn.vision?.title,
         subtitle: seoAiConfigEn.vision?.subtitle,

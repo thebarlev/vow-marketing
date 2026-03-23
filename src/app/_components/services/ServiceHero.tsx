@@ -68,8 +68,8 @@ export function ServiceHero({
             <h1
               className={
                 isLtr
-                  ? "text-black w-full text-left font-semibold leading-[1.05] text-balance text-[56px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
-                  : "text-black w-full text-right font-semibold leading-[1.05] text-balance text-[56px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
+                  ? "text-black w-full text-left font-semibold leading-[1.05] text-balance text-[30px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
+                  : "text-black w-full text-right font-semibold leading-[1.05] text-balance text-[30px] sm:text-[55px] sm:leading-[0.98] lg:text-[55px] lg:leading-[1.0]"
               }
             >
               {title}
