@@ -115,7 +115,7 @@ export function SeoAiTemplateEn({
           <section className="bg-[#F4F1EC] pb-2 pt-[var(--space-section)]">
             <div className="mx-auto max-w-[1440px] px-4 text-center sm:px-6 lg:px-4">
               <H2>{trustHeading.title}</H2>
-              <h3 className="mt-3 text-h3 font-semibold leading-[32px] text-heading-sub mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
+              <h3 className="mt-3 text-[26px] font-semibold leading-[32px] text-heading-sub mx-auto max-w-full sm:max-w-[85%] lg:max-w-[70%]">
                 {trustHeading.description}
               </h3>
             </div>

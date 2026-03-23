@@ -1,9 +1,8 @@
 import { extendTailwindMerge } from "tailwind-merge"
 
 /**
- * Extended twMerge that recognizes our typography tokens (text-h2, text-h3).
- * Without this, tailwind-merge treats them as conflicting with text-left/text-center
- * and drops the font-size token.
+ * Extended twMerge that recognizes typography tokens when used elsewhere.
+ * H2/H3 components use explicit values to avoid hydration mismatch.
  */
 export const twMerge = extendTailwindMerge({
   extend: {
