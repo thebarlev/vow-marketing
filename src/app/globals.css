@@ -126,8 +126,8 @@ body {
   /* H2 Typography */
   h2 {
     @apply font-semibold text-black text-center;
-    font-size: 40px;
-    line-height: 43px;
+    font-size: 30px;
+    line-height: 36px;
     margin-bottom: 5px;
   }
 
@@ -154,8 +154,8 @@ body {
 
   @media (min-width: 1024px) {
     h2 {
-      font-size: 40px;
-      line-height: 46px;
+      font-size: 30px;
+      line-height: 36px;
     }
 
     h3 {
