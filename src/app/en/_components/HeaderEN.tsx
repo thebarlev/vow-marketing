@@ -44,12 +44,16 @@ export function HeaderEN() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const measure = () => {
-      if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight)
+    const measureHeaderHeight = () => {
+      try {
+        if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight)
+      } catch {
+        // ignore measurement errors (SSR/hydration edge cases)
+      }
     }
-    measure()
-    window.addEventListener("resize", measure)
-    return () => window.removeEventListener("resize", measure)
+    measureHeaderHeight()
+    window.addEventListener("resize", measureHeaderHeight)
+    return () => window.removeEventListener("resize", measureHeaderHeight)
   }, [])
 
   useEffect(() => {
