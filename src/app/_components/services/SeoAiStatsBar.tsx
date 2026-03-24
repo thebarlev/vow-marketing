@@ -49,7 +49,7 @@ export function SeoAiStatsBar({
                 <div className="text-white text-[56px] font-semibold leading-none sm:text-[64px] lg:text-[72px] [unicode-bidi:plaintext]">
                   {item.value}
                 </div>
-                <div className="mt-3 text-white/90 text-[16px] font-semibold leading-[1.5] sm:text-[16px] lg:text-[18px]">
+                <div className="mt-3 text-white/90 text-[26px] font-semibold leading-[1.3] sm:text-[20px] lg:text-[24px]">
                   <div className={isEn ? "whitespace-nowrap" : undefined}>{item.line1}</div>
                   <div>{item.line2}</div>
                 </div>
