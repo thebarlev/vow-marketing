@@ -99,12 +99,22 @@ export function ServiceHero({
               <a
                 href={ctaHref}
                 onClick={ctaHref.startsWith("#") ? onHashLinkClick : undefined}
-  className="btn-primary mt-7 !w-[300px] sm:w-auto text-center flex items-center justify-center px-5"
+                className={[
+                  "btn-primary mt-7 !w-auto inline-flex items-center justify-center px-6 text-center",
+                  isLtr ? "whitespace-nowrap" : "max-w-full text-center",
+                ].join(" ")}
               >
                 {ctaLabel}
               </a>
             ) : (
-              <button type="button" className="btn-primary mt-7 !w-[240px] sm:w-auto" onClick={onCtaClick}>
+              <button
+                type="button"
+                className={[
+                  "btn-primary mt-7 !w-auto inline-flex items-center justify-center px-6",
+                  isLtr ? "whitespace-nowrap" : "max-w-full",
+                ].join(" ")}
+                onClick={onCtaClick}
+              >
                 {ctaLabel}
               </button>
             )}

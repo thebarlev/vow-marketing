@@ -29,10 +29,10 @@ export const campaigns: readonly Campaign[] = [
     slug: "ai-seo",
     heroTitle: "Show Up in ChatGPT, Google AI & More",
     heroSubtitle:
-      "73% of AI answers don't include your competitors yet. We help your business appear where your customers are searching - in Google, ChatGPT, and beyond.",
+      "We don’t do “SEO”. We make your business show up where customers actually look - Google, ChatGPT, and AI search.",
     metaTitle: "AI SEO Appear in ChatGPT & Google AI | VOW",
     metaDescription:
-      "73% of AI answers don't include your competitors yet. We help your business appear where your customers are searching - in Google, ChatGPT, and beyond.",
+      "We don’t do “SEO”. We make your business show up where customers actually look - Google, ChatGPT, and AI search.",
   },
 ] as const
 

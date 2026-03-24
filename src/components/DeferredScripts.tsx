@@ -5,16 +5,18 @@ import { useEffect, useRef } from "react"
 const GTM_ID = "GTM-WNGC226Q"
 const FB_PIXEL_ID = "4291258411191239"
 
+/** Safe env access - process.env can be undefined in some bundling contexts. */
+const env = typeof process !== "undefined" ? process.env : ({} as NodeJS.ProcessEnv)
+
 /**
  * Only load standalone gtag.js when GTM does NOT manage GA (e.g. GTM container has no GA4 tag).
  * Set NEXT_PUBLIC_GA_STANDALONE=true to force standalone GA. Default: GTM handles GA/Ads.
  */
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_STANDALONE === "true"
-  ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-  : undefined
+const GA_MEASUREMENT_ID =
+  env.NEXT_PUBLIC_GA_STANDALONE === "true" ? env.NEXT_PUBLIC_GA_MEASUREMENT_ID : undefined
 
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com"
+const POSTHOG_KEY = env.NEXT_PUBLIC_POSTHOG_KEY
+const POSTHOG_HOST = env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com"
 
 function injectScript(
   src: string,

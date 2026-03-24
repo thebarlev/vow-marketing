@@ -48,7 +48,7 @@ export default function SeoAiPageEn() {
           imageAlt="Daily SEO and AI visibility execution by VOW"
         />
       }
-      stats={{ title: "If you're not in AI answers - your competitors are." }}
+      stats={{ title: "What happens in the first few months" }}
       heroSubtitleClassName="mt-5 text-[22px] font-semibold leading-[28px] text-[color:var(--vow-muted)]"
       vision={{
         title: seoAiConfigEn.vision?.title,

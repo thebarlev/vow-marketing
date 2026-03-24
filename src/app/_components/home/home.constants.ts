@@ -51,8 +51,8 @@ export const FAQ_ITEMS = [
 
 export const CLIENT_LOGOS = [
   { src: "/logos/Altshuler_logo-3.svg", alt: "Altshuler Shaham - VOW client for digital marketing and development" },
-  { src: "/logos/horizon_svg-3.svg", alt: "Horizon - VOW client for SEO and website development" },
-  { src: "/logos/Isracarrd_logo-3.svg", alt: "Isracard - VOW client for branding and digital presence" },
+  { src: "/logos/guy.svg", alt: "Horizon - VOW client for SEO and website development" },
+  { src: "/logos/eufy.svg", alt: "Isracard - VOW client for branding and digital presence" },
   { src: "/logos/Logo_Carrefour-5.svg", alt: "Carrefour - VOW client for AI SEO and business growth" },
   { src: "/logos/max_svg1-3.svg", alt: "MAX - VOW client for digital marketing and development" },
   { src: "/logos/Soundcore_svg-3.svg", alt: "Soundcore - VOW client for website and branding" },

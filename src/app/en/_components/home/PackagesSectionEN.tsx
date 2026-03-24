@@ -102,7 +102,7 @@ export function PackagesSectionEN() {
 
               <ul
                 dir="ltr"
-                className="mt-4 space-y-1 text-[18px] font-normal leading-[40px] text-black sm:text-[20px] sm:leading-[56px]"
+                className="mt-4 space-y-1 text-[16px] font-normal leading-[40px] text-black sm:text-[16px] sm:leading-[56px]"
               >
                 {p.bullets.map((b) => (
                   <li
