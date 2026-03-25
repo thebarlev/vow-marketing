@@ -5,6 +5,10 @@ import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
 import { H2, H3 } from "@/components/ui/Heading"
 
+/** Single string for article padding — avoids SSR vs stale client HMR mismatches in Turbopack. */
+const ABOUT_ITEM_ARTICLE_CLASS =
+  "py-[14px] px-[10px] sm:py-[3.25rem] sm:px-[3.25rem] lg:py-[1.1rem] lg:px-[1.1rem]"
+
 export type ServiceAboutItem = {
   id: string
   title: string
@@ -76,14 +80,7 @@ export function ServiceAboutSection({
           {/* Items - שמאל */}
           <div className="relative h-full sub-package lg:px-6">
             {items.map((item) => (
-              <article
-                key={item.id}
-                className="
-                  py-[14px] px-[10px]
-                  sm:py-[3.25rem] sm:px-[3.25rem]
-                  lg:py-[1.1rem] lg:px-[1.1rem]
-                "
-              > 
+              <article key={item.id} className={ABOUT_ITEM_ARTICLE_CLASS}>
                 <div className="flex items-center gap-3 py-2">
                   {item.icon ? (
                     <Image

@@ -5,10 +5,15 @@ import type { LeadSource } from "@/app/_components/home/Popup"
 import { H2 } from "@/components/ui/Heading"
 
 /** Module-level strings so SSR and client bundles always reference the same classes (avoids Turbopack/HMR drift). */
+const HERO_GRID_CLASS = "grid gap-1 md:grid-cols-[40fr_60fr] md:items-center"
+const TEXT_COL_LTR =
+  "order-1 md:order-1 w-full text-left px-4 sm:px-6 lg:px-4 pt-4 pb-2 lg:pb-5"
+const TEXT_COL_RTL =
+  "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 pt-4 pb-2 lg:pb-5"
 const IMAGE_COL_LTR =
-  "order-2 md:order-2 md:flex md:justify-end md:px-4 py-2 lg:py-5"
+  "order-2 md:order-2 md:flex md:justify-end md:px-4 py-0 lg:py-0"
 const IMAGE_COL_RTL =
-  "order-1 md:order-2 md:flex md:justify-start md:px-4 py-2 lg:py-5"
+  "order-1 md:order-2 md:flex md:justify-start md:px-4 py-0 lg:py-0"
 
 export type ServiceHeroProps = {
   title: React.ReactNode
@@ -61,15 +66,9 @@ export function ServiceHero({
   return (
     <section aria-label={sectionAriaLabel} className="w-full bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid gap-8 md:grid-cols-[40fr_60fr] md:items-center">
+        <div className={HERO_GRID_CLASS}>
           {/* Text */}
-          <div
-            className={
-              isLtr
-                ? "order-1 md:order-1 w-full text-left px-4 sm:px-6 lg:px-4 pt-4 pb-6 lg:pb-12"
-                : "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 pt-4 pb-6 lg:pb-12"
-            }
-          >
+          <div className={isLtr ? TEXT_COL_LTR : TEXT_COL_RTL}>
             <h1
               className={
                 isLtr
