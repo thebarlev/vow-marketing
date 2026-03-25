@@ -1,9 +1,19 @@
+import type { Metadata } from "next"
+
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { ContactForm } from "@/app/_components/contact/ContactForm"
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { H2 } from "@/components/ui/Heading"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+    languages: heEnAlternateLanguages("/contact", "/en/contact"),
+  },
+}
 
 const CONTACT_FAQ = [
   { id: "contact-faq-1", question: "תוך כמה זמן תחזרו?", answer: "תוך שעות ספורות בימי עסקים." },

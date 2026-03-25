@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     "מדריכי צמיחה קצרים ומדויקים של VOW על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
   alternates: {
     canonical: "/growth-guides",
+    languages: heEnAlternateLanguages("/growth-guides", "/en/growth-guides"),
   },
   openGraph: {
     title: "מדריכי צמיחה של VOW | VOW",

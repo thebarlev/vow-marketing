@@ -16,6 +16,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
+  redirects: async () => [
+    {
+      source: "/blog/ai-seo-engine",
+      destination: "/blog/seo-ai-engine",
+      permanent: true,
+    },
+  ],
   headers: async () => [
     {
       source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2)",

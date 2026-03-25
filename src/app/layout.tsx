@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Assistant } from "next/font/google";
-import { JsonLd, ORGANIZATION_SCHEMA } from "@/components/JsonLd";
+import { JsonLd, ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/components/JsonLd";
 import { DeferredScripts } from "@/components/DeferredScripts";
 import { LanguageBar } from "@/app/_components/LanguageBar";
 import { TrackingProvider } from "@/app/_components/tracking/TrackingProvider";
@@ -25,16 +25,8 @@ const assistant = Assistant({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vow.co.il"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "he-IL": "/",
-      en: "/en",
-      "x-default": "/",
-    },
-  },
-  title: "מחירים – חשבונית דיגיטלית שנה חינם VOW",
-  description: "חבילות חינם/מקצועי/אקסטרה להפקת מסמכים. התחילו ניסיון חינם והצטרפו למערכת.",
+  title: "VOW",
+  description: "פיתוח דיגיטלי, SEO ושיווק לעסקים.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=2" },
@@ -63,6 +55,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-sans">
         <JsonLd data={ORGANIZATION_SCHEMA} />
+        <JsonLd data={WEBSITE_SCHEMA} />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WNGC226Q"

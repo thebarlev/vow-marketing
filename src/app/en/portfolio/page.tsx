@@ -6,12 +6,17 @@ import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { PortfolioCtaSection } from "@/app/_components/portfolio/PortfolioCtaSection"
 import { PortfolioGrid } from "@/app/_components/portfolio/PortfolioGrid"
 import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
   title: "Our Work – VOW | Web Development, AI Systems & Digital Marketing",
   description:
     "See examples of VOW's work - websites, AI systems, digital stores, and solutions that deliver real ROI for businesses.",
   keywords: "web development, AI systems, web design, digital marketing, business websites",
+  alternates: {
+    canonical: "/en/portfolio",
+    languages: heEnAlternateLanguages("/portfolio", "/en/portfolio"),
+  },
 }
 
 type PortfolioImage = { src: string; alt: string }

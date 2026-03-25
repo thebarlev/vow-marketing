@@ -9,12 +9,17 @@ import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { PortfolioCtaSection } from "@/app/_components/portfolio/PortfolioCtaSection"
 import { PortfolioGrid } from "@/app/_components/portfolio/PortfolioGrid"
 import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
   title: "דוגמאות עבודות – VOW | פיתוח אתרים, מערכות AI ושיווק חכם",
   description:
     "צפו בדוגמאות מהעבודות של VOW – אתרים, מערכות AI, חנויות דיגיטליות ופתרונות שמייצרים ROI אמיתי לעסקים.",
   keywords: "פיתוח אתרים, מערכות AI, עיצוב אתרים, שיווק דיגיטלי, בניית אתרים לעסקים",
+  alternates: {
+    canonical: "/portfolio",
+    languages: heEnAlternateLanguages("/portfolio", "/en/portfolio"),
+  },
 }
 
 type PortfolioImage = { src: string; alt: string }

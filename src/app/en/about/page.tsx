@@ -1,11 +1,16 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { EnLink } from "../_components/EnLink"
 import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   title: "About VOW",
   description: "VOW - Technology infrastructure for business growth.",
+  alternates: {
+    canonical: "/en/about",
+    languages: heEnAlternateLanguages("/about", "/en/about"),
+  },
 }
 
 const WRAP_NARROW = "mx-auto max-w-[950px] px-2 sm:px-6"

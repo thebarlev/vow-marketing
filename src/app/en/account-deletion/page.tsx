@@ -1,5 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next"
+
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/en/account-deletion",
+    languages: heEnAlternateLanguages("/account-deletion", "/en/account-deletion"),
+  },
+}
 
 export default function AccountDeletionPageEn() {
   return (

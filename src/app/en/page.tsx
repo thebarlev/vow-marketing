@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { HeroEN } from "./_components/home/HeroEN"
 import { LogoRowEN } from "./_components/home/LogoRowEN"
 import { VisionToExecutionSectionEN } from "./_components/home/VisionToExecutionSectionEN"
@@ -14,6 +15,10 @@ const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuid
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vow.co.il"),
+  alternates: {
+    canonical: "/en",
+    languages: heEnAlternateLanguages("/", "/en"),
+  },
 
   title: "VOW | AI Websites, SEO & Marketing for Business Growth",
   description:

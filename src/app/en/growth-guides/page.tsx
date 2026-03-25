@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { DoubleHeadingCtaSection } from "@/app/_components/services/DoubleHeadingCtaSection"
 import { JsonLd, itemListSchema, webPageSchema } from "@/components/JsonLd"
 import { H2, H3 } from "@/components/ui/Heading"
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "Explore Growth Guides from VOW on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
   alternates: {
     canonical: "/en/growth-guides",
+    languages: heEnAlternateLanguages("/growth-guides", "/en/growth-guides"),
   },
   openGraph: {
     title: "Growth Guides | Learn How to Get Leads, Traffic & Growth",

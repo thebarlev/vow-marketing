@@ -5,7 +5,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allArticles } from "contentlayer/generated"
 import { BlogShell } from "@/app/_components/blog/BlogShell"
-import { JsonLd, articleSchema } from "@/components/JsonLd"
+import { JsonLd, articleSchema, breadcrumbListSchema } from "@/components/JsonLd"
 import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
 
 const MdxContent = dynamic(
@@ -15,6 +15,11 @@ const MdxContent = dynamic(
 import { BlogEndCta } from "@/app/_components/blog/BlogEndCta"
 import { CopyLinkButton } from "@/app/_components/blog/CopyLinkButton"
 import { H2 } from "@/components/ui/Heading"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+
+function findPostEn(slug: string) {
+  return allArticles.find((a) => a.slug === slug && (a.locale as string | undefined) === "en")
+}
 
 export async function generateMetadata({
   params,
@@ -27,10 +32,19 @@ export async function generateMetadata({
   )
   if (!post) return { title: "בלוג | VOW" }
 
+  const enPair = findPostEn(slug)
+
   return {
     title: `${post.title} | VOW`,
     description: post.description ?? "מאמר בבלוג של VOW.",
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+      ...(enPair
+        ? {
+            languages: heEnAlternateLanguages(`/blog/${post.slug}`, `/en/blog/${post.slug}`),
+          }
+        : {}),
+    },
     openGraph: {
       title: post.title,
       description: post.description ?? "מאמר בבלוג של VOW.",
@@ -65,8 +79,10 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.description ?? undefined,
     image: post.coverImage ? (post.coverImage.startsWith("http") ? post.coverImage : `https://vow.co.il${post.coverImage}`) : undefined,
+    url: shareUrl,
+    inLanguage: "he-IL",
     datePublished: post.date,
-  });
+  })
 
   const formattedDate = new Date(post.date).toLocaleDateString("he-IL", {
     year: "numeric",
@@ -77,6 +93,12 @@ export default async function BlogPostPage({
   return (
     <BlogShell>
       <JsonLd data={articleSchemaData} />
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "בלוג", url: "https://vow.co.il/blog" },
+          { name: post.title, url: shareUrl },
+        ])}
+      />
       <section
         dir="rtl"
         aria-label="מאמר"

@@ -88,8 +88,8 @@ export function ServiceHero({
               <H2
                 className={
                   isLtr
-                    ? "mt-6 w-full text-left text-[26px] font-normal leading-[20px]"
-                    : "mt-6 w-full text-right text-[26px] font-normal leading-[20px]"
+                    ? "mt-6 w-full text-left text-[24px] font-normal leading-[33px]"
+                    : "mt-6 w-full text-right text-[24px] font-normal leading-[33px]"
                 }
               >
                 {heroSubheading}

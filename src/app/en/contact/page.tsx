@@ -1,10 +1,15 @@
 import type { Metadata } from "next"
 
 import { ContactForm } from "@/app/_components/contact/ContactForm"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
   title: "Contact | VOW",
   description: "Get in touch with VOW. Fill in your details and we'll get back to you soon.",
+  alternates: {
+    canonical: "/en/contact",
+    languages: heEnAlternateLanguages("/contact", "/en/contact"),
+  },
 }
 
 export default function ContactPageEn() {

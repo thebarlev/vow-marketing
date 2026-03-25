@@ -7,6 +7,7 @@ import type { PricePlan } from "@/app/_components/home/PriceSection"
 import { SeoAiTemplateHe } from "@/app/_components/SeoAiTemplateHe"
 import { RelatedGuides } from "@/components/marketing/growth-guides/RelatedGuides"
 import { JsonLd, articleSchema, faqPageSchema } from "@/components/JsonLd"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 import {
   AUDITOR_URL_HE,
@@ -215,6 +216,10 @@ export async function generateMetadata({
     description: guide.metaDescription,
     alternates: {
       canonical: `/growth-guides/${guide.slug}`,
+      languages: heEnAlternateLanguages(
+        `/growth-guides/${guide.slug}`,
+        `/en/growth-guides/${guide.slug}`,
+      ),
     },
     openGraph: {
       title: `${guide.keyword} | מדריך צמיחה של VOW`,

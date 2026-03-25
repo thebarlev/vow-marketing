@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { H2, H3 } from "@/components/ui/Heading"
@@ -7,6 +8,10 @@ import { H2, H3 } from "@/components/ui/Heading"
 export const metadata: Metadata = {
   title: "אודות VOW",
   description: "VOW - תשתית טכנולוגית לצמיחה עסקית.",
+  alternates: {
+    canonical: "/about",
+    languages: heEnAlternateLanguages("/about", "/en/about"),
+  },
 }
 
 /* ─── קבועים ─── */

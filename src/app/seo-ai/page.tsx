@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LogoRow } from "@/app/_components/home/LogoRow"
 import { PackagesSection } from "@/app/_components/home/PackagesSection"
@@ -17,7 +18,14 @@ import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfig } from "@/app/_components/services/services.config"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
 
-export const metadata: Metadata = seoAiConfig.metadata
+export const metadata: Metadata = {
+  ...seoAiConfig.metadata,
+  alternates: {
+    ...seoAiConfig.metadata.alternates,
+    canonical: "/seo-ai",
+    languages: heEnAlternateLanguages("/seo-ai", "/en/seo-ai"),
+  },
+}
 
 const SEO_AI_PRICING: readonly PricePlan[] = [
   {

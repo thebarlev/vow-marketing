@@ -1,7 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next"
+
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/account-deletion",
+    languages: heEnAlternateLanguages("/account-deletion", "/en/account-deletion"),
+  },
+}
 
 export default function AccountDeletionPage() {
   return (

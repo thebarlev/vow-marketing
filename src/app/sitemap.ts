@@ -26,8 +26,6 @@ const staticRoutes = [
   "/marketing/ppc",
   "/seo-ai",
   "/roi",
-  "/checkout/success",
-  "/checkout/failed",
   // English
   "/en",
   "/en/invoice",

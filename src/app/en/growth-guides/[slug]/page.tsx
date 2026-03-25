@@ -8,6 +8,7 @@ import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
 import { EnLink } from "@/app/en/_components/EnLink"
 import { RelatedGuides } from "@/components/marketing/growth-guides/RelatedGuides"
 import { JsonLd, articleSchema, faqPageSchema } from "@/components/JsonLd"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 import {
   AUDITOR_URL,
@@ -218,6 +219,10 @@ export async function generateMetadata({
     description: guide.metaDescription,
     alternates: {
       canonical: `/en/growth-guides/${guide.slug}`,
+      languages: heEnAlternateLanguages(
+        `/growth-guides/${guide.slug}`,
+        `/en/growth-guides/${guide.slug}`,
+      ),
     },
     openGraph: {
       title: `${guide.keyword} | VOW Growth Guide`,

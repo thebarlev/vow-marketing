@@ -16,13 +16,22 @@ export function articleSchema(params: {
   datePublished?: string;
   dateModified?: string;
 }) {
+  const pageUrl = params.url
+  const mainEntityOfPage = pageUrl
+    ? {
+        "@type": "WebPage",
+        "@id": `${pageUrl.replace(/\/$/, "")}#webpage`,
+        url: pageUrl,
+      }
+    : undefined
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: params.headline,
     description: params.description ?? params.headline,
     image: params.image,
-    mainEntityOfPage: params.url,
+    ...(mainEntityOfPage ? { mainEntityOfPage } : {}),
     inLanguage: params.inLanguage,
     datePublished: params.datePublished,
     dateModified: params.dateModified ?? params.datePublished,
@@ -32,6 +41,21 @@ export function articleSchema(params: {
       name: "VOW",
       logo: { "@type": "ImageObject", url: "https://vow.co.il/logo.png" },
     },
+  };
+}
+
+export function breadcrumbListSchema(
+  items: { name: string; url: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((entry, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: entry.name,
+      item: entry.url,
+    })),
   };
 }
 
@@ -97,5 +121,19 @@ export const ORGANIZATION_SCHEMA = {
     email: "support@vow.co.il",
     contactType: "customer service",
     availableLanguage: ["Hebrew", "English"],
+  },
+} as const;
+
+/** Site-wide WebSite entity; no SearchAction (no public on-site search URL). */
+export const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "VOW",
+  url: "https://vow.co.il",
+  inLanguage: ["he-IL", "en"],
+  publisher: {
+    "@type": "Organization",
+    name: "VOW",
+    url: "https://vow.co.il",
   },
 } as const;

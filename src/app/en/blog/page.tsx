@@ -9,10 +9,15 @@ import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
 import { coerceBlogCategory, coerceBlogSort, parseTagsParam } from "@/app/_components/blog/blog.utils"
 import { EnLink } from "../_components/EnLink"
 import { prefixEnPath } from "../_lib/prefixEnPath"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
   title: "Blog | VOW",
   description: "Insights and guides on web development, automation, marketing, and AI for businesses.",
+  alternates: {
+    canonical: "/en/blog",
+    languages: heEnAlternateLanguages("/blog", "/en/blog"),
+  },
 }
 
 type SearchParams = Record<string, string | string[] | undefined>

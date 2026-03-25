@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/app/_components/home/SiteHeader";
 import { JsonLd, faqPageSchema } from "@/components/JsonLd";
@@ -5,6 +6,14 @@ import { SiteFooter } from "@/app/_components/home/SiteFooter";
 import { AboutSection } from "@/app/_components/home/AboutSection";
 import { PriceSection } from "@/app/_components/home/PriceSection";
 import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection";
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/pricing",
+    languages: heEnAlternateLanguages("/pricing", "/en/pricing"),
+  },
+};
 
 const PRICING_FAQ = [
   {

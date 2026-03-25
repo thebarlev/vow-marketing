@@ -418,6 +418,9 @@ export const seoAiConfig: ServicePageConfig = {
     title: "קידום עסקים בגוגל וב-AI",
     description:
       "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+    alternates: {
+      canonical: "/seo-ai",
+    },
     openGraph: {
       title: "קידום עסקים בגוגל וב-AI",
       description:

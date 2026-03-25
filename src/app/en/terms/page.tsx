@@ -1,6 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next"
+
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { JsonLd, webPageSchema } from "@/components/JsonLd"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/en/terms",
+    languages: heEnAlternateLanguages("/terms", "/en/terms"),
+  },
+}
 
 export default function TermsPageEn() {
   return (

@@ -1,6 +1,24 @@
+import type { Metadata } from "next"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { CheckoutForm } from "./CheckoutForm"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ packageId: string }>
+}): Promise<Metadata> {
+  const { packageId } = await params
+  return {
+    alternates: {
+      canonical: `/checkout/${packageId}`,
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
+  }
+}
 
 export default async function CheckoutPage({
   params,

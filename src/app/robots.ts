@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: "/api/",
       },
     ],
     sitemap: "https://vow.co.il/sitemap.xml",

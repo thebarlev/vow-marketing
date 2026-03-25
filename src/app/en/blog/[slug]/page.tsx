@@ -16,9 +16,17 @@ import { EnLink } from "@/app/en/_components/EnLink"
 import { EnBlogEndCta } from "@/app/en/_components/EnBlogEndCta"
 import { prefixEnPath } from "@/app/en/_lib/prefixEnPath"
 import { H2 } from "@/components/ui/Heading"
+import { JsonLd, articleSchema, breadcrumbListSchema } from "@/components/JsonLd"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 function findPostEn(slug: string) {
   return allArticles.find((a) => a.slug === slug && (a.locale as string | undefined) === "en")
+}
+
+function findPostHe(slug: string) {
+  return allArticles.find(
+    (a) => a.slug === slug && ((a.locale as string | undefined) !== "en" || !(a.locale as string | undefined)),
+  )
 }
 
 export async function generateMetadata({
@@ -30,10 +38,19 @@ export async function generateMetadata({
   const post = findPostEn(slug)
   if (!post) return { title: "Blog | VOW" }
 
+  const hePair = findPostHe(slug)
+
   return {
     title: `${post.title} | VOW`,
     description: post.description ?? "A VOW blog post.",
-    alternates: { canonical: `/en/blog/${post.slug}` },
+    alternates: {
+      canonical: `/en/blog/${post.slug}`,
+      ...(hePair
+        ? {
+            languages: heEnAlternateLanguages(`/blog/${post.slug}`, `/en/blog/${post.slug}`),
+          }
+        : {}),
+    },
     openGraph: {
       title: post.title,
       description: post.description ?? "A VOW blog post.",
@@ -62,6 +79,19 @@ export default async function BlogPostPageEn({
 
   const shareUrl = `https://vow.co.il/en/blog/${post.slug}`
 
+  const articleJsonLd = articleSchema({
+    headline: post.title,
+    description: post.description ?? undefined,
+    image: post.coverImage
+      ? post.coverImage.startsWith("http")
+        ? post.coverImage
+        : `https://vow.co.il${post.coverImage}`
+      : undefined,
+    url: shareUrl,
+    inLanguage: "en",
+    datePublished: post.date,
+  })
+
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -70,6 +100,13 @@ export default async function BlogPostPageEn({
 
   return (
     <BlogShell locale="en">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Blog", url: "https://vow.co.il/en/blog" },
+          { name: post.title, url: shareUrl },
+        ])}
+      />
       <section
         dir="ltr"
         aria-label="Article"

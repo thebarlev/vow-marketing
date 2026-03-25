@@ -8,10 +8,15 @@ import { BlogShell } from "@/app/_components/blog/BlogShell"
 import { BlogIndexControls } from "@/app/_components/blog/BlogIndexControls"
 import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
 import { coerceBlogCategory, coerceBlogSort, parseTagsParam } from "@/app/_components/blog/blog.utils"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
   title: "בלוג | VOW",
   description: "תובנות ומדריכים על פיתוח אתרים, אוטומציות, שיווק ו‑AI לעסקים.",
+  alternates: {
+    canonical: "/blog",
+    languages: heEnAlternateLanguages("/blog", "/en/blog"),
+  },
 }
 
 type SearchParams = Record<string, string | string[] | undefined>

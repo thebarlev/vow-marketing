@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
 
@@ -14,7 +15,14 @@ const GrowthGuidesCard = dynamic(
   { ssr: true },
 )
 
-export const metadata: Metadata = seoAiConfigEn.metadata
+export const metadata: Metadata = {
+  ...seoAiConfigEn.metadata,
+  alternates: {
+    ...seoAiConfigEn.metadata.alternates,
+    canonical: "/en/seo-ai",
+    languages: heEnAlternateLanguages("/seo-ai", "/en/seo-ai"),
+  },
+}
 
 export default function SeoAiPageEn() {
   return (

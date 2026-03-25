@@ -10,6 +10,7 @@ import { LogoRow } from "@/app/_components/home/LogoRow"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 const SuccessSection = dynamic(() => import("@/app/_components/home/SuccessSection").then((m) => m.SuccessSection))
 const Testimonials = dynamic(() => import("@/app/_components/home/Testimonials").then((m) => m.Testimonials))
@@ -22,6 +23,10 @@ const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuid
 export const metadata: Metadata = {
   // ✅ זה האתר השיווקי (לא app)
   metadataBase: new URL("https://vow.co.il"),
+  alternates: {
+    canonical: "/",
+    languages: heEnAlternateLanguages("/", "/en"),
+  },
 
   title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
   description:

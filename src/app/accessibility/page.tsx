@@ -1,8 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next"
+
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
 import { JsonLd, webPageSchema } from "@/components/JsonLd"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/accessibility",
+    languages: heEnAlternateLanguages("/accessibility", "/en/accessibility"),
+  },
+}
 
 export default function AccessibilityPage() {
   return (

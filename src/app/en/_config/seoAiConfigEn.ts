@@ -6,6 +6,9 @@ export const seoAiConfigEn: ServicePageConfig = {
     title: "Business Promotion in AI Search Engines | VOW",
     description:
       "A site without SEO gets no visitors. We connect every site to an SEO + AI system that runs monthly and grows traffic, content, and leads.",
+    alternates: {
+      canonical: "/en/seo-ai",
+    },
     openGraph: {
       title: "Business Promotion in AI Search Engines | VOW",
       description:
