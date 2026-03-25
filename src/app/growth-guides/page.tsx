@@ -60,7 +60,7 @@ export default function GrowthGuidesIndexPageHe() {
           ctaLabel="לצפייה במדריכים"
           ctaSource="digital_marketing"
           ctaHref="#guide-grid-he"
-          imageSrc="/services/seo-ai/hero1.webp"
+          imageSrc="/new-hero.webp"
           imageAlt="מדריכי צמיחה של VOW"
         />
 

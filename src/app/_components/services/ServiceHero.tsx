@@ -4,6 +4,12 @@ import { openLeadPopup } from "@/app/_components/home/leadPopupEvent"
 import type { LeadSource } from "@/app/_components/home/Popup"
 import { H2 } from "@/components/ui/Heading"
 
+/** Module-level strings so SSR and client bundles always reference the same classes (avoids Turbopack/HMR drift). */
+const IMAGE_COL_LTR =
+  "order-2 md:order-2 md:flex md:justify-end md:px-4 py-2 lg:py-5"
+const IMAGE_COL_RTL =
+  "order-1 md:order-2 md:flex md:justify-start md:px-4 py-2 lg:py-5"
+
 export type ServiceHeroProps = {
   title: React.ReactNode
   subtitle?: React.ReactNode
@@ -29,7 +35,7 @@ export function ServiceHero({
   ctaLabel,
   ctaSource,
   ctaHref,
-  imageSrc = "/D-hero.webp",
+  imageSrc = "/new-hero.webp",
   imageAlt = "",
   dir = "rtl",
 }: ServiceHeroProps) {
@@ -55,14 +61,13 @@ export function ServiceHero({
   return (
     <section aria-label={sectionAriaLabel} className="w-full bg-[#F4F1EC]" dir={dir}>
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid gap-8 md:grid-cols-2 md:items-center">
-
+        <div className="grid gap-8 md:grid-cols-[40fr_60fr] md:items-center">
           {/* Text */}
           <div
             className={
               isLtr
-                ? "order-1 md:order-1 w-full text-left px-4 sm:px-6 lg:px-4 py-[var(--space-section)]"
-                : "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 py-[var(--space-section)]"
+                ? "order-1 md:order-1 w-full text-left px-4 sm:px-6 lg:px-4 pt-4 pb-6 lg:pb-12"
+                : "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 pt-4 pb-6 lg:pb-12"
             }
           >
             <h1
@@ -120,25 +125,24 @@ export function ServiceHero({
             )}
           </div>
 
-          {/* Image */}
+          {/* Image — fill inside a sized box so SSR and client render identical markup (avoids next/image hydration mismatches). */}
           <div
-            className={
-              isLtr
-                ? "order-2 md:order-2 md:flex md:justify-end md:px-4 md:py-[var(--space-section)]"
-                : "order-1 md:order-2 md:flex md:justify-start md:px-4 md:py-[var(--space-section)]"
-            }
+            suppressHydrationWarning
+            className={isLtr ? IMAGE_COL_LTR : IMAGE_COL_RTL}
           >
-            <div className="relative h-[250px] w-full overflow-hidden rounded-none shadow-none md:h-auto md:max-w-[80%] md:rounded-3xl md:shadow-lg md:aspect-[1/1]">
-              <Image
-                src={imageSrc}
-                alt={imageAlt}
-                fill
-                priority
-                fetchPriority="high"
-                quality={60}
-                className="object-cover object-center"
-                sizes="(min-width: 768px) 45vw, 100vw"
-              />
+            <div className="relative w-full overflow-hidden md:max-w-[110%]">
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  priority
+                  fetchPriority="high"
+                  quality={60}
+                  className="object-contain object-center"
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                />
+              </div>
             </div>
           </div>
 

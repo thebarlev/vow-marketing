@@ -436,7 +436,7 @@ export const seoAiConfig: ServicePageConfig = {
     heroSubheading: "אנחנו הופכים את האתר שלך לנכס שמביא לקוחות, גם מגוגל וגם ממנועי AI. בלי קמפיינים ממומנים. בלי תלות בתקציב פרסום.",
     ctaLabel: "קבל אבחון נוכחות - בחינם",
     ctaSource: "digital_marketing",
-    imageSrc: "/services/seo-ai/hero1.webp",
+    imageSrc: "/new-hero.webp",
     imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
   },
   doubleHeading: {

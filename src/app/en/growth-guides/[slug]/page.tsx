@@ -252,7 +252,7 @@ export default async function GrowthGuidePage({
         data={articleSchema({
           headline: guide.keyword,
           description: guide.metaDescription,
-          image: "https://vow.co.il/services/seo-ai/hero1.webp",
+          image: "https://vow.co.il/new-hero.webp",
           url: pageUrl,
           inLanguage: "en",
         })}

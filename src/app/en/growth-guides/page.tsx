@@ -74,7 +74,7 @@ export default function GrowthGuidesIndexPageEn() {
           ctaLabel="Browse guides"
           ctaSource="digital_marketing"
           ctaHref="#growth-guides-grid"
-          imageSrc="/services/seo-ai/hero1.webp"
+          imageSrc="/new-hero.webp"
           imageAlt="Growth Guides"
           dir="ltr"
         />

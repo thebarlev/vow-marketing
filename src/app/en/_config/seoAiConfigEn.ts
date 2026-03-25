@@ -23,7 +23,7 @@ export const seoAiConfigEn: ServicePageConfig = {
     heroSubheading: "",
     ctaLabel: "Start your free audit",
     ctaSource: "digital_marketing",
-    imageSrc: "/services/seo-ai/hero1.webp",
+    imageSrc: "/new-hero.webp",
     imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
   },
   doubleHeading: {

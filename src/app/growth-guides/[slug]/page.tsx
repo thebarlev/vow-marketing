@@ -145,7 +145,7 @@ function buildGuideTemplateProps(guide: GrowthGuideHe) {
       ctaLabel: "קבל אבחון נוכחות בחינם",
       ctaSource: "digital_marketing" as const,
       ctaHref: "#price",
-      imageSrc: "/services/seo-ai/hero1.webp",
+      imageSrc: "/new-hero.webp",
       imageAlt: guide.keyword,
     },
     stats: {
@@ -249,7 +249,7 @@ export default async function GrowthGuidePageHe({
         data={articleSchema({
           headline: guide.keyword,
           description: guide.metaDescription,
-          image: "https://vow.co.il/services/seo-ai/hero1.webp",
+          image: "https://vow.co.il/new-hero.webp",
           url: pageUrl,
           inLanguage: "he",
         })}
