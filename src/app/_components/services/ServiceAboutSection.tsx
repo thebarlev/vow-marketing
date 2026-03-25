@@ -79,10 +79,11 @@ export function ServiceAboutSection({
               <article
                 key={item.id}
                 className="
-                  py-[16px] px-[10px]
+                  py-[14px] px-[10px]
                   sm:py-[3.25rem] sm:px-[3.25rem]
+                  lg:py-[1.1rem] lg:px-[1.1rem]
                 "
-              >
+              > 
                 <div className="flex items-center gap-3 py-2">
                   {item.icon ? (
                     <Image
