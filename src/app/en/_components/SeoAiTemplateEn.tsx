@@ -7,8 +7,8 @@ import type { SeoAiProcessStep } from "@/app/_components/services/SeoAiProcessSt
 import type { SeoAiStatsBarItem } from "@/app/_components/services/SeoAiStatsBar"
 import { H2 } from "@/components/ui/Heading"
 
-const LogoRow = dynamic(
-  () => import("@/app/_components/home/LogoRow").then((m) => m.LogoRow),
+const LogoRowEN = dynamic(
+  () => import("@/app/en/_components/home/LogoRowEN").then((m) => m.LogoRowEN),
   { ssr: true },
 )
 const PriceSection = dynamic(
@@ -122,7 +122,7 @@ export function SeoAiTemplateEn({
           </section>
         ) : null}
 
-        <LogoRow locale="en" />
+        <LogoRowEN />
         {postLogoContent}
         <SeoAiStatsBar locale="en" ariaLabel={stats?.ariaLabel} items={stats?.items} title={stats?.title} />
         <SeoAiProcessSteps
