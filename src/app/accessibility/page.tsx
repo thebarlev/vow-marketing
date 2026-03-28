@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
         data={webPageSchema({
           name: "נגישות | VOW",
           description: "VOW מחויבת לנגישות. האתר עומד בתקן ת\"י 5568 ו-WCAG 2.1 ברמת AA.",
-          url: "https://vow.co.il/accessibility",
+          url: "https://uxellent.com/accessibility",
           dateModified: "2025-02-01",
         })}
       />
@@ -48,8 +48,8 @@ VOW בע״מ נוקטת את מירב המאמצים ומשקיעה משאבים
  אמצעים נוספים ליצירת קשר
 קיימים מספר אמצעים נוספים ליצירת קשר:
 
-- דואר אלקטרוני: support@vow.co.il
-- פניה באמצעות "צור קשר" באתר: https://www.vow.co.il/contact
+- דואר אלקטרוני: support@uxellent.com
+- פניה באמצעות "צור קשר" באתר: https://uxellent.com/contact
 - פניה באמצעות עמוד הלינקדאין: [קישור לעמוד]
 
  נגישות אתר האינטרנט
@@ -80,7 +80,7 @@ VOW היא פלטפורמה דיגיטלית המספקת שירות מלא בא
  פרטי רכז הנגישות ב-VOW
 
 שם: יצחק ברלב 
-דוא"ל: support@vow.co.il  
+דוא"ל: support@uxellent.com  
 טלפון: 054-5215193
 
 

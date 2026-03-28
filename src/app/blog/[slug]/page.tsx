@@ -74,11 +74,11 @@ export default async function BlogPostPage({
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 4)
 
-  const shareUrl = `https://vow.co.il/blog/${post.slug}`
+  const shareUrl = `https://uxellent.com/blog/${post.slug}`
   const articleSchemaData = articleSchema({
     headline: post.title,
     description: post.description ?? undefined,
-    image: post.coverImage ? (post.coverImage.startsWith("http") ? post.coverImage : `https://vow.co.il${post.coverImage}`) : undefined,
+    image: post.coverImage ? (post.coverImage.startsWith("http") ? post.coverImage : `https://uxellent.com${post.coverImage}`) : undefined,
     url: shareUrl,
     inLanguage: "he-IL",
     datePublished: post.date,
@@ -95,7 +95,7 @@ export default async function BlogPostPage({
       <JsonLd data={articleSchemaData} />
       <JsonLd
         data={breadcrumbListSchema([
-          { name: "בלוג", url: "https://vow.co.il/blog" },
+          { name: "בלוג", url: "https://uxellent.com/blog" },
           { name: post.title, url: shareUrl },
         ])}
       />

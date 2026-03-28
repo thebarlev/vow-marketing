@@ -179,7 +179,7 @@ H2: שאלות נפוצות
 | שאלה | תשובה קצרה |
 |------|------------|
 | תוך כמה זמן תחזרו אליי? | תוך שעות ספורות בימי עסקים. |
-| איך אפשר ליצור קשר מלבד הטופס? | וואטסאפ 054-5215193, מייל support@vow.co.il |
+| איך אפשר ליצור קשר מלבד הטופס? | וואטסאפ 054-5215193, מייל support@uxellent.com |
 | האם השיחה הראשונה מחייבת? | לא. שיחת היכרות קצרה ללא התחייבות. |
 | אילו שירותים אתם מציעים? | פיתוח אתרים, שיווק דיגיטלי, עיצוב, חשבונית דיגיטלית, רו״ח AI. |
 
@@ -432,7 +432,7 @@ H2: שאלות נפוצות
     "name": "VOW",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://vow.co.il/logo.png"
+      "url": "https://uxellent.com/logo.png"
     }
   }
 }
@@ -455,8 +455,8 @@ H2: שאלות נפוצות
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "VOW",
-  "url": "https://vow.co.il",
-  "logo": "https://vow.co.il/logo.png",
+  "url": "https://uxellent.com",
+  "logo": "https://uxellent.com/logo.png",
   "sameAs": [
     "https://www.linkedin.com/company/vow",
     "https://www.facebook.com/profile.php?id=61587713103366",
@@ -465,7 +465,7 @@ H2: שאלות נפוצות
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "support@vow.co.il",
+    "email": "support@uxellent.com",
     "contactType": "customer service",
     "availableLanguage": ["Hebrew", "English"]
   }
@@ -492,7 +492,7 @@ H2: שאלות נפוצות
   "@type": "WebPage",
   "name": "מדיניות פרטיות | VOW",
   "description": "מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך",
-  "url": "https://vow.co.il/privacy",
+  "url": "https://uxellent.com/privacy",
   "dateModified": "2026-02-01"
 }
 ```

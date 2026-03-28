@@ -24,7 +24,7 @@ const assistant = Assistant({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vow.co.il"),
+  metadataBase: new URL("https://uxellent.com"),
   title: "VOW",
   description: "פיתוח דיגיטלי, SEO ושיווק לעסקים.",
   icons: {

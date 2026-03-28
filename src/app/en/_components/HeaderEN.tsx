@@ -117,10 +117,10 @@ export function HeaderEN() {
               Google & AI Search Optimization
               </span>
               <div className="flex items-center gap-2 shrink-0">
-                <a href="https://app.vow.co.il/en/auditor/register" className="vow-btn-primary !h-[44px]">
+                <a href="https://app.uxellent.com/en/auditor/register" className="vow-btn-primary !h-[44px]">
                   Sign up
                 </a>
-                <a href="https://app.vow.co.il/en/auditor/login" className="vow-btn-secondary !h-[44px]">
+                <a href="https://app.uxellent.com/en/auditor/login" className="vow-btn-secondary !h-[44px]">
                   Log in
                 </a>
               </div>
@@ -267,10 +267,10 @@ export function HeaderEN() {
               <span className="text-left max-w-[140px]" style={{ fontSize: "16px", lineHeight: "20px" }}>
               Search Performance Optimization
               </span>
-                <a href="https://app.vow.co.il/en/auditor/register" className="vow-btn-primary !h-[44px]">
+                <a href="https://app.uxellent.com/en/auditor/register" className="vow-btn-primary !h-[44px]">
                   Sign up
                 </a>
-                <a href="https://app.vow.co.il/en/auditor/login" className="vow-btn-secondary !h-[44px]">
+                <a href="https://app.uxellent.com/en/auditor/login" className="vow-btn-secondary !h-[44px]">
                   Log in
                 </a>
               </div>

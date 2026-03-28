@@ -33,7 +33,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     kicker: "מנועי חיפוש AI",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "197 ₪ לחודש",
     priceextra: "מתאים ל: עסקים בתחילת דרך או תקציב מוגבל",
     badge: "",
@@ -50,7 +50,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     kicker: "ליווי מומחה + ביצוע חודשי מלא",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "597 ₪ לחודש",
     priceextra: "מתאים ל: עסקים שרוצים תוצאות בלי להתעסק",
     badge: "המומלץ ביותר",
@@ -70,7 +70,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
     kicker: "SEO + מנועי AI + מומחה אישי",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_premium&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_premium&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "1,497 ₪ לחודש",
     priceextra: 'מתאים ל: רפואה / עו"ד / נדל"ן / פיננסים',
     badge: "",

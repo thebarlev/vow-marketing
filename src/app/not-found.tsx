@@ -80,7 +80,7 @@ export default function NotFoundPage() {
                   חזרה לעמוד הבית
                 </Link>
                 <a
-                  href="https://app.vow.co.il"
+                  href="https://app.uxellent.com"
                   className="vow-btn-primary w-full justify-center sm:w-auto"
                 >
                   להצטרפות לחשבונית דיגיטלית מאובטחת - שנה חינם

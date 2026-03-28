@@ -171,7 +171,7 @@ export const invoiceConfig: ProductPageConfig = {
     heroSubheading: "הפקת מסמכים, ניהול לקוחות והפקת דוחות - חתימה דיגיטלית מאובטחת וחיבור לרשות המיסים",
     ctaLabel: "להצטרפות",
     ctaSource: "smart_accounting_ai",
-    ctaHref: "https://app.vow.co.il",
+    ctaHref: "https://app.uxellent.com",
     imageSrc: "/services/d-green-invocie.webp",
     imageAlt: "Invoice",
   },
@@ -179,7 +179,7 @@ export const invoiceConfig: ProductPageConfig = {
     title: "חשבונית דיגיטלית מאובטחת",
     subtitle: "VOW מאפשרת הפקת חשבוניות ו-12 סוגי מסמכים עסקיים, עם חתימה דיגיטלית מאובטחת.",
     ctaLabel: "להצטרפות",
-    ctaHref: "https://app.vow.co.il",
+    ctaHref: "https://app.uxellent.com",
     source: "smart_accounting_ai",
     cards: [
       { id: "invoice-1", src: "/services/invoice/vow1.webp", alt: "הפקת 12 סוגי מסמכים לניהול העסק והפקת דוחות", caption: "הפקת 12 סוגי מסמכים לניהול העסק והפקת דוחות" },
@@ -199,7 +199,7 @@ export const invoiceConfig: ProductPageConfig = {
     subtitle: "חשבוניות, קבלות ומסמכים רגולטוריים עם חתימה דיגיטלית מאובטחת. בחינם לשנה הראשונה",
     ctaLabel: "להצטרפות",
     ctaSource: "smart_accounting_ai",
-    ctaHref: "https://app.vow.co.il",
+    ctaHref: "https://app.uxellent.com",
     items: [
       { id: "invoice-about-1", title: "הפקת קבלות / חשבוניות בקלות", description: "הפיקו חשבוניות מס, קבלות וחשבוניות עסקה בפורמט מקצועי - ישירות מהדשבורד, ללא ידע חשבונאי.", icon: "/services/invoice/invoice.svg" },
       { id: "invoice-about-2", title: "חתימה דיגיטלית מאובטחת", description: "כל מסמך נחתם דיגיטלית ומוגן מפני זיוף / שינוי, אמינות מקסימלית מול לקוחות ורשויות.", icon: "/services/invoice/safe.svg" },
@@ -214,7 +214,7 @@ export const invoiceConfig: ProductPageConfig = {
       { 
         id: "invoice-faq-3", 
         question: "האם יש תמיכה ושירות לקוחות?", 
-        answer: "כן. יש תמיכה אנושית מלאה:\n• צ'אט באתר\n• מייל: support@vow.co.il\n• טלפון / וואטסאפ: 054-5215193\n\nלכל שאלה – אנחנו זמינים." 
+        answer: "כן. יש תמיכה אנושית מלאה:\n• צ'אט באתר\n• מייל: support@uxellent.com\n• טלפון / וואטסאפ: 054-5215193\n\nלכל שאלה – אנחנו זמינים." 
       },
 
       

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 }
 
 export default function GrowthGuidesIndexPageEn() {
-  const pageUrl = "https://vow.co.il/en/growth-guides"
+  const pageUrl = "https://uxellent.com/en/growth-guides"
 
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
@@ -52,7 +52,7 @@ export default function GrowthGuidesIndexPageEn() {
           url: pageUrl,
           items: growthGuides.map((guide) => ({
             name: guide.title,
-            url: `https://vow.co.il/en/growth-guides/${guide.slug}`,
+            url: `https://uxellent.com/en/growth-guides/${guide.slug}`,
           })),
         })}
       />

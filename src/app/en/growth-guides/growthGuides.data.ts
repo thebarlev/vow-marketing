@@ -46,7 +46,7 @@ export type GrowthGuide = {
   relatedSlugs: readonly string[]
 }
 
-export const AUDITOR_URL = "https://app.vow.co.il/en/auditor"
+export const AUDITOR_URL = "https://app.uxellent.com/en/auditor"
 export const SEO_AI_MARKETING_URL = "/en/seo-ai"
 
 const growthGuideContent = [

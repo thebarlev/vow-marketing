@@ -42,7 +42,7 @@ export type GrowthGuideHe = {
   ctaSubtitle: string
 }
 
-export const AUDITOR_URL_HE = "https://app.vow.co.il/auditor"
+export const AUDITOR_URL_HE = "https://app.uxellent.com/auditor"
 export const SEO_AI_URL_HE = "/seo-ai"
 
 const growthGuideContentHe = [

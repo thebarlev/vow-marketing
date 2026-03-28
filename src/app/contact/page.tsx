@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const CONTACT_FAQ = [
   { id: "contact-faq-1", question: "תוך כמה זמן תחזרו?", answer: "תוך שעות ספורות בימי עסקים." },
-  { id: "contact-faq-2", question: "איך ליצור קשר מלבד הטופס?", answer: "וואטסאפ 054-5215193, מייל support@vow.co.il" },
+  { id: "contact-faq-2", question: "איך ליצור קשר מלבד הטופס?", answer: "וואטסאפ 054-5215193, מייל support@uxellent.com" },
   { id: "contact-faq-3", question: "האם השיחה הראשונה מחייבת?", answer: "לא. שיחת היכרות קצרה ללא התחייבות." },
   { id: "contact-faq-4", question: "אילו שירותים אתם מציעים?", answer: "פיתוח אתרים, שיווק דיגיטלי, עיצוב, חשבונית דיגיטלית, רו״ח AI." },
 ] as const;

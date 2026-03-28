@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vow.co.il/sitemap.xml
+Sitemap: https://uxellent.com/sitemap.xml
 
 User-agent: GPTBot
 Allow: /

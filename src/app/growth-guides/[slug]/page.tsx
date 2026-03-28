@@ -23,7 +23,7 @@ const SEO_AI_PRICING_HE: readonly PricePlan[] = [
     kicker: "מנועי חיפוש AI",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_basic&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "197 ₪ לחודש",
     priceextra: "מתאים לעסקים בתחילת הדרך או בתקציב מוגבל",
     badge: "",
@@ -40,7 +40,7 @@ const SEO_AI_PRICING_HE: readonly PricePlan[] = [
     kicker: "ליווי מומחה + ביצוע חודשי",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_pro&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "597 ₪ לחודש",
     priceextra: "מתאים לעסקים שרוצים צמיחה עקבית",
     badge: "המומלץ ביותר",
@@ -59,7 +59,7 @@ const SEO_AI_PRICING_HE: readonly PricePlan[] = [
     kicker: "SEO + מנועי AI + מומחה אישי",
     buttonLabel: "אבחון נוכחות בחינם והצטרפות",
     buttonHref:
-      "https://app.vow.co.il/auditor?link_id=a_premium&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
+      "https://app.uxellent.com/auditor?link_id=a_premium&utm_source=website&utm_medium=cta&utm_campaign=auditor_pricing",
     price: "1,497 ₪ לחודש",
     priceextra: "מתאים לתחומים תחרותיים",
     badge: "",
@@ -241,7 +241,7 @@ export default async function GrowthGuidePageHe({
   if (!guide) notFound()
 
   const template = buildGuideTemplateProps(guide)
-  const pageUrl = `https://vow.co.il/growth-guides/${guide.slug}`
+  const pageUrl = `https://uxellent.com/growth-guides/${guide.slug}`
 
   return (
     <>
@@ -249,7 +249,7 @@ export default async function GrowthGuidePageHe({
         data={articleSchema({
           headline: guide.keyword,
           description: guide.metaDescription,
-          image: "https://vow.co.il/new-hero.webp",
+          image: "https://uxellent.com/new-hero.webp",
           url: pageUrl,
           inLanguage: "he",
         })}

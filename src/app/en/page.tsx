@@ -14,7 +14,7 @@ const FaqSectionEN = dynamic(() => import("./_components/home/FaqSectionEN").the
 const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuidesCard").then((m) => m.GrowthGuidesCard))
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vow.co.il"),
+  metadataBase: new URL("https://uxellent.com"),
   alternates: {
     canonical: "/en",
     languages: heEnAlternateLanguages("/", "/en"),
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
     title: "VOW | AI Websites, SEO & Marketing for Business Growth",
     description:
       "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with VOW.",
-    url: "https://vow.co.il/en",
+    url: "https://uxellent.com/en",
     siteName: "VOW",
     images: [
       {
-        url: "https://vow.co.il/og-home.jpg",
+        url: "https://uxellent.com/og-home.jpg",
         width: 1200,
         height: 630,
         alt: "VOW – AI Accountant & Digital Business Platform",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "VOW | AI Websites, SEO & Marketing for Business Growth",
     description:
       "One year free for secure digital invoice + AI accountant, marketing, branding and systems development for businesses.",
-    images: ["https://vow.co.il/og-home.jpg"],
+    images: ["https://uxellent.com/og-home.jpg"],
   },
 
   robots: {

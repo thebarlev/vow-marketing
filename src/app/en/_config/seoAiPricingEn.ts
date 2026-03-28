@@ -7,7 +7,7 @@ export const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "AI search engines",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/en/auditor?link_id=a_basic",
+      "https://app.uxellent.com/en/auditor?link_id=a_basic",
     price: "$100/month",
     priceextra: "For early-stage businesses or limited budgets",
     badge: "",
@@ -25,7 +25,7 @@ export const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "Expert support + monthly execution",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/en/auditor?link_id=a_pro",
+      "https://app.uxellent.com/en/auditor?link_id=a_pro",
     price: "$270/month",
     priceextra: "For businesses that want consistent growth",
     badge: "Most popular",
@@ -45,7 +45,7 @@ export const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     kicker: "SEO + AI engines + personal expert",
     buttonLabel: "Free presence audit & join",
     buttonHref:
-      "https://app.vow.co.il/en/auditor?link_id=a_premium",
+      "https://app.uxellent.com/en/auditor?link_id=a_premium",
     price: "$670/month",
     priceextra: "For competitive industries (legal, medical, finance)",
     badge: "",

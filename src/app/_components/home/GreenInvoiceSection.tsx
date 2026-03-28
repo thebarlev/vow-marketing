@@ -24,7 +24,7 @@ export function GreenInvoiceSection() {
               סריקת אתר שמזהה חסמים בגוגל וב-AI ומייצרת תכנית פעולה מיידית.
             </H2>
             <Link
-              href="https://vow.co.il/seo-ai"
+              href="https://uxellent.com/seo-ai"
               className="vow-btn-primary mt-8 w-full max-w-[323px] !rounded-xl px-10 py-4 mb-4"
             >
               פרטים נוספים

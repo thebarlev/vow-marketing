@@ -19,7 +19,7 @@ export default function AccessibilityPageEn() {
         data={webPageSchema({
           name: "Accessibility | VOW",
           description: "VOW is committed to accessibility. The site meets Israeli Standard 5568 and WCAG 2.1 Level AA.",
-          url: "https://vow.co.il/en/accessibility",
+          url: "https://uxellent.com/en/accessibility",
           dateModified: "2025-02-01",
         })}
       />
@@ -55,14 +55,14 @@ export default function AccessibilityPageEn() {
               <ul className="list-disc ml-6 space-y-2">
                 <li>
                   Email:{" "}
-                  <a href="mailto:support@vow.co.il" className="text-blue-600 underline font-semibold">
-                    support@vow.co.il
+                  <a href="mailto:support@uxellent.com" className="text-blue-600 underline font-semibold">
+                    support@uxellent.com
                   </a>
                 </li>
                 <li>
                   Contact form:{" "}
-                  <a href="https://www.vow.co.il/en/contact" className="text-blue-600 underline">
-                    vow.co.il/en/contact
+                  <a href="https://uxellent.com/en/contact" className="text-blue-600 underline">
+                    uxellent.com/en/contact
                   </a>
                 </li>
                 <li>LinkedIn page: direct message via our LinkedIn profile</li>
@@ -131,8 +131,8 @@ export default function AccessibilityPageEn() {
               <p><strong>Name:</strong> Yitzhak Berlav</p>
               <p>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:support@vow.co.il" className="text-blue-600 underline">
-                  support@vow.co.il
+                <a href="mailto:support@uxellent.com" className="text-blue-600 underline">
+                  support@uxellent.com
                 </a>
               </p>
               <p><strong>Phone:</strong> 054-5215193</p>

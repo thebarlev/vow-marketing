@@ -21,7 +21,7 @@ export default function TermsPage() {
         data={webPageSchema({
           name: "תנאי שימוש | VOW",
           description: "תנאי השימוש של VOW - עדכון אחרון פברואר 2026",
-          url: "https://vow.co.il/terms",
+          url: "https://uxellent.com/terms",
           dateModified: "2026-02-16",
         })}
       />
@@ -40,9 +40,9 @@ export default function TermsPage() {
               חברת Bugo Media LTD, ח.פ. 515960508 ("VOW", "אנחנו" או "החברה") מפעילה מערכת מקוונת המאפשרת יצירה, ניהול ושליחה של מסמכים חשבונאיים דיגיטליים, לרבות חשבוניות מס, קבלות, חשבוניות עסקה ומסמכים עסקיים נוספים. המערכת זמינה דרך:
             </p>
             <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>אתר האינטרנט שלנו: vow.co.il</li>
-              <li>המערכת המקוונת: app.vow.co.il</li>
-              <li>שירות החתימה הדיגיטלית: dsign.vow.co.il</li>
+              <li>אתר האינטרנט שלנו: uxellent.com</li>
+              <li>המערכת המקוונת: app.uxellent.com</li>
+              <li>שירות החתימה הדיגיטלית: dsign.uxellent.com</li>
             </ul>
             <p>המערכת, האתר ושירות החתימה הדיגיטלית יכונו ביחד להלן: "השירותים" או "המערכת".</p>
 
@@ -64,13 +64,13 @@ export default function TermsPage() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.4 מדיניות הפרטיות</h3>
             <p>
-              מדיניות הפרטיות של VOW זמינה בכתובת <a href="https://vow.co.il/privacy" className="text-blue-600 underline">https://vow.co.il/privacy</a> ומהווה חלק בלתי נפרד מתנאי שימוש אלה.
+              מדיניות הפרטיות של VOW זמינה בכתובת <a href="https://uxellent.com/privacy" className="text-blue-600 underline">https://uxellent.com/privacy</a> ומהווה חלק בלתי נפרד מתנאי שימוש אלה.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.5 שירותי תמיכה</h3>
             <p>אנחנו מספקים תמיכה טכנית בערוצים הבאים:</p>
             <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>צ'אט במערכת (app.vow.co.il)</li>
+              <li>צ'אט במערכת (app.uxellent.com)</li>
               <li>WhatsApp: 0545215193</li>
             </ul>
             <p><strong>שעות פעילות:</strong> ימים א'–ה', 9:00–18:00</p>
@@ -78,7 +78,7 @@ export default function TermsPage() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.6 דיווח על תוכן בעייתי</h3>
             <p>
-              אם נתקלת במערכת בתוכן המפר כל דין, אנא הודע לנו בדוא"ל <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a> עם פירוט התוכן ומהות ההפרה.
+              אם נתקלת במערכת בתוכן המפר כל דין, אנא הודע לנו בדוא"ל <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a> עם פירוט התוכן ומהות ההפרה.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.7 הערות כלליות</h3>
@@ -410,7 +410,7 @@ export default function TermsPage() {
             <h3 className="text-[20px] font-semibold mb-3 mt-6">6.3 איך לבטל מנוי</h3>
             <p>ניתן לבטל מנוי באחד מהאופנים הבאים:</p>
             <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>דוא"ל לכתובת: <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></li>
+              <li>דוא"ל לכתובת: <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></li>
               <li>צ'אט עם נציג במערכת</li>
               <li>WhatsApp: 0545215193</li>
             </ul>
@@ -612,7 +612,7 @@ export default function TermsPage() {
               <li>בדוק תמיד את כתובת ה-URL לפני לחיצה על קישור</li>
             </ul>
             <p>
-              אם מצאת באתר חיצוני תוכן בעייתי, אנא הודע לנו ב-<a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>.
+              אם מצאת באתר חיצוני תוכן בעייתי, אנא הודע לנו ב-<a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a>.
             </p>
           </section>
 
@@ -636,7 +636,7 @@ export default function TermsPage() {
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.1 מהם ערוצי התוכן</h3>
             <p>VOW מפעילה ערוצי תוכן שונים, לרבות:</p>
             <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>בלוג ומאמרים באתר vow.co.il</li>
+              <li>בלוג ומאמרים באתר uxellent.com</li>
               <li>פוסטים ברשתות חברתיות (פייסבוק, אינסטגרם, לינקדאין, TikTok)</li>
               <li>סרטוני הדרכה וחומרי לימוד</li>
             </ul>
@@ -672,7 +672,7 @@ export default function TermsPage() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.5 הצעות למשתמש לתכנים</h3>
             <p>
-              אתה מוזמן להציע נושאים ורעיונות לתכנים בדוא"ל <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>.
+              אתה מוזמן להציע נושאים ורעיונות לתכנים בדוא"ל <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a>.
             </p>
             <p>אם תשלח הצעה:</p>
             <ul className="list-disc mr-6 my-3 space-y-1">
@@ -769,7 +769,7 @@ export default function TermsPage() {
               יש לך שאלות על תנאי השימוש? רוצה לבטל מנוי או לקבל תמיכה?
             </p>
             <div className="bg-white p-6 rounded-lg">
-              <p><strong>דוא"ל:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>דוא"ל:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
               <p><strong>WhatsApp:</strong> 0545215193</p>
               <p><strong>שם החברה:</strong> Bugo Media Ltd</p>
               <p><strong>מספר חברה:</strong> 515960508</p>

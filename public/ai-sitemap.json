@@ -1,131 +1,131 @@
 {
-  "site": "https://vow.co.il",
+  "site": "https://uxellent.com",
   "brand": "VOW",
   "description": "AI-powered accountant, digital invoicing and website development platform.",
-  "generated_at": "2026-03-25T21:18:09.044Z",
+  "generated_at": "2026-03-28T19:04:47.036Z",
   "priority_pages": [
     {
-      "url": "https://vow.co.il",
+      "url": "https://uxellent.com",
       "type": "homepage"
     },
     {
-      "url": "https://vow.co.il/en",
+      "url": "https://uxellent.com/en",
       "type": "homepage_en"
     },
     {
-      "url": "https://vow.co.il/account-ai",
+      "url": "https://uxellent.com/account-ai",
       "type": "product"
     },
     {
-      "url": "https://vow.co.il/en/account-ai",
+      "url": "https://uxellent.com/en/account-ai",
       "type": "product"
     },
     {
-      "url": "https://vow.co.il/en/invoice",
+      "url": "https://uxellent.com/en/invoice",
       "type": "product"
     },
     {
-      "url": "https://vow.co.il/invoice",
+      "url": "https://uxellent.com/invoice",
       "type": "product"
     },
     {
-      "url": "https://vow.co.il/design",
+      "url": "https://uxellent.com/design",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/develop",
+      "url": "https://uxellent.com/develop",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/develop-ai",
+      "url": "https://uxellent.com/develop-ai",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/en/design",
+      "url": "https://uxellent.com/en/design",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/en/develop",
+      "url": "https://uxellent.com/en/develop",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/en/develop-ai",
+      "url": "https://uxellent.com/en/develop-ai",
       "type": "development"
     },
     {
-      "url": "https://vow.co.il/en/marketing/ppc",
+      "url": "https://uxellent.com/en/marketing/ppc",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/en/portfolio",
+      "url": "https://uxellent.com/en/portfolio",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/en/pricing",
+      "url": "https://uxellent.com/en/pricing",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/en/seo-ai",
+      "url": "https://uxellent.com/en/seo-ai",
       "type": "seo"
     },
     {
-      "url": "https://vow.co.il/en/seo-ai/pricing",
+      "url": "https://uxellent.com/en/seo-ai/pricing",
       "type": "seo"
     },
     {
-      "url": "https://vow.co.il/marketing/ppc",
+      "url": "https://uxellent.com/marketing/ppc",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/marketing/seo-ai",
+      "url": "https://uxellent.com/marketing/seo-ai",
       "type": "seo"
     },
     {
-      "url": "https://vow.co.il/portfolio",
+      "url": "https://uxellent.com/portfolio",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/pricing",
+      "url": "https://uxellent.com/pricing",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/roi",
+      "url": "https://uxellent.com/roi",
       "type": "services"
     },
     {
-      "url": "https://vow.co.il/seo-ai",
+      "url": "https://uxellent.com/seo-ai",
       "type": "seo"
     },
     {
-      "url": "https://vow.co.il/blog",
+      "url": "https://uxellent.com/blog",
       "type": "blog"
     },
     {
-      "url": "https://vow.co.il/en/blog",
+      "url": "https://uxellent.com/en/blog",
       "type": "blog"
     },
     {
-      "url": "https://vow.co.il/about",
+      "url": "https://uxellent.com/about",
       "type": "page"
     },
     {
-      "url": "https://vow.co.il/contact",
+      "url": "https://uxellent.com/contact",
       "type": "page"
     },
     {
-      "url": "https://vow.co.il/en/about",
+      "url": "https://uxellent.com/en/about",
       "type": "page"
     },
     {
-      "url": "https://vow.co.il/en/contact",
+      "url": "https://uxellent.com/en/contact",
       "type": "page"
     },
     {
-      "url": "https://vow.co.il/en/growth-guides",
+      "url": "https://uxellent.com/en/growth-guides",
       "type": "page"
     },
     {
-      "url": "https://vow.co.il/growth-guides",
+      "url": "https://uxellent.com/growth-guides",
       "type": "page"
     }
   ]

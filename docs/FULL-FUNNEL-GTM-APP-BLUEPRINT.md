@@ -1,6 +1,6 @@
 # Full Funnel GTM App Blueprint
 
-This document describes the app-side integration points for the `app.vow.co.il` flow that is not present in this repository.
+This document describes the app-side integration points for the `app.uxellent.com` flow that is not present in this repository.
 
 ## Shared helpers
 
@@ -15,7 +15,7 @@ import { trackPurchase } from "@/lib/tracking/purchase"
 
 Location:
 
-- `app.vow.co.il/en/auditor`
+- `app.uxellent.com/en/auditor`
 
 Trigger:
 
@@ -33,7 +33,7 @@ pushEvent("scan_started", {
 
 Location:
 
-- `app.vow.co.il/en/auditor/register`
+- `app.uxellent.com/en/auditor/register`
 
 Trigger options:
 

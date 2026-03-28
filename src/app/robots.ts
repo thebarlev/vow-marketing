@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/api/",
       },
     ],
-    sitemap: "https://vow.co.il/sitemap.xml",
-    host: "https://vow.co.il",
+    sitemap: "https://uxellent.com/sitemap.xml",
+    host: "https://uxellent.com",
   }
 }

@@ -3,7 +3,7 @@ import { allArticles } from "contentlayer/generated"
 
 import { growthGuides } from "@/lib/growth-guides/topics"
 
-const BASE_URL = "https://vow.co.il"
+const BASE_URL = "https://uxellent.com"
 
 const staticRoutes = [
   // Hebrew

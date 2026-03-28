@@ -39,7 +39,7 @@ export function articleSchema(params: {
     publisher: {
       "@type": "Organization",
       name: "VOW",
-      logo: { "@type": "ImageObject", url: "https://vow.co.il/logo.png" },
+      logo: { "@type": "ImageObject", url: "https://uxellent.com/logo.png" },
     },
   };
 }
@@ -108,8 +108,8 @@ export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "VOW",
-  url: "https://vow.co.il",
-  logo: "https://vow.co.il/logo.png",
+  url: "https://uxellent.com",
+  logo: "https://uxellent.com/logo.png",
   sameAs: [
     "https://www.linkedin.com/company/vow",
     "https://www.facebook.com/profile.php?id=61587713103366",
@@ -118,7 +118,7 @@ export const ORGANIZATION_SCHEMA = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "support@vow.co.il",
+    email: "support@uxellent.com",
     contactType: "customer service",
     availableLanguage: ["Hebrew", "English"],
   },
@@ -129,11 +129,11 @@ export const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "VOW",
-  url: "https://vow.co.il",
+  url: "https://uxellent.com",
   inLanguage: ["he-IL", "en"],
   publisher: {
     "@type": "Organization",
     name: "VOW",
-    url: "https://vow.co.il",
+    url: "https://uxellent.com",
   },
 } as const;

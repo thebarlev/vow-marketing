@@ -5,10 +5,10 @@ VOW is a digital agency specializing in marketing, design, and web development f
 We help companies grow online by combining marketing strategy, SEO optimization, UX/UI design, and custom website and system development.
 
 Main website:
-https://vow.co.il
+https://uxellent.com
 
 English version:
-https://vow.co.il/en
+https://uxellent.com/en
 
 ---
 
@@ -23,8 +23,8 @@ Includes:
 - content strategy
 - online visibility
 
-https://vow.co.il/seo-ai
-https://vow.co.il/en/seo-ai
+https://uxellent.com/seo-ai
+https://uxellent.com/en/seo-ai
 
 ---
 
@@ -37,8 +37,8 @@ Includes:
 - branding systems
 - marketing design
 
-https://vow.co.il/design
-https://vow.co.il/en/design
+https://uxellent.com/design
+https://uxellent.com/en/design
 
 ---
 
@@ -51,19 +51,19 @@ Includes:
 - custom systems
 - performance optimization
 
-https://vow.co.il/develop
-https://vow.co.il/en/develop
+https://uxellent.com/develop
+https://uxellent.com/en/develop
 
 ---
 
 ## Additional Pages
 
 Blog
-https://vow.co.il/blog
-https://vow.co.il/en/blog
+https://uxellent.com/blog
+https://uxellent.com/en/blog
 
 Contact
-https://vow.co.il/en/contact
+https://uxellent.com/en/contact
 
 ---
 
@@ -71,8 +71,8 @@ https://vow.co.il/en/contact
 
 Company: VOW Technology LTD 
 Company Number: 515960508  
-Website: https://vow.co.il  
-Email: support@vow.co.il
+Website: https://uxellent.com
+Email: support@uxellent.com
 
 ---
 

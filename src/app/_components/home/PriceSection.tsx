@@ -33,7 +33,7 @@ export type PriceSectionProps = {
 export function PriceSection({ id, title, subtitle, plans, variant = "default", locale = "he" }: PriceSectionProps) {
   // URL לאפליקציה – עובד בלוקאל ובפרודקשן
   const APP_BASE_URL =
-    process.env.NEXT_PUBLIC_APP_BASE_URL ?? "https://app.vow.co.il";
+    process.env.NEXT_PUBLIC_APP_BASE_URL ?? "https://app.uxellent.com";
 
   // נשאר בקובץ אבל לא בשימוש כרגע (אפשר למחוק לגמרי אם לא צריך)
   const [open, setOpen] = useState(false);

@@ -19,7 +19,7 @@ export default function PrivacyPageEn() {
         data={webPageSchema({
           name: "Privacy Policy | VOW",
           description: "VOW's Privacy Policy - How We Protect Your Personal Information",
-          url: "https://vow.co.il/en/privacy",
+          url: "https://uxellent.com/en/privacy",
           dateModified: "2026-02-01",
         })}
       />
@@ -38,8 +38,8 @@ export default function PrivacyPageEn() {
               This privacy policy explains what information we collect, why we use it, who we share it with, and how you can control it.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg my-6">
-              <p><strong>System Address:</strong> <a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a></p>
-              <p><strong>Email:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>System Address:</strong> <a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
             </div>
           </section>
 
@@ -48,9 +48,9 @@ export default function PrivacyPageEn() {
 
             <p>This privacy policy applies to anyone who uses VOW's services, including:</p>
             <ul className="list-disc ml-6 my-4 space-y-2">
-              <li>Our marketing website (<a href="https://vow.co.il" className="text-blue-600 underline">vow.co.il</a>)</li>
-              <li>The accounting document creation system (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
-              <li>The digital signature service (<a href="https://dsign.vow.co.il" className="text-blue-600 underline">dsign.vow.co.il</a>)</li>
+              <li>Our marketing website (<a href="https://uxellent.com" className="text-blue-600 underline">uxellent.com</a>)</li>
+              <li>The accounting document creation system (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
+              <li>The digital signature service (<a href="https://dsign.uxellent.com" className="text-blue-600 underline">dsign.uxellent.com</a>)</li>
             </ul>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
@@ -304,7 +304,7 @@ export default function PrivacyPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">6.3 How to Exercise Your Rights</h3>
             <p>
-              Send a request to: <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>
+              Send a request to: <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a>
             </p>
             <p className="mt-2">We will respond within 21 days and inform you of the actions taken.</p>
 
@@ -452,7 +452,7 @@ export default function PrivacyPageEn() {
             </div>
 
             <p>
-              If you are a parent or guardian and have discovered that a minor has used the service without your permission, contact us immediately at <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a> and we will close the account.
+              If you are a parent or guardian and have discovered that a minor has used the service without your permission, contact us immediately at <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a> and we will close the account.
             </p>
           </section>
 
@@ -473,7 +473,7 @@ export default function PrivacyPageEn() {
             <p>If you have consented to receive marketing communications (newsletter, tips, offers), you may unsubscribe at any time:</p>
             <ul className="list-disc ml-6 my-3 space-y-1">
               <li>Click "Unsubscribe" at the bottom of any email</li>
-              <li>Contact us at <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></li>
+              <li>Contact us at <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></li>
             </ul>
           </section>
 
@@ -486,7 +486,7 @@ export default function PrivacyPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">How we will notify you:</h3>
             <ul className="list-disc ml-6 my-3 space-y-1">
-              <li>Publishing a notice in the system (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
+              <li>Publishing a notice in the system (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
               <li>Sending an email to registered users (for material changes only)</li>
               <li>Updating the "Last Updated" date at the top of this document</li>
             </ul>
@@ -508,7 +508,7 @@ export default function PrivacyPageEn() {
             </p>
 
             <div className="bg-white p-6 rounded-lg">
-              <p><strong>Email:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>Email:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
               <p><strong>Company Name:</strong> Bugo Media LTD</p>
               <p><strong>Company Number:</strong> 515960508</p>
               <p className="mt-4 text-sm text-gray-600">Registered data repository</p>

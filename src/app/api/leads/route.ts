@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
     try {
       const displayName = lastName ? `${firstName} ${lastName}` : firstName
       const res = await brevo.transactionalEmails.sendTransacEmail({
-        sender: { name: "VOW Leads", email: "support@vow.co.il" },
+        sender: { name: "VOW Leads", email: "support@uxellent.com" },
         to: [{ email: process.env.LEADS_NOTIFY_EMAIL!, name: "VOW Admin" }],
         subject: `ליד חדש ב-VOW • ${source}`,
         htmlContent: `

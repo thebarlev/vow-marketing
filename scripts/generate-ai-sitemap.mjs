@@ -9,7 +9,7 @@ const ROOT_DIR = path.resolve(__dirname, "..")
 const APP_DIR = path.join(ROOT_DIR, "src", "app")
 const OUTPUT_FILE = path.join(ROOT_DIR, "public", "ai-sitemap.json")
 
-const SITE_URL = "https://vow.co.il"
+const SITE_URL = "https://uxellent.com"
 const DESCRIPTION =
   "AI-powered accountant, digital invoicing and website development platform."
 

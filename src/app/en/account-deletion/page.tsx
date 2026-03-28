@@ -30,7 +30,7 @@ export default function AccountDeletionPageEn() {
               <h3 className="text-[18px] font-semibold mb-3">Ways to request account deletion:</h3>
               <ul className="list-disc ml-6 space-y-2">
                 <li>Via the chat available on the website and/or the app (where available)</li>
-                <li>By email at: <a href="mailto:support@vow.co.il" className="text-blue-600 underline font-semibold">support@vow.co.il</a></li>
+                <li>By email at: <a href="mailto:support@uxellent.com" className="text-blue-600 underline font-semibold">support@uxellent.com</a></li>
               </ul>
             </div>
             <p>
@@ -41,7 +41,7 @@ export default function AccountDeletionPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Data Retention</h2>
             <p>
-              Please note that the types of data retained by the Company and the periods for which they are retained are detailed in VOW's Privacy Policy, available on our <a href="https://vow.co.il/en/privacy" className="text-blue-600 underline">website</a>.
+              Please note that the types of data retained by the Company and the periods for which they are retained are detailed in VOW's Privacy Policy, available on our <a href="https://uxellent.com/en/privacy" className="text-blue-600 underline">website</a>.
             </p>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800 mb-2">Important to know:</p>
@@ -57,7 +57,7 @@ export default function AccountDeletionPageEn() {
           <section className="mt-8">
             <h2 className="text-[24px] font-bold mb-4">Contact Us</h2>
             <div className="bg-white p-6 rounded-lg">
-              <p><strong>Email:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>Email:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
               <p><strong>WhatsApp:</strong> 0545215193</p>
               <p className="mt-4 text-sm text-gray-600">
                 For further questions or more detailed information, please reach out to us through one of the channels above.

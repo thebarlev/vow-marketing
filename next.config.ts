@@ -18,6 +18,30 @@ const nextConfig: NextConfig = {
   },
   redirects: async () => [
     {
+      source: "/:path*",
+      has: [{ type: "host", value: "vow.co.il" }],
+      destination: "https://uxellent.com/:path*",
+      permanent: true,
+    },
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.vow.co.il" }],
+      destination: "https://uxellent.com/:path*",
+      permanent: true,
+    },
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "app.vow.co.il" }],
+      destination: "https://app.uxellent.com/:path*",
+      permanent: true,
+    },
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "dsign.vow.co.il" }],
+      destination: "https://dsign.uxellent.com/:path*",
+      permanent: true,
+    },
+    {
       source: "/blog/ai-seo-engine",
       destination: "/blog/seo-ai-engine",
       permanent: true,

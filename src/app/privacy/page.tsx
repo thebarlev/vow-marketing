@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         data={webPageSchema({
           name: "מדיניות פרטיות | VOW",
           description: "מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך",
-          url: "https://vow.co.il/privacy",
+          url: "https://uxellent.com/privacy",
           dateModified: "2026-02-01",
         })}
       />
@@ -41,8 +41,8 @@ export default function PrivacyPage() {
               מדיניות פרטיות זו מסבירה איזה מידע אנחנו אוספים, למה אנחנו משתמשים בו, עם מי אנחנו משתפים אותו, ואיך אתה יכול לשלוט בו.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg my-6">
-              <p><strong>כתובת המערכת:</strong> <a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a></p>
-              <p><strong>דוא"ל:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>כתובת המערכת:</strong> <a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a></p>
+              <p><strong>דוא"ל:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
             </div>
           </section>
 
@@ -51,9 +51,9 @@ export default function PrivacyPage() {
             
             <p>מדיניות פרטיות זו חלה על כל מי שמשתמש בשירותי VOW, לרבות:</p>
             <ul className="list-disc mr-6 my-4 space-y-2">
-              <li>האתר השיווקי שלנו (<a href="https://vow.co.il" className="text-blue-600 underline">vow.co.il</a>)</li>
-              <li>המערכת ליצירת מסמכים חשבונאיים (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
-              <li>שירות החתימה הדיגיטלית (<a href="https://dsign.vow.co.il" className="text-blue-600 underline">dsign.vow.co.il</a>)</li>
+              <li>האתר השיווקי שלנו (<a href="https://uxellent.com" className="text-blue-600 underline">uxellent.com</a>)</li>
+              <li>המערכת ליצירת מסמכים חשבונאיים (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
+              <li>שירות החתימה הדיגיטלית (<a href="https://dsign.uxellent.com" className="text-blue-600 underline">dsign.uxellent.com</a>)</li>
             </ul>
 
             <div className="bg-yellow-50 border-r-4 border-yellow-400 p-4 my-6">
@@ -307,7 +307,7 @@ export default function PrivacyPage() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">6.3 איך לממש את הזכויות שלך</h3>
             <p>
-              שלח בקשה לכתובת: <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a>
+              שלח בקשה לכתובת: <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a>
             </p>
             <p className="mt-2">נשיב תוך 21 יום ונעדכן אותך על הפעולות שננקטו.</p>
 
@@ -455,7 +455,7 @@ export default function PrivacyPage() {
             </div>
 
             <p>
-              אם אתה הורה או אפוטרופוס וגילית שקטין השתמש בשירות בלי רשותך, צור איתנו קשר מיד ב-<a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a> ונסגור את החשבון.
+              אם אתה הורה או אפוטרופוס וגילית שקטין השתמש בשירות בלי רשותך, צור איתנו קשר מיד ב-<a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a> ונסגור את החשבון.
             </p>
           </section>
 
@@ -476,7 +476,7 @@ export default function PrivacyPage() {
             <p>אם הסכמת לקבל דיוור שיווקי (ניוזלטר, טיפים, הצעות), תוכל לבטל בכל עת:</p>
             <ul className="list-disc mr-6 my-3 space-y-1">
               <li>לחץ על "הסר עצמי" בתחתית כל דוא"ל</li>
-              <li>פנה אלינו ב-<a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></li>
+              <li>פנה אלינו ב-<a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></li>
             </ul>
           </section>
 
@@ -489,7 +489,7 @@ export default function PrivacyPage() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">איך נודיע לך:</h3>
             <ul className="list-disc mr-6 my-3 space-y-1">
-              <li>פרסום הודעה במערכת (<a href="https://app.vow.co.il" className="text-blue-600 underline">app.vow.co.il</a>)</li>
+              <li>פרסום הודעה במערכת (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
               <li>שליחת דוא"ל למשתמשים רשומים (שינויים מהותיים בלבד)</li>
               <li>עדכון תאריך "עודכן לאחרונה" בראש המסמך</li>
             </ul>
@@ -511,7 +511,7 @@ export default function PrivacyPage() {
             </p>
 
             <div className="bg-white p-6 rounded-lg">
-              <p><strong>דוא"ל:</strong> <a href="mailto:support@vow.co.il" className="text-blue-600 underline">support@vow.co.il</a></p>
+              <p><strong>דוא"ל:</strong> <a href="mailto:support@uxellent.com" className="text-blue-600 underline">support@uxellent.com</a></p>
               <p><strong>שם החברה:</strong> Bugo Media LTD</p>
               <p><strong>מספר חברה:</strong> 515960508</p>
               <p className="mt-4 text-sm text-gray-600">מאגר מידע רשום</p>

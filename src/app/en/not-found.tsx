@@ -74,7 +74,7 @@ export default function NotFoundPageEn() {
                   Back to home
                 </EnLink>
                 <a
-                  href="https://app.vow.co.il/en/auditor"
+                  href="https://app.uxellent.com/en/auditor"
                   className="vow-btn-primary w-full justify-center sm:w-auto"
                 >
                   Get a free presence audit

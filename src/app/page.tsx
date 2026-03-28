@@ -22,7 +22,7 @@ const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuid
 
 export const metadata: Metadata = {
   // ✅ זה האתר השיווקי (לא app)
-  metadataBase: new URL("https://vow.co.il"),
+  metadataBase: new URL("https://uxellent.com"),
   alternates: {
     canonical: "/",
     languages: heEnAlternateLanguages("/", "/en"),
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
       "חברת VOW מפתחת אתרים, מערכות SaaS וכלי AI מתקדמים לעסקים. שירותי SEO, פרסום PPC ושיווק דיגיטלי שמגדילים חשיפה, לידים וצמיחה.",
-    url: "https://vow.co.il",
+    url: "https://uxellent.com",
     siteName: "VOW",
     images: [
       {
-        url: "https://vow.co.il/og-home.jpg",
+        url: "https://uxellent.com/og-home.jpg",
         width: 1200,
         height: 630,
         alt: "VOW – AI Accountant & Digital Business Platform",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
       "שנה חינם לחשבונית דיגיטלית מאובטחת + רו״ח AI, שיווק, מיתוג ופיתוח מערכות לעסקים.",
-    images: ["https://vow.co.il/og-home.jpg"],
+    images: ["https://uxellent.com/og-home.jpg"],
   },
 
   robots: {

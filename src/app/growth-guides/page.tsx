@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export default function GrowthGuidesIndexPageHe() {
-  const pageUrl = "https://vow.co.il/growth-guides"
+  const pageUrl = "https://uxellent.com/growth-guides"
 
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
@@ -47,7 +47,7 @@ export default function GrowthGuidesIndexPageHe() {
           url: pageUrl,
           items: growthGuidesHe.map((guide) => ({
             name: guide.keyword,
-            url: `https://vow.co.il/growth-guides/${guide.slug}`,
+            url: `https://uxellent.com/growth-guides/${guide.slug}`,
           })),
         })}
       />

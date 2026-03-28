@@ -24,7 +24,7 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     title: "Starter",
     kicker: "AI search engines",
     buttonLabel: "Free presence audit & join",
-    buttonHref: "https://app.vow.co.il/en/auditor?link_id=a_basic",
+    buttonHref: "https://app.uxellent.com/en/auditor?link_id=a_basic",
     price: "$100/month",
     priceextra: "For early-stage businesses or limited budgets",
     badge: "",
@@ -41,7 +41,7 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     title: "Pro",
     kicker: "Expert support + monthly execution",
     buttonLabel: "Free presence audit & join",
-    buttonHref: "https://app.vow.co.il/en/auditor?link_id=a_pro",
+    buttonHref: "https://app.uxellent.com/en/auditor?link_id=a_pro",
     price: "$270/month",
     priceextra: "For businesses that want consistent growth",
     badge: "Most popular",
@@ -60,7 +60,7 @@ const SEO_AI_PRICING_EN: readonly PricePlan[] = [
     title: "Expert",
     kicker: "SEO + AI engines + personal expert",
     buttonLabel: "Free presence audit & join",
-    buttonHref: "https://app.vow.co.il/en/auditor?link_id=a_premium",
+    buttonHref: "https://app.uxellent.com/en/auditor?link_id=a_premium",
     price: "$670/month",
     priceextra: "For competitive industries (legal, medical, finance)",
     badge: "",
@@ -244,7 +244,7 @@ export default async function GrowthGuidePage({
   if (!guide) notFound()
 
   const template = buildGuideTemplateProps(guide)
-  const pageUrl = `https://vow.co.il/en/growth-guides/${guide.slug}`
+  const pageUrl = `https://uxellent.com/en/growth-guides/${guide.slug}`
 
   return (
     <>
@@ -252,7 +252,7 @@ export default async function GrowthGuidePage({
         data={articleSchema({
           headline: guide.keyword,
           description: guide.metaDescription,
-          image: "https://vow.co.il/new-hero.webp",
+          image: "https://uxellent.com/new-hero.webp",
           url: pageUrl,
           inLanguage: "en",
         })}
