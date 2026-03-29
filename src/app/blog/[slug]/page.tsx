@@ -40,23 +40,24 @@ export async function generateMetadata({
   if (!post) return { title: "בלוג | Uxellent" }
 
   const enPair = findPostEn(slug)
-  const seoDescription = SEO_DESCRIPTION_OVERRIDES_HE[post.slug] ?? post.description
+  const postSlug = post.slug ?? slug
+  const seoDescription = SEO_DESCRIPTION_OVERRIDES_HE[postSlug] ?? post.description
 
   return {
     title: post.title,
     description: seoDescription ?? "מאמר של Uxellent על SEO, פיתוח אתרים, אוטומציות וצמיחה דיגיטלית לעסקים.",
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `/blog/${postSlug}`,
       ...(enPair
         ? {
-            languages: heEnAlternateLanguages(`/blog/${post.slug}`, `/en/blog/${post.slug}`),
+            languages: heEnAlternateLanguages(`/blog/${postSlug}`, `/en/blog/${postSlug}`),
           }
         : {}),
     },
     openGraph: {
       title: post.title,
       description: post.description ?? "מאמר בבלוג של Uxellent.",
-      url: `/blog/${post.slug}`,
+      url: `/blog/${postSlug}`,
       type: "article",
       images: post.coverImage ? [{ url: post.coverImage }] : undefined,
     },

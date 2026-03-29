@@ -46,23 +46,24 @@ export async function generateMetadata({
   if (!post) return { title: "Blog | Uxellent" }
 
   const hePair = findPostHe(slug)
-  const seoDescription = SEO_DESCRIPTION_OVERRIDES_EN[post.slug] ?? post.description
+  const postSlug = post.slug ?? slug
+  const seoDescription = SEO_DESCRIPTION_OVERRIDES_EN[postSlug] ?? post.description
 
   return {
     title: post.title,
     description: seoDescription ?? "A Uxellent article on SEO, web development, automation, and digital marketing services.",
     alternates: {
-      canonical: `/en/blog/${post.slug}`,
+      canonical: `/en/blog/${postSlug}`,
       ...(hePair
         ? {
-            languages: heEnAlternateLanguages(`/blog/${post.slug}`, `/en/blog/${post.slug}`),
+            languages: heEnAlternateLanguages(`/blog/${postSlug}`, `/en/blog/${postSlug}`),
           }
         : {}),
     },
     openGraph: {
       title: post.title,
       description: post.description ?? "A Uxellent blog post.",
-      url: `/en/blog/${post.slug}`,
+      url: `/en/blog/${postSlug}`,
       type: "article",
       images: post.coverImage ? [{ url: post.coverImage }] : undefined,
     },
