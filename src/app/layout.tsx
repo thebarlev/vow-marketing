@@ -25,8 +25,8 @@ const assistant = Assistant({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://uxellent.com"),
-  title: "VOW",
-  description: "פיתוח דיגיטלי, SEO ושיווק לעסקים.",
+  title: "Uxellent | SEO, AI ופיתוח לעסקים",
+  description: "Uxellent מספקת קידום אתרים, פיתוח מערכות AI ושיווק דיגיטלי לעסקים שרוצים יותר נוכחות, לידים וצמיחה.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=2" },

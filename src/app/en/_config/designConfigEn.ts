@@ -3,9 +3,9 @@ import type { ServicePageConfig } from "@/app/_components/services/services.conf
 export const designConfigEn: ServicePageConfig = {
   slug: "design",
   metadata: {
-    title: "Design & Branding for Businesses | VOW",
+    title: "Design & Branding Services | Uxellent",
     description:
-      "Branding, UX/UI, and websites that look great and convert. A visual language that speaks to your audience.",
+      "Design and branding services with UX/UI, landing pages, and websites that support positioning, conversion, and business growth.",
   },
   hero: {
     title: "Design & Branding for Businesses",

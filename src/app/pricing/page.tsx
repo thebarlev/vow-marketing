@@ -9,6 +9,8 @@ import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang";
 
 export const metadata: Metadata = {
+  title: "מחירון חשבונית דיגיטלית | Uxellent",
+  description: "מחירון חשבונית דיגיטלית מאובטחת עם חיבור לרשות המסים, חתימה דיגיטלית ושנה ראשונה חינם לעסקים.",
   alternates: {
     canonical: "/pricing",
     languages: heEnAlternateLanguages("/pricing", "/en/pricing"),

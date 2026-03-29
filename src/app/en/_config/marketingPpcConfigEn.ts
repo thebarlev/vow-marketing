@@ -3,11 +3,11 @@ import type { ServicePageConfig } from "@/app/_components/services/services.conf
 export const marketingPpcConfigEn: ServicePageConfig = {
   slug: "marketing",
   metadata: {
-    title: "PPC Marketing | VOW",
+    title: "PPC & Digital Marketing Services | Uxellent",
     description:
-      "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing-start measuring.",
+      "Digital marketing services for Google Ads and Meta Ads with strategy, optimization, analytics, and measurable ROI.",
     openGraph: {
-      title: "PPC Marketing | VOW",
+      title: "PPC Marketing | Uxellent",
       description:
         "Google and Meta campaigns built on measurement, optimization, and ROI. Stop guessing-start measuring.",
       url: "/en/marketing/ppc",

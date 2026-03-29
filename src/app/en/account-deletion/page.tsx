@@ -5,6 +5,8 @@ import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
+  title: "Account Deletion | Uxellent",
+  description: "Learn how to request account deletion from the Uxellent service, including support channels and data-retention notes.",
   alternates: {
     canonical: "/en/account-deletion",
     languages: heEnAlternateLanguages("/account-deletion", "/en/account-deletion"),
@@ -17,14 +19,14 @@ export default function AccountDeletionPageEn() {
       <div id="main" role="main">
         <LegalTemplate
           title="Account Deletion"
-          subtitle="Information about the user account deletion process for the VOW service"
+          subtitle="Information about the user account deletion process for the Uxellent service"
           lastUpdated="February 8, 2026"
           dir="ltr"
         >
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Deleting a User Account</h2>
             <p>
-              If you wish to request the deletion of your account from the VOW service, you may contact us through any of the following methods:
+              If you wish to request the deletion of your account from the Uxellent service, you may contact us through any of the following methods:
             </p>
             <div className="bg-blue-50 p-6 rounded-lg my-6">
               <h3 className="text-[18px] font-semibold mb-3">Ways to request account deletion:</h3>
@@ -41,7 +43,7 @@ export default function AccountDeletionPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Data Retention</h2>
             <p>
-              Please note that the types of data retained by the Company and the periods for which they are retained are detailed in VOW's Privacy Policy, available on our <a href="https://uxellent.com/en/privacy" className="text-blue-600 underline">website</a>.
+              Please note that the types of data retained by the Company and the periods for which they are retained are detailed in Uxellent's Privacy Policy, available on our <a href="https://uxellent.com/en/privacy" className="text-blue-600 underline">website</a>.
             </p>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-yellow-800 mb-2">Important to know:</p>

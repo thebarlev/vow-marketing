@@ -53,7 +53,7 @@ export default function SeoAiPageEn() {
           ]}
           closingLine="More visibility → more clicks → more customers."
           imageSrc="/services/d-green-invocie.webp"
-          imageAlt="Daily SEO and AI visibility execution by VOW"
+          imageAlt="Daily SEO and AI visibility execution by Uxellent"
         />
       }
       stats={{ title: "What happens in the first few months" }}

@@ -3,9 +3,9 @@ import type { ProductPageConfig } from "@/app/_components/products/products.conf
 export const developAiConfigEn: ProductPageConfig = {
   slug: "develop-ai",
   metadata: {
-    title: "Custom AI Software & Systems for Businesses | VOW",
+    title: "Custom AI Software Development | Uxellent",
     description:
-      "Architecture, full-stack development, and automations. Faster with AI-without compromising quality or security.",
+      "Custom AI software, systems architecture, and automations for businesses that need scalable development without compromising quality.",
   },
   hero: {
     title: "AI-powered software and systems development",

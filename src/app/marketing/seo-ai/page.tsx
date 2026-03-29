@@ -8,14 +8,14 @@ import { ServiceHero } from "@/app/_components/services/ServiceHero"
 import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
-  title: "שיווק אורגני SEO / AI | VOW",
+  title: "SEO אורגני ו-AI Search | Uxellent",
   description:
-    "בונים נוכחות אורגנית שמייצרת לידים לאורך זמן: SEO טכני, תוכן, מדידה והתאמה למנועי חיפוש בעידן ה‑AI.",
+    "SEO אורגני ו-AI Search לעסקים עם אופטימיזציה טכנית, תוכן ומדידה שמחזקים הופעות, תנועה ולידים.",
   alternates: {
     canonical: "/marketing/seo-ai",
   },
   openGraph: {
-    title: "שיווק אורגני SEO / AI | VOW",
+    title: "שיווק אורגני SEO / AI | Uxellent",
     description:
       "בונים נוכחות אורגנית שמייצרת לידים לאורך זמן: SEO טכני, תוכן, מדידה והתאמה למנועי חיפוש בעידן ה‑AI.",
     url: "/seo-ai",

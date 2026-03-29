@@ -1,6 +1,6 @@
-# VOW
+# Uxellent
 
-VOW is a digital agency specializing in marketing, design, and web development for modern businesses.
+Uxellent is a digital agency specializing in marketing, design, and web development for modern businesses.
 
 We help companies grow online by combining marketing strategy, SEO optimization, UX/UI design, and custom website and system development.
 
@@ -69,7 +69,7 @@ https://uxellent.com/en/contact
 
 ## Company Information
 
-Company: VOW Technology LTD 
+Company: Uxellent Technology LTD 
 Company Number: 515960508  
 Website: https://uxellent.com
 Email: support@uxellent.com

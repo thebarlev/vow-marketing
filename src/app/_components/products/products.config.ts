@@ -74,8 +74,8 @@ const SECTIONS_ORDER: readonly ProductSectionType[] = [
 export const developAiConfig: ProductPageConfig = {
   slug: "develop-ai",
   metadata: {
-    title: "פיתוח תוכנה ומערכות AI בהתאמה אישית לעסקים וחברות",
-    description: "ארכיטקטורה, פיתוח Full-Stack ואוטומציות. מהר יותר עם AI, בלי להתפשר על איכות ואבטחה.",
+    title: "פיתוח מערכות AI לעסקים | Uxellent",
+    description: "פיתוח מערכות AI ותוכנה בהתאמה אישית לעסקים עם ארכיטקטורה נכונה, אוטומציות ופיתוח full-stack מאובטח.",
   },
   hero: {
     title: "פיתוח תוכנה/מערכות בסביבת AI",
@@ -162,8 +162,8 @@ export const developAiConfig: ProductPageConfig = {
 export const invoiceConfig: ProductPageConfig = {
   slug: "invoice",
   metadata: {
-    title: "חשבונית דיגיטלית מאובטחת שנה חינם",
-    description: "חשבונית דיגיטלית מאובטחת הפיקו חשבוניות דיגיטליות מאובטחות בקלות ובמהירות. עמידה מלאה בדרישות רשות המסים, עם חתימה דיגיטלית וסנכרון אוטומטי.",
+    title: "חשבונית דיגיטלית מאובטחת | Uxellent",
+    description: "מערכת לחשבונית דיגיטלית מאובטחת עם חתימה דיגיטלית, חיבור לרשות המסים וניהול מסמכים עסקיים לעסקים.",
   },
   hero: {
     title: "חשבונית דיגיטלית מאובטחת שנה חינם",
@@ -177,7 +177,7 @@ export const invoiceConfig: ProductPageConfig = {
   },
   vision: {
     title: "חשבונית דיגיטלית מאובטחת",
-    subtitle: "VOW מאפשרת הפקת חשבוניות ו-12 סוגי מסמכים עסקיים, עם חתימה דיגיטלית מאובטחת.",
+    subtitle: "Uxellent מאפשרת הפקת חשבוניות ו-12 סוגי מסמכים עסקיים, עם חתימה דיגיטלית מאובטחת.",
     ctaLabel: "להצטרפות",
     ctaHref: "https://app.uxellent.com",
     source: "smart_accounting_ai",
@@ -237,12 +237,12 @@ export const invoiceConfig: ProductPageConfig = {
 export const accountAiConfig: ProductPageConfig = {
   slug: "account-ai",
   metadata: {
-    title: "רואה חשבון AI לעוסק פטור ועוסק מורשה",
-    description: "רואה חשבון AI ראיית חשבון חכמה ב-200 ₪ בלבד. VOW מספקת ליווי עסקי 24/7 עם ידע של 1,000 רואי חשבון - ישירות לעסק הקטן שלכם.",
+    title: "רואה חשבון AI לעסקים קטנים | Uxellent",
+    description: "רואה חשבון AI לעוסק פטור ומורשה עם ליווי חשבונאי חכם, דיווחים מדויקים ותובנות עסקיות 24/7.",
   },
   hero: {
     title: "רואה חשבון AI ליגה אחרת",
-    subtitle: "ה-AI של VOW מזהה הזדמנויות רגולטוריות שאחרים מפספסים. הופך את הניהול הפיננסי שלך למדויק, אוטומטי ורווחי הרבה יותר.",
+    subtitle: "ה-AI של Uxellent מזהה הזדמנויות רגולטוריות שאחרים מפספסים. הופך את הניהול הפיננסי שלך למדויק, אוטומטי ורווחי הרבה יותר.",
     heroSubheading: "הנהלת חשבונות, דיווח מע״מ, דוחות שנתיים והצהרת הון - מקצועיות של 1,000 רואי חשבון ב־AI אחד",
     ctaLabel: "להשארת פרטים",
     ctaSource: "smart_accounting_ai",
@@ -273,7 +273,7 @@ export const accountAiConfig: ProductPageConfig = {
     ctaLabel: "להשארת פרטים",
     ctaSource: "smart_accounting_ai",
     items: [
-      { id: "account-ai-about-1", title: "חוסכים אלפי שקלים בשנה", description: "במקום לשלם הון עתק בחודש לרו״ח מסורתי - עם VOW רואה חשבון AI ישאר לך ההרבה יותר כסף בכיס.", icon: "/about/1.svg" },
+      { id: "account-ai-about-1", title: "חוסכים אלפי שקלים בשנה", description: "במקום לשלם הון עתק בחודש לרו״ח מסורתי - עם Uxellent רואה חשבון AI ישאר לך ההרבה יותר כסף בכיס.", icon: "/about/1.svg" },
       { id: "account-ai-about-2", title: "אפס טעויות, אפס פחדים", description: "ה-AI למד את כל הרגולציה של מס הכנסה, ביטוח לאומי ומע״מ + את הידע של למעלה מ-1,000 רואי חשבון. אתה מקבל מקצועיות של רמה אחרת.", icon: "/about/2.svg" },
       { id: "account-ai-about-3", title: "דוחות בזמן, בלי עיכובים", description: "דוחות חודשיים ודוחות שנתיים מוכנים בזמן, בלי המתנה, בלי \"אני עסוק\", בלי משחקים.",  icon: "/about/3.svg" },
     ],

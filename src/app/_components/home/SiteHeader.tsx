@@ -15,7 +15,7 @@ const HEADER_MARKETING_DROPDOWN = [
 
 const MOBILE_MENU_SECTIONS = [
   {
-    title: "שירותים של VOW",
+    title: "שירותים של Uxellent",
     items: [
       { href: "/design", label: "עיצוב ומיתוג" },
       { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
@@ -27,7 +27,7 @@ const MOBILE_MENU_SECTIONS = [
     ],
   },
   {
-    title: "מוצרים של VOW",
+    title: "מוצרים של Uxellent",
     items: [
       { href: "/account-ai", label: "רואה חשבון AI" },
       { href: "/invoice", label: "חשבונית דיגיטלית מאובטחת" },
@@ -91,11 +91,11 @@ export function SiteHeader() {
             <Link
               href="/"
               className="flex items-center lg:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vow-accent)] rounded-md shrink-0"
-              aria-label="VOW - חזרה לעמוד הבית"
+              aria-label="Uxellent - חזרה לעמוד הבית"
             >
               <Image
                 src="/logo.svg"
-                alt="VOW logo - digital marketing, SEO AI and website development"
+                alt="Uxellent logo - digital marketing, SEO AI and website development"
                 width={150}
                 height={46}
                 priority

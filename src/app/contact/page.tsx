@@ -9,6 +9,8 @@ import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
+  title: "צור קשר עם Uxellent | SEO, פיתוח ושיווק",
+  description: "דברו עם Uxellent על קידום אתרים, פיתוח אתרים, מערכות AI ושיווק דיגיטלי. נשיב תוך שעות ספורות בימי עסקים.",
   alternates: {
     canonical: "/contact",
     languages: heEnAlternateLanguages("/contact", "/en/contact"),
@@ -32,7 +34,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1440px] px-4 py-[var(--space-section)] sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[720px] text-right">
             <h1 className="text-[44px] font-semibold leading-[52px] text-black sm:text-[56px] sm:leading-[64px]">
-              צור קשר עם VOW
+              צור קשר עם Uxellent
             </h1>
             <p className="mt-2 text-[20px] font-semibold leading-[32px] text-[color:var(--vow-muted)]">
               נשמח לשמוע ממך. מלאו את הפרטים ונחזור תוך שעות ספורות. אפשר גם בוואטסאפ: 054-5215193. ימי א׳–ה׳, 9:00–18:00.

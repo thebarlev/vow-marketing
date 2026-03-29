@@ -208,11 +208,11 @@ export async function generateMetadata({
   const guide = getGrowthGuideHe(slug)
 
   if (!guide) {
-    return { title: "מדריכי צמיחה | VOW" }
+    return { title: "מדריכי צמיחה | Uxellent" }
   }
 
   return {
-    title: `${guide.keyword} | מדריך צמיחה של VOW`,
+    title: `${guide.keyword} | Uxellent`,
     description: guide.metaDescription,
     alternates: {
       canonical: `/growth-guides/${guide.slug}`,
@@ -222,7 +222,7 @@ export async function generateMetadata({
       ),
     },
     openGraph: {
-      title: `${guide.keyword} | מדריך צמיחה של VOW`,
+      title: `${guide.keyword} | מדריך צמיחה של Uxellent`,
       description: guide.metaDescription,
       url: `/growth-guides/${guide.slug}`,
       type: "article",

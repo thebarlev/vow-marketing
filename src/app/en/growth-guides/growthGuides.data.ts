@@ -145,7 +145,7 @@ const growthGuideContent = [
       },
       {
         id: "traffic-vow-cta",
-        title: "Use VOW to Turn Traffic Into a Growth Engine",
+        title: "Use Uxellent to Turn Traffic Into a Growth Engine",
         paragraphs: [
           [
             {
@@ -159,7 +159,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " like VOW combines AI SEO strategy, execution, and measurement with a clear monthly roadmap.",
+              text: " like Uxellent combines AI SEO strategy, execution, and measurement with a clear monthly roadmap.",
             },
           ],
           "You can review the SEO/AI offer, run the Auditor flow, or keep learning from related guides before choosing the right next step.",
@@ -168,7 +168,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See the service page behind VOW's growth and visibility framework.",
+            description: "See the service page behind Uxellent's growth and visibility framework.",
           },
           {
             label: "Open Auditor",
@@ -270,7 +270,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Ready to build traffic that compounds?",
     ctaSubtitle:
-      "Use VOW to connect technical SEO, content strategy, and AI search visibility to real lead growth.",
+      "Use Uxellent to connect technical SEO, content strategy, and AI search visibility to real lead growth.",
     relatedSlugs: [
       "how-to-improve-website-seo",
       "how-to-get-leads",
@@ -372,7 +372,7 @@ const growthGuideContent = [
       },
       {
         id: "seo-vow-cta",
-        title: "Let VOW Prioritize the SEO Work That Matters",
+        title: "Let Uxellent Prioritize the SEO Work That Matters",
         paragraphs: [
           [
             {
@@ -386,7 +386,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " with SEO focus like VOW helps teams improve website SEO by combining audits, execution, content upgrades, and AI search readiness into one operating model.",
+              text: " with SEO focus like Uxellent helps teams improve website SEO by combining audits, execution, content upgrades, and AI search readiness into one operating model.",
             },
           ],
           "Use the links below to review the growth offer, open Auditor, or continue with related guides on ranking and online growth.",
@@ -443,7 +443,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Want a cleaner SEO roadmap?",
     ctaSubtitle:
-      "Use VOW to decide what to fix first, what to build next, and how to measure the business impact.",
+      "Use Uxellent to decide what to fix first, what to build next, and how to measure the business impact.",
     relatedSlugs: [
       "how-to-rank-on-google-fast",
       "how-to-grow-small-business-online",
@@ -545,12 +545,12 @@ const growthGuideContent = [
       },
       {
         id: "leads-vow-cta",
-        title: "Use VOW to Build a Lead System, Not Just More Activity",
+        title: "Use Uxellent to Build a Lead System, Not Just More Activity",
         paragraphs: [
           [
             {
               type: "text",
-              text: "VOW helps teams get leads by upgrading the pages, funnels, and search visibility that create qualified demand over time. ",
+              text: "Uxellent helps teams get leads by upgrading the pages, funnels, and search visibility that create qualified demand over time. ",
             },
             {
               type: "link",
@@ -568,7 +568,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See how VOW connects traffic, content, and qualified lead generation.",
+            description: "See how Uxellent connects traffic, content, and qualified lead generation.",
           },
           {
             label: "Open Auditor",
@@ -616,7 +616,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Need more qualified inquiries?",
     ctaSubtitle:
-      "Use VOW to improve the pages, search visibility, and conversion paths that create real pipeline.",
+      "Use Uxellent to improve the pages, search visibility, and conversion paths that create real pipeline.",
     relatedSlugs: [
       "how-to-promote-my-business-online",
       "how-to-get-clients-without-ads",
@@ -718,7 +718,7 @@ const growthGuideContent = [
       },
       {
         id: "promote-vow-cta",
-        title: "Promote Smarter With VOW's Growth Stack",
+        title: "Promote Smarter With Uxellent's Growth Stack",
         paragraphs: [
           [
             {
@@ -732,7 +732,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " like VOW helps businesses promote online with a clearer system: better pages, stronger SEO, AI search readiness, and measurement tied to results.",
+              text: " like Uxellent helps businesses promote online with a clearer system: better pages, stronger SEO, AI search readiness, and measurement tied to results.",
             },
           ],
           "Use the service page, Auditor, and related guides below to decide whether you need visibility, better conversion, or both.",
@@ -741,7 +741,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See how VOW approaches organic visibility and demand capture.",
+            description: "See how Uxellent approaches organic visibility and demand capture.",
           },
           {
             label: "Open Auditor",
@@ -789,7 +789,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Want a cleaner promotion strategy?",
     ctaSubtitle:
-      "Use VOW to connect visibility, conversion, and AI search into one repeatable growth system.",
+      "Use Uxellent to connect visibility, conversion, and AI search into one repeatable growth system.",
     relatedSlugs: [
       "how-to-grow-small-business-online",
       "how-to-get-leads",
@@ -891,12 +891,12 @@ const growthGuideContent = [
       },
       {
         id: "customers-vow-cta",
-        title: "Use VOW to Improve Online Customer Acquisition",
+        title: "Use Uxellent to Improve Online Customer Acquisition",
         paragraphs: [
           [
             {
               type: "text",
-              text: "VOW helps businesses get customers online by combining SEO visibility, clearer pages, and better funnel structure into one growth operating model. ",
+              text: "Uxellent helps businesses get customers online by combining SEO visibility, clearer pages, and better funnel structure into one growth operating model. ",
             },
             {
               type: "link",
@@ -914,7 +914,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See how VOW builds visibility that supports customer acquisition.",
+            description: "See how Uxellent builds visibility that supports customer acquisition.",
           },
           {
             label: "Open Auditor",
@@ -1004,7 +1004,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Want more online customers, not just more clicks?",
     ctaSubtitle:
-      "Use VOW to improve the pages and growth systems that convert attention into revenue.",
+      "Use Uxellent to improve the pages and growth systems that convert attention into revenue.",
     relatedSlugs: [
       "how-to-get-leads",
       "how-to-get-traffic-to-my-website",
@@ -1106,7 +1106,7 @@ const growthGuideContent = [
       },
       {
         id: "rank-vow-cta",
-        title: "Use VOW to Find the Fastest Ranking Opportunities",
+        title: "Use Uxellent to Find the Fastest Ranking Opportunities",
         paragraphs: [
           [
             {
@@ -1120,7 +1120,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " like VOW helps teams rank faster by focusing on pages that are closest to winning, then improving the technical, structural, and content signals that matter.",
+              text: " like Uxellent helps teams rank faster by focusing on pages that are closest to winning, then improving the technical, structural, and content signals that matter.",
             },
           ],
           "The links below point to the SEO/AI offer, the Auditor flow, and related guides that support ranking growth.",
@@ -1129,7 +1129,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See the SEO framework VOW uses to improve rankings systematically.",
+            description: "See the SEO framework Uxellent uses to improve rankings systematically.",
           },
           {
             label: "Open Auditor",
@@ -1177,7 +1177,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Want faster ranking movement with less guesswork?",
     ctaSubtitle:
-      "Use VOW to prioritize the pages and keywords that can move sooner and matter more.",
+      "Use Uxellent to prioritize the pages and keywords that can move sooner and matter more.",
     relatedSlugs: [
       "how-to-improve-website-seo",
       "how-to-get-traffic-to-my-website",
@@ -1279,7 +1279,7 @@ const growthGuideContent = [
       },
       {
         id: "smallbiz-vow-cta",
-        title: "Use VOW to Build Online Growth That Lasts",
+        title: "Use Uxellent to Build Online Growth That Lasts",
         paragraphs: [
           [
             {
@@ -1293,7 +1293,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " like VOW works with small businesses that need a practical system for visibility, lead generation, and SEO execution without unnecessary complexity.",
+              text: " like Uxellent works with small businesses that need a practical system for visibility, lead generation, and SEO execution without unnecessary complexity.",
             },
           ],
           "Use the links below to explore the SEO/AI offer, open Auditor, or continue reading related growth guides.",
@@ -1302,7 +1302,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "Review the service page for VOW's growth and visibility approach.",
+            description: "Review the service page for Uxellent's growth and visibility approach.",
           },
           {
             label: "Open Auditor",
@@ -1350,7 +1350,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Need a simpler path to digital growth?",
     ctaSubtitle:
-      "Use VOW to focus on the pages, channels, and SEO work that matter most for small-business growth.",
+      "Use Uxellent to focus on the pages, channels, and SEO work that matter most for small-business growth.",
     relatedSlugs: [
       "how-to-promote-my-business-online",
       "how-to-get-customers-online",
@@ -1452,7 +1452,7 @@ const growthGuideContent = [
       },
       {
         id: "clients-vow-cta",
-        title: "Use VOW to Build a Client Engine Beyond Paid Ads",
+        title: "Use Uxellent to Build a Client Engine Beyond Paid Ads",
         paragraphs: [
           [
             {
@@ -1466,7 +1466,7 @@ const growthGuideContent = [
             },
             {
               type: "text",
-              text: " like VOW helps businesses reduce dependence on paid channels by improving SEO, AI visibility, authority content, and conversion structure.",
+              text: " like Uxellent helps businesses reduce dependence on paid channels by improving SEO, AI visibility, authority content, and conversion structure.",
             },
           ],
           "The links below let you review the SEO/AI offer, open Auditor, and continue with related guides on traffic and leads.",
@@ -1475,7 +1475,7 @@ const growthGuideContent = [
           {
             label: "Explore Organic Marketing SEO / AI",
             href: SEO_AI_MARKETING_URL,
-            description: "See how VOW builds organic visibility that keeps working over time.",
+            description: "See how Uxellent builds organic visibility that keeps working over time.",
           },
           {
             label: "Open Auditor",
@@ -1523,7 +1523,7 @@ const growthGuideContent = [
     ],
     ctaTitle: "Want a steadier flow of clients without paying for every click?",
     ctaSubtitle:
-      "Use VOW to build the organic visibility and trust assets that reduce ad dependence over time.",
+      "Use Uxellent to build the organic visibility and trust assets that reduce ad dependence over time.",
     relatedSlugs: [
       "how-to-get-traffic-to-my-website",
       "how-to-get-leads",

@@ -232,7 +232,7 @@ body {
     transform: translateY(0);
   }
 
-  /* VOW Primary Button (Token-based) */
+  /* Uxellent Primary Button (Token-based) */
   .vow-btn-primary {
     display: inline-flex;
     height: 50px;
@@ -259,7 +259,7 @@ body {
     outline-offset: 2px;
   }
 
-  /* VOW Secondary Button (Token-based) */
+  /* Uxellent Secondary Button (Token-based) */
   .vow-btn-secondary {
     display: inline-flex;
     height: 50px;

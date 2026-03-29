@@ -23,7 +23,7 @@ export async function generateMetadata({
   const campaign = getCampaign(slug)
 
   if (!campaign) {
-    return { title: "VOW" }
+    return { title: "Uxellent" }
   }
 
   return {
@@ -81,7 +81,7 @@ export default async function CampaignLandingPage({
           ]}
           closingLine="More visibility → more clicks → more customers."
           imageSrc="/services/d-green-invocie.webp"
-          imageAlt="Daily SEO and AI visibility execution by VOW"
+          imageAlt="Daily SEO and AI visibility execution by Uxellent"
         />
       }
       stats={{ title: "What happens in the first few months" }}

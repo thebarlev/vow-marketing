@@ -3,9 +3,9 @@ import type { ServicePageConfig } from "@/app/_components/services/services.conf
 export const developConfigEn: ServicePageConfig = {
   slug: "develop",
   metadata: {
-    title: "AI-Powered Web Development for Businesses | VOW",
+    title: "Web Development for Businesses | Uxellent",
     description:
-      "Corporate sites, e‑commerce, and systems-fast, accessible, and ready for growth. A measurable process that drives conversions.",
+      "AI-powered web development for businesses that need fast, accessible sites with technical SEO, strong UX, and better conversions.",
   },
   hero: {
     title: "AI-powered web development for businesses",

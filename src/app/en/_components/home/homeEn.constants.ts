@@ -1,10 +1,10 @@
 export const CLIENT_LOGOS = [
-  { src: "/logos/Altshuler_logo-3.svg", alt: "Altshuler Shaham - VOW client for digital marketing and development" },
-  { src: "/logos/guy.svg", alt: "Horizon - VOW client for SEO and website development" },
-  { src: "/logos/eufy.svg", alt: "Isracard - VOW client for branding and digital presence" },
-  { src: "/logos/Logo_Carrefour-5.svg", alt: "Carrefour - VOW client for AI SEO and business growth" },
-  { src: "/logos/max_svg1-3.svg", alt: "MAX - VOW client for digital marketing and development" },
-  { src: "/logos/Soundcore_svg-3.svg", alt: "Soundcore - VOW client for website and branding" },
+  { src: "/logos/Altshuler_logo-3.svg", alt: "Altshuler Shaham - Uxellent client for digital marketing and development" },
+  { src: "/logos/guy.svg", alt: "Horizon - Uxellent client for SEO and website development" },
+  { src: "/logos/eufy.svg", alt: "Isracard - Uxellent client for branding and digital presence" },
+  { src: "/logos/Logo_Carrefour-5.svg", alt: "Carrefour - Uxellent client for AI SEO and business growth" },
+  { src: "/logos/max_svg1-3.svg", alt: "MAX - Uxellent client for digital marketing and development" },
+  { src: "/logos/Soundcore_svg-3.svg", alt: "Soundcore - Uxellent client for website and branding" },
 ] as const
 
 export const HERO_TAGS_EN = [
@@ -18,44 +18,44 @@ export const TESTIMONIALS_EN = [
     name: "Hulda",
     title: "Hulda Transformer",
     kicker: "",
-    text: '"We moved from gut feeling to real data. VOW gave us full clarity on the business - insights that surprised us again and again and revealed opportunities that were always there. Results: more sales, more customers, real control."',
+    text: '"We moved from gut feeling to real data. Uxellent gave us full clarity on the business - insights that surprised us again and again and revealed opportunities that were always there. Results: more sales, more customers, real control."',
     imageSrc: "/testimonials/שנאי חולדה.webp",
-    imageAlt: "Hulda Transformer - VOW client testimonial for digital marketing and business growth",
+    imageAlt: "Hulda Transformer - Uxellent client testimonial for digital marketing and business growth",
   },
   {
     name: "Seldat",
     title: "Seldat",
-    text: '"VOW is a quality AI-based development company, combining exceptional innovation with deep marketing and development expertise. They deliver precise solutions that raise management standards and drive measurable results."',
+    text: '"Uxellent is a quality AI-based development company, combining exceptional innovation with deep marketing and development expertise. They deliver precise solutions that raise management standards and drive measurable results."',
     imageSrc: "/testimonials/סלדט.webp",
-    imageAlt: "Seldat - VOW client testimonial for AI development and digital marketing",
+    imageAlt: "Seldat - Uxellent client testimonial for AI development and digital marketing",
   },
   {
     name: "Altshuler Shaham",
     title: "Altshuler Shaham Finance",
-    text: '"We turned to VOW to build a solution that works smoothly. The team quickly showed deep understanding of our product and customers, often more than we did. Committed, professional, and determined to succeed at every step. A true partnership."',
+    text: '"We turned to Uxellent to build a solution that works smoothly. The team quickly showed deep understanding of our product and customers, often more than we did. Committed, professional, and determined to succeed at every step. A true partnership."',
     imageSrc: "/testimonials/אלטשולר שחם פיננסים סרביסס.webp",
-    imageAlt: "Altshuler Shaham Finance - VOW client testimonial for website development",
+    imageAlt: "Altshuler Shaham Finance - Uxellent client testimonial for website development",
   },
   {
     name: "Carrefour",
     title: "Carrefour",
-    text: '"We discovered we didn\'t really know our business. VOW showed us a clear picture - where we profit, where we lose, and how to improve. Every report led to a "how didn\'t I know this before" moment. Results spoke for themselves: significant growth and profitability."',
+    text: '"We discovered we didn\'t really know our business. Uxellent showed us a clear picture - where we profit, where we lose, and how to improve. Every report led to a "how didn\'t I know this before" moment. Results spoke for themselves: significant growth and profitability."',
     imageSrc: "/testimonials/Carrefoure.webp",
-    imageAlt: "Carrefour - VOW client testimonial for SEO and business analytics",
+    imageAlt: "Carrefour - Uxellent client testimonial for SEO and business analytics",
   },
   {
     name: "Youa",
     title: "Youa",
-    text: '"We achieved significant revenue growth with precise marketing and a fast, smooth site. We expanded our customer base and gained full control of our business data. VOW revealed insights we didn\'t know existed - "how did we miss this" moments that led to immediate improvement in sales processes."',
+    text: '"We achieved significant revenue growth with precise marketing and a fast, smooth site. We expanded our customer base and gained full control of our business data. Uxellent revealed insights we didn\'t know existed - "how did we miss this" moments that led to immediate improvement in sales processes."',
     imageSrc: "/testimonials/youa.webp",
-    imageAlt: "Youa - VOW client testimonial for digital marketing and website growth",
+    imageAlt: "Youa - Uxellent client testimonial for digital marketing and website growth",
   },
   {
     name: "Savonella",
     title: "Savonella",
-    text: '"Highly recommend! VOW works with full reliability, delivers everything on time, with high quality, and keeps us updated on every step. It\'s rare to find this level of solution in the market today!"',
+    text: '"Highly recommend! Uxellent works with full reliability, delivers everything on time, with high quality, and keeps us updated on every step. It\'s rare to find this level of solution in the market today!"',
     imageSrc: "/testimonials/סבונלה.webp",
-    imageAlt: "Savonella - VOW client testimonial for branding and design",
+    imageAlt: "Savonella - Uxellent client testimonial for branding and design",
   },
 ] as const
 
@@ -126,8 +126,8 @@ export const ABOUT_US_EN = [
 export const FAQ_ITEMS_EN = [
   {
     id: "home-faq-en-1",
-    question: "What services does VOW provide?",
-    answer: "VOW provides professional digital services including website design, branding, SEO, PPC advertising, AI-powered Google & AI Search Optimization, and development of websites, SaaS platforms and AI tools. Our goal is to help businesses grow through modern technology, strong design, and data-driven marketing.",
+    question: "What services does Uxellent provide?",
+    answer: "Uxellent provides professional digital services including website design, branding, SEO, PPC advertising, AI-powered Google & AI Search Optimization, and development of websites, SaaS platforms and AI tools. Our goal is to help businesses grow through modern technology, strong design, and data-driven marketing.",
   },
   {
     id: "home-faq-en-2",
@@ -137,7 +137,7 @@ export const FAQ_ITEMS_EN = [
   {
     id: "home-faq-en-3",
     question: "Do you offer PPC advertising management?",
-    answer: "Yes. VOW provides PPC campaign management including Google Ads strategy, keyword research, ad creation, conversion tracking and performance optimization. Our goal is to generate qualified traffic and measurable business growth.",
+    answer: "Yes. Uxellent provides PPC campaign management including Google Ads strategy, keyword research, ad creation, conversion tracking and performance optimization. Our goal is to generate qualified traffic and measurable business growth.",
   },
   {
     id: "home-faq-en-4",
@@ -147,7 +147,7 @@ export const FAQ_ITEMS_EN = [
   {
     id: "home-faq-en-5",
     question: "Do you also provide branding and visual design?",
-    answer: "Yes. VOW offers branding and design services including brand identity, visual language, product design and website UI/UX. Our design approach focuses on creating a clear, professional and memorable brand presence.",
+    answer: "Yes. Uxellent offers branding and design services including brand identity, visual language, product design and website UI/UX. Our design approach focuses on creating a clear, professional and memorable brand presence.",
   },
   {
     id: "home-faq-en-6",
@@ -161,8 +161,8 @@ export const FAQ_ITEMS_EN = [
   },
   {
     id: "home-faq-en-8",
-    question: "Why work with VOW?",
-    answer: "VOW combines strategy, design, development and marketing in one integrated approach. With more than 20 years of experience in product design, technology and digital growth, we help businesses build strong digital foundations and scale their online presence.",
+    question: "Why work with Uxellent?",
+    answer: "Uxellent combines strategy, design, development and marketing in one integrated approach. With more than 20 years of experience in product design, technology and digital growth, we help businesses build strong digital foundations and scale their online presence.",
   },
   {
     id: "home-faq-en-9",

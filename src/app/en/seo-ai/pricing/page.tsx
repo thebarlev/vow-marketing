@@ -4,16 +4,16 @@ import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { PriceSection } from "@/app/_components/home/PriceSection"
 
 export const metadata: Metadata = {
-  title: "Pricing Plans | VOW",
+  title: "SEO Business Pricing & AI SEO Plans | Uxellent",
   description:
-    "Compare VOW SEO & AI visibility plans — Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.",
+    "Compare Uxellent SEO business pricing for AI visibility, engine optimization, and monthly growth support.",
   alternates: {
     canonical: "/en/seo-ai/pricing",
   },
   openGraph: {
-    title: "Pricing Plans | VOW",
+    title: "Pricing Plans | Uxellent",
     description:
-      "Compare VOW SEO & AI visibility plans — Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.",
+      "Compare Uxellent SEO & AI visibility plans — Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.",
     url: "/en/seo-ai/pricing",
     type: "website",
   },

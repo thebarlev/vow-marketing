@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     languages: heEnAlternateLanguages("/", "/en"),
   },
 
-  title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
+  title: "Uxellent | קידום אתרים, פיתוח אתרים ושיווק דיגיטלי",
   description:
-    "חברת VOW מפתחת אתרים, מערכות SaaS וכלי AI מתקדמים לעסקים. שירותי SEO, פרסום PPC ושיווק דיגיטלי שמגדילים חשיפה, לידים וצמיחה.",
+    "Uxellent בונה אתרים, מערכות AI ושירותי קידום אתרים ושיווק דיגיטלי לעסקים שרוצים יותר תנועה, לידים וצמיחה.",
 
   keywords: [
     "רו״ח AI",
@@ -47,17 +47,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
+    title: "Uxellent | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
-      "חברת VOW מפתחת אתרים, מערכות SaaS וכלי AI מתקדמים לעסקים. שירותי SEO, פרסום PPC ושיווק דיגיטלי שמגדילים חשיפה, לידים וצמיחה.",
+      "חברת Uxellent מפתחת אתרים, מערכות SaaS וכלי AI מתקדמים לעסקים. שירותי SEO, פרסום PPC ושיווק דיגיטלי שמגדילים חשיפה, לידים וצמיחה.",
     url: "https://uxellent.com",
-    siteName: "VOW",
+    siteName: "Uxellent",
     images: [
       {
         url: "https://uxellent.com/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "VOW – AI Accountant & Digital Business Platform",
+        alt: "Uxellent – AI Accountant & Digital Business Platform",
       },
     ],
     locale: "he_IL",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "VOW | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
+    title: "Uxellent | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
       "שנה חינם לחשבונית דיגיטלית מאובטחת + רו״ח AI, שיווק, מיתוג ופיתוח מערכות לעסקים.",
     images: ["https://uxellent.com/og-home.jpg"],
@@ -89,7 +89,7 @@ export default function HomePage() {
         <LogoRow />
         <VisionToExecutionSection
           title="אפיון, פיתוח, עיצוב ושיווק מבוסס AI שמייצר צמיחה"
-          subtitle="ב-VOW בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים."
+          subtitle="ב-Uxellent בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים."
           ctaLabel="להשארת פרטים"
           source="design_development"
           cards={[

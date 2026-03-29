@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     languages: heEnAlternateLanguages("/", "/en"),
   },
 
-  title: "VOW | AI Websites, SEO & Marketing for Business Growth",
+  title: "SEO Agency & Digital Marketing Services | Uxellent",
   description:
-    "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with VOW.",
+    "Uxellent is an online marketing agency offering digital marketing services, AI web development, and SEO for business growth.",
 
   keywords: [
     "AI accountant",
@@ -39,17 +39,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "VOW | AI Websites, SEO & Marketing for Business Growth",
+    title: "Uxellent | AI Websites, SEO & Marketing for Business Growth",
     description:
-      "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with VOW.",
+      "AI-powered websites, SEO and digital marketing that help businesses rank in Google and AI search. Get more visibility, traffic and customers with Uxellent.",
     url: "https://uxellent.com/en",
-    siteName: "VOW",
+    siteName: "Uxellent",
     images: [
       {
         url: "https://uxellent.com/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "VOW – AI Accountant & Digital Business Platform",
+        alt: "Uxellent – AI Accountant & Digital Business Platform",
       },
     ],
     locale: "en_US",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "VOW | AI Websites, SEO & Marketing for Business Growth",
+    title: "Uxellent | AI Websites, SEO & Marketing for Business Growth",
     description:
       "One year free for secure digital invoice + AI accountant, marketing, branding and systems development for businesses.",
     images: ["https://uxellent.com/og-home.jpg"],

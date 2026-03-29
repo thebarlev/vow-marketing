@@ -9,9 +9,9 @@ import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
-  title: "Our Work – VOW | Web Development, AI Systems & Digital Marketing",
+  title: "Uxellent Portfolio | Web Development, AI & SEO",
   description:
-    "See examples of VOW's work - websites, AI systems, digital stores, and solutions that deliver real ROI for businesses.",
+    "Explore Uxellent projects in web development, AI systems, and digital marketing services built for performance, SEO, and ROI.",
   keywords: "web development, AI systems, web design, digital marketing, business websites",
   alternates: {
     canonical: "/en/portfolio",
@@ -39,7 +39,7 @@ function getPortfolioImages(): PortfolioImage[] {
 
   return numericWebps.map((x, idx) => ({
     src: `/portfolio/${x.name}`,
-    alt: `VOW website development project ${idx + 1} - AI-powered design and digital marketing`,
+    alt: `Uxellent website development project ${idx + 1} - AI-powered design and digital marketing`,
   }))
 }
 

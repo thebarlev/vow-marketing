@@ -12,8 +12,8 @@ import { prefixEnPath } from "../_lib/prefixEnPath"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
-  title: "Blog | VOW",
-  description: "Insights and guides on web development, automation, marketing, and AI for businesses.",
+  title: "Uxellent Blog | SEO, Web Development & AI",
+  description: "Read Uxellent insights on SEO, web development, automation, AI search, and digital marketing services for growing businesses.",
   alternates: {
     canonical: "/en/blog",
     languages: heEnAlternateLanguages("/blog", "/en/blog"),

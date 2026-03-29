@@ -63,16 +63,16 @@ export function GreenInvoiceSectionEN() {
           
           <Image
             src="/manmobile.webp"
-            alt="VOW secure digital invoicing app - mobile view for business document management"
+            alt="Uxellent secure digital invoicing app - mobile view for business document management"
             fill
             priority
-            sizes="100vw"
+            sizes="(max-width: 1023px) 100vw, 50vw"
             className="object-cover lg:hidden"
           />
 
           <Image
             src="/manvow.webp"
-            alt="VOW secure digital invoicing app - desktop view for business document management"
+            alt="Uxellent secure digital invoicing app - desktop view for business document management"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="hidden object-cover lg:block"

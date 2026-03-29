@@ -1,13 +1,13 @@
 export const FAQ_ITEMS = [
   {
     id: "home-faq-1",
-    question: "מה זה VOW ומה אתם עושים?",
+    question: "מה זה Uxellent ומה אתם עושים?",
     answer:
-      "VOW היא חברה לפיתוח אתרים, מערכות ושיווק דיגיטלי. אנחנו עוזרים לעסקים להגדיל חשיפה בגוגל ובמנועי AI באמצעות שילוב של קידום אורגני (SEO), קמפיינים ממומנים (PPC) ופיתוח אתרים ומערכות מתקדמות.",
+      "Uxellent היא חברה לפיתוח אתרים, מערכות ושיווק דיגיטלי. אנחנו עוזרים לעסקים להגדיל חשיפה בגוגל ובמנועי AI באמצעות שילוב של קידום אורגני (SEO), קמפיינים ממומנים (PPC) ופיתוח אתרים ומערכות מתקדמות.",
   },
   {
     id: "home-faq-2",
-    question: "במה VOW מתמחה?",
+    question: "במה Uxellent מתמחה?",
     answer:
       "אנחנו מתמחים בשלושה תחומים מרכזיים: קידום עסקים במנועי חיפוש כמו Google ובמנועי AI, פיתוח אתרים ומערכות מתקדמות, וניהול קמפיינים ממומנים (PPC). השילוב בין הטכנולוגיה, הפיתוח והשיווק מאפשר לנו להביא תוצאות אמיתיות לעסקים.",
   },
@@ -21,7 +21,7 @@ export const FAQ_ITEMS = [
     id: "home-faq-4",
     question: "מה ההבדל בין SEO לבין פרסום ממומן (PPC)?",
     answer:
-      "SEO הוא קידום אורגני שמביא תנועה לאורך זמן דרך תוצאות החיפוש בגוגל. PPC הוא פרסום ממומן שמביא תנועה מידית באמצעות מודעות. ב-VOW משלבים בין השניים כדי להביא גם תוצאות מהירות וגם צמיחה יציבה לאורך זמן.",
+      "SEO הוא קידום אורגני שמביא תנועה לאורך זמן דרך תוצאות החיפוש בגוגל. PPC הוא פרסום ממומן שמביא תנועה מידית באמצעות מודעות. ב-Uxellent משלבים בין השניים כדי להביא גם תוצאות מהירות וגם צמיחה יציבה לאורך זמן.",
   },
   {
     id: "home-faq-5",
@@ -37,25 +37,25 @@ export const FAQ_ITEMS = [
   },
   {
     id: "home-faq-7",
-    question: "למה לבחור ב-VOW?",
+    question: "למה לבחור ב-Uxellent?",
     answer:
       "עם מעל 20 שנות ניסיון בדיגיטל, אנחנו משלבים אסטרטגיה, טכנולוגיה ושיווק. בניגוד לסוכנויות שמתמקדות רק בפרסום או רק בפיתוח, אנחנו בונים את כל המערכת הדיגיטלית של העסק – מהאתר ועד להבאת לקוחות.",
   },
   {
     id: "home-faq-8",
-    question: "איך מתחילים לעבוד עם VOW?",
+    question: "איך מתחילים לעבוד עם Uxellent?",
     answer:
       "פשוט מאוד. משאירים פרטים באתר או יוצרים קשר ונחזור אליכם לשיחת היכרות קצרה. נבדוק את האתר והנוכחות הדיגיטלית שלכם ונציע תוכנית פעולה להגדלת החשיפה והלקוחות.",
   },
 ] as const;
 
 export const CLIENT_LOGOS = [
-  { src: "/logos/Altshuler_logo-3.svg", alt: "Altshuler Shaham - VOW client for digital marketing and development" },
-  { src: "/logos/guy.svg", alt: "Horizon - VOW client for SEO and website development" },
-  { src: "/logos/eufy.svg", alt: "Isracard - VOW client for branding and digital presence" },
-  { src: "/logos/Logo_Carrefour-5.svg", alt: "Carrefour - VOW client for AI SEO and business growth" },
-  { src: "/logos/max_svg1-3.svg", alt: "MAX - VOW client for digital marketing and development" },
-  { src: "/logos/Soundcore_svg-3.svg", alt: "Soundcore - VOW client for website and branding" },
+  { src: "/logos/Altshuler_logo-3.svg", alt: "Altshuler Shaham - Uxellent client for digital marketing and development" },
+  { src: "/logos/guy.svg", alt: "Horizon - Uxellent client for SEO and website development" },
+  { src: "/logos/eufy.svg", alt: "Isracard - Uxellent client for branding and digital presence" },
+  { src: "/logos/Logo_Carrefour-5.svg", alt: "Carrefour - Uxellent client for AI SEO and business growth" },
+  { src: "/logos/max_svg1-3.svg", alt: "MAX - Uxellent client for digital marketing and development" },
+  { src: "/logos/Soundcore_svg-3.svg", alt: "Soundcore - Uxellent client for website and branding" },
 ] as const
 
 export const HERO_TAGS = [
@@ -70,42 +70,42 @@ export const TESTIMONIALS = [
     name: "חולדה",
     title: "שנאי חולדה",
     kicker: "",
-    text: '"עברנו מתחושת בטן לנתונים אמיתיים. VOW העניקה לנו בהירות מלאה על מצב העסק - תובנות שהפתיעו אותנו פעם אחר פעם וחשפו הזדמנויות שהיו תמיד שם. התוצאות: יותר מכירות, יותר לקוחות ושליטה אמיתית בעסק."',
+    text: '"עברנו מתחושת בטן לנתונים אמיתיים. Uxellent העניקה לנו בהירות מלאה על מצב העסק - תובנות שהפתיעו אותנו פעם אחר פעם וחשפו הזדמנויות שהיו תמיד שם. התוצאות: יותר מכירות, יותר לקוחות ושליטה אמיתית בעסק."',
     imageSrc: "/testimonials/שנאי חולדה.webp",
-    imageAlt: "Hulda Transformer - VOW client testimonial for digital marketing and business growth",
+    imageAlt: "Hulda Transformer - Uxellent client testimonial for digital marketing and business growth",
   },
   {
     name: "סלדט",
     title: "סלדט",
-    text: '"VOW היא חברת פיתוח ממבוססת AI איכותית, שמשלבת חדשנות יוצאת דופן עם מומחיות עמוקה בשיווק ופיתוח. מספקים פתרונות מדויקים, שמעלים את רמת הניהול ומובילים לתוצאות מדידות."',    imageSrc: "/testimonials/סלדט.webp",
-    imageAlt: "Seldat - VOW client testimonial for AI development and digital marketing",
+    text: '"Uxellent היא חברת פיתוח ממבוססת AI איכותית, שמשלבת חדשנות יוצאת דופן עם מומחיות עמוקה בשיווק ופיתוח. מספקים פתרונות מדויקים, שמעלים את רמת הניהול ומובילים לתוצאות מדידות."',    imageSrc: "/testimonials/סלדט.webp",
+    imageAlt: "Seldat - Uxellent client testimonial for AI development and digital marketing",
   },
   {
     name: "אלטשולר שחם",
     title: "אלטשולר שחם פיננסים",
-    text: '"פנינו ל-VOW כדי לבנות פתרון שעובד בצורה חלקה, ובמהירות הצוות הראה הבנה מעמיקה של המוצר והלקוחות שלנו, פעמים רבות אף יותר מאשר אנחנו. צוות מחויב, מקצועי ונחוש להצלחה בכל שלב. שותפות אמיתית."',
+    text: '"פנינו ל-Uxellent כדי לבנות פתרון שעובד בצורה חלקה, ובמהירות הצוות הראה הבנה מעמיקה של המוצר והלקוחות שלנו, פעמים רבות אף יותר מאשר אנחנו. צוות מחויב, מקצועי ונחוש להצלחה בכל שלב. שותפות אמיתית."',
     imageSrc: "/testimonials/אלטשולר שחם פיננסים סרביסס.webp",
-    imageAlt: "Altshuler Shaham Finance - VOW client testimonial for website development",
+    imageAlt: "Altshuler Shaham Finance - Uxellent client testimonial for website development",
   },
   {
     name: "Carrefour",
     title: "Carrefour",
-    text: '"גילינו שאנחנו לא באמת מכירים את העסק שלנו. VOW חשפה לנו תמונה ברורה - איפה אנחנו מרוויחים, איפה אנחנו מפסידים, ואיך לשפר. כל דוח הוביל לרגע של ״איך לא ידעתי את זה קודם״. התוצאות דיברו בעד עצמן: צמיחה משמעותית והגדלת הרווחיות."',
+    text: '"גילינו שאנחנו לא באמת מכירים את העסק שלנו. Uxellent חשפה לנו תמונה ברורה - איפה אנחנו מרוויחים, איפה אנחנו מפסידים, ואיך לשפר. כל דוח הוביל לרגע של ״איך לא ידעתי את זה קודם״. התוצאות דיברו בעד עצמן: צמיחה משמעותית והגדלת הרווחיות."',
     imageSrc: "/testimonials/Carrefoure.webp",
-    imageAlt: "Carrefour - VOW client testimonial for SEO and business analytics",
+    imageAlt: "Carrefour - Uxellent client testimonial for SEO and business analytics",
   },
   {
     name: "Youa",
     title: "Youa",
-    text: '"השגנו צמיחה משמעותית בהכנסות בעזרת שיווק מדוייק ואתר שעובד מהר וחלק, הגדלנו את בסיס הלקוחות ורכשנו שליטה מלאה בנתונים העסקיים. VOW  חשפה תובנות שלא ידענו שקיימות - רגעי ״איך פספסנו את זה״ שהובילו לשיפור מיידי בתהליכים השייווקיים."',    imageSrc: "/testimonials/youa.webp",
-    imageAlt: "Youa - VOW client testimonial for digital marketing and website growth",
+    text: '"השגנו צמיחה משמעותית בהכנסות בעזרת שיווק מדוייק ואתר שעובד מהר וחלק, הגדלנו את בסיס הלקוחות ורכשנו שליטה מלאה בנתונים העסקיים. Uxellent  חשפה תובנות שלא ידענו שקיימות - רגעי ״איך פספסנו את זה״ שהובילו לשיפור מיידי בתהליכים השייווקיים."',    imageSrc: "/testimonials/youa.webp",
+    imageAlt: "Youa - Uxellent client testimonial for digital marketing and website growth",
   },
   {
     name: "סבונלה",
     title: "סבונלה",
-    text: '"ממליצה בחום! VOW עובדת באמינות מלאה, מבצעת הכל בזמן, באיכות גבוהה, ומעדכנת באופן שוטף על כל שלב בתהליך. כיום, נדיר מאוד למצוא בשוק פתרון ברמה כזו!"',
+    text: '"ממליצה בחום! Uxellent עובדת באמינות מלאה, מבצעת הכל בזמן, באיכות גבוהה, ומעדכנת באופן שוטף על כל שלב בתהליך. כיום, נדיר מאוד למצוא בשוק פתרון ברמה כזו!"',
     imageSrc: "/testimonials/סבונלה.webp",
-    imageAlt: "Savonella - VOW client testimonial for branding and design",
+    imageAlt: "Savonella - Uxellent client testimonial for branding and design",
   },
 ] as const
 
@@ -114,44 +114,44 @@ export const TESTIMONIALS_EN = [
     name: "Hulda",
     title: "Hulda Transformer",
     kicker: "",
-    text: '"We moved from gut feeling to real data. VOW gave us full clarity on the business - insights that surprised us again and again and revealed opportunities that were always there. Results: more sales, more customers, real control."',
+    text: '"We moved from gut feeling to real data. Uxellent gave us full clarity on the business - insights that surprised us again and again and revealed opportunities that were always there. Results: more sales, more customers, real control."',
     imageSrc: "/testimonials/שנאי חולדה.webp",
-    imageAlt: "Hulda Transformer - VOW client testimonial for digital marketing and business growth",
+    imageAlt: "Hulda Transformer - Uxellent client testimonial for digital marketing and business growth",
   },
   {
     name: "Seldat",
     title: "Seldat",
-    text: '"VOW is a quality AI-based development company, combining exceptional innovation with deep marketing and development expertise. They deliver precise solutions that raise management standards and drive measurable results."',
+    text: '"Uxellent is a quality AI-based development company, combining exceptional innovation with deep marketing and development expertise. They deliver precise solutions that raise management standards and drive measurable results."',
     imageSrc: "/testimonials/סלדט.webp",
-    imageAlt: "Seldat - VOW client testimonial for AI development and digital marketing",
+    imageAlt: "Seldat - Uxellent client testimonial for AI development and digital marketing",
   },
   {
     name: "Altshuler Shaham",
     title: "Altshuler Shaham Finance",
-    text: '"We turned to VOW to build a solution that works smoothly. The team quickly showed deep understanding of our product and customers, often more than we did. Committed, professional, and determined to succeed at every step. A true partnership."',
+    text: '"We turned to Uxellent to build a solution that works smoothly. The team quickly showed deep understanding of our product and customers, often more than we did. Committed, professional, and determined to succeed at every step. A true partnership."',
     imageSrc: "/testimonials/אלטשולר שחם פיננסים סרביסס.webp",
-    imageAlt: "Altshuler Shaham Finance - VOW client testimonial for website development",
+    imageAlt: "Altshuler Shaham Finance - Uxellent client testimonial for website development",
   },
   {
     name: "Carrefour",
     title: "Carrefour",
-    text: '"We discovered we didn\'t really know our business. VOW showed us a clear picture - where we profit, where we lose, and how to improve. Every report led to a "how didn\'t I know this before" moment. Results spoke for themselves: significant growth and profitability."',
+    text: '"We discovered we didn\'t really know our business. Uxellent showed us a clear picture - where we profit, where we lose, and how to improve. Every report led to a "how didn\'t I know this before" moment. Results spoke for themselves: significant growth and profitability."',
     imageSrc: "/testimonials/Carrefoure.webp",
-    imageAlt: "Carrefour - VOW client testimonial for SEO and business analytics",
+    imageAlt: "Carrefour - Uxellent client testimonial for SEO and business analytics",
   },
   {
     name: "Youa",
     title: "Youa",
-    text: '"We achieved significant revenue growth with precise marketing and a fast, smooth site. We expanded our customer base and gained full control of our business data. VOW revealed insights we didn\'t know existed - "how did we miss this" moments that led to immediate improvement in sales processes."',
+    text: '"We achieved significant revenue growth with precise marketing and a fast, smooth site. We expanded our customer base and gained full control of our business data. Uxellent revealed insights we didn\'t know existed - "how did we miss this" moments that led to immediate improvement in sales processes."',
     imageSrc: "/testimonials/youa.webp",
-    imageAlt: "Youa - VOW client testimonial for digital marketing and website growth",
+    imageAlt: "Youa - Uxellent client testimonial for digital marketing and website growth",
   },
   {
     name: "Savonella",
     title: "Savonella",
-    text: '"Highly recommend! VOW works with full reliability, delivers everything on time, with high quality, and keeps us updated on every step. It\'s rare to find this level of solution in the market today!"',
+    text: '"Highly recommend! Uxellent works with full reliability, delivers everything on time, with high quality, and keeps us updated on every step. It\'s rare to find this level of solution in the market today!"',
     imageSrc: "/testimonials/סבונלה.webp",
-    imageAlt: "Savonella - VOW client testimonial for branding and design",
+    imageAlt: "Savonella - Uxellent client testimonial for branding and design",
   },
 ] as const
 

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
+  title: "התשלום נכשל | Uxellent",
+  description: "התשלום לא הושלם. ניתן לנסות שוב דרך עמוד התמחור של Uxellent ולהמשיך את תהליך הרכישה.",
   alternates: {
     canonical: "/checkout/failed",
   },

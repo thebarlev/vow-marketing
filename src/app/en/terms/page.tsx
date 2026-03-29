@@ -6,6 +6,8 @@ import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export const metadata: Metadata = {
+  title: "Terms of Use | Uxellent",
+  description: "Read the Uxellent terms of use covering your rights, responsibilities, and the rules for using our website and services.",
   alternates: {
     canonical: "/en/terms",
     languages: heEnAlternateLanguages("/terms", "/en/terms"),
@@ -17,8 +19,8 @@ export default function TermsPageEn() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
       <JsonLd
         data={webPageSchema({
-          name: "Terms of Use | VOW",
-          description: "VOW Terms of Use - Last updated February 2026",
+          name: "Terms of Use | Uxellent",
+          description: "Uxellent Terms of Use - Last updated February 2026",
           url: "https://uxellent.com/en/terms",
           dateModified: "2026-02-16",
         })}
@@ -32,9 +34,9 @@ export default function TermsPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">1. General</h2>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">1.1 About VOW and the Services</h3>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">1.1 About Uxellent and the Services</h3>
             <p>
-              Bugo Media LTD, Company No. 515960508 ("VOW", "we" or "the Company") operates an online system for creating, managing, and sending digital accounting documents, including tax invoices, receipts, transaction invoices, and other business documents. The system is available via:
+              Bugo Media LTD, Company No. 515960508 ("Uxellent", "we" or "the Company") operates an online system for creating, managing, and sending digital accounting documents, including tax invoices, receipts, transaction invoices, and other business documents. The system is available via:
             </p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Our website: uxellent.com</li>
@@ -45,7 +47,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.2 Agreement to Terms</h3>
             <p>
-              These terms of use ("Terms" or "Agreement") govern the relationship between VOW and anyone who uses the Services ("User", "you").
+              These terms of use ("Terms" or "Agreement") govern the relationship between Uxellent and anyone who uses the Services ("User", "you").
             </p>
             <p>
               By using the Services, you agree to these Terms in full. If you do not agree (in whole or in part), you may not use the Services.
@@ -61,7 +63,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.4 Privacy Policy</h3>
             <p>
-              VOW's Privacy Policy is available at <a href="https://uxellent.com/en/privacy" className="text-blue-600 underline">https://uxellent.com/en/privacy</a> and forms an integral part of these Terms.
+              Uxellent's Privacy Policy is available at <a href="https://uxellent.com/en/privacy" className="text-blue-600 underline">https://uxellent.com/en/privacy</a> and forms an integral part of these Terms.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">1.5 Support</h3>
@@ -88,7 +90,7 @@ export default function TermsPageEn() {
             <h2 className="text-[24px] font-bold mb-4 mt-8">2. Services and License</h2>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.1 What the Services Include</h3>
-            <p>VOW grants a license to perform the following ("the License"):</p>
+            <p>Uxellent grants a license to perform the following ("the License"):</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Create tax invoices, transaction invoices, and receipts</li>
               <li>Send documents by email or export to PDF</li>
@@ -110,7 +112,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.3 Suitability</h3>
             <p>
-              You must verify before use that the Services meet your needs. You have no claim against VOW for any mismatch with your needs or expectations.
+              You must verify before use that the Services meet your needs. You have no claim against Uxellent for any mismatch with your needs or expectations.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.4 User Responsibility</h3>
@@ -118,14 +120,14 @@ export default function TermsPageEn() {
               You are solely and fully responsible for all use of the system by you and/or anyone on your behalf.
             </p>
             <p>
-              VOW is not responsible for your use, the content you create, or the documents you produce.
+              Uxellent is not responsible for your use, the content you create, or the documents you produce.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.5 Not Accounting Advice</h3>
             <p><strong>Important:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>System content does not replace accounting, tax, or legal advice</li>
-              <li>VOW does not provide advisory services of any kind</li>
+              <li>Uxellent does not provide advisory services of any kind</li>
               <li>The system is a document management tool only</li>
               <li>You must seek professional advice as needed</li>
             </ul>
@@ -139,7 +141,7 @@ export default function TermsPageEn() {
             </p>
             <p><strong>You must review and verify every recommendation yourself.</strong></p>
             <p>
-              VOW is not responsible for choices you make or could make in the system. You are solely responsible for document accuracy, classifications, and content.
+              Uxellent is not responsible for choices you make or could make in the system. You are solely responsible for document accuracy, classifications, and content.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.7 Changes to Services</h3>
@@ -155,7 +157,7 @@ export default function TermsPageEn() {
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">2.8 Restriction or Termination</h3>
-            <p>VOW may:</p>
+            <p>Uxellent may:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Warn users about improper or violating use</li>
               <li>Restrict access for users who breach the Terms</li>
@@ -224,9 +226,9 @@ export default function TermsPageEn() {
               <li>Newsletter and marketing (opt-out available at any time)</li>
             </ul>
 
-            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.6 VOW Access to Your Account</h3>
+            <h3 className="text-[20px] font-semibold mb-3 mt-6">3.6 Uxellent Access to Your Account</h3>
             <p>
-              You agree that VOW representatives may access your account at any time for:
+              You agree that Uxellent representatives may access your account at any time for:
             </p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Technical checks</li>
@@ -251,7 +253,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">4.1 Free Trial Period</h3>
             <p>
-              VOW offers a free trial of up to one year from account creation ("Free Trial").
+              Uxellent offers a free trial of up to one year from account creation ("Free Trial").
             </p>
             <p>
               During this period, you may create up to 10 documents per calendar month at no charge.
@@ -259,8 +261,8 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">4.2 Terms and Limits</h3>
             <ul className="list-disc pl-6 my-3 space-y-1">
-              <li>The Free Trial is provided without any commitment from VOW, including availability or absence of faults</li>
-              <li>VOW may change free trial terms at any time (including document limits or duration)</li>
+              <li>The Free Trial is provided without any commitment from Uxellent, including availability or absence of faults</li>
+              <li>Uxellent may change free trial terms at any time (including document limits or duration)</li>
               <li>Changes apply to new users; existing users keep current terms until the end of their year</li>
               <li>The Free Trial is offered once per user/business</li>
             </ul>
@@ -304,7 +306,7 @@ export default function TermsPageEn() {
             </div>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">5.2 Price and Service Changes</h3>
-            <p>VOW may change from time to time:</p>
+            <p>Uxellent may change from time to time:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Service prices</li>
               <li>Subscription types and packages</li>
@@ -420,7 +422,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">7.1 System Ownership</h3>
             <p>
-              All rights in the system, including source code, design, content, trademarks, and patents, belong to VOW or its licensors.
+              All rights in the system, including source code, design, content, trademarks, and patents, belong to Uxellent or its licensors.
             </p>
             <p><strong>You may not:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
@@ -433,7 +435,7 @@ export default function TermsPageEn() {
             <p>
               You retain full ownership of all content and documents you create in the system.
             </p>
-            <p>You grant VOW a license to use your content only for:</p>
+            <p>You grant Uxellent a license to use your content only for:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Operating the Services for you</li>
               <li>Improving the system and developing features (in anonymized form)</li>
@@ -442,7 +444,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">7.3 Use of Data for Improvement</h3>
             <p>
-              You authorize VOW to use information collected from you (as detailed in the Privacy Policy) to create anonymized statistical data, including:
+              You authorize Uxellent to use information collected from you (as detailed in the Privacy Policy) to create anonymized statistical data, including:
             </p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Aggregate and cumulative data</li>
@@ -454,8 +456,8 @@ export default function TermsPageEn() {
             <p><strong>Important:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Statistical data is fully anonymized and cannot identify you</li>
-              <li>Statistical data is VOW's exclusive property</li>
-              <li>VOW may use, sell, license, or share statistical data without restriction</li>
+              <li>Statistical data is Uxellent's exclusive property</li>
+              <li>Uxellent may use, sell, license, or share statistical data without restriction</li>
               <li>You waive any rights in the statistical data</li>
             </ul>
           </section>
@@ -465,7 +467,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.1 AS-IS Services</h3>
             <p>
-              VOW provides the Services "AS-IS" and "AS-AVAILABLE" without warranties of any kind.
+              Uxellent provides the Services "AS-IS" and "AS-AVAILABLE" without warranties of any kind.
             </p>
             <p><strong>We do not warrant:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
@@ -480,7 +482,7 @@ export default function TermsPageEn() {
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.2 Damage Limitation</h3>
-            <p>VOW is not liable for any direct or indirect damage, including:</p>
+            <p>Uxellent is not liable for any direct or indirect damage, including:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Loss of profits or revenue</li>
               <li>Loss of data or documents</li>
@@ -489,9 +491,9 @@ export default function TermsPageEn() {
               <li>Damage from errors, bugs, or inaccuracies</li>
             </ul>
             <p>
-              In any case, VOW's total liability does not exceed the amount you actually paid for the Services in the 3 months before the event causing damage.
+              In any case, Uxellent's total liability does not exceed the amount you actually paid for the Services in the 3 months before the event causing damage.
             </p>
-            <p><strong>Except in case of VOW's willful misconduct.</strong></p>
+            <p><strong>Except in case of Uxellent's willful misconduct.</strong></p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.3 Your Responsibility</h3>
             <p>You assume full responsibility for:</p>
@@ -503,7 +505,7 @@ export default function TermsPageEn() {
               <li>Proper and permitted use of the system</li>
             </ul>
             <p>
-              VOW is not responsible for content you upload, transmit, or publish via the system.
+              Uxellent is not responsible for content you upload, transmit, or publish via the system.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.4 Document Backup</h3>
@@ -513,7 +515,7 @@ export default function TermsPageEn() {
                 You must independently back up and store all documents and materials you create or upload to the system.
               </p>
             </div>
-            <p><strong>VOW is not responsible for:</strong></p>
+            <p><strong>Uxellent is not responsible for:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Loss of documents or data</li>
               <li>Deletion of documents (intentional or accidental)</li>
@@ -529,26 +531,26 @@ export default function TermsPageEn() {
               Where the system allows sending a document link (instead of a PDF), the link is valid for <strong>3 months</strong> from creation.
             </p>
             <p>
-              You must inform your customers of this limit. VOW is not responsible for inability to access links after expiry.
+              You must inform your customers of this limit. Uxellent is not responsible for inability to access links after expiry.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.6 Third-Party Services</h3>
-            <p>VOW is not liable for any damage, loss, or expense arising from:</p>
+            <p>Uxellent is not liable for any damage, loss, or expense arising from:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Malfunction, error, or disruption in third-party systems</li>
-              <li>Services provided via third parties (not directly through VOW)</li>
+              <li>Services provided via third parties (not directly through Uxellent)</li>
               <li>Unavailability of third-party services</li>
               <li>Changes to or discontinuation of third-party services</li>
             </ul>
             <p>
-              Example: If you use a third-party integration and it fails - that is the third party's responsibility, not VOW's.
+              Example: If you use a third-party integration and it fails - that is the third party's responsibility, not Uxellent's.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.7 Internet Connection</h3>
             <p>
               You must ensure a stable internet connection before using the system.
             </p>
-            <p>VOW is not responsible for damage from connection issues, including:</p>
+            <p>Uxellent is not responsible for damage from connection issues, including:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Disconnection</li>
               <li>Slowness</li>
@@ -570,13 +572,13 @@ export default function TermsPageEn() {
               <li>Viruses, malware, trojans</li>
               <li>Hacking or intrusion</li>
               <li>Communication interception</li>
-              <li>VOW site impersonation</li>
+              <li>Uxellent site impersonation</li>
               <li>Online fraud</li>
             </ul>
             <p>
               We invest significant effort in protection but cannot guarantee complete prevention.
             </p>
-            <p>VOW is not liable for damage from these risks, including:</p>
+            <p>Uxellent is not liable for damage from these risks, including:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Disclosure or corruption of data</li>
               <li>Unauthorized actions</li>
@@ -586,7 +588,7 @@ export default function TermsPageEn() {
             </ul>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.10 Force Majeure</h3>
-            <p>VOW is not liable for damage from factors beyond our control, including:</p>
+            <p>Uxellent is not liable for damage from factors beyond our control, including:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Communication line disruption</li>
               <li>Cloud or hosting provider faults</li>
@@ -594,7 +596,7 @@ export default function TermsPageEn() {
               <li>Data exposure from inaccurate information you provided</li>
               <li>Handing your device to others (for repair or viewing)</li>
             </ul>
-            <p>Provided VOW made reasonable efforts to prevent such factors.</p>
+            <p>Provided Uxellent made reasonable efforts to prevent such factors.</p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">8.11 External Links</h3>
             <p>
@@ -603,7 +605,7 @@ export default function TermsPageEn() {
             <p><strong>Important:</strong></p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Links are for your convenience only</li>
-              <li>VOW has not reviewed these sites and is not responsible for them</li>
+              <li>Uxellent has not reviewed these sites and is not responsible for them</li>
               <li>Browsing, using, or sharing information with these sites is at your own risk</li>
               <li>Always verify the URL before clicking</li>
             </ul>
@@ -615,7 +617,7 @@ export default function TermsPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">9. Indemnification</h2>
             <p>
-              You agree to indemnify VOW, its employees, officers, and directors from any claim, demand, loss, damage, or expense (including legal fees) arising from:
+              You agree to indemnify Uxellent, its employees, officers, and directors from any claim, demand, loss, damage, or expense (including legal fees) arising from:
             </p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Your breach of these Terms</li>
@@ -623,14 +625,14 @@ export default function TermsPageEn() {
               <li>Content you uploaded or documents you created</li>
               <li>Any illegal or unauthorized use by you</li>
             </ul>
-            <p>Within 30 days of receiving VOW's written demand.</p>
+            <p>Within 30 days of receiving Uxellent's written demand.</p>
           </section>
 
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">10. Content Channels</h2>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.1 What Are Content Channels</h3>
-            <p>VOW operates various content channels, including:</p>
+            <p>Uxellent operates various content channels, including:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>Blog and articles on uxellent.com</li>
               <li>Social media posts (Facebook, Instagram, LinkedIn, TikTok)</li>
@@ -663,7 +665,7 @@ export default function TermsPageEn() {
               </p>
             </div>
             <p>
-              Any use of information from the Content is at your sole risk. VOW is not liable for loss or damage from relying on the Content.
+              Any use of information from the Content is at your sole risk. Uxellent is not liable for loss or damage from relying on the Content.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.5 Content Suggestions</h3>
@@ -672,33 +674,33 @@ export default function TermsPageEn() {
             </p>
             <p>If you submit a suggestion:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
-              <li>VOW may use it without compensation</li>
-              <li>Any resulting work is VOW's exclusive property</li>
+              <li>Uxellent may use it without compensation</li>
+              <li>Any resulting work is Uxellent's exclusive property</li>
               <li>You have no rights in the intellectual property or output</li>
             </ul>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.6 User-Uploaded Content</h3>
-            <p>If VOW allows users to upload content, you represent and warrant:</p>
+            <p>If Uxellent allows users to upload content, you represent and warrant:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>You are the creator and owner of the content</li>
               <li>No one else has rights in the content</li>
               <li>The content does not infringe third-party rights</li>
-              <li>You grant VOW an unlimited license to use the content</li>
+              <li>You grant Uxellent an unlimited license to use the content</li>
               <li>You are not entitled to compensation</li>
-              <li>You have no claim against VOW regarding use of the content</li>
-              <li>VOW is not responsible for third-party use of the content</li>
+              <li>You have no claim against Uxellent regarding use of the content</li>
+              <li>Uxellent is not responsible for third-party use of the content</li>
             </ul>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">10.7 Right to Remove Content</h3>
             <p>
-              VOW may remove any content you published or terminate your access to Content Channels, at its sole discretion, without prior notice.
+              Uxellent may remove any content you published or terminate your access to Content Channels, at its sole discretion, without prior notice.
             </p>
           </section>
 
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">11. Changes to Terms</h2>
             <p>
-              VOW may change these Terms at any time.
+              Uxellent may change these Terms at any time.
             </p>
             <p>
               Material changes will be published in the system and/or by email at least 30 days in advance.
@@ -716,7 +718,7 @@ export default function TermsPageEn() {
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">12.1 Entire Agreement</h3>
             <p>
-              These Terms (together with the Privacy Policy) constitute the entire agreement between you and VOW.
+              These Terms (together with the Privacy Policy) constitute the entire agreement between you and Uxellent.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">12.2 Waiver</h3>
@@ -734,11 +736,11 @@ export default function TermsPageEn() {
               You may not assign your rights or obligations under this Agreement without our written consent.
             </p>
             <p>
-              VOW may assign its rights and obligations to a third party at any time, provided the third party assumes VOW's obligations to you.
+              Uxellent may assign its rights and obligations to a third party at any time, provided the third party assumes Uxellent's obligations to you.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">12.5 Termination</h3>
-            <p>VOW may terminate this Agreement:</p>
+            <p>Uxellent may terminate this Agreement:</p>
             <ul className="list-disc pl-6 my-3 space-y-1">
               <li>At any time, with 30 days' notice</li>
               <li>Immediately, for your breach of the Terms (without notice)</li>

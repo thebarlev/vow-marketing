@@ -4,8 +4,8 @@ import { ContactForm } from "@/app/_components/contact/ContactForm"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
-  title: "Contact | VOW",
-  description: "Get in touch with VOW. Fill in your details and we'll get back to you soon.",
+  title: "Contact Uxellent | SEO Agency & Marketing Team",
+  description: "Contact Uxellent for SEO agency support, digital marketing services, AI web development, or growth planning for your business.",
   alternates: {
     canonical: "/en/contact",
     languages: heEnAlternateLanguages("/contact", "/en/contact"),

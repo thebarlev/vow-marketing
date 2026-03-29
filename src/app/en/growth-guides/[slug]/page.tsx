@@ -210,12 +210,12 @@ export async function generateMetadata({
 
   if (!guide) {
     return {
-      title: "Growth Guides by VOW | VOW",
+      title: "Growth Guides | Uxellent",
     }
   }
 
   return {
-    title: `${guide.keyword} | VOW Growth Guide`,
+    title: `${guide.keyword} | Uxellent`,
     description: guide.metaDescription,
     alternates: {
       canonical: `/en/growth-guides/${guide.slug}`,
@@ -225,7 +225,7 @@ export async function generateMetadata({
       ),
     },
     openGraph: {
-      title: `${guide.keyword} | VOW Growth Guide`,
+      title: `${guide.keyword} | Uxellent Growth Guide`,
       description: guide.metaDescription,
       url: `/en/growth-guides/${guide.slug}`,
       type: "article",

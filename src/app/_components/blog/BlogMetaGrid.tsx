@@ -13,7 +13,7 @@ type Props = {
 
 export function BlogMetaGrid({
   category,
-  author = "VOW",
+  author = "Uxellent",
   date,
   readingTimeMinutes,
   shareUrl,

@@ -419,9 +419,9 @@ H2: שאלות נפוצות
   "logo": "https://uxellent.com/logo.png",
   "sameAs": [
     "https://www.linkedin.com/company/vow",
-    "https://www.facebook.com/profile.php?id=61587713103366",
-    "https://www.instagram.com/vow.for.success",
-    "https://x.com/Vowsuccess"
+    "https://www.facebook.com/uxelllent",
+    "https://www.instagram.com/uxellent.il",
+    "https://x.com/uxellent69"
   ],
   "contactPoint": {
     "@type": "ContactPoint",

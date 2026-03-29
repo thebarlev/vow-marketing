@@ -17,6 +17,13 @@ import { CopyLinkButton } from "@/app/_components/blog/CopyLinkButton"
 import { H2 } from "@/components/ui/Heading"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
+const SEO_DESCRIPTION_OVERRIDES_HE: Record<string, string> = {
+  "fast-slow-web":
+    "איך לשפר ביצועי אתר ולהגדיל המרות עם מהירות טעינה, UX ו-SEO טכני שמפחיתים נטישה ומחזקים תוצאות עסקיות.",
+  "wordpress-vs-other":
+    "השוואה בין וורדפרס לפלטפורמות אחרות עם יתרונות, חסרונות, SEO, גמישות עסקית ועלויות תחזוקה לאורך זמן.",
+}
+
 function findPostEn(slug: string) {
   return allArticles.find((a) => a.slug === slug && (a.locale as string | undefined) === "en")
 }
@@ -30,13 +37,14 @@ export async function generateMetadata({
   const post = allArticles.find(
     (a) => a.slug === slug && ((a.locale as string | undefined) !== "en" || !(a.locale as string | undefined))
   )
-  if (!post) return { title: "בלוג | VOW" }
+  if (!post) return { title: "בלוג | Uxellent" }
 
   const enPair = findPostEn(slug)
+  const seoDescription = SEO_DESCRIPTION_OVERRIDES_HE[post.slug] ?? post.description
 
   return {
-    title: `${post.title} | VOW`,
-    description: post.description ?? "מאמר בבלוג של VOW.",
+    title: post.title,
+    description: seoDescription ?? "מאמר של Uxellent על SEO, פיתוח אתרים, אוטומציות וצמיחה דיגיטלית לעסקים.",
     alternates: {
       canonical: `/blog/${post.slug}`,
       ...(enPair
@@ -47,7 +55,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: post.title,
-      description: post.description ?? "מאמר בבלוג של VOW.",
+      description: post.description ?? "מאמר בבלוג של Uxellent.",
       url: `/blog/${post.slug}`,
       type: "article",
       images: post.coverImage ? [{ url: post.coverImage }] : undefined,
@@ -179,7 +187,7 @@ export default async function BlogPostPage({
                     <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
                   </svg>
                   <span>מוצר:</span>
-                  <span className="text-black">VOW</span>
+                  <span className="text-black">Uxellent</span>
                 </div>
 
                 {/* Date */}

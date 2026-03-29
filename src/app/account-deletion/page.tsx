@@ -7,6 +7,8 @@ import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
+  title: "מחיקת חשבון | Uxellent",
+  description: "מידע על בקשת מחיקת חשבון בשירות Uxellent, כולל דרכי פנייה, זמני טיפול ושמירת מידע לפי דין.",
   alternates: {
     canonical: "/account-deletion",
     languages: heEnAlternateLanguages("/account-deletion", "/en/account-deletion"),
@@ -21,14 +23,14 @@ export default function AccountDeletionPage() {
       <main id="main" role="main">
         <LegalTemplate
           title="מחיקת חשבון"
-          subtitle="מידע על תהליך מחיקת חשבון משתמש בשירות VOW"
+          subtitle="מידע על תהליך מחיקת חשבון משתמש בשירות Uxellent"
           lastUpdated="8 בפברואר 2026"
         >
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">מחיקת חשבון משתמש</h2>
             
             <p>
-              במקרה שמשתמש מעוניין לבקש את מחיקת חשבונו משירות VOW, ניתן לפנות אלינו באחת מהדרכים הבאות:
+              במקרה שמשתמש מעוניין לבקש את מחיקת חשבונו משירות Uxellent, ניתן לפנות אלינו באחת מהדרכים הבאות:
             </p>
 
             <div className="bg-blue-50 p-6 rounded-lg my-6">
@@ -48,7 +50,7 @@ export default function AccountDeletionPage() {
             <h2 className="text-[24px] font-bold mb-4 mt-8">שמירת נתונים</h2>
             
             <p>
-              יובהר כי סוגי הנתונים הנשמרים על-ידי החברה ומשך הזמן בו הם נשמרים מפורטים במדיניות הפרטיות של VOW, הזמינה <a href="https://uxellent.com/privacy" className="text-blue-600 underline">באתר האינטרנט</a>.
+              יובהר כי סוגי הנתונים הנשמרים על-ידי החברה ומשך הזמן בו הם נשמרים מפורטים במדיניות הפרטיות של Uxellent, הזמינה <a href="https://uxellent.com/privacy" className="text-blue-600 underline">באתר האינטרנט</a>.
             </p>
 
             <div className="bg-yellow-50 border-r-4 border-yellow-400 p-4 my-6">

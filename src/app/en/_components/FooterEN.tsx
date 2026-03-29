@@ -41,7 +41,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   { title: "Services", items: SERVICES_LINKS },
   { title: "Products", items: PRODUCTS_LINKS },
   { title: "Growth Guides", items: GROWTH_GUIDE_LINKS },
-  { title: "VOW", items: VOW_LINKS },
+  { title: "Uxellent", items: VOW_LINKS },
 ]
 
 export function FooterEN() {
@@ -76,7 +76,7 @@ export function FooterEN() {
           <div className="flex flex-col items-start gap-2 md:items-end md:shrink-0">
             <Image
               src="/footer-logo.svg"
-              alt="VOW logo - digital marketing, SEO AI and website development"
+              alt="Uxellent logo - digital marketing, SEO AI and website development"
               width={80}
               height={46}
               className="w-auto h-auto"
@@ -119,7 +119,7 @@ export function FooterEN() {
           </div>
 
           <p className="text-[13px] text-white/50 text-left">
-            © {new Date().getFullYear()} VOW
+            © {new Date().getFullYear()} Uxellent
           </p>
         </div>
 

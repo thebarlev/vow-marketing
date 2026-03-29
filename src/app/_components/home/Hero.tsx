@@ -26,7 +26,7 @@ export function Hero() {
                 fetchPriority="high"
                 quality={60}
                 className="object-contain object-center md:hidden"
-                sizes="100vw"
+                sizes="(max-width: 767px) 100vw, 50vw"
               />
 
               {/* Desktop */}

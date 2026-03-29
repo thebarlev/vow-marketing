@@ -22,13 +22,13 @@ export function PortfolioHero({ locale = "he" }: { locale?: "he" | "en" }) {
           <p className="mt-5 text-pretty text-[18px] leading-[30px] text-black/80 sm:text-[20px] sm:leading-[34px]">
             {isEn ? (
               <>
-                At VOW we build fast sites, AI systems, and digital solutions tied to performance.
+                At Uxellent we build fast sites, AI systems, and digital solutions tied to performance.
                 <br />
                 From spec to launch - every decision is measured by outcome: more leads, more sales, more ROI.
               </>
             ) : (
               <>
-                ב־VOW אנחנו בונים אתרים מהירים, מערכות AI ופתרונות דיגיטליים שמחוברים לביצועים.
+                ב־Uxellent אנחנו בונים אתרים מהירים, מערכות AI ופתרונות דיגיטליים שמחוברים לביצועים.
                 <br />
                 מהאפיון ועד ההשקה - כל החלטה נמדדת לפי תוצאה: יותר לידים, יותר מכירות, ויותר ROI.
               </>

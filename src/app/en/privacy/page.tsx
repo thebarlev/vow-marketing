@@ -6,6 +6,8 @@ import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export const metadata: Metadata = {
+  title: "Privacy Policy | Uxellent",
+  description: "Read Uxellent's privacy policy to understand how we collect, protect, and use personal information across our website and services.",
   alternates: {
     canonical: "/en/privacy",
     languages: heEnAlternateLanguages("/privacy", "/en/privacy"),
@@ -17,8 +19,8 @@ export default function PrivacyPageEn() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
       <JsonLd
         data={webPageSchema({
-          name: "Privacy Policy | VOW",
-          description: "VOW's Privacy Policy - How We Protect Your Personal Information",
+          name: "Privacy Policy | Uxellent",
+          description: "Uxellent's Privacy Policy - How We Protect Your Personal Information",
           url: "https://uxellent.com/en/privacy",
           dateModified: "2026-02-01",
         })}
@@ -26,13 +28,13 @@ export default function PrivacyPageEn() {
       <div id="main" role="main">
         <LegalTemplate
           title="Privacy Policy"
-          subtitle="VOW's Privacy Policy - How We Protect Your Personal Information"
+          subtitle="Uxellent's Privacy Policy - How We Protect Your Personal Information"
           lastUpdated="February 2026"
           dir="ltr"
         >
           <section>
             <p className="text-[18px] leading-relaxed mb-6">
-              Bugo Media LTD, Company No. 515960508 (hereinafter: "VOW", "we" or "the Company") is committed to protecting your privacy and enabling you to have control over your personal information.
+              Bugo Media LTD, Company No. 515960508 (hereinafter: "Uxellent", "we" or "the Company") is committed to protecting your privacy and enabling you to have control over your personal information.
             </p>
             <p className="text-[18px] leading-relaxed mb-6">
               This privacy policy explains what information we collect, why we use it, who we share it with, and how you can control it.
@@ -46,7 +48,7 @@ export default function PrivacyPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">1. Who This Policy Applies To</h2>
 
-            <p>This privacy policy applies to anyone who uses VOW's services, including:</p>
+            <p>This privacy policy applies to anyone who uses Uxellent's services, including:</p>
             <ul className="list-disc ml-6 my-4 space-y-2">
               <li>Our marketing website (<a href="https://uxellent.com" className="text-blue-600 underline">uxellent.com</a>)</li>
               <li>The accounting document creation system (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
@@ -178,7 +180,7 @@ export default function PrivacyPageEn() {
                 <li>• All service providers are bound by confidentiality and data security agreements</li>
                 <li>• Some service providers are located outside of Israel</li>
                 <li>• The level of data protection in those countries may differ from that in Israel</li>
-                <li>• By using VOW's services, you consent to the transfer of your personal information to these providers</li>
+                <li>• By using Uxellent's services, you consent to the transfer of your personal information to these providers</li>
               </ul>
             </div>
 
@@ -447,7 +449,7 @@ export default function PrivacyPageEn() {
 
             <div className="bg-red-50 border-l-4 border-red-400 p-4 my-6">
               <p className="font-semibold text-red-800">
-                VOW's services must not be used by anyone under the age of 18.
+                Uxellent's services must not be used by anyone under the age of 18.
               </p>
             </div>
 

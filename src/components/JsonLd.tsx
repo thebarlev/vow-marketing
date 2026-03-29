@@ -35,10 +35,10 @@ export function articleSchema(params: {
     inLanguage: params.inLanguage,
     datePublished: params.datePublished,
     dateModified: params.dateModified ?? params.datePublished,
-    author: { "@type": "Organization", name: "VOW" },
+    author: { "@type": "Organization", name: "Uxellent" },
     publisher: {
       "@type": "Organization",
-      name: "VOW",
+      name: "Uxellent",
       logo: { "@type": "ImageObject", url: "https://uxellent.com/logo.png" },
     },
   };
@@ -107,7 +107,7 @@ export function itemListSchema(params: {
 export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "VOW",
+  name: "Uxellent",
   url: "https://uxellent.com",
   logo: "https://uxellent.com/logo.png",
   sameAs: [
@@ -128,12 +128,12 @@ export const ORGANIZATION_SCHEMA = {
 export const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "VOW",
+  name: "Uxellent",
   url: "https://uxellent.com",
   inLanguage: ["he-IL", "en"],
   publisher: {
     "@type": "Organization",
-    name: "VOW",
+    name: "Uxellent",
     url: "https://uxellent.com",
   },
 } as const;

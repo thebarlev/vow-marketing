@@ -17,9 +17,9 @@ const GUIDE_CARD_IMAGES = [
 ] as const
 
 export const metadata: Metadata = {
-  title: "Growth Guides | Learn How to Get Leads, Traffic & Growth",
+  title: "Growth Guides | SEO, Leads, Traffic & AI Search",
   description:
-    "Explore Growth Guides from VOW on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
+    "Explore Uxellent growth guides on SEO, AI search, traffic, leads, and customer acquisition for growing businesses.",
   alternates: {
     canonical: "/en/growth-guides",
     languages: heEnAlternateLanguages("/growth-guides", "/en/growth-guides"),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Growth Guides | Learn How to Get Leads, Traffic & Growth",
     description:
-      "Explore Growth Guides from VOW on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
+      "Explore Growth Guides from Uxellent on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
     url: "/en/growth-guides",
     type: "website",
   },
@@ -42,7 +42,7 @@ export default function GrowthGuidesIndexPageEn() {
         data={webPageSchema({
           name: "Growth Guides",
           description:
-            "Explore Growth Guides from VOW on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
+            "Explore Growth Guides from Uxellent on how to get leads, traffic, customers, and long-term business growth through SEO and AI search.",
           url: pageUrl,
         })}
       />
@@ -131,7 +131,7 @@ export default function GrowthGuidesIndexPageEn() {
 
         <DoubleHeadingCtaSection
           title="Want help turning guides into execution?"
-          subtitle="Use VOW to turn SEO, content, and AI visibility into a structured growth plan."
+          subtitle="Use Uxellent to turn SEO, content, and AI visibility into a structured growth plan."
           buttonLabel="Explore AI SEO services"
           buttonSource="digital_marketing"
           buttonHref="/en/seo-ai"

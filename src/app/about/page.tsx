@@ -6,8 +6,8 @@ import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { H2, H3 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
-  title: "אודות VOW",
-  description: "VOW - תשתית טכנולוגית לצמיחה עסקית.",
+  title: "אודות Uxellent | פיתוח, SEO ושיווק דיגיטלי",
+  description: "הכירו את Uxellent, חברה לפיתוח אתרים, אוטומציות, SEO ושיווק דיגיטלי לעסקים שרוצים לגדול עם תשתית טכנולוגית נכונה.",
   alternates: {
     canonical: "/about",
     languages: heEnAlternateLanguages("/about", "/en/about"),
@@ -60,9 +60,9 @@ export default function AboutPage() {
         {/* ════ HERO - ממורכז ════ */}
         <section className="pt-10 pb-7 sm:pt-28 sm:pb-18 lg:pt-16 lg:pb-12 text-center">
           <div className={WRAP_NARROW}>
-            <span className={LABEL}>אודות VOW</span>
+            <span className={LABEL}>אודות Uxellent</span>
             <h1 className="text-[38px] font-semibold leading-[1.1] text-black sm:text-[52px] lg:text-[64px]">
-              אודות VOW - פיתוח ושיווק דיגיטלי
+              אודות Uxellent - פיתוח ושיווק דיגיטלי
             </h1>
             <p className="mt-5 text-[24px] leading-[28px] text-[#000000] sm:text-[22px] sm:leading-[32px]">
               רוב העסקים לא נכשלים בגלל חוסר רעיון - הם נתקעים
@@ -115,7 +115,7 @@ export default function AboutPage() {
               <p className="text-[17px] leading-[28px] text-[#000000] sm:text-[20px] sm:leading-[30px] mx-auto">
                 אחרי יותר מ־20 שנה בעולמות האפיון, הפיתוח וניהול המוצר - הצטברה תובנה אחת:
                 הטכנולוגיה התקדמה, AI שינה את חוקי המשחק, אבל רוב בעלי העסקים עדיין עובדים בשיטות
-                של עשור קודם. VOW הוקמה כדי לסגור את הפער - כבר עכשיו.
+                של עשור קודם. Uxellent הוקמה כדי לסגור את הפער - כבר עכשיו.
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
         <div className="relative h-full w-full">
           <Image
             src="/team/itzik.webp"
-            alt="Itzik Barlev - VOW founder, digital marketing and website development expert"
+            alt="Itzik Barlev - Uxellent founder, digital marketing and website development expert"
             fill
             sizes="160px"
             className="object-cover object-top"

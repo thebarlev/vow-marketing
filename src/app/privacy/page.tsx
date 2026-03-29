@@ -8,6 +8,8 @@ import { LegalTemplate } from "@/app/_components/legal/LegalTemplate"
 import { JsonLd, webPageSchema } from "@/components/JsonLd"
 
 export const metadata: Metadata = {
+  title: "מדיניות פרטיות | Uxellent",
+  description: "מדיניות הפרטיות של Uxellent מסבירה כיצד אנו אוספים, שומרים ומשתמשים במידע אישי באתר ובשירותים הדיגיטליים.",
   alternates: {
     canonical: "/privacy",
     languages: heEnAlternateLanguages("/privacy", "/en/privacy"),
@@ -19,8 +21,8 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-[#F4F1EC]">
       <JsonLd
         data={webPageSchema({
-          name: "מדיניות פרטיות | VOW",
-          description: "מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך",
+          name: "מדיניות פרטיות | Uxellent",
+          description: "מדיניות הפרטיות של Uxellent - כיצד אנו שומרים על המידע האישי שלך",
           url: "https://uxellent.com/privacy",
           dateModified: "2026-02-01",
         })}
@@ -30,12 +32,12 @@ export default function PrivacyPage() {
       <main id="main" role="main">
         <LegalTemplate
           title="מדיניות פרטיות"
-          subtitle="מדיניות הפרטיות של VOW - כיצד אנו שומרים על המידע האישי שלך"
+          subtitle="מדיניות הפרטיות של Uxellent - כיצד אנו שומרים על המידע האישי שלך"
           lastUpdated="פברואר 2026"
         >
           <section>
             <p className="text-[18px] leading-relaxed mb-6">
-              חברת Bugo Media LTD, ח.פ. 515960508 (להלן: "VOW", "אנחנו" או "החברה") מתחייבת לשמור על פרטיותך ולאפשר לך שליטה על המידע האישי שלך.
+              חברת Bugo Media LTD, ח.פ. 515960508 (להלן: "Uxellent", "אנחנו" או "החברה") מתחייבת לשמור על פרטיותך ולאפשר לך שליטה על המידע האישי שלך.
             </p>
             <p className="text-[18px] leading-relaxed mb-6">
               מדיניות פרטיות זו מסבירה איזה מידע אנחנו אוספים, למה אנחנו משתמשים בו, עם מי אנחנו משתפים אותו, ואיך אתה יכול לשלוט בו.
@@ -49,7 +51,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">1. למי מדיניות זו מיועדת</h2>
             
-            <p>מדיניות פרטיות זו חלה על כל מי שמשתמש בשירותי VOW, לרבות:</p>
+            <p>מדיניות פרטיות זו חלה על כל מי שמשתמש בשירותי Uxellent, לרבות:</p>
             <ul className="list-disc mr-6 my-4 space-y-2">
               <li>האתר השיווקי שלנו (<a href="https://uxellent.com" className="text-blue-600 underline">uxellent.com</a>)</li>
               <li>המערכת ליצירת מסמכים חשבונאיים (<a href="https://app.uxellent.com" className="text-blue-600 underline">app.uxellent.com</a>)</li>
@@ -181,7 +183,7 @@ export default function PrivacyPage() {
                 <li>• כל ספקי השירות מחויבים בהסכמי סודיות ואבטחת מידע</li>
                 <li>• חלק מספקי השירות ממוקמים מחוץ לישראל</li>
                 <li>• רמת ההגנה על מידע במדינות אלה עשויה להיות שונה מזו שבישראל</li>
-                <li>• בשימוש בשירותי VOW, אתה מסכים להעברת המידע האישי שלך לספקים אלה</li>
+                <li>• בשימוש בשירותי Uxellent, אתה מסכים להעברת המידע האישי שלך לספקים אלה</li>
               </ul>
             </div>
 
@@ -450,7 +452,7 @@ export default function PrivacyPage() {
             
             <div className="bg-red-50 border-r-4 border-red-400 p-4 my-6">
               <p className="font-semibold text-red-800">
-                אין להשתמש בשירותי VOW אם אתה מתחת לגיל 18.
+                אין להשתמש בשירותי Uxellent אם אתה מתחת לגיל 18.
               </p>
             </div>
 

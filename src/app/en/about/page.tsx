@@ -5,8 +5,8 @@ import { EnLink } from "../_components/EnLink"
 import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
-  title: "About VOW",
-  description: "VOW - Technology infrastructure for business growth.",
+  title: "About Uxellent | SEO Agency & Web Development",
+  description: "Learn about Uxellent, an SEO agency and technology partner for web development, automation, and digital marketing services.",
   alternates: {
     canonical: "/en/about",
     languages: heEnAlternateLanguages("/about", "/en/about"),
@@ -55,7 +55,7 @@ export default function AboutPageEn() {
 
         <section className="pt-10 pb-7 sm:pt-28 sm:pb-18 lg:pt-16 lg:pb-12 text-center">
           <div className={WRAP_NARROW}>
-            <span className={LABEL}>About VOW</span>
+            <span className={LABEL}>About Uxellent</span>
             <h1 className="text-[38px] font-semibold leading-[1.1] text-black sm:text-[52px] lg:text-[64px]">
               Building solutions<br />that deliver results.
             </h1>
@@ -103,7 +103,7 @@ export default function AboutPageEn() {
               <p className="text-[17px] leading-[28px] text-[#000000] sm:text-[20px] sm:leading-[30px] mx-auto">
                 After more than 20 years in specification, development and product management - one insight has accumulated:
                 Technology has advanced, AI has changed the rules, but most business owners still work with methods from a decade ago.
-                VOW was founded to close that gap - right now.
+                Uxellent was founded to close that gap - right now.
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function AboutPageEn() {
                 <div className="relative h-full w-full">
                   <Image
                     src="/team/itzik.webp"
-                    alt="Itzik Barlev - VOW founder, digital marketing and website development expert"
+                    alt="Itzik Barlev - Uxellent founder, digital marketing and website development expert"
                     fill
                     sizes="160px"
                     className="object-cover object-top"

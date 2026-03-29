@@ -12,9 +12,9 @@ import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
-  title: "דוגמאות עבודות – VOW | פיתוח אתרים, מערכות AI ושיווק חכם",
+  title: "תיק עבודות Uxellent | אתרים, AI ושיווק דיגיטלי",
   description:
-    "צפו בדוגמאות מהעבודות של VOW – אתרים, מערכות AI, חנויות דיגיטליות ופתרונות שמייצרים ROI אמיתי לעסקים.",
+    "צפו בפרויקטים של Uxellent בפיתוח אתרים, מערכות AI ושיווק דיגיטלי לעסקים עם דגש על ביצועים, SEO ו-ROI.",
   keywords: "פיתוח אתרים, מערכות AI, עיצוב אתרים, שיווק דיגיטלי, בניית אתרים לעסקים",
   alternates: {
     canonical: "/portfolio",
@@ -42,7 +42,7 @@ function getPortfolioImages(): PortfolioImage[] {
 
   return numericWebps.map((x, idx) => ({
     src: `/portfolio/${x.name}`,
-    alt: `VOW website development project ${idx + 1} - AI-powered design and digital marketing`,
+    alt: `Uxellent website development project ${idx + 1} - AI-powered design and digital marketing`,
   }))
 }
 

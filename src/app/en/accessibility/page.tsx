@@ -6,6 +6,8 @@ import { JsonLd, webPageSchema } from "@/components/JsonLd"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
+  title: "Accessibility Statement | Uxellent",
+  description: "Read the Uxellent accessibility statement, including website accessibility standards, support options, and accessibility contact details.",
   alternates: {
     canonical: "/en/accessibility",
     languages: heEnAlternateLanguages("/accessibility", "/en/accessibility"),
@@ -17,8 +19,8 @@ export default function AccessibilityPageEn() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="ltr">
       <JsonLd
         data={webPageSchema({
-          name: "Accessibility | VOW",
-          description: "VOW is committed to accessibility. The site meets Israeli Standard 5568 and WCAG 2.1 Level AA.",
+          name: "Accessibility | Uxellent",
+          description: "Uxellent is committed to accessibility. The site meets Israeli Standard 5568 and WCAG 2.1 Level AA.",
           url: "https://uxellent.com/en/accessibility",
           dateModified: "2025-02-01",
         })}
@@ -26,14 +28,14 @@ export default function AccessibilityPageEn() {
       <div id="main" role="main">
         <LegalTemplate
           title="Accessibility"
-          subtitle="Our commitment to making VOW accessible to everyone"
+          subtitle="Our commitment to making Uxellent accessible to everyone"
           lastUpdated="February 2025"
           dir="ltr"
         >
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Our Commitment to Accessibility</h2>
             <p className="text-[18px] leading-relaxed mb-6">
-              VOW Ltd. makes every effort and invests significant resources to provide all customers with access to its website and platform in a respectful, accessible, and professional manner. In accordance with the Equal Rights for Persons with Disabilities Law, 5758-1998, and the regulations enacted thereunder, extensive efforts and resources are dedicated to implementing the required accessibility adjustments - enabling people with disabilities to use the platform and website independently and on equal terms.
+              Uxellent Ltd. makes every effort and invests significant resources to provide all customers with access to its website and platform in a respectful, accessible, and professional manner. In accordance with the Equal Rights for Persons with Disabilities Law, 5758-1998, and the regulations enacted thereunder, extensive efforts and resources are dedicated to implementing the required accessibility adjustments - enabling people with disabilities to use the platform and website independently and on equal terms.
             </p>
           </section>
 
@@ -76,7 +78,7 @@ export default function AccessibilityPageEn() {
               An accessible website is one that allows people with disabilities and older adults to browse at the same level of efficiency and enjoyment as all other users. According to a 2003 Microsoft study, 20–25% of the population encounters difficulties using the internet and may benefit from more accessible web content.
             </p>
             <p className="mb-6">
-              VOW Ltd. believes in and actively promotes equal opportunity in the digital space for people with various disabilities and those who rely on assistive technologies.
+              Uxellent Ltd. believes in and actively promotes equal opportunity in the digital space for people with various disabilities and those who rely on assistive technologies.
             </p>
 
             <h3 className="text-[20px] font-semibold mb-3 mt-6">Accessibility Standards & Compliance</h3>
@@ -107,7 +109,7 @@ export default function AccessibilityPageEn() {
           <section>
             <h2 className="text-[24px] font-bold mb-4 mt-8">Physical Accessibility</h2>
             <p className="mb-4">
-              VOW is a fully digital platform providing complete service online, 24/7. You may contact us through the digital channels listed above.
+              Uxellent is a fully digital platform providing complete service online, 24/7. You may contact us through the digital channels listed above.
             </p>
           </section>
 

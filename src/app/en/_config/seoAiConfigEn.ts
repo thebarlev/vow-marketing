@@ -3,14 +3,14 @@ import type { ServicePageConfig } from "@/app/_components/services/services.conf
 export const seoAiConfigEn: ServicePageConfig = {
   slug: "seo-ai",
   metadata: {
-    title: "Business Promotion in AI Search Engines | VOW",
+    title: "SEO Agency for AI Search & Engine Optimization | Uxellent",
     description:
-      "A site without SEO gets no visitors. We connect every site to an SEO + AI system that runs monthly and grows traffic, content, and leads.",
+      "Uxellent is a SEO agency offering engine optimization, seo optimisation for website visibility, and AI search growth for businesses.",
     alternates: {
       canonical: "/en/seo-ai",
     },
     openGraph: {
-      title: "Business Promotion in AI Search Engines | VOW",
+      title: "Business Promotion in AI Search Engines | Uxellent",
       description:
         "A site without SEO gets no visitors. We connect every site to an SEO + AI system that runs monthly and grows traffic, content, and leads.",
       url: "/en/seo-ai",
@@ -93,7 +93,7 @@ export const seoAiConfigEn: ServicePageConfig = {
         id: "seo-ai-about-3",
         title: "More traffic and visibility every month",
         description:
-          "At VOW we identify weak points in the site, content, and sales process, and offer practical solutions that boost conversion rates.",
+          "At Uxellent we identify weak points in the site, content, and sales process, and offer practical solutions that boost conversion rates.",
         icon: "/services/seo-ai/3.svg",
       },
     ],

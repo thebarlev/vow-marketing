@@ -19,6 +19,13 @@ import { H2 } from "@/components/ui/Heading"
 import { JsonLd, articleSchema, breadcrumbListSchema } from "@/components/JsonLd"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
+const SEO_DESCRIPTION_OVERRIDES_EN: Record<string, string> = {
+  "automatio-make":
+    "Learn business automation with Make or Zapier to save hours every week using practical workflows, no-code tools, and beginner-friendly setup steps.",
+  "green-invoice":
+    "Learn how to choose an invoicing system with fewer compliance mistakes, better workflow fit, and smarter business operations from day one.",
+}
+
 function findPostEn(slug: string) {
   return allArticles.find((a) => a.slug === slug && (a.locale as string | undefined) === "en")
 }
@@ -36,13 +43,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = findPostEn(slug)
-  if (!post) return { title: "Blog | VOW" }
+  if (!post) return { title: "Blog | Uxellent" }
 
   const hePair = findPostHe(slug)
+  const seoDescription = SEO_DESCRIPTION_OVERRIDES_EN[post.slug] ?? post.description
 
   return {
-    title: `${post.title} | VOW`,
-    description: post.description ?? "A VOW blog post.",
+    title: post.title,
+    description: seoDescription ?? "A Uxellent article on SEO, web development, automation, and digital marketing services.",
     alternates: {
       canonical: `/en/blog/${post.slug}`,
       ...(hePair
@@ -53,7 +61,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: post.title,
-      description: post.description ?? "A VOW blog post.",
+      description: post.description ?? "A Uxellent blog post.",
       url: `/en/blog/${post.slug}`,
       type: "article",
       images: post.coverImage ? [{ url: post.coverImage }] : undefined,
@@ -187,7 +195,7 @@ export default async function BlogPostPageEn({
                     <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
                   </svg>
                   <span>Product:</span>
-                  <span className="text-black">VOW</span>
+                  <span className="text-black">Uxellent</span>
                 </div>
 
                 {/* Date */}

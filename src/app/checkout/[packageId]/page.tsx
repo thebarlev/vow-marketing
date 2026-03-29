@@ -10,6 +10,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { packageId } = await params
   return {
+    title: "תשלום מאובטח | Uxellent",
+    description: "עמוד תשלום מאובטח של Uxellent להשלמת רכישה עבור שירותים, מנויים או חבילות דיגיטליות.",
     alternates: {
       canonical: `/checkout/${packageId}`,
     },

@@ -11,8 +11,8 @@ import { coerceBlogCategory, coerceBlogSort, parseTagsParam } from "@/app/_compo
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
-  title: "בלוג | VOW",
-  description: "תובנות ומדריכים על פיתוח אתרים, אוטומציות, שיווק ו‑AI לעסקים.",
+  title: "בלוג Uxellent | SEO, פיתוח אתרים ושיווק דיגיטלי",
+  description: "מדריכים ותובנות של Uxellent על SEO, פיתוח אתרים, אוטומציות, שיווק דיגיטלי ו-AI לעסקים שרוצים לצמוח נכון.",
   alternates: {
     canonical: "/blog",
     languages: heEnAlternateLanguages("/blog", "/en/blog"),
@@ -64,7 +64,7 @@ export default async function BlogIndexPage({
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <h1 className="text-balance text-[44px] font-semibold leading-[1.05] text-black sm:text-[56px] lg:text-[70px]">
-                  בלוג VOW - פיתוח, שיווק ו-AI
+                  בלוג Uxellent - פיתוח, שיווק ו-AI
                 </h1>
                 <p className="mt-4 text-pretty text-[18px] leading-[30px] text-[#747474] sm:text-[20px] sm:leading-[34px]">
                   תובנות קצרות ומעשיות על פיתוח אתרים, אוטומציות, שיווק ו‑AI - כדי לבנות תהליך דיגיטלי שמייצר תוצאה.

@@ -71,8 +71,8 @@ const SECTIONS_ORDER: readonly ServiceSectionType[] = [
 export const designConfig: ServicePageConfig = {
     slug: "design",
     metadata: {
-      title: "עיצוב ומיתוג לעסקים ויזים",
-      description: "מיתוג, UX/UI ואתרים שנראים מעולה וגם ממירים. שפה מותגית שמדברת לקהל הנכון.",
+      title: "עיצוב ומיתוג לעסקים | Uxellent",
+      description: "עיצוב ומיתוג לעסקים עם UX/UI, דפי נחיתה ואתרים שמחזקים מותג, משפרים חוויית משתמש ומגדילים המרות.",
     },
     hero: {
       title: "עיצוב ומיתוג לעסקים וליזמים",
@@ -143,8 +143,8 @@ export const designConfig: ServicePageConfig = {
 export const developConfig: ServicePageConfig = {
   slug: "develop",
   metadata: {
-    title: "VOW – פיתוח אתרים, מערכות AI ושיווק שממיר",
-    description: "אתרי תדמית, חנויות ומערכות – מהירים, נגישים ומוכנים לקידום. תהליך מדיד שמייצר המרות.",
+    title: "פיתוח אתרים לעסקים | Uxellent",
+    description: "פיתוח אתרים לעסקים עם SEO טכני, מהירות, נגישות וחוויית משתמש שמייצרים יותר פניות, מכירות וצמיחה.",
   },
   hero: {
     title: "פיתוח אתרים מבוסס AI לעסקים",
@@ -231,10 +231,10 @@ export const developConfig: ServicePageConfig = {
 export const marketingPpcConfig: ServicePageConfig = {
   slug: "marketing",
   metadata: {
-    title: "שיווק PPC | VOW",
-    description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש - מתחילים למדוד.",
+    title: "שיווק PPC לעסקים | Uxellent",
+    description: "ניהול קמפיינים בגוגל ובמטא עם PPC מבוסס נתונים, CRO ושיווק דיגיטלי שמטרתו לידים איכותיים ו-ROI טוב יותר.",
     openGraph: {
-      title: "שיווק PPC | VOW",
+      title: "שיווק PPC | Uxellent",
       description: "קמפיינים בגוגל ובמטא שמבוססים מדידה, אופטימיזציה ו‑ROI. מפסיקים לנחש - מתחילים למדוד.",
       url: "/marketing/ppc",
       type: "website",
@@ -341,8 +341,8 @@ export const marketingPpcConfig: ServicePageConfig = {
 export const roiConfig: ServicePageConfig = {
   slug: "roi",
   metadata: {
-    title: "ROI פחות תנועה - יותר מכירות | VOW",
-    description: "עמוד שירות - ROI / CRO",
+    title: "שיפור ROI ו-CRO לאתרים | Uxellent",
+    description: "שיפור ROI ו-CRO לעסקים עם אופטימיזציית משפך, UX, קופי ומדידה שמגדילים המרות בלי להגדיל תקציב.",
   },
   hero: {
     title: "ROI: פחות תנועה - יותר מכירות",
@@ -415,9 +415,9 @@ export const roiConfig: ServicePageConfig = {
 export const seoAiConfig: ServicePageConfig = {
   slug: "seo-ai",
   metadata: {
-    title: "קידום עסקים בגוגל וב-AI",
+    title: "קידום אתרים בגוגל וב-AI | Uxellent",
     description:
-      "אתר בלי SEO נשאר ללא מבקרים. אנחנו מחברים לכל אתר מערכת SEO + AI שעובדת באופן חודשי ומגדילה תנועה, תוכן ולידים.",
+      "קידום אתרים לעסקים עם SEO, תוכן, סכמות ומדידה חודשית כדי להגדיל חשיפה, תנועה ולידים בגוגל וב-AI.",
     alternates: {
       canonical: "/seo-ai",
     },
@@ -501,7 +501,7 @@ export const seoAiConfig: ServicePageConfig = {
       {
         id: "seo-ai-about-3",
         title: "חודש אחרי חודש, האתר חזק יותר",
-        description: "ב-VOW מזהים נקודות חולשה באתר, בתוכן ובתהליך המכירה, ומציעים פתרונות פרקטיים שמעלים את אחוזי ההמרה.",
+        description: "ב-Uxellent מזהים נקודות חולשה באתר, בתוכן ובתהליך המכירה, ומציעים פתרונות פרקטיים שמעלים את אחוזי ההמרה.",
         icon: "/services/seo-ai/3.svg",
       },
     ],

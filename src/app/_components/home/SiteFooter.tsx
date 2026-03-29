@@ -39,10 +39,10 @@ type FooterColumn = {
 
 const FOOTER_COLUMNS: readonly FooterColumn[] = [
   { title: "חשוב לדעת", items: LEGAL_LINKS },
-  { title: "שירותים של VOW", items: PAGES_LINKS },
-  { title: "מוצרים של VOW", items: PRODUCTS_LINKS },
+  { title: "שירותים של Uxellent", items: PAGES_LINKS },
+  { title: "מוצרים של Uxellent", items: PRODUCTS_LINKS },
   { title: "מדריכי צמיחה", items: GROWTH_GUIDE_LINKS },
-  { title: "VOW", items: VOW_LINKS },
+  { title: "Uxellent", items: VOW_LINKS },
 ] as const
 
 export function SiteFooter() {
@@ -76,7 +76,7 @@ export function SiteFooter() {
           <div className="col-span-2 md:col-span-1 flex flex-col items-start gap-2 md:items-end">
             <Image
               src="/footer-logo.svg"
-              alt="VOW logo - digital marketing, SEO AI and website development"
+              alt="Uxellent logo - digital marketing, SEO AI and website development"
               width={80}
               height={46}
               className="w-auto h-auto"
@@ -120,7 +120,7 @@ export function SiteFooter() {
           </div>
 
           <p className="text-[13px] text-white/50 text-right sm:text-left">
-            © {new Date().getFullYear()} VOW
+            © {new Date().getFullYear()} Uxellent
           </p>
 
         </div>

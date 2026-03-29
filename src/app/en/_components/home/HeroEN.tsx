@@ -28,13 +28,13 @@ export function HeroEN() {
   <div className="relative w-screen h-[360px] -mx-4 sm:-mx-6 md:mx-0 md:w-[120%] md:h-auto md:aspect-[4/3]">
     <Image
       src="/D-hero.webp"
-      alt="VOW website development and AI SEO tools for business growth"
+      alt="Uxellent website development and AI SEO tools for business growth"
       fill
       priority
       fetchPriority="high"
       quality={60}
       className="object-contain object-right"
-      sizes="(max-width: 768px) 100vw, 60vw"
+      sizes="(max-width: 767px) 100vw, 60vw"
     />
   </div>
 </div>

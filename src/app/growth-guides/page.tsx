@@ -12,17 +12,17 @@ import { H2, H3 } from "@/components/ui/Heading"
 import { growthGuidesHe } from "./growthGuides.data"
 
 export const metadata: Metadata = {
-  title: "מדריכי צמיחה של VOW | VOW",
+  title: "מדריכי צמיחה | SEO, לידים ותנועה לעסקים",
   description:
-    "מדריכי צמיחה קצרים ומדויקים של VOW על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
+    "מדריכי צמיחה של Uxellent על SEO, לידים, קידום אונליין ותנועה אורגנית לעסקים שרוצים יותר לקוחות.",
   alternates: {
     canonical: "/growth-guides",
     languages: heEnAlternateLanguages("/growth-guides", "/en/growth-guides"),
   },
   openGraph: {
-    title: "מדריכי צמיחה של VOW | VOW",
+    title: "מדריכי צמיחה של Uxellent | Uxellent",
     description:
-      "מדריכי צמיחה קצרים ומדויקים של VOW על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
+      "מדריכי צמיחה קצרים ומדויקים של Uxellent על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
     url: "/growth-guides",
     type: "website",
   },
@@ -35,15 +35,15 @@ export default function GrowthGuidesIndexPageHe() {
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
       <JsonLd
         data={webPageSchema({
-          name: "מדריכי צמיחה של VOW",
+          name: "מדריכי צמיחה של Uxellent",
           description:
-            "מדריכי צמיחה קצרים ומדויקים של VOW על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
+            "מדריכי צמיחה קצרים ומדויקים של Uxellent על SEO, תנועה, לידים, קידום אונליין וצמיחה דיגיטלית לעסקים.",
           url: pageUrl,
         })}
       />
       <JsonLd
         data={itemListSchema({
-          name: "מדריכי צמיחה של VOW",
+          name: "מדריכי צמיחה של Uxellent",
           url: pageUrl,
           items: growthGuidesHe.map((guide) => ({
             name: guide.keyword,
@@ -54,14 +54,14 @@ export default function GrowthGuidesIndexPageHe() {
       <SiteHeader />
       <main id="main" role="main">
         <ServiceHero
-          title="מדריכי צמיחה של VOW"
+          title="מדריכי צמיחה של Uxellent"
           subtitle="מדריכים קצרים ומדויקים על SEO, תנועה, לידים וקידום דיגיטלי לעסקים שרוצים לגדול נכון."
           tags={["SEO", "תנועה", "לידים", "צמיחה דיגיטלית"]}
           ctaLabel="לצפייה במדריכים"
           ctaSource="digital_marketing"
           ctaHref="#guide-grid-he"
           imageSrc="/new-hero.webp"
-          imageAlt="מדריכי צמיחה של VOW"
+          imageAlt="מדריכי צמיחה של Uxellent"
         />
 
         <section

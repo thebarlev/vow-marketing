@@ -14,7 +14,7 @@ export function LogoRow({ locale = "he" }: { locale?: "he" | "en" }) {
                 alt={logo.alt}
                 width={220}
                 height={50}
-                className="h-auto w-full max-w-full max-h-[36px] object-contain object-center brightness-0 sm:max-h-[44px] md:max-h-[50px]"
+                className="h-auto w-auto max-w-full max-h-[36px] object-contain object-center brightness-0 sm:max-h-[44px] md:max-h-[50px]"
               />
             </div>
           ))}
