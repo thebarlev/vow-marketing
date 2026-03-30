@@ -272,7 +272,7 @@ const growthGuideContentHe = [
     slug: "how-to-promote-my-business-online",
     keyword: "איך לקדם את העסק אונליין",
     metaDescription: "איך לקדם את העסק אונליין עם ערוצים נכונים, SEO ותוכן שמביא ביקוש איכותי.",
-    shortDescription: "מדריך לבחירת ערוצי שיווק דיגיטלי שמחברים בין חשיפה לתוצאות עסקיות.",
+    shortDescription: "מדריך לבחירת ערוצי צמיחה דיגיטלית שמחברים בין חשיפה לתוצאות עסקיות.",
     heroIntro: "איך לקדם את העסק אונליין מתחיל בבחירת ערוצים שמתאימים ללקוחות שלך וליכולת הביצוע שלך לאורך זמן.",
     heroTags: ["שיווק אונליין", "SEO", "ערוצים", "ביקוש"],
     sections: [
@@ -317,11 +317,15 @@ const growthGuideContentHe = [
         id: "promote-cta-he",
         title: "איך Uxellent עוזרת לקדם אונליין",
         paragraphs: [
-          "אנחנו מחברים בין SEO, תוכן, עמודי יעד ומדידה לתהליך קידום מסודר.",
+          [
+            { type: "text", text: "אנחנו מחברים בין SEO, תוכן, עמודי יעד ומדידה לתהליך " },
+            { type: "link", text: "שיווק דיגיטלי", href: SEO_AI_URL_HE },
+            { type: "text", text: " מסודר." },
+          ],
           "אפשר לראות את שירות ה־SEO/AI, לפתוח Auditor, או לקרוא מדריכים משלימים.",
         ],
         links: [
-          { label: "עמוד SEO / AI", href: SEO_AI_URL_HE, description: "הגישה המלאה לקידום אורגני." },
+          { label: "קידום אורגני", href: SEO_AI_URL_HE, description: "הגישה המלאה לקידום אורגני." },
           { label: "פתיחת Auditor", href: AUDITOR_URL_HE, description: "אבחון ראשוני להזדמנויות צמיחה.", external: true },
           { label: "איך לגדול אונליין כעסק קטן", href: "/growth-guides/how-to-grow-small-business-online", description: "לתכנון צמיחה ממוקד." },
           { label: "איך לקבל לידים", href: "/growth-guides/how-to-get-leads", description: "לחיבור בין קידום ללידים." },

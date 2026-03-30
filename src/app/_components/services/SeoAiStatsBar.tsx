@@ -14,9 +14,9 @@ const DEFAULT_ITEMS = {
     { value: "10X", line1: "More sales", line2: "" },
   ],
   he: [
-    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1">₪</span>0</>, line1: "לא צריך תקציב פרסום", line2: "כדי להיות מוצג" },
-    { value: "1", line1: "תשובה אחת, לא 10 קישורים.", line2: "אם לא מופיע, מתחרה שלך כן" },
-    { value: "73%", line1: "מהחיפושים עוברים", line2: "לשאלות ב-AI ב-2025" },
+    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1"></span>10X</>, line1: "מכירות", line2: "" },
+    { value: "10X", line1: "לידים", line2: "" },
+    { value: "10X", line1: "חשיפה", line2: "" },
   ],
 } as const
 

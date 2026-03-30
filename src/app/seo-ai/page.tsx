@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
@@ -17,6 +18,8 @@ import { ServiceHero } from "@/app/_components/services/ServiceHero"
 import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfig } from "@/app/_components/services/services.config"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
+import { JsonLd, faqPageSchema } from "@/components/JsonLd"
+import { H2 } from "@/components/ui/Heading"
 
 export const metadata: Metadata = {
   ...seoAiConfig.metadata,
@@ -86,18 +89,26 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
 ] as const
 
 export default function SeoAiServicePage() {
+  const faqItems = seoAiConfig.faq?.items ?? []
+
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
+      {faqItems.length ? (
+        <JsonLd
+          data={faqPageSchema(faqItems.map((item) => ({ question: item.question, answer: item.answer })))}
+        />
+      ) : null}
       <SiteHeader />
       <main id="main" role="main">
         <ServiceHero
           {...seoAiConfig.hero}
-          ariaLabel={seoAiConfig.hero.title}
+          ariaLabel="קידום אתרים בגוגל וב-AI לעסקים שרוצים יותר לידים"
           ctaHref="#price"
           subtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
+          subtitle="קידום אורגני בגוגל שמגדיל חשיפה, פניות ולידים איכותיים."
           title={
             <>
-              לקוחות כבר לא <span className="line-through">מחפשים בגוגל</span> הם שואלים AI.
+              קידום אתרים בגוגל וב-AI לעסקים שרוצים יותר לידים
             </>
           }
         />
@@ -124,8 +135,8 @@ export default function SeoAiServicePage() {
 
         {/* Unique pricing section ONLY for /seo-ai */}
         <PriceSection id="price"
-          title="חבילות  ומחירים"
-          subtitle="בחר את החבילה שמתאימה לשלב שבו העסק שלך נמצא. אפשר לשדרג בכל עת."
+          title="חבילות קידום אתרים ושיווק דיגיטלי לעסקים"
+          subtitle="בחרו מסלול קידום אורגני בגוגל שמתאים לשלב שבו העסק שלכם נמצא, עם ליווי, ביצוע ומדידה חודשית."
           plans={SEO_AI_PRICING}
           variant="seo-ai"
         />
@@ -135,9 +146,35 @@ export default function SeoAiServicePage() {
 
         <DoubleHeadingCtaSection {...seoAiConfig.doubleHeading} buttonHref="#price" />
         {seoAiConfig.faq ? <ServiceFaqSection {...seoAiConfig.faq} /> : null}
+        <section aria-label="שירותים משלימים" className="bg-[#F4F1EC] pb-[var(--space-section)]">
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-[900px] rounded-[10px] border border-[color:var(--vow-border)] bg-white px-6 py-8 text-right sm:px-10">
+              <H2 className="text-right">שיווק דיגיטלי לעסקים צריך גם מעטפת משלימה</H2>
+              <p className="mt-4 text-[20px] leading-[34px] text-black/80">
+                לצד קידום אורגני בגוגל, אפשר לשלב גם{" "}
+                <Link href="/marketing/ppc" className="font-semibold underline decoration-[#5389BB] underline-offset-4">
+                  שיווק דיגיטלי לעסקים וקידום ממומן
+                </Link>
+                , לחזק{" "}
+                <Link href="/develop" className="font-semibold underline decoration-[#5389BB] underline-offset-4">
+                  בניית אתרים
+                </Link>
+                , לשפר{" "}
+                <Link href="/design" className="font-semibold underline decoration-[#5389BB] underline-offset-4">
+                  חוויית משתמש ועיצוב
+                </Link>
+                {" "}ולהעמיק{" "}
+                <Link href="/roi" className="font-semibold underline decoration-[#5389BB] underline-offset-4">
+                  מדידה והמרות
+                </Link>
+                {" "}כדי להפוך קידום עסקים בגוגל לצמיחה עסקית יציבה.
+              </p>
+            </div>
+          </div>
+        </section>
         <GrowthGuidesCard
-          title="מדריכי צמיחה"
-          description="המשיכו למדריכים שמרחיבים על SEO וצמיחה אורגנית."
+          title="מדריכי קידום אתרים וצמיחה"
+          description="המשיכו למדריכים שמרחיבים על קידום אורגני בגוגל, SEO וצמיחה עסקית."
           dir="rtl"
           sectionClassName="bg-[#F4F1EC] py-[var(--space-section)]"
           containerClassName="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4"

@@ -150,23 +150,6 @@ function buildGuideTemplateProps(guide: GrowthGuideHe) {
     },
     stats: {
       ariaLabel: `${guide.keyword} מדדים`,
-      items: [
-        {
-          value: `${actionBullets.length}`,
-          line1: "צעדים מעשיים",
-          line2: "ליישום",
-        },
-        {
-          value: `${guide.faq.length}`,
-          line1: "שאלות חשובות",
-          line2: "עם תשובות ברורות",
-        },
-        {
-          value: `${guide.heroTags.length}`,
-          line1: guide.heroTags[0] ?? "מיקוד צמיחה",
-          line2: guide.heroTags[1] ?? "ביצוע חכם",
-        },
-      ],
     },
     process: {
       label: "מפת הדרך",

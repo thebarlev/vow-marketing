@@ -13,33 +13,33 @@ const STEPS_HE: readonly SeoAiProcessStep[] = [
   {
     id: "seo-ai-step-1",
     number: "1",
-    title: "אבחון מעמיק, ביום הראשון",
+    title: "אבחון קידום אתרים ויכולת הדירוג של האתר",
     description:
-      "סריקה עמוקה לאתר שלך: תוכן, מבנה, מהירות, נכונות AI, תחרות. ",
+      "אנחנו סורקים תוכן, מבנה, מהירות, כוונת חיפוש ותחרות כדי להבין מה עוצר קידום עסקים בגוגל ובמנועי AI.",
     timing: "יום 1–3",
   },
   {
     id: "seo-ai-step-2",
     number: "2",
-    title: "תכנית עבודה חודשית, ברורה ומסודרת",
+    title: "תוכנית קידום אורגני חודשית עם סדר עדיפויות ברור",
     description:
-      "תכנית עבודה ברורה. ביצוע בפועל. תוצאות מדידות. לא דוחות.",
+      "מגדירים אילו עמודים לקדם, אילו תכנים לכתוב ואילו שיפורים יבנו קידום אורגני בגוגל בצורה מדידה ולא אקראית.",
     timing: "שבוע 1",
   },
   {
     id: "seo-ai-step-3",
     number: "3",
-    title: "ביצוע, לא עוד דוחות שמתאבקים",
+    title: "ביצוע שיפורי תוכן, FAQ ותשתית SEO בפועל",
     description:
-      "משדרגים תוכן, מבנה, עמודי שירות, שאלות נפוצות, סכמות. מתאימים לגוגל ולמנועי AI. עושים, לא רק ממליצים.",
+      "משדרגים עמודי שירות, שאלות נפוצות, סכמות וקישורים פנימיים כדי לחזק קידום אתרים SEO גם בגוגל וגם במנועי AI.",
     timing: "שבוע 2–4",
   },
   {
     id: "seo-ai-step-4",
     number: "4",
-    title: "מדידות ודיווחים, נתונים אמיתיים",
+    title: "מדידה עסקית, לידים ושיפור מתמשך",
     description:
-      "בכל סוף חודש: כמה תנועה הגיעה, מה השתפר, מה השלב הבא. שקיפות מלאה תמיד.",
+      "בסוף כל חודש רואים אילו שינויים הביאו יותר תנועה, פניות ולידים, ומה יקדם את העסק עוד צעד קדימה.",
     timing: "סוף כל חודש",
   },
 ] as const
@@ -101,10 +101,10 @@ export function SeoAiProcessSteps({
           <div className={isLtr ? "text-left" : "text-right"}>
             <div className="text-[#5389BB] text-[14px] font-semibold">{label ?? (isLtr ? "Process" : "התהליך")}</div>
             <H2 className={`mt-2 ${isLtr ? "text-left" : "text-right"}`}>
-              {title ?? (isLtr ? "What you actually get" : "מה קורה מהיום הראשון")}
+              {title ?? (isLtr ? "What you actually get" : "איך נראה קידום אורגני בגוגל וב-AI מהיום הראשון")}
             </H2>
             <H3 className="mt-3">
-              {subtitle ?? (isLtr ? "Full transparency. Every month you know exactly what was done and what's next." : "שקיפות מלאה. כל חודש אתה יודע בדיוק מה נעשה ומה מצפה לך.")}
+              {subtitle ?? (isLtr ? "Full transparency. Every month you know exactly what was done and what's next." : "שיווק דיגיטלי לעסקים לא חייב להישען רק על קידום ממומן. אנחנו בונים תהליך ברור של מחקר, תוכן, שדרוג אתר ומדידה.")}
             </H3>
           </div>
 

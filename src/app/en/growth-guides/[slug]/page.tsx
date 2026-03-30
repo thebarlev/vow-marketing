@@ -151,23 +151,6 @@ function buildGuideTemplateProps(guide: GrowthGuide) {
     },
     stats: {
       ariaLabel: `${guide.keyword} guide metrics`,
-      items: [
-        {
-          value: `${actionBullets.length}`,
-          line1: "Action steps",
-          line2: "to implement",
-        },
-        {
-          value: `${guide.faq.length}`,
-          line1: "Key questions",
-          line2: "answered clearly",
-        },
-        {
-          value: `${guide.heroTags.length}`,
-          line1: guide.heroTags[0] ?? "Growth focus",
-          line2: guide.heroTags[1] ?? "Execution system",
-        },
-      ],
     },
     process: {
       label: "Guide process",
