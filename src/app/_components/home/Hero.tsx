@@ -3,7 +3,7 @@ import { H2 } from "@/components/ui/Heading"
 
 const HERO_TITLE = "פיתוח אתרים, מערכות AI ושיווק שמייצר תוצאות!"
 const HERO_SUBHEADING =
-  "פיתוח ועיצוב אתרים מבוססי AI, מערכות ואוטומציות ושיווק דיגיטלי שמייצר ROI אמיתי"
+  "פיתוח ועיצוב אתרים מבוססי AI, מערכות, אוטומציות ו-seo optimisation שמייצר ROI אמיתי"
 
 export function Hero() {
   return (

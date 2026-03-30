@@ -46,6 +46,11 @@ const nextConfig: NextConfig = {
       destination: "/blog/seo-ai-engine",
       permanent: true,
     },
+    {
+      source: "/en/seo",
+      destination: "/en/seo-ai",
+      permanent: true,
+    },
   ],
   headers: async () => [
     {

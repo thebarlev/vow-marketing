@@ -79,7 +79,7 @@ export const designConfig: ServicePageConfig = {
       heroSubheading: "אתר, אפליקציה, SaaS ומערכות - קריאייטיב ולוגו שמדברים לקהל הנכון",
       ctaLabel: "להשארת פרטים",
       ctaSource: "design_development",
-      imageSrc: "/services/d-design.webp",
+      imageSrc: "/services/d-design2.webp",
       imageAlt: "Branding and UX design for business growth and digital presence",
     },
     doubleHeading: {
@@ -246,7 +246,7 @@ export const marketingPpcConfig: ServicePageConfig = {
     heroSubheading: "",
     ctaLabel: "להשארת פרטים",
     ctaSource: "digital_marketing",
-    imageSrc: "/services/d-marketing.webp",
+    imageSrc: "/services/d-marketing3.webp",
     imageAlt: "PPC digital marketing for business growth and lead generation",
   },
   doubleHeading: {

@@ -21,7 +21,7 @@ export const marketingPpcConfigEn: ServicePageConfig = {
     heroSubheading: "",
     ctaLabel: "Get in touch",
     ctaSource: "digital_marketing",
-    imageSrc: "/services/d-marketing.webp",
+    imageSrc: "/services/d-marketing3.webp",
     imageAlt: "PPC digital marketing for business growth and lead generation",
   },
   doubleHeading: {

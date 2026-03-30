@@ -56,7 +56,7 @@ type SeoAiTemplateEnProps = {
   hero: Omit<ServiceHeroProps, "dir">
   heroTitle?: ReactNode
   heroSubtitleClassName?: string
-  trustHeading?: { title: string; description: string }
+  trustHeading?: { title: ReactNode; description: ReactNode }
   postLogoContent?: ReactNode
   stats?: {
     ariaLabel?: string

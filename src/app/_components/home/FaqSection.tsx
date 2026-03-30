@@ -26,7 +26,7 @@ export function FaqSection() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
         <div dir="rtl" className="mx-auto max-w-[777px] w-full px-4 sm:px-0 text-right">
           <H2 className="text-balance tracking-[-0.2px]">
-            שאלות נפוצות
+            שאלות נפוצות על SEO, צמיחה דיגיטלית ו-Uxellent
           </H2>
 
           <div className="mt-10 border-t border-[color:var(--vow-border)]">

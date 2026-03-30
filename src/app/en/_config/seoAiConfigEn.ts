@@ -27,16 +27,16 @@ export const seoAiConfigEn: ServicePageConfig = {
     imageAlt: "AI SEO strategy helping businesses appear in ChatGPT, Google and AI search results",
   },
   doubleHeading: {
-    title: "SEO isn't just rankings. It's lead quality.",
+    title: "SEO business Pricing only matters when it supports revenue.",
     subtitle:
-      "We build a strategy that measures quality, funnel, and revenue - not just traffic.",
+      "We build a strategy that connects rankings, lead quality, funnel movement, and revenue instead of vanity metrics.",
     buttonLabel: "Get started",
     buttonSource: "digital_marketing",
   },
   vision: {
-    title: "We don’t just bring traffic, we turn it into consistent leads",
+    title: "Search engine optimizations that turn visibility into consistent leads",
     subtitle:
-      "We build visibility in Google & AI that keeps generating leads, every month.",
+      "We combine engine optimization, content systems, and AI search visibility to keep qualified demand growing every month.",
     ctaLabel: "Plans & pricing",
     ctaHref: "#price",
     source: "digital_marketing",
@@ -68,9 +68,9 @@ export const seoAiConfigEn: ServicePageConfig = {
     ],
   },
   about: {
-    title: "Your site exists, but it doesn't bring customers. We can fix that.",
+    title: "Your site exists, but it needs stronger seo optimization to bring customers.",
     subtitle:
-      "SEO + AI presence - monthly support that delivers results without chasing ads.",
+      "We deliver practical seo optimisation for website growth with monthly support that improves visibility, trust, and lead quality.",
     ctaLabel: "Free website audit",
     ctaHref: "#price",
     ctaSource: "digital_marketing",
@@ -99,49 +99,49 @@ export const seoAiConfigEn: ServicePageConfig = {
     ],
   },
   faq: {
-    title: "FAQ: SEO / AI",
+    title: "FAQ: SEO agency, AI search, and growth",
     items: [
       {
         id: "seo-ai-faq-1",
-        question: "How long until you see results?",
+        question: "What does a seo agency actually do for AI search and engine optimization?",
         answer:
-          "Most clients see measurable change - more impressions, more clicks - within 4–8 weeks. First organic inquiries usually arrive in months 2–3. SEO is an asset that grows, not a tap that opens instantly - but unlike ads, it doesn't stop when you stop paying.",
+          "A strong seo agency maps demand, fixes technical issues, improves pages, and builds authority so your business earns visibility in both Google and AI systems.",
       },
       {
         id: "seo-ai-faq-2",
-        question: "What exactly do you do each month?",
+        question: "How is seo optimisation different from one-off project work?",
         answer:
-          "At the start of each month you get a detailed work plan: which pages to upgrade, which content to write, which technical changes to make. At month end, a report with real data. Not 'we did SEO' - we did X, Y, Z and here's the result.",
+          "seo optimisation is continuous. It combines monthly execution across content, technical fixes, internal links, and measurement rather than a one-time checklist.",
       },
       {
         id: "seo-ai-faq-3",
-        question: "How does AI change the game?",
+        question: "What does seo optimisation for website structure and content include each month?",
         answer:
-          "More answers without clicks, more importance on credibility and structure. So we focus on both visibility and lead quality and funnel progression.",
+          "It usually includes page rewrites, schema, internal links, content briefs, conversion improvements, and technical tasks based on what can move rankings and leads fastest.",
       },
       {
         id: "seo-ai-faq-4",
-        question: "Do you handle both technical and content?",
+        question: "How do keyword search engine optimization and broader search engine optimizations work together?",
         answer:
-          "Yes. Technical, content, and links/authority - as one package aimed at business results.",
+          "keyword search engine optimization helps align pages with real queries, while broader search engine optimizations cover site architecture, UX, authority, and performance.",
       },
       {
         id: "seo-ai-faq-5",
-        question: "Is this instead of paid ads?",
+        question: "How do your digital marketing services connect with AI search and organic SEO?",
         answer:
-          "Not necessarily - but it definitely reduces dependence. Clients working with us 3–6 months report 30–60% lower ad spend while keeping the same lead volume. Paid ads can stay as acceleration, not the backbone.",
+          "Our digital marketing services connect SEO, content, CRO, and reporting so organic growth supports the rest of your acquisition mix instead of working in isolation.",
       },
       {
         id: "seo-ai-faq-6",
-        question: "What happens if you stop paying?",
+        question: "How should I evaluate SEO business Pricing before I commit?",
         answer:
-          "The big difference from ads: what we built stays. The upgraded site, content, pages - they're yours forever. Of course ongoing improvement comes with support, but you don't go back to zero the moment you stop.",
+          "Look for scope, execution ownership, reporting clarity, and business outcomes. SEO business Pricing should reflect the work needed to improve visibility, leads, and revenue, not just generic deliverables.",
       },
       {
         id: "seo-ai-faq-7",
-        question: "Do you need site access?",
+        question: "Do I need technical seo optimization as well as content?",
         answer:
-          "Yes, for actual changes we need access. We work with WordPress, Wix, Webflow, and almost any platform. If your site is on a unique platform - we'll do a free initial check before committing to anything.",
+          "Yes. Technical seo optimization makes the site crawlable, indexable, and fast, while content gives search engines and AI systems enough context to rank and cite your business.",
       },
     ],
   },

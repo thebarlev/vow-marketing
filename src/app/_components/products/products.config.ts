@@ -83,7 +83,7 @@ export const developAiConfig: ProductPageConfig = {
     heroSubheading: "Python, React, Node.js - מערכות בהתאמה אישית עם AI בליבה",
     ctaLabel: "להשארת פרטים",
     ctaSource: "design_development",
-    imageSrc: "/services/developai/vow.webp",
+    imageSrc: "/services/developai/vow1.webp",
     imageAlt: "פיתוח מבוסס AI",
     
   },

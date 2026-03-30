@@ -89,7 +89,22 @@ export default function HomePage() {
         <LogoRow />
         <VisionToExecutionSection
           title="אפיון, פיתוח, עיצוב ושיווק מבוסס AI שמייצר צמיחה"
-          subtitle="ב-Uxellent בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים."
+          subtitle={
+            <>
+              ב-Uxellent בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון, כולל
+              {" "}
+              keyword search engine optimization
+              {" "}
+              ו-
+              <a
+                href="https://uxellent.com/en/seo-ai"
+                className="text-[#5389BB] underline hover:no-underline"
+              >
+                AI SEO
+              </a>
+              , מהאפיון ועד המשפך שמביא לקוחות חדשים.
+            </>
+          }
           ctaLabel="להשארת פרטים"
           source="design_development"
           cards={[

@@ -7,12 +7,12 @@ export function SuccessSection({ locale = "he" }: { locale?: "he" | "en" }) {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-4 ">
         <div className="space-y-3">
           <H2 className={isEn ? "text-left sm:text-center" : "text-right sm:text-center"}>
-            {isEn ? "Success isn't built by chance" : "הצלחה לא נבנית במקרה"}
+            {isEn ? "Success isn't built by chance" : "SEO, AI וצמיחה עסקית לא נבנים במקרה"}
           </H2>
           <H3 className={isEn ? "text-left sm:text-center" : "text-right sm:text-center"}>
             {isEn
               ? "It's built from right decisions, solid foundation, and smart management over time."
-              : "היא נבנית מהחלטות נכונות, תשתית מדויקת וניהול חכם לאורך זמן."}
+              : "הם נבנים מתשתית מדויקת, engine optimization חכם ו-digital marketing services שמתחברים למכירות לאורך זמן."}
           </H3>
         </div>
       </div>

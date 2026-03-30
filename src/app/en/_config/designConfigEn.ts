@@ -12,7 +12,7 @@ export const designConfigEn: ServicePageConfig = {
     heroSubheading: "Website, app, SaaS & systems - creative and logos that speak to your audience",
     ctaLabel: "Get in touch",
     ctaSource: "design_development",
-    imageSrc: "/services/d-design.webp",
+    imageSrc: "/services/d-design2.webp",
     imageAlt: "Branding and UX design for business growth and digital presence",
   },
   doubleHeading: {

@@ -11,7 +11,7 @@ const TEXT_COL_LTR =
 const TEXT_COL_RTL =
   "order-2 md:order-1 w-full text-right px-4 sm:px-6 lg:px-4 pt-4 pb-2 lg:pb-5"
 const IMAGE_COL_LTR =
-  "order-2 md:order-2 md:flex md:justify-end md:px-4 py-0 lg:py-0"
+  "order-2 md:order-2 md:flex md:justify-end md:px-4 py-0 lg:py-0  "
 const IMAGE_COL_RTL =
   "order-1 md:order-2 md:flex md:justify-start md:px-4 py-0 lg:py-0"
 
