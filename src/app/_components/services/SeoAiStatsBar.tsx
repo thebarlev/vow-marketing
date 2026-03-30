@@ -9,14 +9,14 @@ export type SeoAiStatsBarItem = {
 
 const DEFAULT_ITEMS = {
   en: [
-    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] mr-1"></span>10X</>, line1: "more customers", line2: "" },
-    { value: "10X", line1: "More leads", line2: "" },
-    { value: "10X", line1: "More sales", line2: "" },
+    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] mr-1"></span>10X</>, line1: "morecustomers", line2: "" },
+    { value: "10X", line1: "more leads", line2: "" },
+    { value: "10X", line1: "more sales", line2: "" },
   ],
   he: [
-    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1"></span>10X</>, line1: "מכירות", line2: "" },
-    { value: "10X", line1: "לידים", line2: "" },
-    { value: "10X", line1: "חשיפה", line2: "" },
+    { value: <><span className="text-[40px] sm:text-[40px] lg:text-[40px] ml-1"></span>10X</>, line1: "יותר מכירות", line2: "" },
+    { value: "10X", line1: "יותר לידים", line2: "" },
+    { value: "10X", line1: "יותר חשיפה", line2: "" },
   ],
 } as const
 
