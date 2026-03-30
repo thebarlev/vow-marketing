@@ -84,7 +84,11 @@ export default async function CampaignLandingPage({
           imageAlt="Daily SEO and AI visibility execution by Uxellent"
         />
       }
-      stats={{ title: "What happens in the first few months" }}
+      stats={{
+        title: "What happens in the first few months",
+        subtitle:
+          "Early execution strengthens visibility, lead quality, and sales opportunities through consistent SEO and AI search improvements.",
+      }}
       heroSubtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
       vision={{
         title: seoAiConfigEn.vision?.title,

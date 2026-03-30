@@ -68,9 +68,9 @@ export const seoAiConfigEn: ServicePageConfig = {
     ],
   },
   about: {
-    title: "Your site exists, but it needs stronger seo optimization to bring customers.",
+    title: "Your site exists, but it needs stronger SEO optimisation to bring customers.",
     subtitle:
-      "We deliver practical seo optimisation for website growth with monthly support that improves visibility, trust, and lead quality.",
+      "We deliver practical SEO optimisation for website growth with monthly execution that improves visibility, trust, and lead quality.",
     ctaLabel: "Free website audit",
     ctaHref: "#price",
     ctaSource: "digital_marketing",
@@ -79,21 +79,21 @@ export const seoAiConfigEn: ServicePageConfig = {
         id: "seo-ai-about-1",
         title: "Less ad spend, more customers",
         description:
-          "The system replaces manual work, reduces reliance on external vendors, and lets you produce marketing outputs, analytics, and exposure quickly.",
+          "We reduce dependence on paid media by improving organic visibility, strengthening service pages, and building content that keeps attracting qualified demand.",
         icon: "/services/seo-ai/1.svg",
       },
       {
         id: "seo-ai-about-2",
         title: "Stop the campaign? Leads don't stop",
         description:
-          "Stop the campaign, leads disappear. Every dollar spent on Google/Facebook burns and builds nothing for the future.",
+          "When paid campaigns pause, your SEO foundation, internal links, and high-intent pages can keep bringing relevant prospects from Google and AI search.",
         icon: "/services/seo-ai/2.svg",
       },
       {
         id: "seo-ai-about-3",
         title: "More traffic and visibility every month",
         description:
-          "At Uxellent we identify weak points in the site, content, and sales process, and offer practical solutions that boost conversion rates.",
+          "Each month we improve weak points in the site, content, and conversion path so traffic quality, search visibility, and lead intent keep compounding.",
         icon: "/services/seo-ai/3.svg",
       },
     ],

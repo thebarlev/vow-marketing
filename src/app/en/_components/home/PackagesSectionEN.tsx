@@ -117,7 +117,7 @@ export function PackagesSectionEN() {
                     }}
                   >
                     <CheckIcon />
-                    <span>{b}</span>
+                    <span className="text-[17px] font-normal text-black">{b}</span>
                   </li>
                 ))}
               </ul>

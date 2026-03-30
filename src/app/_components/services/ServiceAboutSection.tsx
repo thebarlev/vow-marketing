@@ -93,13 +93,13 @@ export function ServiceAboutSection({
                   ) : null}
                   <H3
                     dir={isLtr ? "ltr" : "rtl"}
-                    className={isLtr ? "text-left text-black sm:text-[30px] sm:leading-[36px]" : "text-right text-black sm:text-[30px] sm:leading-[36px]"}
+                    className={isLtr ? "text-left text-black text-[20px] leading-[26px]" : "text-right text-black text-[20px] leading-[26px]"}
                   >
                     {item.title}
                   </H3>
                 </div>
                 {item.description ? (
-                  <p className={isLtr ? "text-left text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]" : "text-right text-[20px] leading-[32px] text-[#000000] sm:max-w-[90%]"}>
+                  <p className={isLtr ? "text-left text-[18px] font-normal leading-[26px] text-black sm:max-w-[90%]" : "text-right text-[18px] font-normal leading-[26px] text-black sm:max-w-[90%]"}>
                     {item.description}
                   </p>
                 ) : null}

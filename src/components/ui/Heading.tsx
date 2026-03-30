@@ -21,7 +21,7 @@ export function H2({ children, className, ...props }: H2Props) {
 export function H3({ children, className, ...props }: H3Props) {
   return (
     <h3
-      className={twMerge("text-[26px] font-semibold leading-[32px] text-heading-sub", className)}
+      className={twMerge("text-[20px] font-semibold leading-[26px] text-heading-sub", className)}
       {...props}
     >
       {children}

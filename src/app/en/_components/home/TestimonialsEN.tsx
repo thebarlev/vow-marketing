@@ -26,7 +26,7 @@ export function TestimonialsEN() {
                   <p className="mt-3 md:mt-4 w-[95%] max-w-full text-center text-[20px] font-bold leading-[32px] text-[color:var(--vow-muted)] py-1 md:py-2">
                     {t.title}
                   </p>
-                  <p className="mt-1 md:mt-2 w-[99%] max-w-full text-center text-[20px] font-semibold leading-[30px] text-black">
+                  <p className="mt-1 md:mt-2 w-[99%] max-w-full text-center text-[20px] font-regular leading-[30px] text-black">
                     {t.text}
                   </p>
                 </div>

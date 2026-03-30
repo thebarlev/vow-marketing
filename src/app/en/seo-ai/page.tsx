@@ -97,7 +97,11 @@ export default function SeoAiPageEn() {
             imageAlt="Daily SEO and AI visibility execution by Uxellent"
           />
         }
-        stats={{ title: "What engine optimization changes in the first few months" }}
+        stats={{
+          title: "What engine optimization changes in the first few months",
+          subtitle:
+            "The first phase focuses on stronger visibility, more qualified leads, and clearer SEO momentum across Google and AI search.",
+        }}
         process={{
           title: "What you actually get from seo optimisation for website growth",
           subtitle:

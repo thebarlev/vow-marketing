@@ -111,6 +111,22 @@ function getSectionTimingLabel(index: number) {
   return `Stage ${index + 1}`
 }
 
+function normalizeBulletText(text: string) {
+  return text.trim().replace(/[.!?]+$/, "")
+}
+
+function buildAboutDescriptionEn(keyword: string, index: number) {
+  if (index === 0) {
+    return `This is an early priority in ${keyword.toLowerCase()} because it helps remove structural friction that limits visibility, trust, and conversion potential.`
+  }
+
+  if (index === 1) {
+    return `This step improves search intent alignment, strengthens page clarity, and gives visitors a better reason to keep reading and move toward inquiry.`
+  }
+
+  return `That is how content, structure, and measurement start working together, so ${keyword.toLowerCase()} becomes a repeatable growth system instead of a one-off fix.`
+}
+
 function buildGuideTemplateProps(guide: GrowthGuide) {
   const [problem, solution, actions, cta] = guide.sections
   const combinedBullets = [...(problem.bullets ?? []), ...(solution.bullets ?? []), ...(actions.bullets ?? [])]
@@ -125,8 +141,8 @@ function buildGuideTemplateProps(guide: GrowthGuide) {
 
   const aboutItems = actionBullets.slice(0, 3).map((bullet, index) => ({
     id: `${guide.slug}-about-${index + 1}`,
-    title: bullet,
-    description: undefined,
+    title: normalizeBulletText(bullet),
+    description: buildAboutDescriptionEn(guide.keyword, index),
     icon: GUIDE_ABOUT_ICONS[index % GUIDE_ABOUT_ICONS.length],
   }))
 

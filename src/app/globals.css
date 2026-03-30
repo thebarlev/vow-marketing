@@ -135,8 +135,8 @@ body {
   h3 {
     @apply font-semibold;
     color: #747474;
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   /* List Typography */
@@ -159,8 +159,8 @@ body {
     }
 
     h3 {
-      font-size: 30px;
-      line-height: 36px;
+      font-size: 22px;
+      line-height: 28px;
     }
 
     li {

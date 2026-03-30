@@ -95,7 +95,7 @@ export function VisionToExecutionSection({
                 />
               </div>
 
-              <figcaption className={isLtr ? "mt-1 mb-2 text-left text-[20px] lg:text-[24px] font-semibold leading-tight text-black" : "mt-1 mb-2 text-right text-[20px] lg:text-[24px] font-semibold leading-tight text-black"}>
+              <figcaption className={isLtr ? "mt-1 mb-2 text-left text-[18px] font-semibold leading-tight text-[#717171] leading-[1.2]" : "mt-1 mb-2 text-right text-[18px] lg:text-[18px] font-semibold leading-tight text-black  leading-[1.2]"}>
                 {card.caption}
               </figcaption>
             </figure>

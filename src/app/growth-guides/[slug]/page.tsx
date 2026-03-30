@@ -110,6 +110,22 @@ function getSectionTimingLabel(index: number) {
   return `שלב ${index + 1}`
 }
 
+function normalizeBulletText(text: string) {
+  return text.trim().replace(/[.!?]+$/, "")
+}
+
+function buildAboutDescriptionHe(keyword: string, index: number) {
+  if (index === 0) {
+    return `זהו צעד פתיחה חשוב ב-${keyword}, כי הוא עוזר לזהות חסמים שמשפיעים על חשיפה, חוויית שימוש והיכולת של העמוד לייצר פניות.`
+  }
+
+  if (index === 1) {
+    return `המהלך הזה מחזק את ההתאמה לכוונת החיפוש, מוסיף עומק לתוכן ומשפר את הסיכוי שהגולש יתקדם לפנייה ולא יעזוב את העמוד.`
+  }
+
+  return `כך בונים תהליך מסודר שבו תוכן, מבנה ומדידה עובדים יחד, ו-${keyword} הופך ממאמץ נקודתי למנוע צמיחה עקבי יותר.`
+}
+
 function buildGuideTemplateProps(guide: GrowthGuideHe) {
   const [problem, solution, actions, cta] = guide.sections
   const combinedBullets = [...(problem.bullets ?? []), ...(solution.bullets ?? []), ...(actions.bullets ?? [])]
@@ -124,8 +140,8 @@ function buildGuideTemplateProps(guide: GrowthGuideHe) {
 
   const aboutItems = actionBullets.slice(0, 3).map((bullet, index) => ({
     id: `${guide.slug}-about-he-${index + 1}`,
-    title: bullet,
-    description: undefined,
+    title: normalizeBulletText(bullet),
+    description: buildAboutDescriptionHe(guide.keyword, index),
     icon: GUIDE_ABOUT_ICONS[index % GUIDE_ABOUT_ICONS.length],
   }))
 

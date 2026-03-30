@@ -74,7 +74,7 @@ export function RelatedGuides({
                 <H3 className="text-black">
                   {"keyword" in item ? item.keyword : item.title}
                 </H3>
-                <p className="mt-4 text-[17px] leading-[28px] text-[color:var(--vow-muted)]">
+                <p className="mt-4 text-[18px] leading-[28px] text-black">
                   {"shortDescription" in item ? item.shortDescription : item.description}
                 </p>
                 <span className="mt-6 inline-flex text-[16px] font-semibold leading-[24px] text-[#5389BB]">

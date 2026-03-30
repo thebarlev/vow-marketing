@@ -23,6 +23,8 @@ type SeoAiTemplateHeProps = {
   stats?: {
     ariaLabel?: string
     items?: readonly SeoAiStatsBarItem[]
+    title?: ReactNode
+    subtitle?: ReactNode
   }
   process?: {
     label?: ReactNode
@@ -71,7 +73,12 @@ export function SeoAiTemplateHe({
           title={heroTitle ?? hero.title}
         />
         <LogoRow />
-        <SeoAiStatsBar ariaLabel={stats?.ariaLabel} items={stats?.items} />
+        <SeoAiStatsBar
+          ariaLabel={stats?.ariaLabel}
+          items={stats?.items}
+          title={stats?.title}
+          subtitle={stats?.subtitle}
+        />
         <SeoAiProcessSteps
           label={process?.label}
           title={process?.title}
