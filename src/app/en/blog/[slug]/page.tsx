@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
-import Image from "next/image"
 import { notFound } from "next/navigation"
 import { allArticles } from "contentlayer/generated"
 import { BlogShell } from "@/app/_components/blog/BlogShell"
 import { BlogPostRow } from "@/app/_components/blog/BlogPostRow"
+import { BlogCoverIcon } from "@/app/_components/blog/BlogCoverIcon"
 
 const MdxContent = dynamic(
   () => import("@/app/_components/blog/MdxContent").then((m) => m.MdxContent),
@@ -142,18 +142,9 @@ export default async function BlogPostPageEn({
             <div className="max-w-[650px]">
 
               {/* Cover image */}
-              {post.coverImage ? (
-                <div className="relative aspect-[4/4] w-[300px] overflow-hidden rounded-3xl border border-black/10 bg-white/40">
-                  <Image
-                    src={post.coverImage}
-                    alt={post.title}
-                    fill
-                    priority={false}
-                    sizes="300px"
-                    className="object-cover"
-                  />
-                </div>
-              ) : null}
+              <div className="relative aspect-[4/4] w-[300px] overflow-hidden rounded-3xl border border-black/10 bg-white/40">
+                <BlogCoverIcon slug={post.slug} title={post.title} />
+              </div>
 
               {/* Title */}
               <h1 className="mt-8 text-balance text-[40px] font-semibold leading-[1.06] text-black sm:text-[52px] lg:text-[64px]">
