@@ -1,5 +1,5 @@
 type BlogCoverIconProps = {
-  slug: string
+  slug?: string
   title: string
 }
 
@@ -94,7 +94,7 @@ function IconComparison() {
   )
 }
 
-function renderIcon(slug: string) {
+function renderIcon(slug?: string) {
   switch (slug) {
     case "automatio-make":
       return <IconAutomation />
