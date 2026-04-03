@@ -1,7 +1,10 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
+import { Fragment } from "react"
 
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
 
 export default function SeoAiPageEn() {
   const faqItems = seoAiConfigEn.faq?.items ?? []
+  const portfolioImages = getPortfolioImages("en")
 
   return (
     <>
@@ -141,15 +145,23 @@ export default function SeoAiPageEn() {
         }}
         faq={seoAiConfigEn.faq}
         extraContent={
-          <GrowthGuidesCard
-            title="Growth Guides"
-            description="Practical guides on traffic, SEO, and customer acquisition to help you grow faster."
-            links={[
-              { href: "/en/growth-guides/how-to-get-traffic-to-my-website", label: "How to Get Traffic to Your Website" },
-              { href: "/en/growth-guides/how-to-get-customers-online", label: "How to Get Customers Online" },
-            ]}
-            indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
-          />
+          <Fragment>
+            <PortfolioWorksSection
+              locale="en"
+              images={portfolioImages}
+              title="Selected work behind our SEO, AI, and website execution"
+              subtitle="Real client builds across websites, landing pages, and growth projects that show the level of execution behind our SEO and AI work."
+            />
+            <GrowthGuidesCard
+              title="Growth Guides"
+              description="Practical guides on traffic, SEO, and customer acquisition to help you grow faster."
+              links={[
+                { href: "/en/growth-guides/how-to-get-traffic-to-my-website", label: "How to Get Traffic to Your Website" },
+                { href: "/en/growth-guides/how-to-get-customers-online", label: "How to Get Customers Online" },
+              ]}
+              indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
+            />
+          </Fragment>
         }
       />
     </>

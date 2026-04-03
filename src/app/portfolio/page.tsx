@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import fs from "node:fs"
-import path from "node:path"
 
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
@@ -9,6 +7,7 @@ import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { PortfolioCtaSection } from "@/app/_components/portfolio/PortfolioCtaSection"
 import { PortfolioGrid } from "@/app/_components/portfolio/PortfolioGrid"
 import { PortfolioHero } from "@/app/_components/portfolio/PortfolioHero"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 export const metadata: Metadata = {
@@ -20,30 +19,6 @@ export const metadata: Metadata = {
     canonical: "/portfolio",
     languages: heEnAlternateLanguages("/portfolio", "/en/portfolio"),
   },
-}
-
-type PortfolioImage = { src: string; alt: string }
-
-function getPortfolioImages(): PortfolioImage[] {
-  const dir = path.join(process.cwd(), "public", "portfolio")
-  let filenames: string[] = []
-
-  try {
-    filenames = fs.readdirSync(dir)
-  } catch {
-    return []
-  }
-
-  const numericWebps = filenames
-    .filter((name) => /^\d+\.webp$/.test(name))
-    .map((name) => ({ name, n: Number.parseInt(name, 10) }))
-    .filter((x) => Number.isFinite(x.n))
-    .sort((a, b) => a.n - b.n)
-
-  return numericWebps.map((x, idx) => ({
-    src: `/portfolio/${x.name}`,
-    alt: `Uxellent website development project ${idx + 1} - AI-powered design and digital marketing`,
-  }))
 }
 
 const FAQ_ITEMS = [
@@ -86,7 +61,7 @@ const FAQ_ITEMS = [
 ] as const
 
 export default function PortfolioPage() {
-  const images = getPortfolioImages()
+  const images = getPortfolioImages("he")
 
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">

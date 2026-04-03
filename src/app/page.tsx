@@ -10,6 +10,8 @@ import { LogoRow } from "@/app/_components/home/LogoRow"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 
 const SuccessSection = dynamic(() => import("@/app/_components/home/SuccessSection").then((m) => m.SuccessSection))
@@ -79,6 +81,8 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
+  const portfolioImages = getPortfolioImages("he")
+
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
       <JsonLd data={faqPageSchema(FAQ_ITEMS.map((i) => ({ question: i.question, answer: i.answer })))} />
@@ -151,6 +155,12 @@ export default function HomePage() {
           indexLink={{ href: "/growth-guides", label: "לכל המדריכים" }}
         />
         <FaqSection />
+        <PortfolioWorksSection
+          locale="he"
+          images={portfolioImages}
+          title="עבודות נבחרות שמראות איך צמיחה דיגיטלית נראית בפועל"
+          subtitle="אתרים, דפי נחיתה ומערכות שפיתחנו כדי לחבר בין פיתוח, שיווק דיגיטלי, SEO ותוצאות עסקיות אמיתיות."
+        />
         <p className="mx-auto max-w-[1440px] px-4 pb-8 text-center text-[18px] text-[color:var(--vow-muted)]">
           <Link href="/portfolio" className="text-[#5389BB] underline hover:no-underline">
             פרויקטים

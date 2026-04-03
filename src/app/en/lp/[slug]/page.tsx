@@ -1,7 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { Fragment } from "react"
 
 import { seoAiConfigEn } from "@/app/en/_config/seoAiConfigEn"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
@@ -49,6 +52,7 @@ export default async function CampaignLandingPage({
 }) {
   const { slug } = await params
   const campaign = getCampaign(slug)
+  const portfolioImages = getPortfolioImages("en")
 
   if (!campaign) notFound()
 
@@ -123,15 +127,23 @@ export default async function CampaignLandingPage({
       }}
       faq={seoAiConfigEn.faq}
       extraContent={
-        <GrowthGuidesCard
-          title="Growth Guides"
-          description="Practical guides on traffic, SEO, and customer acquisition to help you grow faster."
-          links={[
-            { href: "/en/growth-guides/how-to-get-traffic-to-my-website", label: "How to Get Traffic to Your Website" },
-            { href: "/en/growth-guides/how-to-get-customers-online", label: "How to Get Customers Online" },
-          ]}
-          indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
-        />
+        <Fragment>
+          <PortfolioWorksSection
+            locale="en"
+            images={portfolioImages}
+            title="Selected work that supports stronger SEO and conversion performance"
+            subtitle="A look at real projects across websites, landing pages, and digital builds that prove how execution quality supports visibility, trust, and lead generation."
+          />
+          <GrowthGuidesCard
+            title="Growth Guides"
+            description="Practical guides on traffic, SEO, and customer acquisition to help you grow faster."
+            links={[
+              { href: "/en/growth-guides/how-to-get-traffic-to-my-website", label: "How to Get Traffic to Your Website" },
+              { href: "/en/growth-guides/how-to-get-customers-online", label: "How to Get Customers Online" },
+            ]}
+            indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
+          />
+        </Fragment>
       }
     />
   )

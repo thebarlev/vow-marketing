@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { HeroEN } from "./_components/home/HeroEN"
 import { LogoRowEN } from "./_components/home/LogoRowEN"
 import { VisionToExecutionSectionEN } from "./_components/home/VisionToExecutionSectionEN"
@@ -71,6 +73,8 @@ export const metadata: Metadata = {
 }
 
 export default function EnHomePage() {
+  const portfolioImages = getPortfolioImages("en")
+
   return (
     <>
       <HeroEN />
@@ -122,6 +126,12 @@ export default function EnHomePage() {
         indexLink={{ href: "/en/growth-guides", label: "All Growth Guides" }}
       />
       <FaqSectionEN />
+      <PortfolioWorksSection
+        locale="en"
+        images={portfolioImages}
+        title="Selected work that shows how strategy turns into execution"
+        subtitle="A selection of websites, landing pages, and product builds that connect development, SEO, digital marketing, and measurable business growth."
+      />
     </>
   )
 }

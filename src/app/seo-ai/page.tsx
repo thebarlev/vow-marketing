@@ -17,6 +17,8 @@ import { ServiceFaqSection } from "@/app/_components/services/ServiceFaqSection"
 import { ServiceHero } from "@/app/_components/services/ServiceHero"
 import { SeoAiStatsBar } from "@/app/_components/services/SeoAiStatsBar"
 import { seoAiConfig } from "@/app/_components/services/services.config"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { H2 } from "@/components/ui/Heading"
@@ -90,6 +92,7 @@ const SEO_AI_PRICING: readonly PricePlan[] = [
 
 export default function SeoAiServicePage() {
   const faqItems = seoAiConfig.faq?.items ?? []
+  const portfolioImages = getPortfolioImages("he")
 
   return (
     <div className="min-h-screen bg-[#F4F1EC]" dir="rtl">
@@ -146,6 +149,12 @@ export default function SeoAiServicePage() {
 
         <DoubleHeadingCtaSection {...seoAiConfig.doubleHeading} buttonHref="#price" />
         {seoAiConfig.faq ? <ServiceFaqSection {...seoAiConfig.faq} /> : null}
+        <PortfolioWorksSection
+          locale="he"
+          images={portfolioImages}
+          title="עבודות שממחישות איך SEO, פיתוח ו-AI נראים בפועל"
+          subtitle="מבחר אתרים, דפי נחיתה ומערכות שבנינו כדי לחבר בין קידום אורגני, חוויית משתמש ותוצאות עסקיות אמיתיות."
+        />
         <section aria-label="שירותים משלימים" className="bg-[#F4F1EC] pb-[var(--space-section)]">
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-[900px] rounded-[10px] border border-[color:var(--vow-border)] bg-white px-6 py-8 text-right sm:px-10">
