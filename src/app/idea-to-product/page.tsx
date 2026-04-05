@@ -215,7 +215,7 @@ export default function IdeaToProductPage() {
           ctaHref="#lead-idea-to-product"
           subtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
           subtitle="כל רעיון שתביאו - אפשר לתכנן, לעצב ולבנות, במסלול אחד ברור עד מוצר חי."
-          heroSubheading="רוב האנשים לא נתקעים «ברעיון הטוב» - הם נתקעים באיסוף, באפיון מוצר ובביצוע. אנחנו מקצרים את הדרך: מסמך דרישות, UI/UX שמייצר אמון, ופיתוח שמיישם בניית אתרים, פיתוח אפליקציות או מערכת Web - לפי מה שהרעיון באמת צריך."
+          heroSubheading="רוב האנשים לא נתקעים״ברעיון הטוב״ - הם נתקעים באיסוף, באפיון מוצר ובביצוע. אנחנו מקצרים את הדרך: מסמך דרישות, UI/UX שמייצר אמון, ופיתוח שמיישם בניית אתרים, פיתוח אפליקציות או מערכת Web - לפי מה שהרעיון באמת צריך."
           ctaLabel="נתאם שיחת בירור"
           ctaSource="design_development"
           imageSrc="/new-hero.webp"
