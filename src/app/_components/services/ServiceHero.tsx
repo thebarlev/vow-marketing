@@ -124,7 +124,7 @@ export function ServiceHero({
             )}
           </div>
 
-          {/* Image — fill inside a sized box so SSR and client render identical markup (avoids next/image hydration mismatches). */}
+          {/* Image - fill inside a sized box so SSR and client render identical markup (avoids next/image hydration mismatches). */}
           <div
             suppressHydrationWarning
             className={isLtr ? IMAGE_COL_LTR : IMAGE_COL_RTL}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pricing Plans | Uxellent",
     description:
-      "Compare Uxellent SEO & AI visibility plans — Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.",
+      "Compare Uxellent SEO & AI visibility plans - Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.",
     url: "/en/seo-ai/pricing",
     type: "website",
   },

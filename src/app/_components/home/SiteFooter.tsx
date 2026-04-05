@@ -18,6 +18,7 @@ const PRODUCTS_LINKS = [
 
 const PAGES_LINKS = [
   { href: "/design", label: "עיצוב ומיתוג" },
+  { href: "/idea-to-product", label: "מרעיון למוצר - אפיון, עיצוב ופיתוח" },
   { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
   { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
   { href: "/marketing/ppc", label: "שיווק PPC" },

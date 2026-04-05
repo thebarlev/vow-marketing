@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react"
 import { EnLink } from "./EnLink"
 
 const DEV_DROPDOWN = [
+  { href: "/en/idea-to-product", label: "Idea to Product" },
   { href: "/en/develop", label: "Web Development" },
   { href: "/en/develop-ai", label: "Software Development" },
 ] as const
@@ -19,6 +20,7 @@ const MOBILE_SECTIONS = [
     title: "Uxellent Services",
     items: [
       { href: "/en/design", label: "Design & Branding" },
+      { href: "/en/idea-to-product", label: "Idea to Product" },
       { href: "/en/develop", label: "Web Development" },
       { href: "/en/develop-ai", label: "Software Development" },
       { href: "/en/pricing", label: "Pricing" },

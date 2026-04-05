@@ -17,6 +17,7 @@ const PRODUCTS_LINKS = [
 
 const SERVICES_LINKS = [
   { href: "/en/design", label: "Design & Branding" },
+  { href: "/en/idea-to-product", label: "Idea to Product" },
   { href: "/en/develop", label: "Web Development" },
   { href: "/en/develop-ai", label: "Software Development" },
   { href: "/en/marketing/ppc", label: "PPC Marketing" },

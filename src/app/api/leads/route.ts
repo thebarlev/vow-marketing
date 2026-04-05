@@ -21,7 +21,17 @@ const baseLeadSchema = z.object({
   pagePath: z.string().optional(),
   userAgent: z.string().optional(),
   captchaToken: z.string().min(1, "CAPTCHA token required"),
+  message: z.string().max(1500).optional(),
 })
+
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+}
 
 const leadSchemaV1 = baseLeadSchema.extend({
   firstName: z.string().min(1, "שם פרטי חובה"),
@@ -54,7 +64,8 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const { email, phone, source, pagePath, userAgent, captchaToken, lead_id } = parsed.data
+    const { email, phone, source, pagePath, userAgent, captchaToken, lead_id, message: rawMessage } = parsed.data
+    const message = rawMessage?.trim() ? rawMessage.trim() : undefined
 
     const { firstName, lastName } =
       "fullName" in parsed.data
@@ -86,6 +97,7 @@ export async function POST(req: NextRequest) {
       source,
       page_path: pagePath,
       user_agent: userAgent,
+      message: message ?? null,
     } as never)
 
     if (error) {
@@ -103,6 +115,14 @@ export async function POST(req: NextRequest) {
 
     try {
       const displayName = lastName ? `${firstName} ${lastName}` : firstName
+      const safeName = escapeHtml(displayName)
+      const safeEmailH = escapeHtml(email)
+      const safePhone = escapeHtml(phone)
+      const safePage = escapeHtml(pagePath ?? "")
+      const safeMessage =
+        message != null && message.length > 0
+          ? `<p><b>הודעה:</b></p><p style="white-space:pre-wrap">${escapeHtml(message)}</p>`
+          : ""
       const res = await brevo.transactionalEmails.sendTransacEmail({
         sender: { name: "VOW Leads", email: "support@uxellent.com" },
         to: [{ email: process.env.LEADS_NOTIFY_EMAIL!, name: "VOW Admin" }],
@@ -110,11 +130,12 @@ export async function POST(req: NextRequest) {
         htmlContent: `
           <div dir="rtl" style="font-family: Arial; line-height:1.6">
             <h2>ליד חדש התקבל</h2>
-            <p><b>שם:</b> ${displayName}</p>
-            <p><b>אימייל:</b> ${email}</p>
-            <p><b>טלפון:</b> ${phone}</p>
+            <p><b>שם:</b> ${safeName}</p>
+            <p><b>אימייל:</b> ${safeEmailH}</p>
+            <p><b>טלפון:</b> ${safePhone}</p>
             <p><b>מקור:</b> ${source}</p>
-            <p><b>עמוד:</b> ${pagePath ?? ""}</p>
+            <p><b>עמוד:</b> ${safePage}</p>
+            ${safeMessage}
           </div>
         `,
       })

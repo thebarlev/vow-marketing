@@ -24,6 +24,8 @@ const staticRoutes = [
   "/portfolio",
   "/marketing/ppc",
   "/seo-ai",
+  "/idea-to-product",
+  "/en/idea-to-product",
   "/roi",
   // English
   "/en",
