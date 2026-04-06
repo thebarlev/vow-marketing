@@ -5,7 +5,6 @@ import { useState, useRef, useEffect } from "react"
 import { EnLink } from "./EnLink"
 
 const DEV_DROPDOWN = [
-  { href: "/en/idea-to-product", label: "Idea to Product" },
   { href: "/en/develop", label: "Web Development" },
   { href: "/en/develop-ai", label: "Software Development" },
 ] as const
@@ -129,20 +128,12 @@ export function HeaderEN() {
             </div>
 
             <ul className="hidden md:flex flex-nowrap items-center gap-1">
-            <li>
+              <li>
                 <EnLink
                   href="/en/contact"
                   className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
                 >
                   Contact
-                </EnLink>
-              </li>
-              <li>
-                <EnLink
-                  href="/en/design"
-                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline "
-                >
-                  Design
                 </EnLink>
               </li>
               <li className="relative group">
@@ -201,7 +192,22 @@ export function HeaderEN() {
                   </ul>
                 </div>
               </li>
-
+              <li>
+                <EnLink
+                  href="/en/design"
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline "
+                >
+                  Design
+                </EnLink>
+              </li>
+              <li className="hidden md:flex md:items-center">
+                <EnLink
+                  href="/en/idea-to-product"
+                  className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline"
+                >
+                  Idea to Product
+                </EnLink>
+              </li>
             </ul>
 
 

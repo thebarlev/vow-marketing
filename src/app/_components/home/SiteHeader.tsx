@@ -17,6 +17,7 @@ const MOBILE_MENU_SECTIONS = [
   {
     title: "שירותים של Uxellent",
     items: [
+      { href: "/idea-to-product", label: "מאיפיון למוצר" },
       { href: "/design", label: "עיצוב ומיתוג" },
       { href: "/develop", label: "פיתוח אתרים מבוסס AI" },
       { href: "/develop-ai", label: "פיתוח תוכנה מבוסס AI" },
@@ -130,6 +131,9 @@ export function SiteHeader() {
                     </svg>
                   )}
                 </button>
+              </li>
+              <li className="hidden md:flex md:items-center">
+                <Link href="/idea-to-product" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline">מאיפיון למוצר</Link>
               </li>
               <li className="hidden md:flex md:items-center">
                 <Link href="/design" className="link-standard text-[18px] leading-normal px-3 py-2 hover:text-[#5389BB] transition-colors no-underline hover:underline">עיצוב ומיתוג</Link>

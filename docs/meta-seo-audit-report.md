@@ -201,7 +201,7 @@ This report compares the metadata title and description values before and after 
 
 #### `/en/seo-ai/pricing`
 - Original meta title: `Pricing Plans | Uxellent`
-- Original meta description: `Compare Uxellent SEO & AI visibility plans — Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.`
+- Original meta description: `Compare Uxellent SEO & AI visibility plans - Starter, Pro, and Expert. Choose the plan that fits your business stage and start growing today.`
 - Updated meta title: `SEO Business Pricing & AI SEO Plans | Uxellent`
 - Updated meta description: `Compare Uxellent SEO business pricing for AI visibility, engine optimization, and monthly growth support.`
 - Length compliance: Title 46/65 OK; Description 105/70-155 OK
