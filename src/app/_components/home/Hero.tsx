@@ -12,10 +12,10 @@ export function Hero() {
 
         <div className="flex flex-col gap-8 md:grid md:grid-cols-[1fr_1fr] md:items-center">
 
-          {/* IMAGE */}
-          <div className="order-1 md:order-2 flex justify-end">
+          {/* IMAGE — height cap on md+ matches ServiceHero (centered vs text without oversized column) */}
+          <div className="order-1 md:order-2 flex justify-end md:items-center">
 
-            <div className="relative w-screen h-[320px] -mx-4 sm:-mx-6 md:mx-0 md:w-full md:h-[550px]">
+            <div className="relative w-screen h-[320px] -mx-4 sm:-mx-6 md:mx-0 md:w-full md:h-[min(500px,52vh)]">
 
               {/* Mobile */}
               <Image
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
 
           {/* TEXT */}
-          <div className="order-2 md:order-1 flex flex-col items-end text-right">
+          <div className="order-2 md:order-1 flex flex-col items-end text-right md:py-2">
 
             <h1 className="text-black w-full font-semibold leading-[1.05] text-right">
 

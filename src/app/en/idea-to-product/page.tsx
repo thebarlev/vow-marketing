@@ -53,9 +53,9 @@ const PROCESS_STEPS_EN: readonly SeoAiProcessStep[] = [
   {
     id: "itp-en-1",
     number: "1",
-    title: "From raw idea to a focused product concept",
+    title: "From a rough idea to a clear, precise product",
     description:
-      "We clarify the problem, value proposition, market, and primary users-so you move from a vague idea to a testable product statement and sensible priorities.",
+      "We distill the problem, sharpen the value proposition, define the market and core users, and turn a fuzzy idea into a product statement you can test, prioritize, and build on.",
     timing: "Week 1–2",
   },
   {
@@ -63,31 +63,31 @@ const PROCESS_STEPS_EN: readonly SeoAiProcessStep[] = [
     number: "2",
     title: "Product specification & requirements (PRD)",
     description:
-      "We define flows, business rules, integrations, and technical assumptions. A solid product spec reduces risk before website development or mobile app development begins.",
+      "We lay the foundation for build: user flows, business rules, integrations, and technical assumptions. A tight spec cuts risk and keeps development safe and efficient.",
     timing: "Week 2–4",
   },
   {
     id: "itp-en-3",
     number: "3",
-    title: "UI/UX design & prototyping",
+    title: "UI/UX design & prototype",
     description:
-      "We translate the spec into a real experience: screens, edge states, and flows. UI/UX here is alignment and risk reduction-you see the product before full implementation.",
+      "We turn the spec into a full user experience-screens, flows, and edge cases-and ship a prototype you can see, test, and refine before engineering starts.",
     timing: "Week 3–6",
   },
   {
     id: "itp-en-4",
     number: "4",
-    title: "Development-site, app, or platform",
+    title: "Full product development",
     description:
-      "We build websites, cross-platform apps, or web platforms with business logic-grounded in approved specs and design, without mid-project guesswork on scope.",
+      "We implement end to end: websites, mobile apps, or web systems with real business logic-on approved spec and design, with no guesswork mid-flight.",
     timing: "Scope-based",
   },
   {
     id: "itp-en-5",
     number: "5",
-    title: "Launch, measurement, and growth",
+    title: "Launch, validation, and optimization",
     description:
-      "Go live, observe real behavior, and iterate. When you are ready, add organic visibility-Google and AI search-so the product can be discovered and understood.",
+      "Ship to production, measure performance, and improve on data. Layer in SEO and visibility in AI-driven search to expand reach and support long-term growth.",
     timing: "Ongoing",
   },
 ]
@@ -198,13 +198,13 @@ export default function IdeaToProductPageEn() {
       <HeaderEN />
       <main id="main" role="main">
         <ServiceHero
-          ariaLabel="Have an idea? We turn it into a real digital product"
-          title={<>Have an idea? We turn it into a real digital product</>}
+          ariaLabel="From Idea to Real Product"
+          title={<>From Idea to Real Product</>}
           dir="ltr"
           ctaHref="#lead-idea-to-product-en"
           subtitleClassName="mt-5 text-[25px] font-semibold leading-[30px] text-[color:var(--vow-muted)]"
-          subtitle="Whatever you start with-we can plan, design, and build in one clear path to a shipped product."
-          heroSubheading="Most teams do not get stuck on the quality of the idea-they get stuck on clarification, product specification, and execution. We shorten the path: requirements docs, UI/UX that earns trust, and development-website development, mobile app development, or a web platform-grounded in what the idea actually needs."
+          subtitle="We plan, design, and build your idea-one clear path from concept to launch."
+          heroSubheading="Skip the guesswork: clear requirements, trusted UI/UX, and development-website, app, or web platform-built for your idea."
           ctaLabel="Book a discovery call"
           ctaSource="design_development"
           imageSrc="/new-hero.webp"
