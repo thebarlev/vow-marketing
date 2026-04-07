@@ -8,6 +8,7 @@ import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
 import { SEO_AI_PRICING_EN } from "@/app/en/_config/seoAiPricingEn"
 import { SeoAiTemplateEn } from "@/app/en/_components/SeoAiTemplateEn"
+import { InlineLeadForm } from "@/app/_components/leads/InlineLeadForm"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 
 const DailyExecutionBlock = dynamic(
@@ -144,6 +145,16 @@ export default function SeoAiPageEn() {
           buttonHref: "#price",
         }}
         faq={seoAiConfigEn.faq}
+        afterPackages={
+          <InlineLeadForm
+            title="Get in touch"
+            subtitle="Tell us briefly about your site and goals—we will follow up with next steps on Google & AI visibility."
+            pagePathOverride="/en/seo-ai"
+            source="digital_marketing"
+            locale="en"
+            anchorId="lead-seo-ai-en"
+          />
+        }
         extraContent={
           <Fragment>
             <PortfolioWorksSection

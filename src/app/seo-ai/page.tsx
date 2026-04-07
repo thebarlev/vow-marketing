@@ -20,6 +20,7 @@ import { seoAiConfig } from "@/app/_components/services/services.config"
 import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
 import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
 import { GrowthGuidesCard } from "@/components/marketing/GrowthGuidesCard"
+import { InlineLeadForm } from "@/app/_components/leads/InlineLeadForm"
 import { JsonLd, faqPageSchema } from "@/components/JsonLd"
 import { H2 } from "@/components/ui/Heading"
 
@@ -194,6 +195,13 @@ export default function SeoAiServicePage() {
           indexLink={{ href: "/growth-guides", label: "לכל המדריכים" }}
         />
         <PackagesSection />
+        <InlineLeadForm
+          title="השארת פרטים"
+          subtitle="ספרו בקצרה על האתר והמטרות — נחזור עם הצעדים הבאים לקידום בגוגל ובמנועי AI."
+          pagePathOverride="/seo-ai"
+          source="digital_marketing"
+          anchorId="lead-seo-ai"
+        />
       </main>
       <SiteFooter />
     </div>

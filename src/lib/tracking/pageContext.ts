@@ -38,7 +38,7 @@ export function inferPageContext(pathname: string): PageContext {
     return { page_category: "service", page_slug, service: "web_development" }
   }
 
-  if (pathname === "/seo-ai") {
+  if (pathname === "/seo-ai" || pathname === "/en/seo-ai") {
     return { page_category: "service", page_slug, service: "marketing" }
   }
 

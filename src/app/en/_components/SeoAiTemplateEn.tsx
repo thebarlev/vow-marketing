@@ -82,6 +82,8 @@ type SeoAiTemplateEnProps = {
   doubleHeading: Omit<ComponentProps<typeof DoubleHeadingCtaSection>, "dir">
   faq?: Omit<ComponentProps<typeof ServiceFaqSection>, "dir">
   extraContent?: ReactNode
+  /** Rendered after packages (e.g. lead form). */
+  afterPackages?: ReactNode
   dataKeyword?: string
 }
 
@@ -99,6 +101,7 @@ export function SeoAiTemplateEn({
   doubleHeading,
   faq,
   extraContent,
+  afterPackages,
   dataKeyword,
 }: SeoAiTemplateEnProps) {
   return (
@@ -159,6 +162,7 @@ export function SeoAiTemplateEn({
         {faq ? <ServiceFaqSection {...faq} dir="ltr" /> : null}
         {extraContent}
         <PackagesSectionEN />
+        {afterPackages}
       </div>
     </div>
   )
