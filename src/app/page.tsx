@@ -1,26 +1,38 @@
 // src/app/page.tsx
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
+import Link from "next/link"
 
 import { Hero } from "@/app/_components/home/Hero"
+import { JsonLd, faqPageSchema } from "@/components/JsonLd"
+import { FAQ_ITEMS } from "@/app/_components/home/home.constants"
 import { LogoRow } from "@/app/_components/home/LogoRow"
-import { PackagesSection } from "@/app/_components/home/PackagesSection"
 import { SiteFooter } from "@/app/_components/home/SiteFooter"
 import { SiteHeader } from "@/app/_components/home/SiteHeader"
-import { SuccessSection } from "@/app/_components/home/SuccessSection"
-import { Testimonials } from "@/app/_components/home/Testimonials"
-import { CookieBanner } from "@/app/_components/home/CookieBanner"
-import { AboutSection } from "@/app/_components/home/AboutSection"
 import { VisionToExecutionSection } from "@/app/_components/home/VisionToExecutionSection"
-import { FaqSection } from "@/app/_components/home/FaqSection"
-import { GreenInvoiceSection } from "@/app/_components/home/GreenInvoiceSection"
+import { PortfolioWorksSection } from "@/app/_components/portfolio/PortfolioWorksSection"
+import { getPortfolioImages } from "@/app/_components/portfolio/portfolioImages"
+import { heEnAlternateLanguages } from "@/lib/seo/hreflang"
+
+const SuccessSection = dynamic(() => import("@/app/_components/home/SuccessSection").then((m) => m.SuccessSection))
+const Testimonials = dynamic(() => import("@/app/_components/home/Testimonials").then((m) => m.Testimonials))
+const AboutSection = dynamic(() => import("@/app/_components/home/AboutSection").then((m) => m.AboutSection))
+const GreenInvoiceSection = dynamic(() => import("@/app/_components/home/GreenInvoiceSection").then((m) => m.GreenInvoiceSection))
+const PackagesSection = dynamic(() => import("@/app/_components/home/PackagesSection").then((m) => m.PackagesSection))
+const FaqSection = dynamic(() => import("@/app/_components/home/FaqSection").then((m) => m.FaqSection))
+const GrowthGuidesCard = dynamic(() => import("@/components/marketing/GrowthGuidesCard").then((m) => m.GrowthGuidesCard))
 
 export const metadata: Metadata = {
   // ✅ זה האתר השיווקי (לא app)
-  metadataBase: new URL("https://vow.co.il"),
+  metadataBase: new URL("https://uxellent.com"),
+  alternates: {
+    canonical: "/",
+    languages: heEnAlternateLanguages("/", "/en"),
+  },
 
-  title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+  title: "Uxellent | קידום אתרים, פיתוח אתרים ושיווק דיגיטלי",
   description:
-    "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
+    "Uxellent בונה אתרים, מערכות AI ושירותי קידום אתרים ושיווק דיגיטלי לעסקים שרוצים יותר תנועה, לידים וצמיחה.",
 
   keywords: [
     "רו״ח AI",
@@ -37,17 +49,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+    title: "Uxellent | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
-      "VOW מספקת שירותים מתקדמים לעסקים קטנים ובינוניים: רו״ח AI חכם, חשבונית דיגיטלית מאובטחת לשנה חינם, פתרונות שיווק, עיצוב ופיתוח אתרים ומערכות.",
-    url: "https://vow.co.il",
-    siteName: "VOW",
+      "חברת Uxellent מפתחת אתרים, מערכות SaaS וכלי AI מתקדמים לעסקים. שירותי SEO, פרסום PPC ושיווק דיגיטלי שמגדילים חשיפה, לידים וצמיחה.",
+    url: "https://uxellent.com",
+    siteName: "Uxellent",
     images: [
       {
-        url: "https://vow.co.il/og-home.jpg",
+        url: "https://uxellent.com/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "VOW – AI Accountant & Digital Business Platform",
+        alt: "Uxellent – AI Accountant & Digital Business Platform",
       },
     ],
     locale: "he_IL",
@@ -56,10 +68,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "VOW – רו״ח AI, חשבונית דיגיטלית ופיתוח אתרים ומערכות",
+    title: "Uxellent | פיתוח אתרים ומערכות AI, SEO ושיווק דיגיטלי לעסקים",
     description:
       "שנה חינם לחשבונית דיגיטלית מאובטחת + רו״ח AI, שיווק, מיתוג ופיתוח מערכות לעסקים.",
-    images: ["https://vow.co.il/og-home.jpg"],
+    images: ["https://uxellent.com/og-home.jpg"],
   },
 
   robots: {
@@ -69,8 +81,11 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
+  const portfolioImages = getPortfolioImages("he")
+
   return (
     <div className="min-h-screen bg-[#F4F1EC]">
+      <JsonLd data={faqPageSchema(FAQ_ITEMS.map((i) => ({ question: i.question, answer: i.answer })))} />
       <SiteHeader />
 
       <main id="main" role="main">
@@ -78,7 +93,22 @@ export default function HomePage() {
         <LogoRow />
         <VisionToExecutionSection
           title="אפיון, פיתוח, עיצוב ושיווק מבוסס AI שמייצר צמיחה"
-          subtitle="ב-VOW בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון - מהאפיון ועד המשפך שמביא לקוחות חדשים."
+          subtitle={
+            <>
+              ב-Uxellent בונים אתרים ומוצרים דיגיטליים עם חשיבה שיווקית מהיום הראשון, כולל
+              {" "}
+              keyword search engine optimization
+              {" "}
+              ו-
+              <a
+                href="https://uxellent.com/en/seo-ai"
+                className="text-[#5389BB] underline hover:no-underline"
+              >
+                AI SEO
+              </a>
+              , מהאפיון ועד המשפך שמביא לקוחות חדשים.
+            </>
+          }
           ctaLabel="להשארת פרטים"
           source="design_development"
           cards={[
@@ -114,10 +144,33 @@ export default function HomePage() {
         <GreenInvoiceSection />
 
         <PackagesSection />
+        <GrowthGuidesCard
+          title="מדריכי צמיחה"
+          description="מדריכים פרקטיים על תנועה, SEO וצמיחה עסקית שיעזרו לך לצמוח מהר יותר."
+          dir="rtl"
+          links={[
+            { href: "/growth-guides/how-to-get-traffic-to-my-website", label: "איך להביא תנועה לאתר" },
+            { href: "/growth-guides/how-to-get-customers-online", label: "איך לקבל לקוחות אונליין" },
+          ]}
+          indexLink={{ href: "/growth-guides", label: "לכל המדריכים" }}
+        />
         <FaqSection />
+        <PortfolioWorksSection
+          locale="he"
+          images={portfolioImages}
+          title="עבודות נבחרות שמראות איך צמיחה דיגיטלית נראית בפועל"
+          subtitle="אתרים, דפי נחיתה ומערכות שפיתחנו כדי לחבר בין פיתוח, שיווק דיגיטלי, SEO ותוצאות עסקיות אמיתיות."
+        />
+        <p className="mx-auto max-w-[1440px] px-4 pb-8 text-center text-[18px] text-[color:var(--vow-muted)]">
+          <Link href="/portfolio" className="text-[#5389BB] underline hover:no-underline">
+            פרויקטים
+          </Link>
+          {" · "}
+          <Link href="/blog" className="text-[#5389BB] underline hover:no-underline">
+            תובנות ומדריכים
+          </Link>
+        </p>
       </main>
-
-      <CookieBanner />
       <SiteFooter />
     </div>
   )
