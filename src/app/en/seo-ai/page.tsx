@@ -148,7 +148,7 @@ export default function SeoAiPageEn() {
         afterPackages={
           <InlineLeadForm
             title="Get in touch"
-            subtitle="Tell us briefly about your site and goals—we will follow up with next steps on Google & AI visibility."
+            subtitle="Tell us briefly about your site and goals-we will follow up with next steps on Google & AI visibility."
             pagePathOverride="/en/seo-ai"
             source="digital_marketing"
             locale="en"

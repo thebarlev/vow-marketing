@@ -23,7 +23,7 @@ export function HeroEN() {
               {HERO_SUBHEADING_EN}
             </H2>
           </div>
-          {/* IMAGE — same md height cap as ServiceHero */}
+          {/* IMAGE - same md height cap as ServiceHero */}
           <div className="order-1 md:order-2 flex justify-end md:items-center md:justify-end md:px-4">
             <div className="relative w-screen h-[360px] -mx-4 sm:-mx-6 md:mx-0 md:w-full md:max-w-[110%] md:h-[min(500px,52vh)]">
               <Image

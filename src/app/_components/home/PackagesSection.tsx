@@ -57,7 +57,7 @@ export function PackagesSection({ locale = "he" }: { locale?: "he" | "en" }) {
       <div id="lead-design-development" className="scroll-mt-24" />
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-8">
         <H2 className="pb-0 text-center">
-          {isLtr ? "Our services" : "השירותים שלנו"}
+          {isLtr ? "Our services" : "מסלול הבנייה של Uxellent"}
         </H2>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:gap-1 lg:place-items-stretch lg:justify-center">

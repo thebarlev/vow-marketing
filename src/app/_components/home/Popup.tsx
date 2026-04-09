@@ -230,7 +230,7 @@ export function Popup({
                 </div>
               )}
 
-              <h2 className="mb-1 text-center text-[50px] font-bold">{title}</h2>
+              <h2 className="pt-4 mb-2 text-center text-[30px] font-bold">{title}</h2>
 
               <h6 className="mb-2 px-1 py-1 text-center text-[26px] font-semibold text-[#747474]">
                 {description}

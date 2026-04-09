@@ -170,7 +170,7 @@ export async function POST(req: NextRequest) {
     }
 
     // --- Brevo email (best-effort: lead is already saved) ---
-    // If you see 401 "unrecognised IP address": Brevo → Security → Authorised IPs — disable the
+    // If you see 401 "unrecognised IP address": Brevo → Security → Authorised IPs - disable the
     // IP allowlist for serverless (Vercel IPs change), or use a dedicated API key without IP restriction.
     const notifyTo = process.env.LEADS_NOTIFY_EMAIL
     const brevoKey = process.env.BREVO_API_KEY

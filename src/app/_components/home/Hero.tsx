@@ -12,7 +12,7 @@ export function Hero() {
 
         <div className="flex flex-col gap-8 md:grid md:grid-cols-[1fr_1fr] md:items-center">
 
-          {/* IMAGE — height cap on md+ matches ServiceHero (centered vs text without oversized column) */}
+          {/* IMAGE - height cap on md+ matches ServiceHero (centered vs text without oversized column) */}
           <div className="order-1 md:order-2 flex justify-end md:items-center">
 
             <div className="relative w-screen h-[320px] -mx-4 sm:-mx-6 md:mx-0 md:w-full md:h-[min(500px,52vh)]">

@@ -197,7 +197,7 @@ export default function SeoAiServicePage() {
         <PackagesSection />
         <InlineLeadForm
           title="השארת פרטים"
-          subtitle="ספרו בקצרה על האתר והמטרות — נחזור עם הצעדים הבאים לקידום בגוגל ובמנועי AI."
+          subtitle="ספרו בקצרה על האתר והמטרות - נחזור עם הצעדים הבאים לקידום בגוגל ובמנועי AI."
           pagePathOverride="/seo-ai"
           source="digital_marketing"
           anchorId="lead-seo-ai"
